@@ -1,0 +1,19 @@
+<div id="infobox">
+	<fieldset>
+		<legend><span style="color: red;">Notes</span></legend>
+		
+		<p>This one-click fringe test program checks the readiness of the telescopes to observe. Observers must first <a href="https://auscope.phys.utas.edu.au/opswiki/doku.php?id=wiki:operations">setup the telescopes</a> before running this program. This program will automatically start running a new schedule, so <b>please ensure no other person is using the telescopes. </b></p>
+
+		<p>
+			<ol>
+				<li>Specify the fringe test start time (UTC) in the editable text box. The "after 10/15 mins" buttons allow quick input of either 10 or 15 minutes from the current time. A minimum of 10 minutes is usually sufficient for this program to generate a schedule and for the antenna to turn to the target source.</li>
+				<li>This fringe test program shows results based on one scan only. Specify the duration of the scan (in seconds) and the desired minimum SNR in the following text boxes. You will see a warning and be prompted to use a longer duration if it is too short to achieve the required SNR. (Tips: You can set the minimum SNR to 1 if you want a very short scan duration. However, SNR 7 is typically the minimum to see fringes.)</li>
+				<li>Mind the data transfer and processing time! A 10-second scan should take about 8 minutes to transfer for the AUM/AUA mode, and about 20 minute for the VGOS/AUV mode. You will also need to give about 5 minutes for the rest of the process to complete.</li>
+				<li>Selecting the source to observe is optional. You will see a list of visible strong sources for the start time you specified after choosing the stations. The list also shows the estimated maximum source flux densities for the sources. You can simply click on the source name from the list to quickly fill the text box. If you have another source to observe which is not in the list, fill the "use source" text box manually with the source name. If left empty, this program will automatically schedule a source.</li>
+				<li>Upon clicking the station checkboxes, you need to select the correct recorder for which you have set up to use.</li>
+				<li>The last step is to click on the "check fringe!" button, which will start the fringe test.</li>
+			</ol>
+		</p>
+
+	</fieldset>
+</div>

@@ -1,0 +1,243 @@
+       IVS Analysis Report for R1947 ($20MAY18XA) 
+       This report is the official IVS analysis report that corresponds to 
+       the database maintained by the IVS Data Centers for this session.  
+   (Analyzed by David Gordon, NASA Goddard Space Flight Center.
+    Spoolfile source: interactive solve/nuSolve analysis.) 
+
+Problems: FORTLEZA was very noisy. Ready message said the receiver was cold.
+          SESHAN25 has no met data.
+          NYALES20 receiver was warm, but the data looks okay. 
+
+Parameterization comments: None. 
+
+Other comments: Refringed version to correct many S-band subambiguities at  
+          SESHAN25 and YEBES40M, and a few in X-band. Gain ~640 observation
+          in the solution.
+
+-----------------------------------------
+
+Session Statistics 
+
+  Observations:     15980 scheduled 
+                    15908 correlated (in database)
+                    15111 recoverable (usable)
+                    14878 used
+  Session fit:        40.412 ps
+
+-----------------------------------------
+
+Station Performance 
+
+                           Number of Observations
+
+                    Scheduled   Recoverable*        Used   % of scheduled
+                                                              obs used
+
+  FORTLEZA               1102          1003          872        79.1%
+  HART15M                1725          1556         1515        87.8%
+  HOBART26                893           712          704        78.8%
+  ISHIOKA                2894          2799         2777        96.0%
+  KOKEE                  2004          1917         1876        93.6%
+  MATERA                 2865          2714         2683        93.6%
+  NYALE13S               2703          2551         2528        93.5%
+  NYALES20               3095          2984         2963        95.7%
+  ONSALA60               2977          2878         2849        95.7%
+  SEJONG                 2629          2404         2386        90.8%
+  SESHAN25               2991          2845         2820        94.3%
+  WETTZELL               3121          3051         3006        96.3%
+  YEBES40M               2961          2808         2777        93.8%
+  ---------------   ---------   -----------    ---------       ------
+  Station Total**       15980         15111        14878        93.1%
+
+  * Recoverable: can be included in the solution. 
+  ** Total includes distinct observations only.
+
+  MISSED:    Station was scheduled, but it did not observe.
+  NOT CORR:  Station was scheduled but not correlated.
+  NOT USED:  Usable data was generated for this station,
+             but the analyst rejected it all.
+
+-----------------------------------------
+
+Source Performance 
+
+                    Number of Observations
+
+                Scheduled  Correlated*    Used      % of scheduled
+                                                       obs used
+
+  0926-039             89          89        5            5.6%
+  0306+102            131         131      128           97.7%
+  0044-846             16          16        6           37.5%
+  2325-150             10          10        5           50.0%
+  2029+121            141         141      139           98.6%
+  1313-333             22          22       18           81.8%
+  1227+255            135         135      119           88.1%
+  1221+809            240         240      235           97.9%
+  1933-400             52          52       47           90.4%
+  0003-066             34          34       32           94.1%
+  0133+476            938         930      903           96.3%
+  0454-234            145         145      115           79.3%
+  0530-727             13          13        9           69.2%
+  0602+673            152         152      135           88.8%
+  0656+082             36          36       29           80.6%
+  0718+793            284         284      277           97.5%
+  0727-115            170         170      160           94.1%
+  0749+540             57          57       47           82.5%
+  0823+033            151         146      142           94.0%
+  0955+476            946         946      929           98.2%
+  1057-797             37          37       19           51.4%
+  1104-445             11          11        8           72.7%
+  1128+385            648         648      625           96.5%
+  1300+580            262         262      255           97.3%
+  1351-018             67          67       66           98.5%
+  1424-418             40          40       35           87.5%
+  NRAO512             688         686      674           98.0%
+  1741-038            243         243      234           96.3%
+  3C371              1878        1868     1789           95.3%
+  3C418               894         887      853           95.4%
+  2052-474             13          13       12           92.3%
+  2149+056             28          28       28          100.0%
+  2255-282             38          38       35           92.1%
+  0237-027            125         125      115           92.0%
+  1149-084            155         155      146           94.2%
+  1324+224            153         153      146           95.4%
+  1639+230            226         226      195           86.3%
+  1639-062            249         249      221           88.8%
+  1846+322             48          48       45           93.8%
+  2227-088            162         162      159           98.1%
+  0019+058             10          10        8           80.0%
+  0307+380            108         108      106           98.1%
+  0529+483            433         424      416           96.1%
+  0641+392             21          21       21          100.0%
+  1040+244            388         387      366           94.3%
+  2309+454            183         183      178           97.3%
+  2319+317            307         307      277           90.2%
+  0322+222            301         301      289           96.0%
+  0606-223             77          77       66           85.7%
+  0646-306             46          46       36           78.3%
+  0920-397             26          26        9           34.6%
+  1759-396             32          32       21           65.6%
+  0016+731           1340        1322     1271           94.9%
+  0048-427             36          36       27           75.0%
+  0308-611             33          33       17           51.5%
+  0422+004            140         140      136           97.1%
+  1243-160             82          82       72           87.8%
+  1657-261            107         107       92           86.0%
+  1806+456            781         769      686           87.8%
+  0202+319            477         477      473           99.2%
+  NRAO150               9           9        9          100.0%
+  0403-132              9           9        8           88.9%
+  0437-454             15          15       14           93.3%
+  0821+394            144         144      136           94.4%
+  0827+243            400         400      385           96.2%
+  0834-201             80          80       29           36.2%
+  1504+377             26          26       21           80.8%
+  1751+288            460         460      431           93.7%
+  1758-651              5           5        5          100.0%
+  1936-155            137         137      118           86.1%
+  2126-158             40          40       15           37.5%
+  ------------  ---------  ----------   ------          ------
+  Source Total      15980       15908    14878           93.1%
+
+ * Correlated: included in database 
+
+-----------------------------------------
+
+Baseline Performance 
+
+                                 Number of Observations
+
+                         Scheduled   Recoverable*         Used   % of scheduled
+                                                                    obs used
+
+  FORTLEZA-HART15M             200           192           161        80.5%
+  FORTLEZA-HOBART26             31             0    DESELECTED         0.0%
+  FORTLEZA-ISHIOKA              37            31            27        73.0%
+  FORTLEZA-KOKEE                67            57            37        55.2%
+  FORTLEZA-MATERA              126           118           107        84.9%
+  FORTLEZA-NYALE13S             81            77            71        87.7%
+  FORTLEZA-NYALES20             88            86            77        87.5%
+  FORTLEZA-ONSALA60            108           104            93        86.1%
+  FORTLEZA-SEJONG               38            27            26        68.4%
+  FORTLEZA-SESHAN25             41            35            31        75.6%
+  FORTLEZA-WETTZELL            118           116           100        84.7%
+  FORTLEZA-YEBES40M            167           160           142        85.0%
+  HART15M-HOBART26             150           125           125        83.3%
+  HART15M-ISHIOKA              103            90            90        87.4%
+  HART15M-KOKEE                  0      NOT CORR      NOT CORR         0.0%
+  HART15M-MATERA               198           183           183        92.4%
+  HART15M-NYALE13S             110            95            95        86.4%
+  HART15M-NYALES20             130           113           113        86.9%
+  HART15M-ONSALA60             149           141           139        93.3%
+  HART15M-SEJONG               117            88            87        74.4%
+  HART15M-SESHAN25             151           131           130        86.1%
+  HART15M-WETTZELL             188           184           179        95.2%
+  HART15M-YEBES40M             229           214           213        93.0%
+  HOBART26-ISHIOKA             129           111           110        85.3%
+  HOBART26-KOKEE               178           152           147        82.6%
+  HOBART26-MATERA               33            14            14        42.4%
+  HOBART26-NYALE13S             20            16            16        80.0%
+  HOBART26-NYALES20             42            36            36        85.7%
+  HOBART26-ONSALA60             23            17            17        73.9%
+  HOBART26-SEJONG              121            97            95        78.5%
+  HOBART26-SESHAN25            127           115           115        90.6%
+  HOBART26-WETTZELL             29            23            23        79.3%
+  HOBART26-YEBES40M             10             6             6        60.0%
+  ISHIOKA-KOKEE                274           269           263        96.0%
+  ISHIOKA-MATERA               240           233           232        96.7%
+  ISHIOKA-NYALE13S             267           257           256        95.9%
+  ISHIOKA-NYALES20             323           318           317        98.1%
+  ISHIOKA-ONSALA60             279           277           277        99.3%
+  ISHIOKA-SEJONG               343           336           331        96.5%
+  ISHIOKA-SESHAN25             381           375           372        97.6%
+  ISHIOKA-WETTZELL             280           276           276        98.6%
+  ISHIOKA-YEBES40M             238           226           226        95.0%
+  KOKEE-MATERA                 131           129           129        98.5%
+  KOKEE-NYALE13S               192           184           183        95.3%
+  KOKEE-NYALES20               225           211           211        93.8%
+  KOKEE-ONSALA60               174           171           170        97.7%
+  KOKEE-SEJONG                 215           214           212        98.6%
+  KOKEE-SESHAN25               232           226           220        94.8%
+  KOKEE-WETTZELL               180           174           174        96.7%
+  KOKEE-YEBES40M               136           130           130        95.6%
+  MATERA-NYALE13S              278           269           267        96.0%
+  MATERA-NYALES20              304           300           300        98.7%
+  MATERA-ONSALA60              346           342           340        98.3%
+  MATERA-SEJONG                220           184           183        83.2%
+  MATERA-SESHAN25              259           237           233        90.0%
+  MATERA-WETTZELL              360           353           344        95.6%
+  MATERA-YEBES40M              370           352           351        94.9%
+  NYALE13S-NYALES20            347           331           322        92.8%
+  NYALE13S-ONSALA60            310           300           298        96.1%
+  NYALE13S-SEJONG              245           213           213        86.9%
+  NYALE13S-SESHAN25            269           255           255        94.8%
+  NYALE13S-WETTZELL            301           290           289        96.0%
+  NYALE13S-YEBES40M            283           264           263        92.9%
+  NYALES20-ONSALA60            350           349           349        99.7%
+  NYALES20-SEJONG              272           254           253        93.0%
+  NYALES20-SESHAN25            326           316           315        96.6%
+  NYALES20-WETTZELL            363           359           359        98.9%
+  NYALES20-YEBES40M            325           311           311        95.7%
+  ONSALA60-SEJONG              248           216           215        86.7%
+  ONSALA60-SESHAN25            285           274           274        96.1%
+  ONSALA60-WETTZELL            361           356           349        96.7%
+  ONSALA60-YEBES40M            344           331           328        95.3%
+  SEJONG-SESHAN25              347           335           331        95.4%
+  SEJONG-WETTZELL              249           246           246        98.8%
+  SEJONG-YEBES40M              214           194           194        90.7%
+  SESHAN25-WETTZELL            310           300           299        96.5%
+  SESHAN25-YEBES40M            263           246           245        93.2%
+  WETTZELL-YEBES40M            382           374           368        96.3%
+  -----------------      ---------   -----------    ----------       ------
+  Baseline Total             15980         15111         14878        93.1%
+
+  * Recoverable: can be included in the solution. 
+
+  MISSED:     Baseline was scheduled, but at least one of the sites
+              did not observe.
+  NOT CORR:   Baseline was scheduled but not correlated.
+  NO DATA:    The baseline's stations were both correlated,
+              but they did not observe together.
+  DESELECTED: Usable data was generated for the baseline,
+              but the analyst rejected it.

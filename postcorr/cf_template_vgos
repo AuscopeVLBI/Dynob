@@ -1,0 +1,28 @@
+* control file for exp. AUST
+
+* reference scan {refscan}
+
+*    max_parity  0.01
+pc_mode multitone
+pc_period 1
+	
+* stop -30
+
+sb_win -256.0 256.0 mb_win -2.0 2.0 dr_win -5.e-5 5.e-5
+*sb_win -2.0 2.0 mb_win -2.0 2.0 dr_win -30.0e-5 30.0e-5
+
+weak_channel 0.1
+pc_amp_hcode .001
+*ion_npts 45
+ion_win -88 88
+ion_smooth true
+mbd_anchor sbd
+
+samplers 4 abcdefgh ijklmnop qrstuvwx yzABCDEF
+
+ref_freq 6000.0
+    freqs a b c e f g h i j k l m n o p q s t u v w x y z A B C D E F
+
+if station {refstation}
+    pc_mode manual
+

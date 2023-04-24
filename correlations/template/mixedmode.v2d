@@ -1,0 +1,48 @@
+minLength = 0.01
+invalidMask = 0
+singleScan = True
+threadsFile = threads
+tweakIntTime = True
+minSubarray = 1
+sortAntennas = True
+minReadSize = 128000000
+machines=vc0,vc0,vc0,vc0,vc0,vc0,vc0,vc0,vc0,vc0,vc0,vc0,vc0,vc0,vc0,vc1,vc1,vc1,vc1,vc1,vc1,vc1,vc1,vc1,vc1,vc1,vc1,vc1,vc1,vc1,vc1,vc1,vc1,vc1,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,flexbuffhb,flexbuffhb,flexbuffhb
+#machines=vc0,vc0,vc0,vc0,vc0,vc0,vc0,vc0,vc0,vc0,vc0,vc0,vc0,vc0,vc0,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,flexbuffhb,flexbuffhb,flexbuffhb
+
+SETUP default
+{
+	#specRes = 0.015625
+	#specRes = 0.0125
+	specRes = 0.25
+	tInt = 1.0
+	guardNS = 26000
+	#freqId = 12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27
+}
+
+RULE default
+{
+	setup = default
+}
+
+vex = {expname}.vex
+
+antennas = {antennas}
+
+ZOOM {zoomname} {
+
+	addZoomFreq = freq@8212.99/bw@16.00
+	addZoomFreq = freq@8252.99/bw@16.00
+	addZoomFreq = freq@8352.99/bw@16.00
+	addZoomFreq = freq@8512.99/bw@16.00
+	addZoomFreq = freq@8732.99/bw@16.00
+	addZoomFreq = freq@8852.99/bw@16.00
+	addZoomFreq = freq@8892.99/bw@16.00
+	addZoomFreq = freq@8932.99/bw@16.00
+	addZoomFreq = freq@2200.99/bw@16.00
+	addZoomFreq = freq@2216.99/bw@16.00
+	addZoomFreq = freq@2232.99/bw@16.00
+	addZoomFreq = freq@2248.99/bw@16.00
+	addZoomFreq = freq@2264.99/bw@16.00
+	addZoomFreq = freq@2280.99/bw@16.00
+}
+

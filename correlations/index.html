@@ -1,0 +1,30 @@
+<!Doctype html>
+<html>
+<head>
+
+</head>
+<body>
+<form action="correlate.php" method="post">
+<label for="exper">Experiment name(s) (multiple names for continuous DYN sessions only):</label><br>
+<input type="text" name="exper" placeholder="dyn001,dyn002,dyn003"><br><br>
+<label for="cstations">Stations to correlate (leave blank to correlate all stations):</label><br>
+<input type="text" name="cstations" placeholder="e.g. hb,ke,yg (lower case)"><br><br>
+<label for="cmode">Observing mode:</label><br>
+<input type="text" name="cmode" placeholder="mixed or vgos"><br><br>
+<!--commented out for security concerns
+	<label for="craid">Raid (separate by ,): </label><br>
+<input type="text" id="craid" name="craid" placeholder="e.g. /mnt/rd1/AUSTRAL/,/mnt/godzilla16/"><br><br>
+-->
+
+<p>Correlation control server:</p>
+<label for="cserver">Server: </label><br> 
+<input type="text" id="cserver" name="cserver" placeholder="vc0"><br><br> 
+<label for="cusername">Username: </label><br> 
+<input type="text" id="cusername" name="cusername" placeholder="observer"><br><br> 
+<label for="cpassword">Password: </label><br> 
+<input type="password" id="cpassword" name="cpassword"><br><br>
+
+<input type="submit" name="submit" value="submit">
+</form>
+</body>
+</html>

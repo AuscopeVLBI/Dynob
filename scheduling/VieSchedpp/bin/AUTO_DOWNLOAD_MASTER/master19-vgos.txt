@@ -1,0 +1,70 @@
+## Master file format version 1.0           2001.08.21 CCT&NRV
+
+                         2019 MULTI-AGENCY VGOS SCHEDULE
+
+                     Last Updated - December 15, 2020 - CCT
+
+  SESSION      SESSION DATE  DOY TIME  DUR       STATIONS                            SKED CORR STATUS  PF  DBC SUBM  DEL  MK4
+    NAME         CODE  mondd ddd hh:mm hr                                                      yymondd    CODE      days  NUM 
+------------------------------------------------------------------------------------------------------------------------------
+|VGOS-T9007    |VT9007|JAN07|  7|18:00|24 |GsK2OeOwWfWsYj                           |HAYS|HAYS|       |    |VG|NASA|   0|    |
+|VGOS-T9022    |VT9022|JAN22| 22|18:00|24 |K2OeOwWfWsYj                             |HAYS|HAYS|       |    |VG|NASA|   0|    |
+------------------------------------------------------------------------------------------------------------------------------
+|EVGOS-T035    |VGT035|FEB04| 35|10:00| 5 |OeWsYj                                   |BONN|BONN|       |    |VE|NASA|   0|    |
+|VGOS-T9035    |VT9035|FEB04| 35|18:00|24 |GsK2OeWfWsYj                             |HAYS|HAYS|       |    |VG|NASA|   0|    |
+|EVGOS-T050    |VGT050|FEB19| 50|10:00| 6 |OeWsYj                                   |BONN|BONN|       |    |VE|NASA|   0|    |
+|VGOS-T9050    |VT9050|FEB19| 50|18:00|24 |GsK2OeWfWsYj                             |HAYS|HAYS|       |    |VG|NASA|   0|    |
+------------------------------------------------------------------------------------------------------------------------------
+|VGOS-T9063    |VT9063|MAR04| 63|18:00|24 |GsK2OeWfWsYj                             |HAYS|HAYS|       |    |VG|NASA|   0|    |
+|VGOS-T9077    |VT9077|MAR18| 77|18:00|24 |GsK2OeWfWsYj                             |HAYS|HAYS|       |    |VG|NASA|   0|    |
+------------------------------------------------------------------------------------------------------------------------------
+|VGOS-T9091    |VT9091|APR01| 91|18:00|24 |GsK2OeWfWsYj                             |HAYS|HAYS|       |    |VG|NASA|   0|    |
+|EVGOS-T105    |VGT105|APR15|105|10:00| 6 |OeWsYj                                   |BONN|BONN|       |    |VE|NASA|   0|    |
+|VGOS-T9105    |VT9105|APR15|105|18:00|24 |GsK2OeWfWs                               |HAYS|HAYS|       |    |VG|NASA|   0|    |
+|EUVGOS-119    |EV9119|APR29|119|10:00| 6 |OeWsYj                                   |BONN|BONN|       |    |VE|NASA|   0|    |
+|VGOS-T9119    |VT9119|APR29|119|18:00|24 |GsK2OeWfWs                               |HAYS|HAYS|       |    |VG|NASA|   0|    |
+------------------------------------------------------------------------------------------------------------------------------
+|VGOS-T9133    |VT9133|MAY13|133|18:00|24 |GsK2OeWfWs                               |HAYS|HAYS|       |    |VG|NASA|   0|    |
+|VGOS-T9148    |VT9148|MAY28|148|18:00|24 |GsOeWs                                   |HAYS|HAYS|       |    |VG|NASA|   0|    |
+------------------------------------------------------------------------------------------------------------------------------
+|EUVGOS-162    |EV9162|JUN11|162|10:00| 6 |OeOwWsYj                                 |BONN|BONN|       |    |VE|NASA|   0|    |
+|VGOS-T9162    |VT9162|JUN11|162|18:00|24 |GsK2OeWfWs                               |HAYS|HAYS|       |    |VG|NASA|   0|    |
+|EUVGOS-175    |EV9175|JUN24|175|10:00| 6 |OeOwWsYj                                 |BONN|BONN|       |    |VE|NASA|   0|    |
+|VGOS-T9175    |VT9175|JUN24|175|18:00|24 |GsK2OeOwWfWs                             |HAYS|HAYS|       |    |VG|NASA|   0|    |
+------------------------------------------------------------------------------------------------------------------------------
+|EUVGOS-189    |EV9189|JUL08|189|10:00| 4 |OeOwWsYj                                 |BONN|BONN|       |    |VE|NASA|   0|    |
+|VGOS-T9189    |VT9189|JUL08|189|18:00|24 |GsOeWs                                   |HAYS|HAYS|       |    |VG|NASA|   0|    |
+|EUVGOS-203    |EV9203|JUL22|203|10:00| 4 |OeOwWsYj                                 |BONN|BONN|       |    |VE|NASA|   0|    |
+|VGOS-T9203    |VT9203|JUL22|203|18:00|24 |GsK2OeOwWfWs                             |HAYS|HAYS|       |    |VG|NASA|   0|    |
+------------------------------------------------------------------------------------------------------------------------------
+|EUVGOS-217    |EV9217|AUG05|217|10:00| 4 |OeOwWsYj                                 |BONN|BONN|       |    |VE|NASA|   0|    |
+|VGOS-T9217    |VT9217|AUG05|217|18:00|24 |GsK2OeOwWfWsYj                           |HAYS|HAYS|       |    |VG|NASA|   0|    |
+|EUVGOS-231    |EV9231|AUG19|231|10:00| 4 |OeOwWsYj                                 |BONN|BONN|       |    |VE|NASA|   0|    |
+|VGOS-T9231    |VT9231|AUG19|231|18:00|24 |GsK2OeOwWfWsYj                           |HAYS|HAYS|       |    |VG|NASA|   0|    |
+------------------------------------------------------------------------------------------------------------------------------
+|VGOS-T9248    |VT9248|SEP05|248|18:00|24 |GsK2OeOwWfWsYj                           |HAYS|HAYS|       |    |VG|NASA|   0|    |
+|EUVGOS-259    |EV9259|SEP16|259|10:00| 6 |OeOwWsYj                                 |BONN|BONN|       |    |VE|NASA|   0|    |
+|VGOS-T9259    |VT9259|SEP16|259|18:00|24 |GsK2OeOwWfWsYj                           |HAYS|HAYS|       |    |VG|NASA|   0|    |
+|VGOS-T9273    |VT9273|SEP30|273|18:00|24 |GsK2OeOwWfWs                             |HAYS|HAYS|       |    |VG|NASA|   0|    |
+------------------------------------------------------------------------------------------------------------------------------
+|EUVGOS-290    |EV9290|OCT17|290|10:00| 4 |OwWs                                     |BONN|BONN|       |    |VE|NASA|   0|    |
+|VGOS-T9290    |VT9290|OCT17|290|18:00|24 |GsK2OeOwWs                               |HAYS|HAYS|       |    |VG|NASA|   0|    |
+|VGOS-19290    |V19290|OCT17|290|18:30| 1 |K2Ws                                     |HAYS|HAYS|       |    |VI|NASA|   0|    |
+|EUVGOS-301    |EV9301|OCT28|301|10:00| 4 |OeOwWs                                   |BONN|BONN|       |    |VE|NASA|   0|    |
+|VGOS-T9301    |VT9301|OCT28|301|18:00|24 |GsK2OeOwWf                               |HAYS|HAYS|       |    |VG|NASA|   0|    |
+------------------------------------------------------------------------------------------------------------------------------
+|EUVGOS-318    |EV9318|NOV14|318|10:00| 4 |OeOwWsYj                                 |BONN|BONN|       |    |VE|NASA|   0|    |
+|VGOS-T9318    |VT9318|NOV14|318|18:00|24 |GsK2OeOwWf                               |HAYS|HAYS|       |    |VG|NASA|   0|    |
+|EUVGOS-329    |EV9329|NOV25|329|10:00| 4 |OeOwWsYj                                 |BONN|BONN|       |    |VE|NASA|   0|    |
+|VGOS-T9329    |VT9329|NOV25|329|18:00|24 |GsK2OeOwWfWsYj                           |HAYS|HAYS|       |    |VG|NASA|   0|    |
+------------------------------------------------------------------------------------------------------------------------------
+|EUVGOS-343    |EV9343|DEC09|343|10:00| 4 |IsOeOwWsYj                               |BONN|BONN|       |    |VE|NASA|   0|    |
+|VGOS-T9343    |VT9343|DEC09|343|18:00|24 |GsIsOeOwWfWs                             |HAYS|HAYS|       |    |VG|NASA|   0|    |
+|VGOS-B9344    |B19344|DEC10|344|18:30| 1 |IsOeOw                                   |VIEN|OSO |       |    |VB|OSO |   0|    |
+|VGOS-B9351    |B19351|DEC17|351|18:30| 1 |IsOeOw                                   |VIEN|OSO |       |    |VB|OSO |   0|    |
+|EUVGOS-357    |EV9357|DEC23|357|10:00| 6 |IsOeOwWsYj                               |BONN|BONN|       |    |VE|NASA|   0|    |
+|VGOS-B9357    |B19357|DEC23|357|18:30| 1 |IsOeOw                                   |VIEN|OSO |       |    |VB|OSO |   0|    |
+|VGOS-T9360    |VT9360|DEC26|360|18:00|24 |IsK2OeOwWfWsYj                           |HAYS|HAYS|       |    |VG|NASA|   0|    |
+|VGOS-B9364    |B19364|DEC30|364|18:30| 1 |IsOeOw                                   |VIEN|OSO |       |    |VB|OSO |   0|    |
+------------------------------------------------------------------------------------------------------------------------------
+## Master file format version 1.0           2001.08.21 CCT&NRV

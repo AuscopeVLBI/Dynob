@@ -1,0 +1,239 @@
+       IVS Analysis Report for R11034 ($22JAN18XA)
+       This report is the official IVS analysis report that corresponds to
+       the database maintained by the IVS Data Centers for this session.
+   (Analyzed by Sergei Bolotin, NVI, Inc. / NASA Goddard Space Flight Center.
+    Spoolfile source: interactive solve/nuSolve analysis.)
+
+Problems: HART15M  Missed few scans due to power interruptions.
+          KOKEE    Intensive (18:23-19:33).
+          MATERA   Did not participte.
+          NYALES20 Did not participate.
+          NYALE13S Problem with compressor. Started at 10:17, just ~7hrs of observations total.
+          RAEGSMAR Cablecal is disconnected.
+          SEJONG   First ~10hrs of the session are ok, the rest is much noiser. Problems with 
+                   phase calibrations.
+
+Parameterization comments: A clock break was added to KOKEE, two clock breaks were added to 
+                           YARRA12M and two clock breaks to SEJONG.
+
+Other comments: This is a second submission with applied manual phase cals to
+                SEJONG. Manual phase cals makes usable observtions at the station
+                performed after 03:27, but they are much noiser.
+
+-----------------------------------------
+
+Session statistics
+
+  Observations:     8505 scheduled
+                    4366 correlated (in database)
+                    3837 recoverable (usable)
+                    3569 used
+  Session fit:        41.948 ps
+
+-----------------------------------------
+
+Station Performance
+
+                           Number of Observations
+
+                    Scheduled   Recoverable*        Used   % of scheduled
+                                                              obs used
+
+  AGGO                    739           372          362        49.0%
+  HART15M                1185           662          638        53.8%
+  ISHIOKA                1852          1197         1120        60.5%
+  KOKEE                  1545           982          937        60.6%
+  MATERA                 1772        MISSED       MISSED         0.0%
+  NYALE13S               1189           196          194        16.3%
+  NYALES20               2048        MISSED       MISSED         0.0%
+  RAEGSMAR               1743           948          902        51.7%
+  SEJONG                 1066           723          549        51.5%
+  WARK12M                 907           762          716        78.9%
+  WETTZELL               1942          1022          972        50.1%
+  YARRA12M               1022           810          748        73.2%
+  ---------------   ---------   -----------    ---------       ------
+  Station Total**        8505          3837         3569        42.0%
+
+  * Recoverable: can be included in the solution.
+  ** Total includes distinct observations only.
+
+  MISSED:    Station was scheduled, but it did not observe.
+  NOT CORR:  Station was scheduled but not correlated.
+  NOT USED:  Usable data was generated for this station,
+             but the analyst rejected it all.
+
+-----------------------------------------
+
+Source Performance
+
+                    Number of Observations
+
+                Scheduled  Correlated*    Used      % of scheduled
+                                                       obs used
+
+  1610-771             37          37       28           75.7%
+  2036-034            103          60        0            0.0%
+  0829+089             49          21        1            2.0%
+  1016-311             11           9        8           72.7%
+  2232-488             14          14        9           64.3%
+  1448+762            121          50       49           40.5%
+  0110+495             98          34       33           33.7%
+  1330+022             36          15       12           33.3%
+  0216+011             48          25       17           35.4%
+  0235+164            471         246      195           41.4%
+  1606-398              3           3        2           66.7%
+  2329-384              6           6        6          100.0%
+  0048-097             14          10        8           57.1%
+  0104-408             30          30       21           70.0%
+  CTA26                10           5        5           50.0%
+  0458-020            335         229      190           56.7%
+  0552+398            348         132      121           34.8%
+  0805+410            160          60       52           32.5%
+  1057-797            129         129      122           94.6%
+  1124-186             95          92       74           77.9%
+  1128+385            340         134      129           37.9%
+  1144-379            131         120       81           61.8%
+  1417+385             61          19       16           26.2%
+  1451-375             59          53       47           79.7%
+  NRAO512              67          21       20           29.9%
+  1749+096            366         216      195           53.3%
+  1921-293             52          39       34           65.4%
+  2052-474             62          62       42           67.7%
+  2113+293             90          20       19           21.1%
+  2255-282             42          39       31           73.8%
+  2318+049             88          41       34           38.6%
+  0515+208             38          14       14           36.8%
+  0613+570            453         144      138           30.5%
+  0648-165            295         242      197           66.8%
+  0800+618             38          12       12           31.6%
+  1244-255             37          27       26           70.3%
+  1324+224            105          47       45           42.9%
+  1639+230            104          36       21           20.2%
+  1846+322             68          30       27           39.7%
+  2000+472            384         130       99           25.8%
+  2229+695            626         196      184           29.4%
+  2355-106             10           9        7           70.0%
+  0307+380             16           2        2           12.5%
+  1040+244             70          27       24           34.3%
+  1053+704            274         112      107           39.1%
+  1616+063             63          20       14           22.2%
+  1705+018             83          51       41           49.4%
+  2144+092             54          20       17           31.5%
+  2214+350             33          10        8           24.2%
+  0035-252             57          52       38           66.7%
+  0322+222             47          15       14           29.8%
+  0537-286            188         149      127           67.6%
+  0646-306             10          10        6           60.0%
+  0920-397             12           9        6           50.0%
+  1759-396             23          19       15           65.2%
+  2008-159            204         156       82           40.2%
+  2208-137              7           7        7          100.0%
+  0109+224             26           8        8           30.8%
+  0308-611             47          47       37           78.7%
+  0332-403             96          80       61           63.5%
+  1657-261             46          36       20           43.5%
+  1806+456            176          68       63           35.8%
+  0017+200             25           6        3           12.0%
+  0131-522             50          50       34           68.0%
+  0202+319            304         132      101           33.2%
+  NRAO150              62          11        7           11.3%
+  0736+017             82          58       52           63.4%
+  0827+243             63          22       21           33.3%
+  0834-201             35          30       11           31.4%
+  1219+044             22          12       11           50.0%
+  1243-072             37          26       25           67.6%
+  1538+149             32          11       11           34.4%
+  1751+288            627         252      225           35.9%
+  ------------  ---------  ----------   ------          ------
+  Source Total       8505        4366     3569           42.0%
+
+ * Correlated: included in database
+
+-----------------------------------------
+
+Baseline Performance
+
+                                 Number of Observations
+
+                         Scheduled   Recoverable*         Used   % of scheduled
+                                                                    obs used
+
+  AGGO-HART15M                 251           119           117        46.6%
+  AGGO-ISHIOKA                   0       NO DATA       NO DATA         0.0%
+  AGGO-KOKEE                    65            29            29        44.6%
+  AGGO-MATERA                   90        MISSED        MISSED         0.0%
+  AGGO-NYALE13S                  0       NO DATA       NO DATA         0.0%
+  AGGO-NYALES20                 42        MISSED        MISSED         0.0%
+  AGGO-RAEGSMAR                166           120           115        69.3%
+  AGGO-SEJONG                    0       NO DATA       NO DATA         0.0%
+  AGGO-WARK12M                  29            24            24        82.8%
+  AGGO-WETTZELL                 85            69            68        80.0%
+  AGGO-YARRA12M                 11            11             9        81.8%
+  HART15M-ISHIOKA               46            40            40        87.0%
+  HART15M-KOKEE                  0       NO DATA       NO DATA         0.0%
+  HART15M-MATERA               176        MISSED        MISSED         0.0%
+  HART15M-NYALE13S              41             5             5        12.2%
+  HART15M-NYALES20              99        MISSED        MISSED         0.0%
+  HART15M-RAEGSMAR             215           186           177        82.3%
+  HART15M-SEJONG                48            32            23        47.9%
+  HART15M-WARK12M               55            48            48        87.3%
+  HART15M-WETTZELL             169           152           150        88.8%
+  HART15M-YARRA12M              85            80            78        91.8%
+  ISHIOKA-KOKEE                329           310           301        91.5%
+  ISHIOKA-MATERA               160        MISSED        MISSED         0.0%
+  ISHIOKA-NYALE13S             164            40            40        24.4%
+  ISHIOKA-NYALES20             298        MISSED        MISSED         0.0%
+  ISHIOKA-RAEGSMAR             120           115           108        90.0%
+  ISHIOKA-SEJONG               255           238           181        71.0%
+  ISHIOKA-WARK12M              136           122           121        89.0%
+  ISHIOKA-WETTZELL             192           191           191        99.5%
+  ISHIOKA-YARRA12M             152           141           138        90.8%
+  KOKEE-MATERA                 113        MISSED        MISSED         0.0%
+  KOKEE-NYALE13S               141            40            40        28.4%
+  KOKEE-NYALES20               237        MISSED        MISSED         0.0%
+  KOKEE-RAEGSMAR               139           127           122        87.8%
+  KOKEE-SEJONG                 102            95            79        77.5%
+  KOKEE-WARK12M                178           152           147        82.6%
+  KOKEE-WETTZELL               145           144           138        95.2%
+  KOKEE-YARRA12M                96            85            81        84.4%
+  MATERA-NYALE13S              143        MISSED        MISSED         0.0%
+  MATERA-NYALES20              289        MISSED        MISSED         0.0%
+  MATERA-RAEGSMAR              328        MISSED        MISSED         0.0%
+  MATERA-SEJONG                 55        MISSED        MISSED         0.0%
+  MATERA-WARK12M                 0       NO DATA       NO DATA         0.0%
+  MATERA-WETTZELL              382        MISSED        MISSED         0.0%
+  MATERA-YARRA12M               36        MISSED        MISSED         0.0%
+  NYALE13S-NYALES20            274        MISSED        MISSED         0.0%
+  NYALE13S-RAEGSMAR            131            44            43        32.8%
+  NYALE13S-SEJONG               73            13            13        17.8%
+  NYALE13S-WARK12M              15             0    DESELECTED         0.0%
+  NYALE13S-WETTZELL            176            49            48        27.3%
+  NYALE13S-YARRA12M             31             5             5        16.1%
+  NYALES20-RAEGSMAR            266        MISSED        MISSED         0.0%
+  NYALES20-SEJONG              101        MISSED        MISSED         0.0%
+  NYALES20-WARK12M              36        MISSED        MISSED         0.0%
+  NYALES20-WETTZELL            352        MISSED        MISSED         0.0%
+  NYALES20-YARRA12M             54        MISSED        MISSED         0.0%
+  RAEGSMAR-SEJONG               31            26            26        83.9%
+  RAEGSMAR-WARK12M               0       NO DATA       NO DATA         0.0%
+  RAEGSMAR-WETTZELL            333           319           300        90.1%
+  RAEGSMAR-YARRA12M             14            11            11        78.6%
+  SEJONG-WARK12M               141           115            85        60.3%
+  SEJONG-WETTZELL               68            63            42        61.8%
+  SEJONG-YARRA12M              192           141           100        52.1%
+  WARK12M-WETTZELL               3             0    DESELECTED         0.0%
+  WARK12M-YARRA12M             314           301           291        92.7%
+  WETTZELL-YARRA12M             37            35            35        94.6%
+  -----------------      ---------   -----------    ----------       ------
+  Baseline Total              8505          3837          3569        42.0%
+
+  * Recoverable: can be included in the solution.
+
+  MISSED:     Baseline was scheduled, but at least one of the sites
+              did not observe.
+  NOT CORR:   Baseline was scheduled but not correlated.
+  NO DATA:    The baseline's stations were both correlated,
+              but they did not observe together.
+  DESELECTED: Usable data was generated for the baseline,
+              but the analyst rejected it.
+

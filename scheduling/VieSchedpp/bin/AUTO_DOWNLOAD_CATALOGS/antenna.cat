@@ -1,0 +1,375 @@
+* VERSION 2021-10-19_iGSFC 
+* CATALOG antenna.cat  
+* 
+* ANTENNA.CAT - antenna information 
+*  
+* Updates (most recent at the top): 
+* 2022-02-14 JMG Corrected Ishioka El slew rate to 360deg/m (was incorrectly 720 deg/m)
+* 2021-10-29 JMG Restored Ishioka el slew to 6 because motors fixed. 
+* 2021-08-18 JMG Restored YEBES cable wrap because it was fixed. See 2021-02-16 below
+* 2021-06-17 JMG Modified Ishioka El speed to 3 deg/sec per email from Haruka Ueshiba
+* 2021-05-21 JMG Changed OE/OW  limits to avoid slow regio per Email from Eskil
+* 2021-05-07 JMG Added pointer to SEJONG horizon mask
+* 2021-04-02 JMG Modified slew constants for Oe/Ow per email from Bill Petrachenko on April 1. 
+* 2021-03-01 JMG Added in DSS56 per email from JPL. 
+* 2021-02-19 JMG Changed GGAO12M az, el offsets and rates: (5 293) (3 70) based on testing done by Petrov
+* 2021-02-16 JMG Changed YEBES40M el limits to 15-89 per email j.gonzelez (2020-02-16). Also changed mask. This is temp fix while working on gearbox
+* 2021-01-15 JMG Changed cable wrp limits for DSS26 per email from JPL
+* 2020-12-29 JMG Changed limits in KOKEE12M per email Ed Himwhich  AZ 182.5-722.3, El 1.1-88.2 
+* 2020-11-13 JMG Changed equip code for  URUMQI
+* 2020-10-13 JMG Added in DSS26. Info from JPL email. 
+* 2020-08-03 JMG Added in NYALE13N. Based on 13S
+* 2020-07-14 JMG Changed YEBES40M limits per email from Javier Garcia 7/24/2020
+* 2020-07-06 JMG Changed MACGO12M slewing model based on email from M. Berbue. 
+* 2020-06-17 JMG Changed MACGO12M two letter codes to "Mg" from "MG". MG broke some sked routines
+* 2020-05-26 JMG Modified slewing models for Ws,Wn, K2, GA per 2020May12 email from Mario Berube
+* 2019-09-19  JMG  Added in MACGO12M per email from  2019Sep10 Alex Burns haystack
+* 2019-07-23  JMG  Modified slew times and constants for Wettzell per email from Christian Plotz (2019Jul23)            
+* 2019-06-25  JMG  Added in NYAEL13S
+* 2019-04-29  JMG  Changed AGGOs wrap limits per email from Hayao. 
+* 2018-04-27  JMG  Fixed entries for Onsala twins per email R.Hass 4/26/18. Hass originally gave wrong info
+* 2018-01-09  JMG  Changed WETTZELL lower limit to 5 degrees. 
+* 2018-01-09  JMG  Modified Kokee's slew parameters. These changed after repair 
+* 2017-12-04  JMG  Changed Dec limits of HARTRAO per email from JQuick: (-88,45)-->(-83,45) 
+* 2017-11-15  JMG  Changed az limits of Wettzell twins
+* 2017-09-25  JMG  Added pointer to mask information. 
+* 2017-09-19  JMG  Added in RAEGSMAR
+* 2017-09-12  JMG  Changed 1-letter code of Hobart12 to "L"
+* 2017-08-24  JMG  Added information for ONSALA twins per Email rudiger 2017Aug23
+* 2017-04-20  JMG  Modified slewing of several antennas per email Mario Berube 2017Apr20
+*                  FORTLEZA, HOBART, HART15M, KATH12M, KOKEE,MATERA, MEDICINA, NYALES20
+*                  ONSALA60, SEJONG,SESHAN25,TSUKUB32,URUMQI,YARA12M,YEBES40M
+* 2017-03-21  JMG  Added DSS34 and DSS36
+* 2016-10-12  JMG  Modified wettz13S, Wettz13N antenna size. 
+* 2016-10-08  JMG  Modifed IRBENE el limits per V. Bezrokovs
+* 2016-09-27  JMG  Added IRBENE in Latvia per 2016Sep27 V. Bezrukovs
+* 2016-08-17  JMG  Changed ISHIOKA Az limits per email from Ryoji Kawabata
+* 2016-07-20  JMG  Moved AGGO to the top of the list. Previously in location occupied by TIGO. 
+* 2016-06-22  KLB  Use same 2-letter codes than in the IVS file ns-codes.txt 
+* 2016-04-07  JMG  Modified Seshan limits per email from BO XIA 3/31/16
+* 2016-01-25  JMG  Added KOKEE12M as K2
+* 2015-11-12  DBB  Change lower el. limit from 6.0 to 7.0 for KASHIMA11 and 
+*                  KOGANEI per Eiji Kawai.
+* 2015-09-17  DBB  Change lower el. limit from 5.0 to 5.5 for VERAMZSW per T. Jike.
+* 2015-09-10  JMG  Changed HARTRAO mask key from "HT" to "Hh" 
+* 2015-02-25  JMG  Added RAEGYEB 
+* 2015-02-23  JMG  Added  ISHIOKA from jd1502 schedule
+* 2015-02-12  JMG  Put in WETTDBBC = Wettzell DBBC
+* 2014-01-22  JMG  Changed antenna parameters for WETTZ13N, 13S to
+* 2014-12-10  JMG  Several changes:  GGAO12M lower=6.25; Hart15M upper=88; 
+* 2014-12-10  JMG  GGAO12M AZ=5 deg/sec, el=1.1 per WEH
+* 2014-11-06  JMG  Added DSS54 per email from Garcia Miro 2014Nov06
+* 2014-07-01  JMG  Modified az-el limits twin.
+* 2014-06-03  JMG  Added twin telescope per email from arno Muesken
+* 2014-05-16  DBB  Add TIANMA65 per Fengchun Shu.
+* 2014-04-16  DBB  Change upper wrap limit in azimuth from 540 to 720 for Warkworth.
+* 2014-03-25  JMG  Added ONSALDBC = ONSALA60 with DBBC
+* 2014-01-30  JMG  Added 3 seconds to HART15Ms slew parameters
+* 2013-12-17  JMG  Added YEBESDBC= YEBES40M but with DBBC
+*                  Restored from 2013 version. the 2013Nov20 had wrong slew speeds for GGAO
+* 2013-12-13  JMG  Modified AZ-el limits for Warkworth per email from Stuart. 2013-Nov-21
+* 2013-10-10  JMG  Modified Warkworth entry to reflect antenna mask
+* 2013-07-16  DBB  Add TIGOPLTA as the future home of TIGO at La Plata, Argentina.
+* 2013-07-02  JMG  Fixed Yaragadees limits
+* 2013-05-01  JMG  Changed name of Goddard 12M from GORF7102 to GGAO12M
+* 2013-04-29  JMG  Added 5 seconds to both axis for Kokee due to repair
+* 2013-03-27  JMG  Added in Sejong
+* 2013-01-17  JMG  Added GGAO12M=GORF7102
+* 2012-11-05  JMG  Added Axis offset for HART15M using information from first solve solutions
+* 2012-09-25  DBB  Add 15-m antenna at Hartebeesthoek (HART15M).
+* 2012-08-16  JMG  For Badary, Svetloe, Zelenchuk, RATE1 72-->60, C1 60-->40, Rate2 48-->30, C2 60-->40. (email elena 8/16/12) 
+* 2012-02-15  JMG  Chaged limits of Effelsberg fom 30-480 to 34-490 per email Uwe Bach (11/21/2011)
+* 2012-01-18  DBB  Add JAXA station UCHINOUR.
+* 2011-08-18  DBB  Correct TIGO slew speeds per Hayo Hase.
+* 2011-08-15  DBB  Change TIGO Lim1 from (276 916) to (276 774) per Ed Himwich.
+* 2011-07-11  DBB  Add KUNMING per Fengchun Shu.
+* 2011-07-06  DBB  Change slewing constant for HOBART12, KATH12M, and YARRA12M to 3 sec per Ed Himwich.
+* 2011-05-24  JMG  Updated wrap limits for Hobart, Katherine, Yarragadee, Warkworth
+* 2010-08-12  DGG  Updated axis offsets from 2010a.axo file. Changed 'PARKES64' to 'PARKES'. 
+* 2010-08-11  DBB  Change HOBART26 azimuth and elevation slew speeds to 39 deg/min (from 40 deg/min)
+*                  per Brett Reid.
+* 2010-08-11  DBB  Change DSS15 elevation slew speed to 39 deg/min (from 45 deg/min) per George Martinez.
+* 2010-01-14  JMG  Change slew rates of DS15 to 48 deg/min and 45 deg/min per email George Martinez
+* 2009-12-04  JMG  Changed limits of DSS65A per 12/04/09 email from Esther Moll Moreno
+* 2009-09-28  DBB  Add VERA stations Mizusawa and Ishigakijima.
+* 2009-09-25  JMG  Updated GGAO (=ORION) limits
+* 2009-09-21  DBB  Add New Hobart, Katherine, Yarragadee, and Warkworth or simulation purposes.
+* 2009-07-13  JMG  Changed Badary so that pionts to horizon mask
+* 2009-06-11  DBB  Changed DSS45 CW limit to 628.9 (from 630.0) per Shinji Horiuchi.
+* 2009-06-11  DBB  Changed DSS43=TIDBIN64 CW limit to 759.8 (from 760.0) per Shinji Horiuchi.
+* 2009-05-13  DBB  Change DSS65A azimuth slew speed to 48 deg/min (from 15 deg/min) and
+*                  elevation slew speed to 48 deg/min (from 15 deg/min) per George Martinez.
+* 2009-02-09  DBB  Change DSS65A azimuth slew speed to 15 deg/min (from 24 deg/min) and
+*                  elevation slew speed to 15 deg/min (from 24 deg/min) per George Martinez.
+* 2008-10-31  JMG  Modified YEBES40M az limits to -60-420.  
+* 2008-10-22  JMG  Modified YEBES40M az limits to 0-360.  
+* 2008-06-17  DBB  Add YEBES40M per P. de Vicente and P. Colomer. Comment out old YEBES
+*                  to avoid confusion.
+* 2008-06-10  DBB  Change DSS65A azimuth slew speed to 24 deg/min (from 15 deg/min) and
+*                  elevation slew speed to 24 deg/min (from 48 deg/min) per George Martinez.
+* 2008-06-04  DBB  Add AIRA, CHICHI10, and SINTOTU3 (Japanese GARNET stations) based on
+*                  JD0805 schedule.
+* 2008-05-21  DBB  Change DSS15 azimuth slew rate to 48.0 per George Martinez.
+* 2008-04-11  JMG  Changed rate, constant for DSS13 to 10 and 48d/sec  and limits 271-719
+* 2007-08-28  DBB  Change slew time constants C1 and C2 from 30 to 36 sec for Hobart
+*                  per E. Himwich and J. Gipson.
+* 2007-06-20  DBB  Change Y-axis slew rate for Hobart back to 40 deg/min per O. Titov.
+* 2007-02-20  JMG  Added BADARY. Used same slew and limits as for ZELENCHUK
+* 2007-01-17  JMG  Modified Kok slew, off to 117, 9, and Nyal slew, off to 120, 9
+* 2006-09-11  DBB  Change NYALES20 first axis limit from 260 to 271 per Helge Digre.
+* 2006-05-24  DBB  Change ALGOPARK azimuth slew rate from 24.4 to 20.0 per Mario Berube.
+* 2006-05-10  DBB  Add ATCA, CEDUNA, and MOPRA per S. Pogrebenko and C. Phillips.
+* 2005-12-13  DBB  Change DSS15 azimuth slew rate to 24.0 per Pamela Wolken.
+* 2005-10-07  DBB  Change WETTZELL cable limits per R. Kilger.
+* 2005-10-07  DBB  Correct SESHAN25 slew rates per Wang Guangli.
+* 2005-09-21  DBB  Add new station DSS65A at Madrid per Axel Nothnagel
+* 2005-07-25  NRV  Change SVETLOE and ZELENCHK az limits per A. Melnikov and A. Mikhailov.
+* 2005-07-21  NRV  Change WETTZELL cable limits per R. Kilger.
+* 2005-03-21  NRV  Change NYALES20 axis offset to 0.508 (same as NRAO20, KOKEE).
+* 2005-03-03  NRV  Add constants to ALGOPARK slewing per M. Berube.
+* 2004-11-04  NRV  Correct ZELENCHK equipment to 118.
+* 2004-11-04  NRV  Correct SVETLOE equipment to 116.
+* 2004-06-29  NRV  Correct error in ARIES_9M upper el limit.
+* 2004-06-28  NRV  Change ARIES_9M (Yellowknife) limits and rates per M. Berube.
+* 2004-06-18  NRV  Change limits for SESHAN per X. Huang.
+* 2004-03-09  NRV  Change METSHOVI (old mobile) to METSAHOV (astronomy antenna).
+* 2004-02-24  NRV  Change METSHOVI size to 13.7 m.
+* 2003-11-17  NRV  Commented out KASHIMA 26m because the antenna is dismantled.
+* 2003-11-05  NRV  Reduce SVETLOE slewing range per A. Mikhailov, E. Skurhina
+* 2003-07-02  NRV  Update DSS43=TIDBIN64 slew rates and limits per A. Fey.
+* 2003-06-16  NRV  Reduce Algonquin el rate to 5 deg/min per M. Berube.
+* 2003-03-03  NRV  Modify Parkes info per J. Reynolds.
+* 2003-02-05  NRV  Change diameter of Sv and Zc to 32 m.
+* 2002-12-10  NRV  Algonquin has NRAO20 equipment=106.
+* 2002-04-17  NRV  Reduce MATERA slewing rate per P. Colucci.
+* 2002-04-08  NRV  Corrected 2-letter code for DSS13 from 15 to 13.
+* 2001-11-26  NRV  Reduce DSS65 az slew speed to 15 deg/min per George Martinez.
+* 2001-10-31  NRV  Add ZELENCHK per info from WEH.
+* 2001-10-24  NRV  Add SVETLOE per info in IVS AR1999.
+* 2001-10-02  NRV  Add GBT per F. Ghigho.
+* 2001-08-07  NRV  Add Metsahovi info from old .drg schedule.
+* 2001-05-29  NRV  Change TIGO position code to Tc (Concepcion).
+* 2001-05-08  NRV  Add Parkes with info from A. Fey.
+* 2001-01-19  NRV  Change DSS45 slew rate in elevation from 42 to 48 deg/min
+*                  per George Martinez. Other DSS antennas unchanged.
+* 2000-12-11  NRV  Change O'Higgins cable wrap to -90/270, one full wrap.
+* 2000-10-29  NRV  Fixed WSTRBORK HA limits to be +/-90.0.
+* 2000-10-16  NRV  Update TORUN, JODRELL2, WESTRBORK with info
+*                  from P. Charlot sending sched dat files. Didn't change
+*                  CAMBG32M info since it was already checked by P. Burgess.
+* 2000-10-03  NRV  Change Syowa antenna name from SYOWA10 to SYOWA.
+* 2000-07-03  NRV  Change Y-axis slew rate for Hobart during drive repairs.
+* 2000-05-18  NRV  Add DSS13 with info per C. Jacobs.
+* 2000-03-18  NRV  Change TSUKUB32 az limits per S. Kurihara.
+* 2000-03-16  NRV  Increase slewing constant to 14 sec for TSUKUB32 per S. Kurihara.
+* 2000-02-04  NRV  Change NYALES20 constant to 7 sec per NyAl team.
+* 2000-02-02  NRV  Change MATERA constant to 20 sec per P. Colucci.
+* 2000-01-31  NRV  Modify KASHIM34 lower elevation limit to 7.0 per Y. Koyama.
+* 2000-01-31  NRV  Add KASHIM11, KOGANEI, MIURA, TATEYAMA 11-m antennas per GSI.
+* 2000-01-25  NRV  Add CTVA (Canadian Trans. VLBI Antenna) per C. Klatt.
+* 2000-01-13  NRV  Add 10 sec constant for TSUKUB32 slewing.
+* 1999-11-09  NRV  Change TSUKUB32 az slew rate back to 180 following rail repair.
+* 1999-10-15  NRV  Reduce DSS65 AZ slewing rate to 30 per P. Wolken/A. Perea.
+* 1999-07-16  NRV  Change EFLSBERG az slew rate to 20 per A. Kraus & R. Porcas.
+* 1999-03-31  NRV  Change TSUKUB32 az slew rate to 60 during rail repair.
+* 1998-12-28  NRV  Add SYOWA10 with parameters from Shibuya&Fukuzaki.
+* 1998-11-13  NRV  Change Crimea az limits per A. Volvach.
+* 1998-08-07  NRV  Correct the TIGO diameter.
+* 1998-05-05  NRV  Add TAHITI for simulations, copied from NRAO20.
+* 1998-03-26  NRV  Add TSUKUB32 with parameters from Fukuzaki.
+* 1998-02-09  NRV  Add 2-sec constant to Ny Alesund model.
+* 1998-01-12  NRV  Correct the HartRAO slewing rates and constants per J. Quick.
+* 1997-12-16  NRV  Correct the Matera az limits and constants per P. Colucci.
+* 1997-12-05  NRV  Added TIGO, copied from EUROP6 schedule.
+* 1997-10-21  NRV  Change Algonquin to AZEL, revised limits, remove constants,
+*                  per M. Berube.
+* 1997-09-22  NRV  Change NRAO20 upper el limit per GB ops and M. Eubanks.
+* 1997-06-10  NRV  Return DSS65 to fast slewing rate, azimuth has been fixed.
+* 1997-03-25  NRV  Revised slew rates and constants for Westford per B. Corey.
+* 1997-03-24  NRV  New limits for MV3 per C. Kodak, after limit stop repair.
+* 1996-12-12  NRV  Add mask link for Effelsberg, correct limits/rates per A. Mueskens.
+* 1996-12-10  NRV  Change "PO" links for stations with new 2-letter codes.
+* 1996-11-26  NRV  Change az limits for Yebes per P. Vicente.
+* 1996-02-17  NRV  Change upper el limits for DSS15, 45, 65 to 88 deg from 90.
+* 1
+
+996-01-25  NRV  Add CAMBG32M antenna, info confirmed per P. Burgess.
+* 1995-10-03  NRV  Put in 10 sec constants for Yebes per P. Colomer.
+* 1995-07-03  NRV  Change Kashima az limits and change constant to 0 per Y. Fukuzaki.
+* 1995-05-03  NRV  Add MIAMI20 per M. Eubanks.
+* 1995-04-21  NRV  Update Ny Alesund az limits, per S. Rekkedal
+* 1995-04-14  NRV  Change Noto az slew from 48 to 43, add constants, per V. Tornatore.
+* 1995-04-13  NRV  Change az, el limits for Kashima-26 per Y. Fukuzaki.
+* 1995-02-17  NRV  Reduce DSS45 el slew rate from 48 to 42 per P. Wolken.
+* 1995-01-24  NRV  Reduce DSS65 slewing rates.
+* 1995-01-09  NRV  NRAO20 initial entry, same as Kokee.
+* 1994-12-20  NRV  Change Bonn az slewing back to 30 deg/min.
+* 1994-12-19  NRV  Initial Yebes data from P. Vicente
+* 1994-10-11  NRV  Change Ny Alesund name per C. Ma and M. Eubanks
+* 1994-10-11  NRV  Change lower az limit for Medicina per G. Maccaferri
+* 1994-08-29  NRV  Reduce Bonn az slewing to 15 deg/min er message from Bonn
+*                  and changed az cable limits per Kurt Standke
+* 1994-08-18  NRV  Change az limits for Fortaleza, per JDW
+* 1994-07-29  NRV  Change VLBA upper el limits to 88 degrees.
+* 1994-06-24  NRV  Change Crimea az limits by 2 degrees
+* 1994-05-23  NRV  Corrected Crimea el limits
+* 1994-05-19  NRV  Corrected Crimea slew rates and limits
+* 1994-04-13  NRV  Correct az cable limits for Crimea per Nesterov
+* 1994-04-07  NRV  Add MV3-LOW as a test (fake) antenna with 0 el limit
+* 1994-02-16  NRV  Urumqi is using a K4 terminal in spring 94.
+* 1993-11-23  NRV  Revised MV3 az and el limits
+* 1993-11-19  NRV  Add horizon mask pointers for VLBA sites
+* 1993-11-17  NRV  Lower el limits for MV3, set az limits for new trailer orientation.
+* 1993-11-08  NRV  Update terminal numbers to cross-ref correctly in equip.cat file.
+* 1993-10-28  NRV  Urumqi terminal is 67, formerly at Seshan. Seshan is "SH".
+* 1993-08-06  NRV  Add Mizusawa 10-m
+* 1993-08-06  NRV  Correct O'Higgins diameter to 9m
+* 1993-07-14  NRV  Fairbanks has MO, Yellowknife has 36
+*                  Lower limit for Fortaleza antenna is 5 degrees (software).
+* 1993-06-03  NRV  Axis offset for Kokee
+* 1993-04-28  NRV  Add McMurdo
+* 1993-02-24  NRV  Change NATAL to FORTLEZA
+* 1993-01-22  NRV  Change DSS slew rates to full 48 deg/min
+* 1992-10-27  NRV  Add Brazil
+* 1992-10-22  NRV  DSS15, 45, 65 slew rates increased, el limit lowered
+* Note: Assume that acceleration/deceleration is constant A, and Slew is V, both in seconds. Then
+*       offset is V/A.  Example: V=4deg/sec,  A=2deg/s^2,  Offset is 2. 
+*            
+*
+*ID Name    Axis  Offset   Rate1 C1  Lim1   Lim1   Rate2  C2  Lim2  Lim2  Diam  PO EQ  MS 
+*
+ O AGGO     AZEL   0.00000 360.0   0  -24.2  476.5  180.0   0   0.0  90.0   6.0 Ag 70  Ag
+ A AIRA     AZEL   0.00000 180.0   0   20.0  700.0  180.0   0   5.0  88.0  10.0 Ai Ai  --
+ G ALGOPARK AZEL   0.00000  20.0  10   41.0  453.0    5.0  30   8.8  86.8  47.0 Ap 106 --
+ A ARECIBO  AZEL   0.00000  23.5   0    0.0  540.0    1.8   0  70.0  89.6 300.0 Ar 03  --
+ Y ARIES_4M AZEL   0.00000  36.0   0    0.0  900.0   48.0   0  17.0  89.0   3.8 Tl 08  --
+ X ARIES_9M AZEL   0.00000  80.0   0    0.0 1440.0   45.0   0   7.7  83.9   9.0 Yk 36  --
+ A ATCA     AZEL   0.00000  40.0   0 -150.0  330.0   20.0   0  12.0  89.0  22.0 At At  --
+ B BADARY   AZEL   0.00250  60.0  40  278.0  802.0   30.0  40  12.0  80.0  32.0 Bd Bd  Bd
+ B BR-VLBA  AZEL   2.12950  90.0   0  270.0  810.0   30.0   0   2.3  88.0  25.0 Br BR  Br
+ U CEBRER26 HADC   0.00000  20.0   0  -85.0   85.0   20.0   0 -35.0  88.0  25.0 Ce --  --
+ C CEDUNA   AZEL   0.00240  40.0   0 -170.0  300.0   40.0   0   5.0  89.0  30.0 Cd Cd  --
+ C CHICHI10 AZEL   0.00000 180.0   0   20.0  700.0  180.0   0   5.0  88.0  10.0 Cc Cc  Cc
+ X CHLBOLTN AZEL   0.30600  60.0   0    0.0  360.0   60.0   0   5.0  88.0  25.0 Ch --  --
+ C CRIMEA   AZEL   0.00000  54.0  30  339.0  740.0   36.0  35   3.0  85.0  22.0 Sm 35  Sm
+ C CTVA     AZEL   0.00000 150.0   5  -20.0  380.0   60.0   5  10.0  90.0   3.6 Sb CT  --
+ D DSS13    AZEL   0.00000  48.0  10  271.0  719.0   48.0  10   7.0  89.0  34.0 13 13  --
+ D DSS15    AZEL   0.00000  48.0  20  270.0  720.0   39.0  20   6.2  88.0  34.0 15 15  --
+ T DSS26    AZEL   0.00000  48.0  20  270.0  720.0   48.0  20   6.2  88.0  34.0 26 26  --
+ T DSS34    AZEL   0.00000  48.0  20  180.0  628.9   48.0  20   6.2  88.0  34.0 34 34  --
+ T DSS36    AZEL   0.00000  48.0  20  180.0  628.9   48.0  20   6.2  88.0  34.0 36 36  --
+ T DSS45    AZEL   0.00000  48.0  20  180.0  628.9   48.0  20   6.2  88.0  34.0 45 45  --
+ T DSS56    AZEL   0.00000  48.0  20  270.0  720.0   48.0  20   6.2  88.0  34.0 56 56  --
+ M DSS65A   AZEL   0.00000  48.0  20  271.3  718.9   48.0  20   6.2  88.0  34.0 6a 69  6a
+ B EFLSBERG AZEL   0.00000  20.0  10   34.0  490.0   15.0  10   8.0  89.0 100.0 Eb 06  Eb
+ D FD-VLBA  AZEL   2.13100  90.0   0  270.0  810.0   30.0   0   2.3  88.0  25.0 Fd FV  Fd
+*F FORTLEZA AZEL   0.00000  40.0   0  171.0  709.0   20.0   0   5.0  88.0  14.2 Ft 01  --
+ F FORTLEZA AZEL   0.00000  48.0   7  171.0  709.0   20.0  10   5.0  88.0  14.2 Ft 01  --
+ G GGAO12M  AZEL   0.00000 293.0   5  180.0  720.0   70.0   3   6.5  88.0  12.0 Gs Gs  Gs
+ A GILCREEK XYNS   7.28470  60.0   0  -86.0   86.0   60.0   0 -73.5  73.5  25.9 Gc 101 Gc
+ D GOLDMARS AZEL   0.00000  12.0   0  136.0  672.0   12.0   0   6.0  88.0  64.0 14 68  --
+ Q GOLDVENU AZEL   0.92520 120.0   0  270.0  810.0  120.0   0   6.0  88.0  26.0 Gv 16  --
+ J HARTRAO  HADC   6.69220  24.0  45  -88.0   88.0   22.2  45 -83.0  45.0  26.0 Hh 34  Hh
+*J HART15M  AZEL   1.47000 120.0   3 -185.0  275.0   60.0   3   2.0  88.0  15.0 Ht Ht  Ht
+ J HART15M  AZEL   1.47000 124.0   8 -185.0  275.0   60.0   8   2.0  88.0  15.0 Ht Ht  Ht
+ H HATCREEK HADC   0.00000  13.0  40  -80.9   80.9   12.0  40 -38.0  85.0  26.0 Hc 03  Hc
+ K HAYSTACK AZEL   0.00000 120.0   0    0.0  360.0  120.0   0   3.0  88.0  37.0 Hs 00  --
+ H HN-VLBA  AZEL   2.13030  90.0   0  270.0  810.0   30.0   0   2.3  88.0  25.0 Hn HN  Hn
+* H HOBART12 AZEL   0.00000 300.0   3   90.0  630.0   75.0   3   5.0  88.0  12.0 Hb Hb  Hb
+ L HOBART12 AZEL   0.00000 300.0   9   90.0  630.0   75.0   9   5.0  88.0  12.0 Hb Hb  Hb
+ H HOBART26 XYEW   8.19430  39.0  36  -82.0   82.0   39.0  36 -74.0  74.0  26.0 Ho 04  --
+ I IRBENE   AZEL   0.0     168.0   3  -326.  326.0  126.0   3   3.0  89.0  32.0 Ir Ir  --
+ I ISHIOKA  AZEL   0.00000 720.0  10  -70.0  430.0  360.0  10   5.0  89.0  13.2 Is Is  Is
+ I ITAPETGA AZEL   0.00000  60.0   0  270.0  810.0   60.0   0   5.0  88.0  14.0 It --  --
+ J JODRELL2 AZEL   0.45800  20.0   0  270.0  690.0   20.0   0   1.0  89.0  76.0 Jb 37  --
+ O KASHIM34 AZEL   0.00000  45.0   0   90.0  630.0   40.0   0   7.0  88.0  34.0 Kb KB  --
+ R KASHIM11 AZEL   0.00000 180.0   0   95.0  625.0  180.0   0   7.0  88.0  11.0 K1 K1  --
+*K KATH12M  AZEL   0.00000 300.0   3   90.0  630.0   75.0   3   5.0  88.0  12.0 Ke Ke  --
+ K KATH12M  AZEL   0.00000 300.0   9   90.0  630.0   75.0   8   5.0  88.0  12.0 Ke Ke  -- 
+ K KAUAI    XYNS   2.43440  60.0   0  -87.6   86.6   60.0   0 -80.8  81.0   9.0 Ku 35  Ku
+*K KOKEE    AZEL   0.51810 117.0  15  270.0  810.0  117.0  15   0.0  89.7  20.0 Kk 102 Kk
+ K KOKEE    AZEL   0.51810 112.0  12  270.0  810.0  136.0  12   0.0  89.7  20.0 Kk 102 Kk
+ C KOKEE12M AZEL   0.00000 720.0  10  182.5  722.3  360.0   6   1.1  88.2  12.0 K2 K2  K2
+ K KITTPEAK AZEL   0.00000  14.0   0  270.0  690.0   14.0   0  12.0  88.0  12.0 Kt --  --
+ K KUNMING  AZEL   0.00000  60.0   0  280.0  800.0   30.0   0   6.0  86.0  40.0 Km 103 --
+ K KP-VLBA  AZEL   2.13130  90.0   0  270.0  810.0   30.0   0   2.3  88.0  25.0 Kp KV  Kp
+ G KOGANEI  AZEL   0.00000 180.0   0   95.0  625.0  180.0   0   7.0  88.0  11.0 Kg Kg  --
+ W KWAJAL26 AZEL   0.00000 750.0   0    0.0  360.0  750.0   0   0.0  90.0  25.6 Kw --  --
+ L LA-VLBA  AZEL   2.13180  90.0   0  270.0  810.0   30.0   0   2.3  88.0  25.0 La LA  La
+ M MADRID64 AZEL   0.00000  12.0   0  230.0  760.0   12.0   0   6.0  88.0  64.0 Ro 69  --
+ U MARCUS   AZEL   0.00000 660.0   0    0.0  720.0  300.0   0   0.0  90.0  10.0 Mr 161 --
+ N MARPOINT HADC   6.68770  25.0   0  -82.5   82.5   25.0   0 -40.0  88.0  25.9 Md 09  -- 
+*I MATERA   AZEL   0.00000  90.0  20  277.0  803.0  100.0  20   4.0  88.0  20.0 Ma 119 --
+ I MATERA   AZEL   0.00000 105.0  33  277.0  803.0  139.0  33   4.0  88.0  20.0 Ma 119 --
+ M MACGO12M AZEL   0.00000 720.0  11  180.0  720.0  360.0   9   6.5  88.0  12.0 Mg Mg   Mg
+*B MEDICINA AZEL   1.82760  48.0   0  270.0  810.0   30.0   0   5.0  88.5  32.0 Mc 38  Mc
+ B MEDICINA AZEL   1.82760  48.0  10  270.0  810.0   30.0  10   5.0  88.5  32.0 Mc 38  Mc 
+ Z METSAHOV AZEL   0.00000  60.0   0  -90.0  450.0   60.0   0   5.0  89.0  13.7 Mh MH  --
+ M MIAMI20  AZEL   0.00000 120.0   0  270.0  810.0  120.0   0   0.0  88.8  20.0 Mi 08  --
+ B MIURA    AZEL   0.00000 180.0   0   95.0  625.0  180.0   0   6.0  88.0  11.0 Mu Mu  --
+ G MIZUSGSI AZEL   0.00000  60.0   0   60.0  720.0   45.0   0   0.0  88.0   5.0 Mz MZ  Mz
+ M MIZNAO10 AZEL   0.00000 180.0   0  183.0  717.0  180.0   0   3.0  88.0  10.0 Mn 250 --
+ M MK-VLBA  AZEL   2.13480  90.0   0  270.0  810.0   30.0   0   2.3  88.0  25.0 Mk MK  Mk
+ M MOJAVE12 XYNS   0.00000  60.0   0  -90.0   90.0   60.0   0 -90.0  90.0  12.0 Mo 01  Mo
+ M MOPRA    AZEL   0.00000  38.0   0 -150.0  330.0   19.0   0  12.0  89.0  30.0 Mp Mp  --
+ N NL-VLBA  AZEL   2.13050  90.0   0  270.0  810.0   30.0   0   2.3  88.0  25.0 Nl NL  Nl
+ X NOBEYA45 AZEL   0.00000  20.0   0  120.0  690.0   20.0   0   7.0  88.0  45.0 No 32  --
+ S NOTO     AZEL   1.83150  43.0   4  290.0  810.0   30.0   2   5.0  88.5  32.0 Nt NO  Nt
+ W NRAO85_3 HADC   6.70720  30.0   0  -82.5   82.5   20.0   0 -45.0  88.0  25.9 G3 103 G3
+ G NRAO_140 HADC  14.93940  18.0   0 -105.0  105.0   18.0   0 -40.0  88.0  43.0 Gb 100 --
+ G GBT_VLBA AZEL  -0.08810  10.0   0  270.0  810.0    5.0   0   5.0  89.0 100.0 Gt 100 --
+ N NRAO20   AZEL   0.50900 120.0   2  270.0  810.0  120.0   2   0.0  89.0  20.0 Gn 106 Gn
+*N NYALES20 AZEL   0.51980 120.0   9  271.0  809.0  120.0   9   0.0  89.7  20.0 Ny 66  Ny
+ N NYALES20 AZEL   0.51980 130.0  10  271.0  809.0  135.0   9   0.0  89.7  20.0 Ny 66  Ny 
+ 1 NYALE13S AZEL   0.00000 720.0   0  -90.0  450.0  360.0   0   5.0  90.0  13.2 Ns Ns  Ns
+ 2 NYALE13N AZEL   0.00000 720.0   0  -90.0  450.0  360.0   0   5.0  90.0  13.2 Nn Nn  Nn
+ P OHIGGINS AZEL   0.00000  90.0   0  270.0  630.0   90.0   0   0.0  88.0   9.0 Oh 100 --
+*T ONSALA60 AZEL   0.00000 144.0  20  340.0  740.0   60.0  10   5.0  85.0  20.0 On 02  --
+ T ONSALA60 AZEL   0.00000 183.0  20  340.0  740.0   60.0  18   5.0  85.0  20.0 On 02  --
+ 1 ONSA13NE AZEL   0.00000 720.0   5  -65.0  425.0  360.0   4   5.0  90.0  13.2 Oe Oe   Oe
+ 2 ONSA13SW AZEL   0.00000 720.0   5  -65.0  425.0  360.0 4.5   5.0  90.0  13.2 Ow Ow   Ow
+ S ONSALA85 HADC   2.15000  18.0   0 -180.0  180.0   20.0   0 -40.0  88.0  25.0 O8 02  --
+ Z ORION_5M AZEL   0.00000 180.0   0  195.0  875.0  180.0   0   6.2  89.0   5.0 Gg 10  --
+ O OV-VLBA  AZEL   2.13970  90.0   0  270.0  810.0   30.0   0   2.3  88.0  25.0 Ov OV  Ov
+ O OVRO_130 AZEL   0.00000  14.0   0  270.0  690.0   14.0   0  14.0  88.0  40.0 Oo 08  --
+ P PARKES   AZEL   0.00000  24.0   5  207.0  654.4   11.0   5  30.5  88.8  64.0 Pa 09  --
+ U PENTCTON AZEL   0.00000  12.0   0  230.0  760.0   12.0   0   6.0  88.0  25.0 Pe --  --
+ P PIETOWN  AZEL   2.13710  90.0   0  270.0  810.0   30.0   0   2.3  88.0  25.0 Pt PT  Pt
+ U QUABBIN  AZEL   0.00000  60.0   0  270.0  810.0   60.0   0   5.0  88.0  18.0 Qb --  --
+ R RAEGSMAR AZEL   0.00000 720.0   3  300.0  780.0  360.0   3   5.0  89.0  13.2 Sa Sa  --
+ R RAEGYEB  AZEL   0.00000 720.0   3  300.0  780.0  360.0   3   5.0  89.0  13.2 Yj Yj  --
+ R ROBLED32 HADC   6.70600  20.0   0 -100.0  100.0   20.0   0 -35.0  86.0  32.0 61 --  --
+ S SANTIA12 XYNS   0.00000  60.0   0  -82.5   82.8   60.0   0 -81.5  81.9  12.0 St 70  St
+ C SC-VLBA  AZEL   2.13370  90.0   0  270.0  810.0   30.0   0   2.3  88.0  25.0 Sc SC  Sc
+ J SINTOTU3 AZEL   0.00000  60.0   0   20.0  700.0   60.0   0   5.0  88.0   3.8 S3 S3  S3
+*S SEJONG   AZEL   0.00000 300.0   0   10.0  710.0  300.0   0   5.0  89.0  22.0 Kv Kv  --
+ S SEJONG   AZEL   0.00000 300.0  25   10.0  710.0  210.0  30   5.0  89.0  22.0 Kv Kv  Kv
+*C SESHAN25 AZEL   0.00000  60.0   0  290.0  780.0   30.0   0   5.0  87.0  25.0 Sh 104 --
+ C SESHAN25 AZEL   0.00000  56.0   9  290.0  780.0   30.0   9   5.0  87.0  25.0 Sh 104 --
+ L SEST     SEST   0.00000  55.0   0  290.0  790.0   40.0   0   6.0  88.0  15.0 Se 70  Se
+ S SYOWA    AZEL   0.00000 360.0   0   90.0  630.0  360.0   0   0.0  90.0  10.0 Sy SY  --
+ S SVETLOE  AZEL   0.00000  60.0  40  278.0  802.0   30.0  40  10.0  80.0  32.0 Sv 116 --
+ Y TATEYAMA AZEL   0.00000 180.0   0   95.0  625.0  180.0   0   6.0  88.0  11.0 Ta Ty  --
+ T TIANMA65 AZEL   0.00000  30.0   0  280.0  800.0   15.0   0   6.0  87.0  65.0 T6 109 --
+ T TIDBIN64 AZEL   0.00000  15.0  12  230.0  759.8   15.0  12   6.0  86.0  64.0 Ti 39  --
+ O TIGO     AZEL   0.00000 360.0   0  276.0  774.0  180.0   0   0.0  90.0   6.0 Tc 70  Tc
+ Z TORUN    AZEL   0.00000  22.0  15  280.0  800.0   12.5  15   3.0  88.0  14.0 Tr Tr  --
+*T TSUKUB32 AZEL   0.00000 180.0  14   10.0  710.0  180.0  14   5.0  88.0  32.0 Ts TS  --
+ T TSUKUB32 AZEL   0.00000 194.0  14   10.0  710.0  190.0  16   5.0  88.0  32.0 Ts TS  --
+ V UCHINOUR AZEL   0.00000 300.0   0  275.0  805.0  150.0   0   5.0  88.0  34.0 Uc Uc  Uc
+*U URUMQI   AZEL   0.00000  60.0   0  280.0  800.0   30.0   0   5.0  88.0  25.0 Ur K4  --
+ U URUMQI   AZEL   0.00000  60.0   9  280.0  800.0   32.0   9   5.0  88.0  25.0 Ur 67  --
+ U USSURISK AZEL   4.00000  30.0 900  270.0  810.0   15.0 900   5.0  88.0  70.0 Us US  --
+ S VERAISGK AZEL   0.00000 120.0   0  270.0  810.0  120.0   0   5.0  85.0  20.0 Vs Vs  Vs
+ M VERAMZSW AZEL   0.00000 120.0   0  270.0  810.0  120.0   0   5.5  85.0  20.0 Vm Vm  Vm
+ Y VLA      AZEL   0.00000  40.0   0  275.0  805.0   20.0   0  10.0  88.0  26.0 Y1 101 --
+ W WARK12M  AZEL   0.00000 300.0   2  180.0  720.0   60.0   2   8.0  88.0  12.0 Ww Ww  Ww
+ E WESTFORD AZEL   0.31830 200.0  10  100.0  460.0  120.0  10   4.0  87.2  18.0 Wf 07  Wf
+ W WSTRBORK HADC   0.00000  15.0  10  -90.0   90.0   15.0  10 -38.0  90.0  25.9 Wb 11  --
+ N WETTZ13N AZEL   0.00000 720.0  10  -90.0  450.0  360.0   6   5.0  90.0  13.2 Wn Wn  Wn
+ S WETTZ13S AZEL   0.00000 720.0  10  -90.0  450.0  360.0   6   5.0  90.0  13.2 Ws Ws  Ws
+ V WETTZELL AZEL   0.00000 240.0   2  251.5  831.0   90.0   1   5.0  89.0  20.0 Wz 33  Wz
+*Y YARRA12M AZEL   0.00000 300.0   3   90.0  630.0   75.0   3   5.0  88.0  12.0 Yg Yg  --
+ Y YARRA12M AZEL   0.00000 300.0   9   90.0  630.0   75.0   9   5.0  88.0  12.0 Yg Yg  --
+ Y YEBES40M AZEL   2.00980 120.0  16  -60.0  420.0   60.0  16  15.0  89.0  40.0 Ys 105 -- 
+ Z ZELENCHK AZEL   0.00000  60.0  40  278.0  802.0   30.0  40  12.0  80.0  32.0 Zc 118 --

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings>
+	<station>
+		<parameters>
+			<parameter name="default">
+				<weight>1</weight>
+				<minScan>30</minScan>
+				<maxScan>600</maxScan>
+				<maxSlewtime>600</maxSlewtime>
+				<maxSlewDistance>175</maxSlewDistance>
+				<minSlewDistance>0</minSlewDistance>
+				<maxWait>600</maxWait>
+				<minElevation>5</minElevation>
+				<maxNumberOfScans>9999</maxNumberOfScans>
+			</parameter>
+		</parameters>
+		<waitTimes>
+			<setup>0</setup>
+			<source>5</source>
+			<tape>1</tape>
+			<calibration>10</calibration>
+			<corsynch>3</corsynch>
+		</waitTimes>
+		<cableWrapBuffers>
+			<axis1LowOffset>5</axis1LowOffset>
+			<axis1UpOffset>5</axis1UpOffset>
+			<axis2LowOffset>0</axis2LowOffset>
+			<axis2UpOffset>0</axis2UpOffset>
+		</cableWrapBuffers>
+	</station>
+	<source>
+		<parameters>
+			<parameter name="default">
+				<weight>1</weight>
+				<minElevation>0</minElevation>
+				<minSunDistance>4</minSunDistance>
+				<minScan>0</minScan>
+				<maxScan>9999</maxScan>
+				<minNumberOfStations>2</minNumberOfStations>
+				<minRepeat>1800</minRepeat>
+				<minFlux>0.05</minFlux>
+				<maxNumberOfScans>999</maxNumberOfScans>
+			</parameter>
+		</parameters>
+	</source>
+	<baseline>
+		<parameters>
+			<parameter name="default">
+				<minScan>0</minScan>
+				<maxScan>9999</maxScan>
+				<weight>1</weight>
+			</parameter>
+		</parameters>
+	</baseline>
+	<output>
+		<directory>../out/</directory>
+		<NGS_directory>../out/</NGS_directory>
+	</output>
+	<general>
+		<pathToScheduler>./VieSchedpp</pathToScheduler>
+	</general>
+</settings>

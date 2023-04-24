@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings>
+	<station>
+		<parameters>
+			<parameter name="default">
+				<weight>1</weight>
+				<minScan>30</minScan>
+				<maxScan>600</maxScan>
+				<minSlewtime>0</minSlewtime>
+				<maxSlewtime>600</maxSlewtime>
+				<maxSlewDistance>175</maxSlewDistance>
+				<minSlewDistance>0</minSlewDistance>
+				<maxWait>600</maxWait>
+				<minElevation>5</minElevation>
+				<maxNumberOfScans>9999</maxNumberOfScans>
+			</parameter>
+		</parameters>
+		<waitTimes>
+			<setup>0</setup>
+			<source>5</source>
+			<tape>1</tape>
+			<calibration>10</calibration>
+			<corsynch>3</corsynch>
+		</waitTimes>
+		<cableWrapBuffers>
+			<axis1LowOffset>5</axis1LowOffset>
+			<axis1UpOffset>5</axis1UpOffset>
+			<axis2LowOffset>0</axis2LowOffset>
+			<axis2UpOffset>0</axis2UpOffset>
+		</cableWrapBuffers>
+	</station>
+	<source>
+		<parameters>
+			<parameter name="default">
+				<weight>1</weight>
+				<minElevation>0</minElevation>
+				<minSunDistance>4</minSunDistance>
+				<minScan>0</minScan>
+				<maxScan>9999</maxScan>
+				<minNumberOfStations>3</minNumberOfStations>
+				<minRepeat>1800</minRepeat>
+				<minFlux>0.05</minFlux>
+				<maxNumberOfScans>999</maxNumberOfScans>
+			</parameter>
+		</parameters>
+	</source>
+	<baseline>
+		<parameters>
+			<parameter name="default">
+				<minScan>0</minScan>
+				<maxScan>9999</maxScan>
+				<weight>1</weight>
+			</parameter>
+		</parameters>
+	</baseline>
+	<output>
+		<directory>../out/</directory>
+		<NGS_directory>../out/</NGS_directory>
+	</output>
+	<modes>
+		<mode name="VGOS_16_Gbps">
+			<bits>2</bits>
+			<sampleRate>1024</sampleRate>
+			<band name="A">
+				<frequency>3.2564000000000002</frequency>
+				<channels>1</channels>
+			</band>
+			<band name="B">
+				<frequency>5.4964000000000004</frequency>
+				<channels>1</channels>
+			</band>
+			<band name="C">
+				<frequency>6.6163999999999996</frequency>
+				<channels>1</channels>
+			</band>
+			<band name="D">
+				<frequency>10.4564</frequency>
+				<channels>1</channels>
+			</band>
+		</mode>
+		<mode name="VGOS_32_Gbps">
+			<bits>2</bits>
+			<sampleRate>2048</sampleRate>
+			<band name="A">
+				<frequency>3.2564000000000002</frequency>
+				<channels>1</channels>
+			</band>
+			<band name="B">
+				<frequency>5.4964000000000004</frequency>
+				<channels>1</channels>
+			</band>
+			<band name="C">
+				<frequency>6.6163999999999996</frequency>
+				<channels>1</channels>
+			</band>
+			<band name="D">
+				<frequency>10.4564</frequency>
+				<channels>1</channels>
+			</band>
+		</mode>
+		<mode name="SX_1_Gbps">
+			<bits>2</bits>
+			<sampleRate>32</sampleRate>
+			<band name="S">
+				<frequency>2.3999999999999999</frequency>
+				<channels>6</channels>
+			</band>
+			<band name="X">
+				<frequency>8.5</frequency>
+				<channels>10</channels>
+			</band>
+		</mode>
+		<mode name="SX_512_Mbps">
+			<bits>2</bits>
+			<sampleRate>16</sampleRate>
+			<band name="S">
+				<frequency>2.3999999999999999</frequency>
+				<channels>6</channels>
+			</band>
+			<band name="X">
+				<frequency>8.5</frequency>
+				<channels>10</channels>
+			</band>
+		</mode>
+		<mode name="SX_256_Mbps">
+			<bits>2</bits>
+			<sampleRate>8</sampleRate>
+			<band name="S">
+				<frequency>2.3999999999999999</frequency>
+				<channels>6</channels>
+			</band>
+			<band name="X">
+				<frequency>8.5</frequency>
+				<channels>10</channels>
+			</band>
+		</mode>
+		<mode name="SX_128_Mbps">
+			<bits>1</bits>
+			<sampleRate>8</sampleRate>
+			<band name="S">
+				<frequency>2.3999999999999999</frequency>
+				<channels>6</channels>
+			</band>
+			<band name="X">
+				<frequency>8.5</frequency>
+				<channels>10</channels>
+			</band>
+		</mode>
+	</modes>
+	<simulator_templates>
+		<24_hour_SX>
+			<simulator>
+				<number_of_simulations>1000</number_of_simulations>
+				<station name="__all__">
+					<wn>17.68</wn>
+					<clockASD>1</clockASD>
+					<clockDur>50</clockDur>
+					<tropo_Cn>1.8</tropo_Cn>
+					<tropo_H>2000</tropo_H>
+					<tropo_dH>200</tropo_dH>
+					<tropo_dHseg>2</tropo_dHseg>
+					<tropo_ve>8</tropo_ve>
+					<tropo_vn>0</tropo_vn>
+					<tropo_wzd0>150</tropo_wzd0>
+				</station>
+			</simulator>
+			<solver>
+				<EOP>
+					<XPO>
+						<interval>24</interval>
+						<constraint>0.0001</constraint>
+					</XPO>
+					<YPO>
+						<interval>24</interval>
+						<constraint>0.0001</constraint>
+					</YPO>
+					<dUT1>
+						<interval>24</interval>
+						<constraint>0.0001</constraint>
+					</dUT1>
+					<NUTX>
+						<interval>24</interval>
+						<constraint>0.0001</constraint>
+					</NUTX>
+					<NUTY>
+						<interval>24</interval>
+						<constraint>0.0001</constraint>
+					</NUTY>
+				</EOP>
+				<station name="__all__">
+					<coordinates>true</coordinates>
+					<datum>true</datum>
+					<linear_clock>true</linear_clock>
+					<quadratic_clock>true</quadratic_clock>
+					<PWL_clock>
+						<interval>60</interval>
+						<constraint>1.3</constraint>
+					</PWL_clock>
+					<PWL_ZWD>
+						<interval>30</interval>
+						<constraint>1.5</constraint>
+					</PWL_ZWD>
+					<PWL_NGR>
+						<interval>180</interval>
+						<constraint>0.050000000000000003</constraint>
+					</PWL_NGR>
+					<PWL_EGR>
+						<interval>180</interval>
+						<constraint>0.050000000000000003</constraint>
+					</PWL_EGR>
+				</station>
+				<source>
+					<minScans>3</minScans>
+					<minObs>5</minObs>
+					<minObs_datum>25</minObs_datum>
+					<estimate>__none__</estimate>
+					<datum>__all__</datum>
+				</source>
+			</solver>
+			<priorities>
+				<fraction>70</fraction>
+				<percentile>0.75</percentile>
+				<variable name="#obs">1</variable>
+				<variable name="XPO">0.20000000000000001</variable>
+				<variable name="YPO">0.20000000000000001</variable>
+				<variable name="dUT1">0.20000000000000001</variable>
+				<variable name="NUTX">0.20000000000000001</variable>
+				<variable name="NUTY">0.20000000000000001</variable>
+				<variable name="scale">0</variable>
+			</priorities>
+		</24_hour_SX>
+		<1h_intensive_SX>
+			<simulator>
+				<number_of_simulations>1000</number_of_simulations>
+				<station name="__all__">
+					<wn>17.68</wn>
+					<clockASD>1</clockASD>
+					<clockDur>50</clockDur>
+					<tropo_Cn>1.8</tropo_Cn>
+					<tropo_H>2000</tropo_H>
+					<tropo_dH>200</tropo_dH>
+					<tropo_dHseg>2</tropo_dHseg>
+					<tropo_ve>8</tropo_ve>
+					<tropo_vn>0</tropo_vn>
+					<tropo_wzd0>150</tropo_wzd0>
+				</station>
+			</simulator>
+			<solver>
+				<EOP>
+					<dUT1>
+						<interval>1</interval>
+						<constraint>0.0001</constraint>
+					</dUT1>
+				</EOP>
+				<station name="__all__">
+					<coordinates>false</coordinates>
+					<datum>false</datum>
+					<linear_clock>true</linear_clock>
+					<quadratic_clock>false</quadratic_clock>
+					<PWL_ZWD>
+						<interval>60</interval>
+						<constraint>1.5</constraint>
+					</PWL_ZWD>
+				</station>
+				<source>
+					<minScans>3</minScans>
+					<minObs>5</minObs>
+					<minObs_datum>25</minObs_datum>
+					<estimate>__none__</estimate>
+					<datum>__all__</datum>
+				</source>
+			</solver>
+			<priorities>
+				<fraction>70</fraction>
+				<percentile>0.75</percentile>
+				<variable name="#obs">0.5</variable>
+				<variable name="XPO">0.00000000000000001</variable>
+				<variable name="YPO">0.00000000000000001</variable>
+				<variable name="dUT1">1.00000000000000001</variable>
+				<variable name="NUTX">0.00000000000000001</variable>
+				<variable name="NUTY">0.00000000000000001</variable>
+				<variable name="scale">0</variable>
+			</priorities>
+		</1h_intensive_SX>
+		<24_hour_VGOS>
+			<simulator>
+				<number_of_simulations>1000</number_of_simulations>
+				<station name="__all__">
+					<wn>2.83</wn>
+					<clockASD>1</clockASD>
+					<clockDur>50</clockDur>
+					<tropo_Cn>1.8</tropo_Cn>
+					<tropo_H>2000</tropo_H>
+					<tropo_dH>200</tropo_dH>
+					<tropo_dHseg>2</tropo_dHseg>
+					<tropo_ve>8</tropo_ve>
+					<tropo_vn>0</tropo_vn>
+					<tropo_wzd0>150</tropo_wzd0>
+				</station>
+			</simulator>
+			<solver>
+				<EOP>
+					<XPO>
+						<interval>24</interval>
+						<constraint>0.0001</constraint>
+					</XPO>
+					<YPO>
+						<interval>24</interval>
+						<constraint>0.0001</constraint>
+					</YPO>
+					<dUT1>
+						<interval>24</interval>
+						<constraint>0.0001</constraint>
+					</dUT1>
+					<NUTX>
+						<interval>24</interval>
+						<constraint>0.0001</constraint>
+					</NUTX>
+					<NUTY>
+						<interval>24</interval>
+						<constraint>0.0001</constraint>
+					</NUTY>
+				</EOP>
+				<station name="__all__">
+					<coordinates>true</coordinates>
+					<datum>true</datum>
+					<linear_clock>true</linear_clock>
+					<quadratic_clock>true</quadratic_clock>
+					<PWL_clock>
+						<interval>60</interval>
+						<constraint>1.3</constraint>
+					</PWL_clock>
+					<PWL_ZWD>
+						<interval>30</interval>
+						<constraint>1.5</constraint>
+					</PWL_ZWD>
+					<PWL_NGR>
+						<interval>180</interval>
+						<constraint>0.050000000000000003</constraint>
+					</PWL_NGR>
+					<PWL_EGR>
+						<interval>180</interval>
+						<constraint>0.050000000000000003</constraint>
+					</PWL_EGR>
+				</station>
+				<source>
+					<minScans>3</minScans>
+					<minObs>5</minObs>
+					<minObs_datum>25</minObs_datum>
+					<estimate>__none__</estimate>
+					<datum>__all__</datum>
+				</source>
+			</solver>
+			<priorities>
+				<fraction>70</fraction>
+				<percentile>0.75</percentile>
+				<variable name="#obs">1</variable>
+				<variable name="XPO">0.20000000000000001</variable>
+				<variable name="YPO">0.20000000000000001</variable>
+				<variable name="dUT1">0.20000000000000001</variable>
+				<variable name="NUTX">0.20000000000000001</variable>
+				<variable name="NUTY">0.20000000000000001</variable>
+				<variable name="scale">0</variable>
+			</priorities>
+		</24_hour_VGOS>
+		<1h_intensive_VGOS>
+			<simulator>
+				<number_of_simulations>1000</number_of_simulations>
+				<station name="__all__">
+					<wn>2.83</wn>
+					<clockASD>1</clockASD>
+					<clockDur>50</clockDur>
+					<tropo_Cn>1.8</tropo_Cn>
+					<tropo_H>2000</tropo_H>
+					<tropo_dH>200</tropo_dH>
+					<tropo_dHseg>2</tropo_dHseg>
+					<tropo_ve>8</tropo_ve>
+					<tropo_vn>0</tropo_vn>
+					<tropo_wzd0>150</tropo_wzd0>
+				</station>
+			</simulator>
+			<solver>
+				<EOP>
+					<dUT1>
+						<interval>1</interval>
+						<constraint>0.0001</constraint>
+					</dUT1>
+				</EOP>
+				<station name="__all__">
+					<coordinates>false</coordinates>
+					<datum>false</datum>
+					<linear_clock>true</linear_clock>
+					<quadratic_clock>false</quadratic_clock>
+					<PWL_ZWD>
+						<interval>60</interval>
+						<constraint>1.5</constraint>
+					</PWL_ZWD>
+				</station>
+				<source>
+					<minScans>3</minScans>
+					<minObs>5</minObs>
+					<minObs_datum>25</minObs_datum>
+					<estimate>__none__</estimate>
+					<datum>__all__</datum>
+				</source>
+			</solver>
+			<priorities>
+				<fraction>70</fraction>
+				<percentile>0.75</percentile>
+				<variable name="#obs">0.5</variable>
+				<variable name="XPO">0.00000000000000001</variable>
+				<variable name="YPO">0.00000000000000001</variable>
+				<variable name="dUT1">1.00000000000000001</variable>
+				<variable name="NUTX">0.00000000000000001</variable>
+				<variable name="NUTY">0.00000000000000001</variable>
+				<variable name="scale">0</variable>
+			</priorities>
+		</1h_intensive_VGOS>
+	</simulator_templates>
+	<general>
+		<pathToScheduler>./VieSchedpp</pathToScheduler>
+	</general>
+</settings>

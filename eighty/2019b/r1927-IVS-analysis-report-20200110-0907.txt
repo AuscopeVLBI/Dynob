@@ -1,0 +1,133 @@
+       IVS Analysis Report for R1927 ($19DEC30XA) 
+       This report is the official IVS analysis report that corresponds to 
+       the database maintained by the IVS Data Centers for this session.  
+   (Analyzed by David Gordon, NASA Goddard Space Flight Center.
+    Spoolfile source: interactive solve/nuSolve analysis.) 
+
+Problems: Very poor perfomance at SEJONG. Both bands are very noisy.
+          Some refringing was done and we now get 219 observations vs.
+          80 before refringing.  
+
+Parameterization comments: MATERA's cable cal has breaks and was not applied. 
+
+Other comments: NYALE13S did not observe.  
+
+-----------------------------------------
+
+Session Statistics 
+
+  Observations:     3301 scheduled 
+                    2143 correlated (in database)
+                    1901 recoverable (usable)
+                    1792 used
+  Session fit:        29.850 ps
+
+-----------------------------------------
+
+Station Performance 
+
+                           Number of Observations
+
+                    Scheduled   Recoverable*        Used   % of scheduled
+                                                              obs used
+
+  FORTLEZA                858           590          566        66.0%
+  MATERA                 1308           937          899        68.7%
+  NYALE13S               1057      NOT CORR     NOT CORR         0.0%
+  NYALES20               1347           956          896        66.5%
+  SEJONG                  611           276          219        35.8%
+  WETTZ13N               1421          1043         1004        70.7%
+  ---------------   ---------   -----------    ---------       ------
+  Station Total**        3301          1901         1792        54.3%
+
+  * Recoverable: can be included in the solution. 
+  ** Total includes distinct observations only.
+
+  MISSED:    Station was scheduled, but it did not observe.
+  NOT CORR:  Station was scheduled but not correlated.
+  NOT USED:  Usable data was generated for this station,
+             but the analyst rejected it all.
+
+-----------------------------------------
+
+Source Performance 
+
+                    Number of Observations
+
+                Scheduled  Correlated*    Used      % of scheduled
+                                                       obs used
+
+  1022+194              1           1        1          100.0%
+  1227+255              3           3        3          100.0%
+  0745+241             13          10       10           76.9%
+  1435-218              6           6        5           83.3%
+  0119+115             24          24       10           41.7%
+  0133+476            151         114       88           58.3%
+  0229+131             59          42       31           52.5%
+  0454-234             11           9        8           72.7%
+  0552+398            273         152      104           38.1%
+  0727-115             27          25       24           88.9%
+  OJ287               231         149      133           57.6%
+  1418+546            136          99       75           55.1%
+  NRAO512             176         137      107           60.8%
+  1741-038             51          34       32           62.7%
+  1749+096            148         102       92           62.2%
+  3C418               456         278      242           53.1%
+  3C446                30          26       25           83.3%
+  0613+570            143          81       76           53.1%
+  1149-084              3           3        3          100.0%
+  1639-062             30          28       22           73.3%
+  2229+695            115          64       61           53.0%
+  2355-106             30          30       25           83.3%
+  0420+022             41          25       22           53.7%
+  0716+714             98          69       64           65.3%
+  1144+402            304         182      166           54.6%
+  1546+027            124          83       77           62.1%
+  2144+092             18          14       14           77.8%
+  0322+222             10           6        6           60.0%
+  1657-261             12          12       11           91.7%
+  0017+200            144          83       75           52.1%
+  0202+319            200         114       97           48.5%
+  1030+415            207         121       70           33.8%
+  1842+681             26          17       13           50.0%
+  ------------  ---------  ----------   ------          ------
+  Source Total       3301        2143     1792           54.3%
+
+ * Correlated: included in database 
+
+-----------------------------------------
+
+Baseline Performance 
+
+                                 Number of Observations
+
+                         Scheduled   Recoverable*         Used   % of scheduled
+                                                                    obs used
+
+  FORTLEZA-MATERA              235           198           188        80.0%
+  FORTLEZA-NYALE13S            144      NOT CORR      NOT CORR         0.0%
+  FORTLEZA-NYALES20            207           175           169        81.6%
+  FORTLEZA-SEJONG               16             2    DESELECTED         0.0%
+  FORTLEZA-WETTZ13N            256           215           209        81.6%
+  MATERA-NYALE13S              245      NOT CORR      NOT CORR         0.0%
+  MATERA-NYALES20              322           308           300        93.2%
+  MATERA-SEJONG                129            66            62        48.1%
+  MATERA-WETTZ13N              377           365           349        92.6%
+  NYALE13S-NYALES20            274      NOT CORR      NOT CORR         0.0%
+  NYALE13S-SEJONG              130      NOT CORR      NOT CORR         0.0%
+  NYALE13S-WETTZ13N            264      NOT CORR      NOT CORR         0.0%
+  NYALES20-SEJONG              178           109            69        38.8%
+  NYALES20-WETTZ13N            366           364           358        97.8%
+  SEJONG-WETTZ13N              158            99            88        55.7%
+  -----------------      ---------   -----------    ----------       ------
+  Baseline Total              3301          1901          1792        54.3%
+
+  * Recoverable: can be included in the solution. 
+
+  MISSED:     Baseline was scheduled, but at least one of the sites
+              did not observe.
+  NOT CORR:   Baseline was scheduled but not correlated.
+  NO DATA:    The baseline's stations were both correlated,
+              but they did not observe together.
+  DESELECTED: Usable data was generated for the baseline,
+              but the analyst rejected it.

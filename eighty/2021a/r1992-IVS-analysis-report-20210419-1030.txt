@@ -1,0 +1,164 @@
+       IVS Analysis Report for R1992 ($21MAR29XA) 
+       This report is the official IVS analysis report that corresponds to 
+       the database maintained by the IVS Data Centers for this session.  
+   (Analyzed by Sergei Bolotin, NVI, Inc. / NASA Goddard Space Flight Center.
+    Spoolfile source: interactive solve/nuSolve analysis.) 
+
+This is a final submission, the phase calibrations of SEJONG looks good and the
+correlator does not apply manual phase cal for the station. On the other hand,
+applying manual phase cal for YARRA12M removes both clock break effects and
+reduces the residuals of the station.
+
+Problems:
+  - Many non-detections in both bands of AGGO. 
+
+Parameterization comments: None. 
+
+Other comments: NYALE13S was tagged along.
+
+-----------------------------------------
+
+Session Statistics 
+
+  Observations:     2283 scheduled 
+                    2265 correlated (in database)
+                    1743 recoverable (usable)
+                    1701 used
+  Session fit:        34.010 ps
+
+-----------------------------------------
+
+Station Performance 
+
+                           Number of Observations
+
+                    Scheduled   Recoverable*        Used   % of scheduled
+                                                              obs used
+
+  AGGO                    431           244          239        55.5%
+  HART15M                 701           500          487        69.5%
+  MATERA                  915           729          709        77.5%
+  NYALE13S                431           317          312        72.4%
+  SEJONG                  677           493          483        71.3%
+  WETTZ13N                979           869          854        87.2%
+  YARRA12M                432           334          318        73.6%
+  ---------------   ---------   -----------    ---------       ------
+  Station Total**        2283          1743         1701        74.5%
+
+  * Recoverable: can be included in the solution. 
+  ** Total includes distinct observations only.
+
+  MISSED:    Station was scheduled, but it did not observe.
+  NOT CORR:  Station was scheduled but not correlated.
+  NOT USED:  Usable data was generated for this station,
+             but the analyst rejected it all.
+
+-----------------------------------------
+
+Source Performance 
+
+                    Number of Observations
+
+                Scheduled  Correlated*    Used      % of scheduled
+                                                       obs used
+
+  3C345                14          14       12           85.7%
+  NGC1218              12          12        7           58.3%
+  0826-373             17          17        9           52.9%
+  2325-150              9           6        4           44.4%
+  2037+216             44          44        4            9.1%
+  1737-081              3           3        2           66.7%
+  3C279                28          28       26           92.9%
+  1150+497             29          29       21           72.4%
+  0010+405              5           5        4           80.0%
+  0346+800              5           5        3           60.0%
+  1928+154             11          11        9           81.8%
+  2325+093             11          11       10           90.9%
+  0059+581            193         193      121           62.7%
+  0104-408             20          20       16           80.0%
+  0119+115             34          32       25           73.5%
+  0454-234            108         108       98           90.7%
+  0537-441             13          13        5           38.5%
+  0727-115             92          92       88           95.7%
+  1034-293              6           6        2           33.3%
+  1057-797             17          17       11           64.7%
+  1124-186             19          19       15           78.9%
+  1144-379             15          15       13           86.7%
+  1418+546             24          24       20           83.3%
+  1451-375             14          14       11           78.6%
+  NGC6251               3           3        3          100.0%
+  1749+096             74          74       66           89.2%
+  1921-293             20          20       15           75.0%
+  3C418               216         216      163           75.5%
+  2052-474             16          16       10           62.5%
+  3C446               139         136       95           68.3%
+  0420-014            112         112      102           91.1%
+  1244-255             71          71       54           76.1%
+  1324+224             28          28       26           92.9%
+  1846+322             16          16       13           81.2%
+  2229+695             89          89       83           93.3%
+  0307+380              5           5        4           80.0%
+  0529+483             80          80       69           86.2%
+  0536+145             18          18        4           22.2%
+  0641+392              7           7        4           57.1%
+  1059+282             23          23       16           69.6%
+  2214+350              8           8        7           87.5%
+  0322+222             15          15       11           73.3%
+  1015+057              6           6        1           16.7%
+  1759-396              9           9        2           22.2%
+  2008-159             83          81       55           66.3%
+  0308-611             73          73       15           20.5%
+  0332-403             35          35       30           85.7%
+  1502+036             17          17       16           94.1%
+  0017+200             14          14       10           71.4%
+  0202+319            183         178      142           77.6%
+  1030+415             41          41       33           80.5%
+  1406-076            134         134      114           85.1%
+  1504+377              5           2        2           40.0%
+  ------------  ---------  ----------   ------          ------
+  Source Total       2283        2265     1701           74.5%
+
+ * Correlated: included in database 
+
+-----------------------------------------
+
+Baseline Performance 
+
+                                 Number of Observations
+
+                         Scheduled   Recoverable*         Used   % of scheduled
+                                                                    obs used
+
+  AGGO-HART15M                 212           111           107        50.5%
+  AGGO-MATERA                   90            57            56        62.2%
+  AGGO-NYALE13S                 12             0    DESELECTED         0.0%
+  AGGO-SEJONG                    0      NOT CORR      NOT CORR         0.0%
+  AGGO-WETTZ13N                 88            69            69        78.4%
+  AGGO-YARRA12M                 29             7             7        24.1%
+  HART15M-MATERA               163           128           123        75.5%
+  HART15M-NYALE13S              21            13            13        61.9%
+  HART15M-SEJONG                53            38            38        71.7%
+  HART15M-WETTZ13N             176           156           154        87.5%
+  HART15M-YARRA12M              76            54            52        68.4%
+  MATERA-NYALE13S              122           107           104        85.2%
+  MATERA-SEJONG                136            79            77        56.6%
+  MATERA-WETTZ13N              354           325           317        89.5%
+  MATERA-YARRA12M               50            33            32        64.0%
+  NYALE13S-SEJONG              121            61            60        49.6%
+  NYALE13S-WETTZ13N            126           120           120        95.2%
+  NYALE13S-YARRA12M             29            16            15        51.7%
+  SEJONG-WETTZ13N              177           145           145        81.9%
+  SEJONG-YARRA12M              190           170           163        85.8%
+  WETTZ13N-YARRA12M             58            54            49        84.5%
+  -----------------      ---------   -----------    ----------       ------
+  Baseline Total              2283          1743          1701        74.5%
+
+  * Recoverable: can be included in the solution. 
+
+  MISSED:     Baseline was scheduled, but at least one of the sites
+              did not observe.
+  NOT CORR:   Baseline was scheduled but not correlated.
+  NO DATA:    The baseline's stations were both correlated,
+              but they did not observe together.
+  DESELECTED: Usable data was generated for the baseline,
+              but the analyst rejected it.

@@ -1,0 +1,207 @@
+<!Doctype html>
+<head>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+
+function checkCookie() {
+	let user = getCookie("dynob_user");
+	if (user == "" || user == null) {
+		var CurPageURL = window.location.href;
+		window.location.href = window.location.protocol + "//" + window.location.host + "/web/login.php?ref=" + btoa(CurPageURL);
+	}
+}
+
+function getCookie(cname) {
+	let name = cname + "=";
+	let ca = document.cookie.split(';');
+	for(let i = 0; i < ca.length; i++) {
+		let c = ca[i];
+		while (c.charAt(0) == ' ') {
+		c = c.substring(1);
+		}
+		if (c.indexOf(name) == 0) {
+		return c.substring(name.length, c.length);
+		}
+	}
+	return "";
+}
+
+function makeRequest(toPHP, callback) {
+	var xmlhttp;
+	if (window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
+		xmlhttp=new XMLHttpRequest();
+	}
+	else{// code for IE6, IE5
+		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.onreadystatechange=function(){
+		if (xmlhttp.readyState==4 && xmlhttp.status==200){
+			callback(xmlhttp.response);
+		}
+	}
+	xmlhttp.open("GET",toPHP,true);
+	xmlhttp.send();
+}
+
+$(document).ready(function(){
+	checkCookie();
+	$("#btnstart").click(function(){
+		var session = $("input[name=session]").val();
+		$(".pgcontent").html('<div id="tracearea"><textarea id="obstext" rows="10" cols="50" readonly></textarea></div>');
+		toCorrelate(session);
+	});
+});
+
+function toCorrelate(session){
+	$( "#btnstart" ).hide();
+	var precorr = ["init","checkdir","getdataloc","copyvex","getlog","getv2d","genfilelist","dxcalc","dxmpi","postmpi","corrcomplete"];
+	//var precorr = ["init","checkdir","getdataloc","copyvex","getlog","getv2d","corrcomplete"];
+	//var precorr = ["init","dxcalc","dxmpi","postmpi","corrcomplete"];
+	var ind = 0;
+	precorrprogress(precorr[ind]);
+
+	function precorrprogress(value) {
+		makeRequest("../correlations/getprogress.php?progress="+value, function(response) {
+			$( "#obstext" ).html(response);
+			if(value!="next"){
+				//only dxmpi is different because it checks status from vc0
+				if(value=="dxmpi"){
+					if (response.indexOf("Correlation completed") < 0){
+						makeRequest("../correlations/precorrelate2.php?exper="+session+"&do="+value, function(response2) {
+							setTimeout(function(){ 
+								precorrprogress(precorr[ind]);
+							},15000); //every 15 seconds
+						});
+					}
+					else{
+						var str = $("#obstext").val();
+						if (str.indexOf("Exit:") < 0){
+							if (ind<precorr.length){
+								ind = ind + 1;
+								precorrprogress(precorr[ind]);
+							}
+						}
+						else{
+							precorrprogress("next");
+						}
+					}
+				}
+				//correlation done
+				else if(value=="corrcomplete"){ //just in case
+					postCorrelate(session);
+				}
+				else{
+					precorrexec(value);
+				}
+			}
+		});
+	}
+
+	function precorrexec(value) {
+		makeRequest("../correlations/precorrelate2.php?exper="+session+"&do="+value, function(response) {
+			setTimeout(function(){ 
+				var str = $("#obstext").val();
+				if (str.indexOf("Exit:") < 0){
+					if (ind<precorr.length){
+						ind = ind + 1;
+						precorrprogress(precorr[ind]);
+					}
+					else{
+						precorrprogress("next");
+					}
+				}
+			},1000);
+		});
+	}
+}
+
+function postCorrelate(session){
+	var postcorr = ["initff","fringecheck","done"];
+	var completemsg = ["done","done","done"];
+	var ind = 0;
+	postcorrprogress(postcorr[ind]);
+
+	function postcorrprogress(value) {
+		if(value=="initff"){
+			$("#tracearea").html("<p>Creating control file</p><iframe id='corframe' width='500' height='300' src='../postcorr/initfringefit.php?exp="+session+"'></iframe>");
+		}
+		else if(value=="fringecheck"){
+			$("#tracearea").html("<p>Fringe fitting</p><iframe id='corframe' width='500' height='300' src='../postcorr/fringefit.php?exp="+session+"'></iframe>");
+		}
+		else if (value=="done"){
+			$("#tracearea").html('<textarea id="obstext" rows="10" cols="50" readonly>Fringe-fitting completed!</textarea>');
+			createDB(session);
+		}
+
+		if(value !== "done"){
+			var loopprogress = setInterval(function(){
+				if($("#corframe").contents().text().indexOf(completemsg[ind]) > 0){
+					if (ind<postcorr.length){
+						ind = ind + 1;
+						postcorrprogress(postcorr[ind]);
+					}
+					else{
+						postcorrprogress("next");
+					}
+				}
+			},5000); //check status every 5 seconds
+		}
+		
+	}
+	
+}
+
+function createDB(session){
+	//$( "#btnstart" ).hide();
+	$("#tracearea").html('<div id="tracearea"><textarea id="obstext" rows="10" cols="50" readonly></textarea></div>');
+	var cdb = ["checkdir","cp2mac","data2mac","predb","createdb","dbcomplete"];
+	var ind = 0;
+	cdbprogress(cdb[ind]);
+
+	function cdbprogress(value) {
+		makeRequest("../createdb/getprogress.php?progress="+value, function(response) {
+			$( "#obstext" ).html(response);
+			if(value!="next"){
+				if(value=="dbcomplete"){ 
+					$( "#obstext" ).append("\n\nAll done!");
+				}
+				else{
+					cdbexec(value);
+				}
+			}
+		});
+	}
+
+	function cdbexec(value) {
+		makeRequest("../createdb/lv1db.php?exper="+session+"&do="+value, function(response) {
+			setTimeout(function(){ 
+				var str = $("#obstext").val();
+				if (str.indexOf("Exit:") < 0){
+					if (ind<cdb.length){
+						ind = ind + 1;
+						cdbprogress(cdb[ind]);
+					}
+					else{
+						cdbprogress("next");
+					}
+				}
+			},1000);
+		});
+	}
+}
+
+</script>
+</head>
+<body>
+<h2>
+Southern Intensive (SI) Automation
+</h2>
+<div style='color:Red' id="notice"></div>
+<div class="pgcontent">
+	<p>Session name: <input type="text" name="session" placeholder="e.g. z22276" required/></p>
+	<input type="button" id='btnstart' value="Start!">
+</div>
+<br>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<div id="formdiv">
+	<form action="../../scheduling/prefringe.php" method="post">
+		<!--<form action="#sched" method="post">-->
+		<fieldset>
+			<legend>General</legend>
+			<p>Start Time (UTC): <input type="text" id="startTime" name="startTime" placeholder="e.g. 2020-12-25 00:00:00" required/>
+			<input type="button" onclick="inxmin(10)" value="after 10 mins" />
+			<input type="button" onclick="inxmin(15)" value="after 15 mins" />
+			</p>
+			<p>Duration (s): <input type="text" name="duration" placeholder="e.g. 40" required value="45"/></p>
+			<p>Min SNR (both bands): <input type="text" name="minsnr" placeholder="e.g. 30" required value="30"/></p>
+			<span id="expmode" class="expmode">
+				Mode:<br>
+				<input type="radio" id="mixedmode" name="emode" value="mixed" required="required">
+				<label for="mixedmode">AUM/AUA</label>
+				<input type="radio" id="vgosmode" name="emode" value="vgos">
+				<label for="vgosmode">AUV/VGOS</label>
+			</span>
+	
+			<p>Use source: <input type="text" name="useSource" placeholder="e.g. 1921-293 (optional)" /></p>
+		</fieldset>
+		<br>
+		<fieldset>
+			<legend>Stations</legend>
+			<input type="checkbox" id="Hobart12m" name="hb12" class="recSelect" value=1 />
+			<label for="hb12">Hobart 12m</label>
+			<span id="hb12recorder" class="recorder" style="display:none;">
+				Recorder:<br>
+				<input type="radio" id="flexbuffhb" name="recorderhb" value="flexbuffhb">
+				<label for="flexbuffhb">flexbuffhb</label><br>
+				<input type="radio" id="flexbuf-2hb" name="recorderhb" value="flexbuf-2hb">
+				<label for="flexbuf-2hb">flexbuf-2hb</label>
+			</span>
+			<br>
+		
+			<input type="checkbox" id="Hobart26m" class="recSelect" name="ho26" value=1 />
+			<label for="ho26">Hobart 26m</label>
+			<span id="ho26recorder" class="recorder" style="display:none;">
+				Recorder:<br>
+				<input type="radio" id="flexbuffho" name="recorderho" value="flexbuffhb">
+				<label for="flexbuffho">flexbuffhb</label><br>
+				<input type="radio" id="mk5hb" name="recorderho" value="mk5hb">
+				<label for="mk5hb">mk5hb</label>
+			</span>
+			<br>
+		
+			<input type="checkbox" id="Kath12m" class="recSelect" name="ke12" value=1 />
+			<label for="ke12">Katherine 12m</label>
+			<span id="hb12recorder" class="recorder" style="display:none;">
+				Recorder:<br>
+				<input type="radio" id="flexbuffke" name="recorderke" value="flexbuffke">
+				<label for="flexbuffke">flexbuffke</label>
+			</span>
+			<br>
+		
+			<input type="checkbox" id="Yarra12m" class="recSelect" name="yg12" value=1 />
+			<label for="yg12">Yarragadee 12m</label>
+			<span id="yg12recorder" class="recorder" style="display:none;">
+				Recorder:<br>
+				<input type="radio" id="flexbuffyg" name="recorderyg" value="flexbuffyg">
+				<label for="flexbuffyg">flexbuffyg</label><br>
+				<input type="radio" id="mark5byg" name="recorderyg" value="mk5yg">
+				<label for="mark5byg">mk5yg</label>
+			</span>
+			
+			<br>
+		</fieldset>
+		<br>
+		<fieldset>
+			<legend>Visible strong sources</legend>
+			<div id="vistable"></div>
+		</fieldset>
+		<br>
+		<input type="submit" value="Check fringe!">
+	</form>
+</div>

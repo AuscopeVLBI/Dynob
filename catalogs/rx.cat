@@ -1,0 +1,626 @@
+* VERSION 2021Jan19_iGFSC
+* CATALOG rx.cat 
+* RX.CAT - station receiver setups
+*
+* Updates (most recent entries at the top):
+* 2021-01-21 JMG Updated HOBART26, NYALES13S, SESHAN26 LO sequences
+* 2021-01-19 JMG Added NYALE13S to VG_MK4
+* 2020-10-13 JMG Put in DSS26.
+* 2020-07-14 JMG Changed YEBES replaced YDC_STD-->YDC_WIDE for wideband. 
+*                LO settings different in two cases. 
+* 2020-01-03  JMG  In SX_STD, SX_WIDE Changed freq sequnce for NYALE13S to NYS_STD
+* 2019-09-19  JMG  Put in  values for MACGO12M based on KOKEE12M
+* 2019-06-25  JMG  Added NYALE13S to SX_STD
+* 2018-07-10  JMG  Added 2GB VLBA mode
+* 2018-07-03  JMG  Modified LO settings for SX_STD (LO-->CDPA_STD) 
+*                  SX_WIDE (LO-->CDPW_STD), VG_MK4 (LO -->CDPA_VG2) for AGGO.
+* 2017-12-04  JMG  Modified LO settings for SX_WIDE for HOBART26
+* 2017-09-26  JMG  Put in ONSA13SW, ONSA13NE
+* 2017-09-19  JMG  Added in RAEGSMAR
+* 2017-03-21  JMG  Changed NYALES20,WETTZELL to ODB_WIDE, ODB_STD
+* 2017-03-21  JMG  Added DSS34 and DSS36
+* 2017-03-10  JMG  Added WARK12M, KATH12M to broadband 
+* 2017-02-09  JMG  Changed EFLSBERG LOs to all EFL_STD
+* 2017-02-07  JMG  Changed LO pointers for METSAHOV to MET_STD 
+* 2016-11-30  JMG  Added YARRA12M to VG_MK4 (RDV mode) 
+* 2016-09-27  JMG  Added IRBENE in Latvia per 2016Sep27 V. Bezrukovs
+* 2016-08-23  JMG  For SX_STD and SX_WIDE, and RDV SESHAN LO is now SESH_LO
+* 2016-07-20  JMG  Added ISHIOKA and WETTZ13N to VG_MK4  (=RDV mode)
+* 2016-03-30  JMG  In SX_WIDE changed SHESAN25 to SESH_LO 
+* 2016-02-08  KLB  Commented lines DSS54, MCMURDO, ONSALDBC, TAHITI, WETTDBBC
+* 2016-02-08  KLB  Changed PARKES64 with PARKES
+* 2016-02-08  KLB  Replaced TIGOPLTA with AGGO
+* 2015-01-25  JMG  Added in KOKEE12M based on GGAO12M
+* 2015-06-29  JMG  Changed TWIN_WIDE to TWN_DBBC.  In SX_WIDE changed MEDICINA to ODB_WIDE
+* 2015-06-24  JMG  Added WETTZ13N to SX_STD 
+* 2015-06-23  JMG  Under SX_WIDE chaned MC to TWN_DBBC because of change in hardware.  
+* 2015-06-10  JMG  (with KLB) Synchronized with aust
+* 2015-05-29  JMG  For Kunming changed to CDP_STDU to CDP_STDK, CDP_WIDE to CDP_WIDK
+* 2015-05-14  KLB  Added TIANMA65 to SX_STD
+* 2015-04-22  JMG  Replaced PARKES64 by PARKES in SX_WIDE 
+* 2015-04-21  JMG  Removed YEBESDBC. This was a temporay station put in to test DBBC recording.
+* 2015-04-21  JMG  YDC_WIDE replaced by YDC_STD. No distinction between wide and narrow band. 
+* 2015-02-25  JMG  Changed RAEGYEB LO: YDC_WIDE-->RAEG_WIDE
+* 2015-02-25  JMG  Added RAEGYEB to SX_WIDE.
+* 2015-02-23  JMG  Added ISHIOKA from jd1502 schedule
+* 2015-02-12  JMG  Added WETTDBBC to SX_WIDE 
+* 2015-01-20  JMG  Yebes has now gone to DBBC. Change LO Keys: YEB_WIDE--> YDC_WIDE, YEB_STD-->YDC_STD
+* 2014-12-10  JMG  Removed stations from wideband setups. From SX-WIDE:  KAS11,DSS13, Koganei,NOTO     
+* 2014-11-06  JMG  Added DSS54
+* 2014-10-30  JMG  For CDP_STD 
+* 2014-09-30  JMG  For VG_MK4  (RDV setup) added ODB_WID for Onsala60
+* 2014-07-01  JMG  Added WETTZ13N
+* 2014-06-12  JMG  Modified DSS13 for DVP
+* 2014-05-16  DBB  Tianma
+* 2014-03-25  JMG  Added ONSALDBC = ONSALA60 with DBBC
+* 2014-02-06  JMG  Added VLBA_RV
+* 2014-01-16  JMG  Modified link to LO settings for HARTRAO, HART15M to DBBC_HH
+* 2013-12-17  JMG  Added YEBESDBC = YEBES40M with DBBC
+* 2013-11-20  JMG  In SX_WIDE changed Urumqi's LO to CDP_STDUW. Also updated loif.cat.
+* 2013-10-11  JMG  Changed WARK12M to use DBBC_WW
+* 2013-07-11  JMG  Added Sejong to SX_WIDE
+* 2013-05-17  JMG  Added new LOIF pointers for KOGANEI (K4_KOG) and KASHIMA11 (K4_KAS11) 
+* 2013-05-06  JMG  Changed name of GORF7102 to GGAO12M
+* 2013-04-10  JMG  Added Sejong to SX_STD
+* 2013-09-17  DBB  Add AIRA to SX_WIDE.
+* 2013-03-27  JMG  Added SEJONG
+* 2013-03-20  JMG  Changed LO setting for WARK12M, HOBART12, and KATH12M  
+*                  to DBBC_AU for all modes. Previously only for some. 
+* 2013-01-18  JMG  Added GORF7102 to SX_WIDE
+* 2012-11-16  JMG  Changed point for LOs for URUMQI
+* 2012-10-09  JMG  Removed some changes that were made while adding VEX support to sked.          
+* 2012-08-16  JMG  In SX_WIDE, changed SV CDP_WIDE to CDP_STDN, ZC from CDPV_WIDE to CDP_STDN 
+* 2012-08-16  JMG  In SX_STD, Changed SV, ZC from CDP_STD to CDP_STDN.  
+* 2012-05-18  JMG  Added EFLSBERG to VG_MK4 (RDV mode) 
+* 2012-01-18  DBB  Add JAXA station UCHINOUR.
+* 2011-08-11  JMG  Changed Kashima, Kunming in SX_STD
+* 2011-07-11  DBB  Add KUNMING with CDP_STDU to SX_STD.
+* 2011-03-07  JMG  Added FORTLEZA, HOBART12 to VG_MK4
+* 2009-09-28  DBB  Add VERA stations Mizusawa and Ishigakijima.
+* 2009-09-28  JMG  Changed AIRA, CHICHIJIMA and SHINTOTU to CDP_STDN
+* 2009-09-21  DBB  Add New Hobart, Katherine, Yarragadee, and Warkworth for simulation
+*                  purposes.
+* 2009-04-10  DBB  Change BADARY SX_STD from CDPV_STD to CDP_STDN and
+*                  SX_WIDE from CDPV_WIDE to CDP_STDN per A. Melnikov.
+* 2008-09-26  JMG  Added Parkes, Syowa to SX_WIDE
+* 2008-06-20  JMG  Removed YEBES, added YEBES40M
+* 2008-06-09  JMG  Added AIRA, CHICHI10, and SINTOTU3
+* 2007-10-18  JMG  Changed CDP_WIDE to KAS_WIDE for KASHIM34 
+* 2007-08-07  JMG  Changed CDP_STD to KAS_STD for KASHIM34 
+* 2007-18-07  JMG  Added YEBES so that it could participate in R4s
+* 2007-02-20  JMG  Added BADARY SX_STD, SX_WIDE so that it could participate in R4s.
+* 2006-05-11  JMG  Added KK_AT for K band Australian fringe test.
+* 2006-05-01  JMG  Added XX-DBE for DBE testing
+* 2006-03-31  JMG  Added kashima to VG_MK4
+* 2005-11-22  NRV  Change URUMQI reference to CDP_STDU.
+* 2005-10-07  NRV  Change DSS65 to DSS65A. Remove DSN stations from WIDEBAND.
+* 2005-09-30  NRV  Add SESH 8-channel for Europe.
+* 2005-09-22  NRV  Add ZELENCHK to standard groups for simulations.
+* 2005-09-16  NRV  Add XX_STD for IGRID demo.
+* 2005-08-11  NRV  Remove Seshan from all modes, use one of 8-chan selections 
+*                  depending on channel setup matches.
+* 2005-08-02  NRV  Add SESH for 8 -channel Seshan.
+* 2005-07-09  NRV  Move ZELENCHK to VG_ZC because of diffefrent BBC assignments.
+* 2005-07-05  NRV  Add ZELENCHK and SVETLOE to RDV group with CDP_WID8.
+* 2005-07-05  NRV  Change ZELENCHK to ZC8_STD and ZC8_WIDE. 
+* 2005-04-30  NRV  Remove URUMQI from RDV and all WIDE groups.
+* 2005-03-22  NRV  Add SESHAN25 and URUMQI to RDV group.
+* 2004-11-19  NRV  Add ZELENCHK to wide and standard.
+* 2004-10-06  NRV  Add KK_STD per P. Charlot.
+* 2002-10-16  NRV  Add SVETLOE to SX_STD and SX_WIDE.
+* 2002-09-04  NRV  Change ALGOPARK from CDP to CDPV everywhere.
+* 2002-04-08  NRV  Add DSS13 to SX_STD.
+* 2002-02-20  NRV  Add NOTO and TIGO to RDV group.
+* 2001-11-01  NRV  Add ZELENCHK to S2, not wideband.
+* 2001-10-24  NRV  Add SVETLOE to S2, not wideband.
+* 2001-10-02  NRV  Add GBT_VLBA.
+* 2001-05-08  NRV  Add PARKES64 as CDP_STDN (narrow band)
+* 2001-02-03  NRV  FAKE: added DSS stations to wideband
+* 2000-10-26  NRV  Add EFLSBERG, MEDICINA, NOTO, ONSALA85, SESHAN25, URUMQI to C_STD.
+* 2000-10-16  NRV  Add CAMBG32M, TORUN, JODRELL2, WSTRBORK to C_STD. 
+* 2000-09-18  NRV  Add SESHAN to wideband.
+* 2000-01-31  NRV  Add GSI domestic stations to SX_STD.
+* 2000-01-25  NRV  Add S2 and S3 receiver types from C. Klatt
+* 2000-01-13  NRV  Add MATERA to WID8 list
+* 1999-01-15  NRV  Add WETTZELL to VG list
+* 1999-01-15  NRV  Change CDPV_VG and NRAO_VG to add suffix "2" and move
+*                  these stations into the "MK4" group
+* 1998-12-28  NRV  Add SYOWA10
+* 1998-11-02  NRV  Change SESHAN to CDPV_SES for non-std S LO
+* 1998-05-05  NRV  Add TAHITI for simulations
+* 1998-03-26  NRV  Add Tsukuba
+* 1997-12-10  NRV  Add TIGO
+* 1997-03-31  NRV  New SX_DSN for CRF experiments
+* 1996-01-17  NRV  Change to CDP_STD_N for stations that are still narrowband
+*                  Now CDP_STD means a wideband receiver.
+*
+------------------------------------------------------
+* RXname   = referenced from the freq.cat file
+* Stn.Name = antenna name, as in antenna.cat
+* LOIFname = 8-char LO/IF setup name, found in the loif.cat file
+         
+*
+*RXname  Stn.Name    LOIFname
+*
+ SX_DSN
+ -       DSS15       DSN_CRF  
+ -       DSS26       DSN_CRF
+ -       DSS45       DSN_CRF
+ -       TIDBIN64    DSN_CRF
+ -       MEDICINA    CDP_CRF
+ -       HARTRAO     CDP_CRF
+ SX_STD
+ -       AIRA        CDP_STDN 
+ -       ALGOPARK    CDPV_STD
+ -       ARIES_4M    CDP_STD
+ -       ARIES_9M    CDP_STD
+ -       BADARY      CDP_STDN
+ -       CHICHI10    CDP_STDN
+ -       CRIMEA      CDP_STDN
+ -       CTVA        CDP_STD
+ -       DSS13       DVP_STD 
+ -       DSS15       DSN_STD  
+ -       DSS26       DSN_STD
+ -       DSS34       DSN_STD  
+ -       DSS36       DSN_STD  
+ -       DSS45       DSN_STD
+ -       TIDBIN64    DSN_STD
+*-       DSS54       DSN_STD
+ -       DSS65A      DSN_STD
+ -       EFLSBERG    EFL_STD
+ -       GILCREEK    CDPV_STD
+ -       GOLDVENU    DSN_STD
+ -       HARTRAO     DBBC_HH
+ -       HART15M     DBBC_HH
+ -       HAYSTACK    CDP_STD
+ -       HOBART12    DBBC_AU
+ -       HOBART26    DBBC_26
+ -       ISHIOKA     CDP_STDN
+ -       KASHIM34    KAS_STD
+ -       KASHIM11    K4_KAS11
+ -       KATH12M     DBBC_AU
+ -       KOGANEI     K4_KOG
+ -       KOKEE       NRAO_STD
+ -       KUNMING     CDP_STDK
+ -       KWAJAL26    CDP_STDN
+ -       MARPOINT    CDP_STDN
+ -       MARCUS      CDP_STDN
+ -       MATERA      CDP_STD
+*-       MCMURDO     CDP_STD
+ -       MEDICINA    CDP_STD
+ -       METSAHOV    MET_STD
+ -       MIAMI20     CDP_STD    
+ -       MIURA       CDP_STD
+ -       MIZUSGSI    CDP_STD
+ -       MIZNAO10    CDP_STD
+ -       FORTLEZA    CDP_STD
+ -       NRAO85_3    NRAO_STD
+ -       NRAO20      NRAO_STD
+ -       NYALES20    ODB_STD 
+ -       NYALE13S    NYS_STD
+ -       OHIGGINS    CDPV_STD
+ -       ONSALA60    ODB_STD
+*-       ONSALDBC    ODB_STD
+ -       ORION_5M    CDP_STD
+ -       OVRO_130    CDP_STD
+ -       NOTO        CDPVNOTO 
+*-       PARKES64    CDP_STDN
+ -       PARKES      CDP_STD
+ -       SANTIA12    CDP_STD
+ -       SEJONG      CDP_STDN
+ -       SEST        CDP_STD
+ -       SESHAN25    SESH_LO
+ -       SINTOTU3    CDP_STDN
+ -       SVETLOE     CDP_STDN
+ -       SYOWA       CDP_STD
+*-       TAHITI      CDP_STD
+ -       TATEYAMA    CDP_STD
+ -       TIANMA65    CDP_T6
+ -       TIGO        CDPV_STD
+ -       AGGO        CDPA_STD
+ -       TSUKUB32    TSU_STD
+ -       UCHINOUR    TSU_STD
+ -       URUMQI      CDP_STDU
+ -       VERAISGK    JD_VSTD
+ -       VERAMZSW    JD_VSTD
+ -       WARK12M     DBBC_WW
+ -       WESTFORD    CDP_STD
+ -       WETTZELL    ODB_STD
+ -       WETTZ13N    TWN_DBBC
+ -       WETTZ13S    TWN_DBBC
+ -       YARRA12M    DBBC_AU
+ -       YEBES40M    YDC_STD
+* -       ZELENCHK    ZC8_STD
+  -       ZELENCHK    CDP_STDN
+* -       ZELENCHK    CDP_STDN
+ SX_SE8W
+  -       SESHAN25    CDPV_SE8
+ SX_SE8N
+ -       SESHAN25    CDPV_SE8
+ SX_SE8E
+ -       SESHAN25    CDPV_SE8
+ XX_STD 
+ -       WESTFORD    CDP_XX1
+ -       WSTRBORK    CDP_XX2
+ -       ONSALA60    CDP_XX1
+ -       ORION_5M    CDP_XX1
+* -       KASHIM34    CDP_XX1
+ XX_DBE
+ -       WESTFORD    CDP_XX3
+ -       ORION_5M    CDP_XX3
+ XX_WID 
+ -       NRAO20      NRAO_XWID 
+ -       GBT_VLBA    NRAO_XWID 
+ -       ORION_5M    CDP_WIDE
+ -       WESTFORD    CDP_WIDE
+ -       WETTZELL    CDP_WIDE
+ -       TSUKUB32    CDP_WIDE
+ -       HARTRAO     CDP_WIDE
+ -       HOBART26    DBBC_26
+ -       FORTLEZA    CDP_WIDE
+ -       ORION_5M    CDP_WIDE
+ -       KOKEE       CDP_WIDE
+ -       GILCREEK    CDP_WIDE
+ -       ONSALA60    CDP_WIDE 
+ SX_WIDE
+ -       AIRA        AIRA_WIDE
+ -       ALGOPARK    CDPV_WIDE
+ -       BADARY      CDP_STDN
+ -       ARIES_4M    CDP_WIDE
+ -       ARIES_9M    CDP_WIDE
+ -       CHICHI10    KAS_WIDE
+ -       CTVA        CDP_WIDE
+ -       CRIMEA      CDP_WIDE
+ -       DSS26       DSN_STD
+ -       DSS34       DSN_STD  
+ -       DSS36       DSN_STD  
+ -       DSS45       DSN_STD
+ -       TIDBIN64    DSN_STD
+ -       EFLSBERG    EFL_STD
+ -       FORTLEZA    CDP_WIDE
+ -       GILCREEK    CDPV_WIDE
+ -       GGAO12M     CDP_WIDE
+ -       HARTRAO     DBBC_HH
+ -       HART15M     DBBC_HH
+ -       HAYSTACK    CDP_WIDE
+ -       HOBART12    DBBC_AU
+ -       HOBART26    DBBC_26
+ -       IRBENE      IRB_WIDE
+ -       ISHIOKA     KAS_WIDE
+ -       KASHIM34    KAS_WIDE
+ -       KASHIM11    KAS_WIDE
+ -       KATH12M     DBBC_AU
+ -       KOGANEI     KAS_WIDE
+ -       KOKEE       NRAO_WIDE
+ -       KOKEE12M    CDP_WIDE
+ -       KUNMING     CDP_WIDE 
+ -       KWAJAL26    CDP_WIDE 
+ -       MATERA      CDP_WIDE
+ -       MACGO12M   CDP_WIDE
+ -       METSAHOV    MET_STD
+*-       MCMURDO     CDP_WIDE
+ -       MIAMI20     CDP_WIDE   
+ -       MEDICINA    ODB_WIDE
+ -       NOTO        CDPVNOTO
+ -       NRAO85_3    NRAO_WIDE
+ -       NRAO20      NRAO_WIDE
+ -       NYALES20    ODB_WIDE
+ -       NYALE13S    NYS_STD
+ -       OHIGGINS    CDPV_WIDE
+ -       ONSALA60    ODB_WIDE
+ -       ONSA13NE    RAEG_WIDE
+ -       ONSA13SW    RAEG_WIDE 
+*-       ONSALDBC    ODB_WIDE
+ -       ORION_5M    CDP_WIDE
+ -       OVRO_130    CDP_WIDE
+ -       PARKES      PKS_WIDE
+ -       RAEGSMAR    RAEG_WIDE 
+ -       RAEGYEB     RAEG_WIDE 
+ -       SANTIA12    CDP_WIDE
+ -       SEST        CDP_WIDE
+ -       SEJONG      TSU_WIDE
+* -       SESHAN25    CDPV_SE
+ -       SESHAN25    SESH_LO
+ -       SINTOTU3    CDP_STDN 
+ -       SYOWA       TSU_WIDE
+ -       SVETLOE     CDP_STDN
+*-       TAHITI      CDP_WIDE
+ -       TIANMA65    CDP_T6
+ -       TIGO        CDPV_WIDE
+ -       AGGO        CDPA_WIDE
+ -       TSUKUB32    TSU_WIDE
+ -       UCHINOUR    TSU_WIDE
+ -       URUMQI      CDP_STDUW
+ -       VERAISGK    TSU_WIDE
+ -       VERAMZSW    TSU_WIDE
+ -       WARK12M     DBBC_WW
+ -       WESTFORD    CDP_WIDE
+ -       WETTZELL    ODB_WIDE
+*-       WETTDBBC    ODB_WIDE
+ -       WETTZ13N    TWN_DBBC
+ -       WETTZ13S    TWN_DBBC
+ -       YARRA12M    DBBC_AU
+ -       YEBES40M    YDC_WIDE
+ -       ZELENCHK    CDP_STDN
+* CORE modes testing
+ SX_W16
+ -       ALGOPARK    CDPV_W16
+ -       ARIES_4M    CDP_W16
+ -       ARIES_9M    CDP_W16
+ -       DSS15       CDP_W16
+ -       DSS26       DSN_W16
+ -       DSS45       CDP_W16
+ -       FORTLEZA    CDP_W16
+ -       GILCREEK    CDPV_W16
+ -       HARTRAO     CDP_W16
+ -       HAYSTACK    CDP_W16
+ -       HOBART26    CDP_W16
+ -       KOKEE       NRAO_W16
+* -       KASHIMA     CDP_W16 
+ -       MATERA      CDP_W16
+ -       MEDICINA    CDP_W16
+ -       MIAMI20     CDP_W16   
+ -       NRAO85_3    NRAO_W16
+ -       NRAO20      NRAO_W16
+ -       NYALES20    CDP_W16
+ -       OHIGGINS    CDPV_W16
+ -       ONSALA60    CDP_W16
+ -       ORION_5M    CDP_W16
+ -       OVRO_130    CDP_W16
+ -       SANTIA12    CDP_W16
+*-       SESHAN25    CDP_W16
+ -       SEST        CDP_W16
+ -       TSUKUB32    CDP_W16  
+ -       WESTFORD    CDP_W16
+ -       WETTZELL    CDP_W16
+ SX_W14
+ -       ALGOPARK    CDP_W14
+ -       ARIES_4M    CDP_W14
+ -       ARIES_9M    CDP_W14
+ -       FORTLEZA    CDP_W14
+ -       GILCREEK    CDP_W14
+ -       HARTRAO     CDP_W14
+ -       HAYSTACK    CDP_W14
+ -       HOBART26    CDP_W14
+ -       KOKEE       CDP_W14 
+* -       KASHIMA     CDP_W14
+ -       MATERA      CDP_W14
+ -       MIAMI20     CDP_W14
+ -       NRAO85_3    CDP_W14 
+ -       NRAO20      CDP_W14 
+ -       NYALES20    CDP_W14
+ -       OHIGGINS    CDP_W14 
+ -       ONSALA60    CDP_W14
+ -       ORION_5M    CDP_W14
+ -       OVRO_130    CDP_W14
+ -       SANTIA12    CDP_W14
+*-       SESHAN25    CDP_W14
+ -       SEST        CDP_W14
+*-       TAHITI      CDP_W14 
+ -       WESTFORD    CDP_W14
+ -       WETTZELL    CDP_W14
+  VG_STD
+ -       BR-VLBA     VLBA_79
+ -       FD-VLBA     VLBA_79
+ -       HN-VLBA     VLBA_79
+ -       KP-VLBA     VLBA_79
+ -       LA-VLBA     VLBA_79
+ -       MK-VLBA     VLBA_79
+ -       NL-VLBA     VLBA_79
+ -       OV-VLBA     VLBA_79
+ -       PIETOWN     VLBA_79
+ -       SC-VLBA     VLBA_79
+ VG_2GB	
+ -       BR-VLBA     VG_2GB
+ -       FD-VLBA     VG_2GB
+ -       HN-VLBA     VG_2GB
+ -       KP-VLBA     VG_2GB
+ -       LA-VLBA     VG_2GB
+ -       MK-VLBA     VG_2GB
+ -       NL-VLBA     VG_2GB
+ -       OV-VLBA     VG_2GB
+ -       PIETOWN     VG_2GB
+ -       SC-VLBA     VG_2GB
+ VG_4
+ -       GILCREEK    CDPV_W4
+ -       KOKEE       NRAO_W4 
+* Used for RDV sessions
+ VG_MK4
+ -       ALGOPARK    CDPV_VG2
+ -       BADARY      CDP_WID8
+ -       EFLSBERG    EFL_STD 
+ -       FORTLEZA    CDP_WID8
+ -       GILCREEK    CDPV_VG2
+ -       HARTRAO     DBBC_HH
+ -       HART15M     DBBC_HH
+ -       KOKEE       NRAO_VG2
+ -       HOBART26    DBBC_26 
+ -       HOBART12    DBBC_AU
+ -       KATH12M     DBBC_AU
+ -       ISHIOKA     KAS_WID8
+ -       KASHIM34    KAS_WID8
+ -       MATERA      CDP_WID8
+ -       NRAO20      NRAO_VG2
+ -       ONSALA60    ODB_WID8
+*-       ONSALDBC    ODB_WID8
+ -       ORION_5M    CDP_WID8
+ -       MEDICINA    CDP_WID8 
+ -       NOTO        CDPVNVG2
+ -       NYALES20    ODB_WIDE
+ -       NYALE13S    NYS_STD
+ -       PARKES      CDP_WID8 
+ -       TSUKUB32    TSU_WID8
+ -       TIGO        CDPV_VG2
+ -       WETTZ13N    ODB_WID8
+ -       WARK12M     DBBC_AU
+ -       AGGO        CDPA_VG2
+ -       SESHAN25    CDP_STDK
+* Added 2010Dec23
+ -       SESHAN25    SESH_LO
+ -       SVETLOE     CDP_WID8 
+ -       WESTFORD    CDP_WID8 
+ -       WETTZELL    ODB_WID8 
+ -       URUMQI      CDP_WID8
+ -       YARRA12M    CDPV_VG2 
+ -       YEBES40M    CDP_WID8 
+ VG_ZC
+ VLBA_PN 
+ -       BR-VLBA     VLBA_PN 
+ -       FD-VLBA     VLBA_PN
+ -       HN-VLBA     VLBA_PN 
+ -       KP-VLBA     VLBA_PN 
+ -       LA-VLBA     VLBA_PN 
+ -       MK-VLBA     VLBA_PN 
+ -       NL-VLBA     VLBA_PN 
+ -       OV-VLBA     VLBA_PN 
+ -       PIETOWN     VLBA_PN 
+ -       SC-VLBA     VLBA_PN 
+ VLBA_PW 
+ -       BR-VLBA     VLBA_PW  
+ -       FD-VLBA     VLBA_PW  
+ -       HN-VLBA     VLBA_PW  
+ -       KP-VLBA     VLBA_PW  
+ -       LA-VLBA     VLBA_PW  
+ -       MK-VLBA     VLBA_PW  
+ -       NL-VLBA     VLBA_PW  
+ -       OV-VLBA     VLBA_PW  
+ -       PIETOWN     VLBA_PW  
+ -       SC-VLBA     VLBA_PW  
+ VLBA_RV
+ -       BR-VLBA     VLBA_RV
+ -       FD-VLBA     VLBA_RV
+ -       HN-VLBA     VLBA_RV
+ -       KP-VLBA     VLBA_RV
+ -       LA-VLBA     VLBA_RV
+ -       MK-VLBA     VLBA_RV
+ -       NL-VLBA     VLBA_RV
+ -       OV-VLBA     VLBA_RV
+ -       PIETOWN     VLBA_RV
+ -       SC-VLBA     VLBA_RV 
+ VLBA_STD
+ -       BR-VLBA     VLBA_STD
+ -       FD-VLBA     VLBA_STD
+ -       HN-VLBA     VLBA_STD
+ -       KP-VLBA     VLBA_STD
+ -       LA-VLBA     VLBA_STD
+ -       MK-VLBA     VLBA_STD
+ -       NL-VLBA     VLBA_STD
+ -       OV-VLBA     VLBA_STD
+ -       PIETOWN     VLBA_STD
+ -       SC-VLBA     VLBA_STD
+ -       NRAO_140    NRAO8_STD
+ VLBA_WID
+ -       BR-VLBA     VLBA_WIDE
+ -       FD-VLBA     VLBA_WIDE
+ -       HN-VLBA     VLBA_WIDE
+ -       KP-VLBA     VLBA_WIDE
+ -       LA-VLBA     VLBA_WIDE
+ -       MK-VLBA     VLBA_WIDE
+ -       NL-VLBA     VLBA_WIDE
+ -       OV-VLBA     VLBA_WIDE
+ -       PIETOWN     VLBA_WIDE
+ -       SC-VLBA     VLBA_WIDE
+ -       NRAO_140    NRAO8_WIDE
+
+ -       ZELENCHK    ZC8_WIDE 
+ VLBA_PH
+ -       BR-VLBA     VLBA_STD
+ -       FD-VLBA     VLBA_STD
+ -       HN-VLBA     VLBA_STD
+ -       KP-VLBA     VLBA_STD
+ -       LA-VLBA     VLBA_STD
+ -       MK-VLBA     VLBA_STD
+ -       NL-VLBA     VLBA_STD
+ -       OV-VLBA     VLBA_STD
+ -       PIETOWN     VLBA_STD
+ -       SC-VLBA     VLBA_STD
+ L_STD
+ -       NOTO        L-STD
+ -       BR-VLBA     VLBA_L
+ -       FD-VLBA     VLBA_L
+ -       HN-VLBA     VLBA_L
+ -       KP-VLBA     VLBA_L
+ -       LA-VLBA     VLBA_L
+ -       MK-VLBA     VLBA_L
+ -       NL-VLBA     VLBA_L
+ -       OV-VLBA     VLBA_L
+ -       PIETOWN     VLBA_L
+ -       SC-VLBA     VLBA_L
+*
+ M4_TEST
+ -       HN-VLBA     VLBA_XX
+ -       NL-VLBA     VLBA_XX
+ -       GILCREEK    CDPV_XX 
+ -       KOKEE       NRAO_XX 
+ -       NRAO20      NRAO_XX 
+ SX_WALL
+ -       ALGOPARK    CDPV_WIDE
+ -       CRIMEA      CDP_WIDE
+ -       FORTLEZA    CDP_WIDE
+ -       GILCREEK    CDPV_WIDE
+ -       HARTRAO     CDP_WIDE
+ -       HOBART12    DBBC_AU
+ -       HOBART26    DBBC_26
+ -       KASHIMA     KAS_STD
+ -       KATH12M     CDP_WIDE
+ -       KOKEE       NRAO_WIDE
+ -       MATERA      CDP_WIDE
+ -       MEDICINA    CDP_WIDE
+ -       NRAO20      NRAO_WIDE
+ -       NYALES20    CDP_WIDE
+ -       ORION_5M    CDP_WIDE
+ -       ONSALA60    CDP_WIDE
+ -       SANTIA12    CDP_WIDE
+*-       SESHAN25    CDPS_WID
+ -       WARK12M     DBBC_WW
+ -       WESTFORD    CDP_WIDE
+ -       WETTZELL    CDP_WIDE
+ -       YARRA12M    DBBC_AU
+ -       YEBES40M    CDP_WIDE
+ X-M4TEST
+ -       ORION_5M    CDP_WBX
+ -       WESTFORD    CDP_WBX
+ S2_STD
+ -       ALGOPARK    S2_STD 
+ -       CTVA        S2_STD 
+ -       ARIES_9M    S2_STD 
+ -       SVETLOE     S2_STD 
+ -       ZELENCHK    S2_STD 
+ K4_STD
+ -       KOGANEI     K4_STD
+ -       MIURA       K4_STD
+ -       KASHIM11    K4_STD
+ -       KASHIM34    K4_STD
+* -       KASHIMA     K4_STD
+ -       TATEYAMA    K4_STD
+ K4_WIDE
+ -       KOGANEI     K4_WIDE
+ -       KASHIM11    K4_WIDE
+ -       KASHIM34    K4_WIDE
+ C_STD
+ -       CAMBG32M    C_CM 
+ -       EFLSBERG    C_EF
+ -       JODRELL2    C_JB 
+ -       MEDICINA    C_MC
+ -       NOTO        C_NT
+ -       ONSALA85    C_O8
+ -       SESHAN25    C_SH
+ -       TORUN       C_TR 
+ -       URUMQI      C_UR
+ -       WSTRBORK    C_WB 
+ K_STD
+ -       CAMBG32M    K_21680
+ -       EFLSBERG    K_22000
+ -       JODRELL2    K_22000 
+ -       MEDICINA    K_21864
+ -       NOTO        K_21600
+ -       ONSALA60    K_22000
+ -       SESHAN25    K_21600
+ -       METSAHOV   K_21480
+ -       URUMQI      K_22000
+ KK_AT
+ -       ATCA        K_22200
+ -       CEDUNA      K_22200
+ -       HOBART26    K_22200
+ -       MOPRA       K_22200
+ -       PARKES      K_22200

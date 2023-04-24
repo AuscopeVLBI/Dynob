@@ -1,0 +1,218 @@
+<!Doctype html>
+<head>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+
+function makeRequest(toPHP, callback) {
+	var xmlhttp;
+	if (window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
+		xmlhttp=new XMLHttpRequest();
+	}
+	else{// code for IE6, IE5
+		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.onreadystatechange=function(){
+		if (xmlhttp.readyState==4 && xmlhttp.status==200){
+			callback(xmlhttp.response);
+		}
+	}
+	xmlhttp.open("GET",toPHP,false);
+	xmlhttp.send();
+}
+
+$(document).ready(function(){
+
+	$( "#rtfform" ).submit(function( event ) {
+		event.preventDefault();
+
+		var $form = $( this ),
+		sname = $( "input[name='sessionName']" ).val(),
+		sst = $( "input[name='stations']" ).val(),
+		sfcsou = $( "input[name='fcsource']" ).val(),
+		srec = $( "input[name='recorders']" ).val();
+
+		if ( $("#anysource").is(":checked") ){
+			var sasou = 1;
+		}
+		else{
+			var sasou = 0;
+		}
+
+		// Send the data using post
+		var posting = $.post( "./fringe/realtimefringeprocess.php?action=prepare", { sessionName: sname, stations: sst, fcsource: sfcsou, anysource: sasou, recorders: srec } );
+
+		posting.done(function( data ) {
+
+			//show monitor screen
+			$("#dyn_fringe_form").hide();
+			$("#dyn_fringe_content").show();
+			const timeList = data.split("\n");
+			var checkend = 0;
+			var nextfringetime = 0;
+
+			//every second update
+			//convert time now (in UTC) into string
+			var checknow = 0;
+			var secintval = setInterval(function() {
+				var date = new Date();
+				var Y = date.getUTCFullYear();
+				var m = addZero(date.getUTCMonth()+1);
+				var d = addZero(date.getUTCDate());
+				var H = addZero(date.getUTCHours());
+				var i = addZero(date.getUTCMinutes());
+				var s = addZero(date.getUTCSeconds());
+				var tnow = Y+"-"+m+"-"+d+" "+H+":"+i+":"+s;
+
+				$("#timenow").html(tnow);
+				const tmpnow = new Date(tnow);
+				const tmplastlist = new Date(timeList.at(-1));
+
+				if(tmpnow>=tmplastlist){
+					$("#timenextfringe").html("No more fringe checks for this session");
+					if(checkend == 0){
+						checknow = 1;
+						checkend = 1;
+					}
+					clearInterval(secintval);
+				}
+				else{
+					//if(typeof(nextfringetime) == "undefined") {
+					if(nextfringetime == 0) {
+						var checknext = true;
+					}
+					else{
+						if(nextfringetime<tmpnow){
+							checknow = 1;
+							var checknext = true;
+						}
+						else{
+							var checknext = false;
+						}
+					}
+					if(checknext){
+						$.each(timeList, function( index, value ) {
+							const tmpnext = new Date(value);
+							if( tmpnext > tmpnow) {
+								$("#timenextfringe").html(value);
+								nextfringetime = tmpnext;
+								return false;
+							}
+						});
+					}
+				}
+				if(checknow==1){
+					checknow = 0;
+					prepfile();
+				}
+
+			}, 1000);
+
+			//other functions
+			function addZero(i) {
+				if (i < 10) {
+					i = "0" + i
+				}
+				return i;
+			}
+		});
+	});
+
+	function prepfile(){
+		makeRequest("./fringe/realtimefringeprocess.php?action=prepfiles", function(response) {	
+			//every 10-second update
+			//check transfer status
+			var tensecintval = setInterval(function() {
+				var isstop = 0;
+				var rres = "";
+				if (isstop == 0){
+					//alert(isstop);
+					makeRequest("./fringe/realtimefringeprocess.php?action=checksize", function(response) {	
+						if(response.includes("true")){
+							clearInterval(tensecintval);
+							isstop = 1;
+						}
+						else{
+							rres = String(response);
+						}
+					});
+					$("#dyniframe").html(rres);
+				}
+				if (isstop == 1){
+					$("#dyniframe").html("<iframe id='corframe' width='500' height='300' src='../correlations/ajax.html#mfdynf'></iframe>");
+					trackcorr("initfringefit");
+				}
+
+			}, 10000);
+		});
+	}
+
+	function trackcorr(steps){
+		window.setTimeout(function(){
+			var corstat = $("#corframe").contents().find("#progressTXT").text();
+		}, 5000);
+		var trackintval = setInterval(function() {
+			if(steps == "initfringefit"){
+				var corstat = $("#corframe").contents().find("#progressTXT").text();
+				if(corstat == "done"){
+					$("#dyniframe").html("<iframe id='corframe' width='500' height='300' src='../postcorr/initfringefit.php?exp=mfdynf'></iframe>");
+					steps = "fringefit";
+				}
+			}
+			else if(steps == "fringefit"){
+				var corstat = $("#corframe").contents().find("p").text();
+				if(corstat == "initff done"){
+					$("#dyniframe").html("<iframe id='corframe' width='500' height='300' src='../postcorr/fringefit.php?exp=mfdynf'></iframe>");
+					steps = "monitor";
+				}
+			}
+			else if(steps == "monitor"){
+				var corstat = $("#corframe").contents().find("p").text();
+				if(corstat == "fringefit done"){
+					$("#dyniframe").html("<iframe id='corframe' width='500' height='300' src='../pmonitor/monitor.php?exp=mfdynf'></iframe>");
+					steps = "done";
+
+				}
+			}
+			else if(steps == "done"){
+				var corstat = $("#corframe").contents().find("p").text();
+				if( corstat.includes("monitored")){
+					alert("done");
+					$("#dyniframe").html("<iframe id='corframe' width='500' height='300' src='./fringe/realtimefringeplot.php'></iframe>");
+					clearInterval(trackintval);
+				}
+			}
+			
+		}, 10000);
+	}
+});
+</script>
+</head>
+<body>
+	<h2>
+		Realtime fringe check
+	</h2>
+	<div id="dyn_fringe_form">
+		<form action="" method="post" id="rtfform">
+			<fieldset>
+				<legend>Session</legend>
+				<p>
+					Name: <input type="text" id="sessionName" name="sessionName" placeholder="e.g. aum040" required/><br><br>
+					Stations (Australian 12m + Ht only): <input type="text" id="stations" name="stations" placeholder="e.g. Hb,Ke,Ht" required/><br><br>
+					Recorders* (same as during ssh):  <input type="text" id="recorders" name="recorders" placeholder="e.g. flexbuf-2hb,flexbuffke,flexbuf:/disk3/aum040ht" size=40 required/><br>
+					<span style="color: red;">*Note: include path for non-AuScope data. E.g. flexbuf:/disk3/aum040ht</span>
+					<br><br>
+					Fringe check sources: <input type="text" id="fcsource" name="fcsource" placeholder="optional. e.g. 0454-234,1057-797" size=40/><br><br>
+					<input type="checkbox" id="anysource" name="anysource">
+					<label for="anysource">Any scan less than 90 secs every 3 hours (ignores "fringe check sources")</label>
+				</p>
+			</fieldset>
+			<input name="submit" type="submit" value="Submit">
+		</form>
+	</div>
+	<div id="dyn_fringe_content" style="display: none;">
+		<p>Time Now (UT): <span id="timenow"></span> </p>
+		<p>Next fringe check starts: <span id="timenextfringe"></span></p>
+		<div id="dyniframe"></div>
+	</div>
+</body>
+</html>

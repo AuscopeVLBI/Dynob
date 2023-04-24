@@ -1,0 +1,179 @@
+       IVS Analysis Report for R1914 ($19SEP30XA) 
+       This report is the official IVS analysis report that corresponds to 
+       the database maintained by the IVS Data Centers for this session.  
+   (Analyzed by David Gordon, NASA Goddard Space Flight Center.
+    Spoolfile source: interactive solve/nuSolve analysis.) 
+
+Problems: S-band subambiguities at MATERA and SEJONG. SEJONG and KOKEE
+          were noisy.
+
+Parameterization comments: None. 
+
+Other comments: ISHIOKA, NYALE13S and WETTZ13N did not participate.
+
+-----------------------------------------
+
+Session Statistics 
+
+  Observations:     5795 scheduled 
+                    2484 correlated (in database)
+                    2035 recoverable (usable)
+                    1417 used
+  Session fit:        47.186 ps
+
+-----------------------------------------
+
+Station Performance 
+
+                           Number of Observations
+
+                    Scheduled   Recoverable*        Used   % of scheduled
+                                                              obs used
+
+  AGGO                    745           419          334        44.8%
+  FORTLEZA                739           520          410        55.5%
+  HART15M                1065           595          464        43.6%
+  ISHIOKA                1408        MISSED       MISSED         0.0%
+  KOKEE                  1147           624          455        39.7%
+  MATERA                 1473           637          314        21.3%
+  NYALE13S                900        MISSED       MISSED         0.0%
+  SEJONG                 1523           664          377        24.8%
+  WETTZ13N               1474        MISSED       MISSED         0.0%
+  YARRA12M               1116           611          480        43.0%
+  ---------------   ---------   -----------    ---------       ------
+  Station Total**        5795          2035         1417        24.5%
+
+  * Recoverable: can be included in the solution. 
+  ** Total includes distinct observations only.
+
+  MISSED:    Station was scheduled, but it did not observe.
+  NOT CORR:  Station was scheduled but not correlated.
+  NOT USED:  Usable data was generated for this station,
+             but the analyst rejected it all.
+
+-----------------------------------------
+
+Source Performance 
+
+                    Number of Observations
+
+                Scheduled  Correlated*    Used      % of scheduled
+                                                       obs used
+
+  0108+388             22           3        0            0.0%
+  0150-144              3           1        0            0.0%
+  1540-828             23          23        9           39.1%
+  CEN-A                13          13        0            0.0%
+  1738+499             91          19       10           11.0%
+  0437-454              8           8        7           87.5%
+  0812+367             41          12        4            9.8%
+  2106-413              4           4        1           25.0%
+  0059+581            344          66       26            7.6%
+  0454-234            250         152       94           37.6%
+  0458-020            336         151       90           26.8%
+  0530-727             29          29        8           27.6%
+  0727-115            255         143       95           37.3%
+  0808+019             13           4        3           23.1%
+  0955+476            237          62       50           21.1%
+  1034-293             13           7        0            0.0%
+  1124-186            115          65       44           38.3%
+  1144-379            133         108       63           47.4%
+  1606+106             72          32       22           30.6%
+  1749+096            319         148      105           32.9%
+  3C371               473          97       37            7.8%
+  2255-282             77          47       31           40.3%
+  0237-027             12           3        1            8.3%
+  1324+224             25           9        3           12.0%
+  1639-062            186          99       54           29.0%
+  2000+472            111          31       16           14.4%
+  2227-088            300         164       93           31.0%
+  2229+695            101          18        6            5.9%
+  2355-106            178          95       63           35.4%
+  0307+380              6           4        2           33.3%
+  0529+483            301          80       43           14.3%
+  1040+244            168          54       33           19.6%
+  1144+402            307          80       53           17.3%
+  2144+092             48          14       10           20.8%
+  1759-396             23          15        3           13.0%
+  0048-427             24          24       10           41.7%
+  0308-611            135         135       92           68.1%
+  1243-160             19          12        8           42.1%
+  1657-261            185         111       54           29.2%
+  0403-132              5           5        5          100.0%
+  0834-201             34          18        2            5.9%
+  1039+811            159          32       16           10.1%
+  1406-076            227         121       71           31.3%
+  1751+288            122          33       15           12.3%
+  1936-155            236         127       63           26.7%
+  2126-158             12           6        2           16.7%
+  ------------  ---------  ----------   ------          ------
+  Source Total       5795        2484     1417           24.5%
+
+ * Correlated: included in database 
+
+-----------------------------------------
+
+Baseline Performance 
+
+                                 Number of Observations
+
+                         Scheduled   Recoverable*         Used   % of scheduled
+                                                                    obs used
+
+  AGGO-FORTLEZA                210           183           153        72.9%
+  AGGO-HART15M                 207           102            88        42.5%
+  AGGO-ISHIOKA                   0        MISSED        MISSED         0.0%
+  AGGO-KOKEE                    62            43            42        67.7%
+  AGGO-MATERA                  115            76            36        31.3%
+  AGGO-NYALE13S                 21        MISSED        MISSED         0.0%
+  AGGO-SEJONG                    0      NOT CORR      NOT CORR         0.0%
+  AGGO-WETTZ13N                 97        MISSED        MISSED         0.0%
+  AGGO-YARRA12M                 33            15            15        45.5%
+  FORTLEZA-HART15M             151           142           140        92.7%
+  FORTLEZA-ISHIOKA               5        MISSED        MISSED         0.0%
+  FORTLEZA-KOKEE                45            44            42        93.3%
+  FORTLEZA-MATERA              143           132            59        41.3%
+  FORTLEZA-NYALE13S             34        MISSED        MISSED         0.0%
+  FORTLEZA-SEJONG                4             3    DESELECTED         0.0%
+  FORTLEZA-WETTZ13N            127        MISSED        MISSED         0.0%
+  FORTLEZA-YARRA12M             20            16            16        80.0%
+  HART15M-ISHIOKA               60        MISSED        MISSED         0.0%
+  HART15M-KOKEE                  0      NOT CORR      NOT CORR         0.0%
+  HART15M-MATERA               212           182            89        42.0%
+  HART15M-NYALE13S              49        MISSED        MISSED         0.0%
+  HART15M-SEJONG                79            55            38        48.1%
+  HART15M-WETTZ13N             183        MISSED        MISSED         0.0%
+  HART15M-YARRA12M             124           114           109        87.9%
+  ISHIOKA-KOKEE                254        MISSED        MISSED         0.0%
+  ISHIOKA-MATERA               143        MISSED        MISSED         0.0%
+  ISHIOKA-NYALE13S             139        MISSED        MISSED         0.0%
+  ISHIOKA-SEJONG               393        MISSED        MISSED         0.0%
+  ISHIOKA-WETTZ13N             157        MISSED        MISSED         0.0%
+  ISHIOKA-YARRA12M             257        MISSED        MISSED         0.0%
+  KOKEE-MATERA                  96            88            52        54.2%
+  KOKEE-NYALE13S               103        MISSED        MISSED         0.0%
+  KOKEE-SEJONG                 285           279           155        54.4%
+  KOKEE-WETTZ13N               114        MISSED        MISSED         0.0%
+  KOKEE-YARRA12M               188           170           164        87.2%
+  MATERA-NYALE13S              179        MISSED        MISSED         0.0%
+  MATERA-SEJONG                164            95            43        26.2%
+  MATERA-WETTZ13N              335        MISSED        MISSED         0.0%
+  MATERA-YARRA12M               86            64            35        40.7%
+  NYALE13S-SEJONG              147        MISSED        MISSED         0.0%
+  NYALE13S-WETTZ13N            185        MISSED        MISSED         0.0%
+  NYALE13S-YARRA12M             43        MISSED        MISSED         0.0%
+  SEJONG-WETTZ13N              181        MISSED        MISSED         0.0%
+  SEJONG-YARRA12M              270           232           141        52.2%
+  WETTZ13N-YARRA12M             95        MISSED        MISSED         0.0%
+  -----------------      ---------   -----------    ----------       ------
+  Baseline Total              5795          2035          1417        24.5%
+
+  * Recoverable: can be included in the solution. 
+
+  MISSED:     Baseline was scheduled, but at least one of the sites
+              did not observe.
+  NOT CORR:   Baseline was scheduled but not correlated.
+  NO DATA:    The baseline's stations were both correlated,
+              but they did not observe together.
+  DESELECTED: Usable data was generated for the baseline,
+              but the analyst rejected it.

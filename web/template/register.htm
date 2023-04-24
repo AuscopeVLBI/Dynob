@@ -1,0 +1,48 @@
+<div class="registerBox">
+	<?php if ($_SESSION["register_message"]): ?>
+	<div class="loginTopMessage">
+		<b><?php echo $_SESSION["register_message"]; ?></b>
+		<?php session_unset(); ?>
+	</div>
+	<?php endif; ?>
+	
+	<script>
+		function validateRegister() {
+			var x = document.forms["RegForm"]["password"].value;
+			var y = document.forms["RegForm"]["passwordconf"].value;
+			if (x !== y) {
+				alert("<?php echo $lang["pswconflict"]; ?>");
+				return false;
+			}
+		}
+	</script>
+	
+	<form action="?mod=register" method="post" name="RegForm" onsubmit="return validateRegister()">
+		<table id="regTab" class="formGroup">
+			<tbody>
+				<tr>
+				  <td><label for="invitecode"><b><?php echo $lang["invitecode"]; ?>:</b></label></td>
+				  <td><input type="text" class="<?php echo inputRClass; ?>" id="invitecode" name="invitecode" required></td>
+				</tr>
+				<tr>
+				  <td><label for="username"><b><?php echo $lang["username"]; ?>:</b></label></td>
+				  <td><input type="text" class="<?php echo inputRClass; ?>" id="username" name="username" required></td>
+				</tr>
+				<tr>
+				  <td><label for="email"><b><?php echo $lang["email"]; ?>:</b></label></td>
+				  <td><input type="email" class="<?php echo inputRClass; ?>" id="email" name="email" required></td>
+				</tr>
+				<tr>
+				  <td><label for="pwd"><b><?php echo $lang["password"]; ?>:</b></label></td>
+				  <td><input type="password" class="<?php echo inputRClass; ?>" id="pwd" name="password" required></td>
+				</tr>
+				<tr>
+				  <td><label for="pwdconf"><b><?php echo $lang["passwordconf"]; ?>:</b></label></td>
+				  <td><input type="password" class="<?php echo inputRClass; ?>" id="pwdconf" name="passwordconf" required></td>
+				</tr>
+			</tbody>
+		</table>
+		<input type="hidden" id="sec" name="sec" value="<?php echo $rand; ?>">
+		<button name="submit" type="submit" class="<?php echo btnClass; ?>"><?php echo $lang["submit"]; ?></button>
+	</form>
+</div>

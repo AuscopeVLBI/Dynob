@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="../scripts/jquery-3.5.1.min.js"></script>
+<script>
+
+function checkCookie() {
+	let user = getCookie("dynob_user");
+	if (user == "" || user == null) {
+		var CurPageURL = window.location.href;
+		window.location.href = window.location.protocol + "//" + window.location.host + "/web/login.php?ref=" + btoa(CurPageURL);
+	}
+}
+
+function getCookie(cname) {
+	let name = cname + "=";
+	let ca = document.cookie.split(';');
+	for(let i = 0; i < ca.length; i++) {
+		let c = ca[i];
+		while (c.charAt(0) == ' ') {
+		c = c.substring(1);
+		}
+		if (c.indexOf(name) == 0) {
+		return c.substring(name.length, c.length);
+		}
+	}
+	return "";
+}
+
+//try to delete duplications. Do a generic function that does the request to php
+function makeRequest(toPHP, callback) {
+	var xmlhttp;
+	if (window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
+		xmlhttp=new XMLHttpRequest();
+	}
+	else{// code for IE6, IE5
+		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.onreadystatechange=function(){
+		if (xmlhttp.readyState==4 && xmlhttp.status==200){
+			callback(xmlhttp.response);
+		}
+	}
+	xmlhttp.open("GET",toPHP,true);
+	xmlhttp.send();
+}
+
+$(document).ready(function(){
+	checkCookie();
+	//hash
+	if(window.location.hash) {
+		var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+	}
+
+	var direct = 1; //determine if directly do difx2mark4 and fringe finding, 0 is off, 1 is on
+	var precorr = ["init","checkdir","getdataloc","copyvex","getlog","getv2d","genfilelist","dxcalc","dxmpi","corrcomplete"];
+	//var precorr = ["init","checkdir","getdataloc","copyvex","getlog","getv2d","genfilelist","corrcomplete"];
+	var ind = 0;
+	precorrprogress(precorr[ind]);
+	
+	function precorrprogress(value) {
+		makeRequest("../correlations/getprogress.php?progress="+value, function(response) {
+			$( "#outputTXT" ).html(response);
+			if(value!="next"){
+				//only dxmpi is different because it checks status from vc0
+				if(value=="dxmpi"){
+					if (response.indexOf("Correlation completed") < 0){
+						makeRequest("../correlations/precorrelate2.php?exper="+hash+"&do="+value, function(response2) {
+							setTimeout(function(){ 
+								precorrprogress(precorr[ind]);
+							},30000); //every 30 seconds
+						});
+					}
+					else{
+						var str = $("#outputTXT").html();
+						if (str.indexOf("Exit:") < 0){
+							$( "#progressTXT" ).html("done");
+							if (ind<precorr.length){
+								ind = ind + 1;
+								precorrprogress(precorr[ind]);
+							}
+						}
+						else{
+							precorrprogress("next");
+						}
+					}
+				}
+				//correlation completed
+				else if(value=="corrcomplete"){ 
+					if(direct==1){
+						makeRequest("../correlations/precorrelate2.php?exper="+hash+"&do=postmpi", function(response) {
+							$( "#outputTXT" ).append("Continue with fringe finding?");
+						});
+					}
+					else{
+						$( "#outputTXT" ).append("Please run difx2mark4 manually");
+					}
+				}
+				else{
+					precorrexec(value);
+				}
+			}
+		});
+	}
+
+	function precorrexec(value) {
+		makeRequest("../correlations/precorrelate2.php?exper="+hash+"&do="+value, function(response) {
+			//precorrprogress("next");
+			setTimeout(function(){ 
+				var str = $("#outputTXT").html();
+				if (str.indexOf("Exit:") < 0){
+					if (ind<precorr.length){
+						ind = ind + 1;
+						precorrprogress(precorr[ind]);
+					}
+				}
+				else{
+					precorrprogress("next");
+				}
+			},1000);
+		});
+	}
+});
+
+</script>
+</head>
+<body>
+<div id="progressTXT">Progress</div>
+<textarea id="outputTXT" rows="5" cols="50"></textarea>
+
+</body>
+</html>

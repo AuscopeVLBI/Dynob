@@ -1,0 +1,36 @@
+       IVS Analysis Report for R11020 ($21OCT12XA)
+       This report is the official IVS analysis report that corresponds to
+       the database maintained by the IVS Data Centers for this session.
+   (Analyzed by Sergei Bolotin, NVI, Inc. / NASA Goddard Space Flight Center.
+    Spoolfile source: interactive solve/nuSolve analysis.)
+
+
+***WARNING:  Schedule file not valid for this spoolfile***
+
+Problems: AGGO   Reported 2 lost scans (21:38-21:42) by field system.
+          BADARY Power outage (09:11-09:16).
+          HART15M Recorded in mark5b. 
+          HARTVDIF is HART15M recorded in flexbuf (vdif format).
+          ISHIOKA Did not participate.
+          WARK12M Wind stowed (23:21-02:14)
+          WETTZELL Halted (08:59-10:00).
+          Multiple subambigs in S-band of MATERA and RAEGSMAR baselines.
+          r11020.skd has invalid record $EXPER 
+          Therefore the source breakdown at the end of the summary has been deleted.
+          The reported information is based on the nuSolve spoolfile, which is based
+          on the correlated data.
+
+Parameterization comments: None.
+
+Other comments: None.
+
+-----------------------------------------
+
+Session statistics
+
+  Observations:    ????? scheduled
+                   11933 correlated (in database)
+                   10094 recoverable (usable)
+                    9457 used
+  Session fit:        36.476 ps
+

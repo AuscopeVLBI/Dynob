@@ -1,0 +1,262 @@
+       IVS Analysis Report for R1974 ($20NOV24XA) 
+       This report is the official IVS analysis report that corresponds to 
+       the database maintained by the IVS Data Centers for this session.  
+   (Analyzed by Sergei Bolotin, NASA Goddard Space Flight Center.
+    Spoolfile source: interactive solve/nuSolve analysis.) 
+
+This is a final solution of the session, it includes observations at NYALE13S
+(with the station's pcal tones by applying a pc_tonemask in the control file
+for fringe fitting) and fixed subambiguities in S-band.
+
+Problems:
+ - FORTLEZA did not participate.
+ - HOBART26 missed 9hrs of the session due to wind stow.
+ - SEJONG lost ~8hrs of the session due to "data server error".
+ - YEBES40M did not observe first 2.5hrs of the session.
+
+Parameterization comments: None. 
+
+Other comments:
+ - Observations at SEJONG are extremely noisy.
+
+
+-----------------------------------------
+
+Session Statistics 
+
+  Observations:     12710 scheduled 
+                    10865 correlated (in database)
+                    10285 recoverable (usable)
+                    10052 used
+  Session fit:        20.898 ps
+
+-----------------------------------------
+
+Station Performance 
+
+                           Number of Observations
+
+                    Scheduled   Recoverable*        Used   % of scheduled
+                                                              obs used
+
+  AGGO                    889           505          498        56.0%
+  FORTLEZA               1046        MISSED       MISSED         0.0%
+  HART15M                1548          1192         1176        76.0%
+  HOBART26                527           240          237        45.0%
+  KOKEE                  1348          1134         1100        81.6%
+  MATERA                 2594          2280         2225        85.8%
+  MEDICINA               2750          2543         2485        90.4%
+  NOTO                   1526          1407         1369        89.7%
+  NYALE13S               1760          1470         1446        82.2%
+  ONSALA60               2509          2254         2209        88.0%
+  SEJONG                 1784          1003          998        55.9%
+  SVETLOE                2114          1907         1843        87.2%
+  WETTZELL               2693          2505         2443        90.7%
+  YEBES40M               2332          2130         2075        89.0%
+  ---------------   ---------   -----------    ---------       ------
+  Station Total**       12710         10285        10052        79.1%
+
+  * Recoverable: can be included in the solution. 
+  ** Total includes distinct observations only.
+
+  MISSED:    Station was scheduled, but it did not observe.
+  NOT CORR:  Station was scheduled but not correlated.
+  NOT USED:  Usable data was generated for this station,
+             but the analyst rejected it all.
+
+-----------------------------------------
+
+Source Performance 
+
+                    Number of Observations
+
+                Scheduled  Correlated*    Used      % of scheduled
+                                                       obs used
+
+  0107-610              8           6        6           75.0%
+  1022-665              6           3        1           16.7%
+  1519-294             42          41       34           81.0%
+  0440+345             38          38       28           73.7%
+  2201+315            126         126      122           96.8%
+  4C39.25             214         173      159           74.3%
+  2037-253             67          65       56           83.6%
+  1738+476            153         153      137           89.5%
+  0334-131             40          34       29           72.5%
+  0818-128             52          52       46           88.5%
+  0003-066            159         138      138           86.8%
+  0059+581            816         739      702           86.0%
+  0104-408             97          54       38           39.2%
+  0133+476            487         412      382           78.4%
+  0405-385             39          12        8           20.5%
+  0454-234            397         270      270           68.0%
+  0530-727             13           6        3           23.1%
+  0537-441             55          18       16           29.1%
+  0727-115            389         268      251           64.5%
+  0805+410            213         195      179           84.0%
+  0823+033             75          66       65           86.7%
+  1034-293              5           1        0            0.0%
+  1057-797             15           8        3           20.0%
+  1124-186             28          20       20           71.4%
+  1128+385            276         245      235           85.1%
+  1144-379             47          19       17           36.2%
+  1255-316             45          26       18           40.0%
+  1417+385            145         135      126           86.9%
+  NGC6251              67          67       59           88.1%
+  1741-038            231         203      187           81.0%
+  3C371               899         818      740           82.3%
+  1908-201             39          19       16           41.0%
+  1923+210             76          76       73           96.1%
+  1954-388             56          32       25           44.6%
+  1958-179             34          33       33           97.1%
+  3C418               548         516      485           88.5%
+  2052-474             41          14       11           26.8%
+  2149+056             37          37       36           97.3%
+  2255-282             15          10       10           66.7%
+  0420-014            537         420      410           76.4%
+  0613+570            447         414      385           86.1%
+  1324+224            142         135      120           84.5%
+  1639-062            305         256      247           81.0%
+  1846+322             92          78       72           78.3%
+  0019+058            257         228      217           84.4%
+  0716+714            653         601      568           87.0%
+  0748+126            444         362      331           74.5%
+  1053+704            243         217      209           86.0%
+  1617+229             94          93       87           92.6%
+  2059+034             69          69       61           88.4%
+  0322+222            255         236      223           87.5%
+  0646-306            106          68       64           60.4%
+  1759-396             21          19       13           61.9%
+  0016+731            688         645      627           91.1%
+  0308-611             57          33       19           33.3%
+  0627-199             12           8        6           50.0%
+  1555+001             80          80       79           98.8%
+  1657-261             80          70       34           42.5%
+  0221+067            493         404      343           69.6%
+  0642+449            675         561      525           77.8%
+  0736+017             64          43       38           59.4%
+  0827+243            120         107       95           79.2%
+  1030+415             46          43       38           82.6%
+  1123+264             16          16       13           81.2%
+  1213-172             45          40       37           82.2%
+  1243-072             24          21       20           83.3%
+  1406-076            406         313      303           74.6%
+  1538+149             13          11       11           84.6%
+  1758-651              9           5        0            0.0%
+  2254+074            127         121       93           73.2%
+  ------------  ---------  ----------   ------          ------
+  Source Total      12710       10865    10052           79.1%
+
+ * Correlated: included in database 
+
+-----------------------------------------
+
+Baseline Performance 
+
+                                 Number of Observations
+
+                         Scheduled   Recoverable*         Used   % of scheduled
+                                                                    obs used
+
+  AGGO-FORTLEZA                221        MISSED        MISSED         0.0%
+  AGGO-HART15M                 136            95            95        69.9%
+  AGGO-HOBART26                 36            17            17        47.2%
+  AGGO-KOKEE                    47            35            35        74.5%
+  AGGO-MATERA                   75            49            48        64.0%
+  AGGO-MEDICINA                 75            69            69        92.0%
+  AGGO-NOTO                     11            10            10        90.9%
+  AGGO-NYALE13S                 12             0    DESELECTED         0.0%
+  AGGO-ONSALA60                 67            52            51        76.1%
+  AGGO-SEJONG                    0      NOT CORR      NOT CORR         0.0%
+  AGGO-SVETLOE                  41            25            25        61.0%
+  AGGO-WETTZELL                 72            68            65        90.3%
+  AGGO-YEBES40M                 96            85            83        86.5%
+  FORTLEZA-HART15M             142        MISSED        MISSED         0.0%
+  FORTLEZA-HOBART26             20        MISSED        MISSED         0.0%
+  FORTLEZA-KOKEE                46        MISSED        MISSED         0.0%
+  FORTLEZA-MATERA               97        MISSED        MISSED         0.0%
+  FORTLEZA-MEDICINA            104        MISSED        MISSED         0.0%
+  FORTLEZA-NOTO                 23        MISSED        MISSED         0.0%
+  FORTLEZA-NYALE13S             30        MISSED        MISSED         0.0%
+  FORTLEZA-ONSALA60             88        MISSED        MISSED         0.0%
+  FORTLEZA-SEJONG                8        MISSED        MISSED         0.0%
+  FORTLEZA-SVETLOE              62        MISSED        MISSED         0.0%
+  FORTLEZA-WETTZELL             90        MISSED        MISSED         0.0%
+  FORTLEZA-YEBES40M            115        MISSED        MISSED         0.0%
+  HART15M-HOBART26             113            45            45        39.8%
+  HART15M-KOKEE                  0      NOT CORR      NOT CORR         0.0%
+  HART15M-MATERA               163           148           144        88.3%
+  HART15M-MEDICINA             178           176           173        97.2%
+  HART15M-NOTO                 116           108           107        92.2%
+  HART15M-NYALE13S              46            27            27        58.7%
+  HART15M-ONSALA60             130           122           121        93.1%
+  HART15M-SEJONG                55            23            23        41.8%
+  HART15M-SVETLOE              115           110           110        95.7%
+  HART15M-WETTZELL             167           160           157        94.0%
+  HART15M-YEBES40M             187           178           174        93.0%
+  HOBART26-KOKEE               159            91            88        55.3%
+  HOBART26-MATERA               11             8             8        72.7%
+  HOBART26-MEDICINA             11            10            10        90.9%
+  HOBART26-NOTO                  3             0    DESELECTED         0.0%
+  HOBART26-NYALE13S              5             0    DESELECTED         0.0%
+  HOBART26-ONSALA60              8             7             7        87.5%
+  HOBART26-SEJONG              127            34            34        26.8%
+  HOBART26-SVETLOE              17            13            13        76.5%
+  HOBART26-WETTZELL             10             9             9        90.0%
+  HOBART26-YEBES40M              7             6             6        85.7%
+  KOKEE-MATERA                 104           100            98        94.2%
+  KOKEE-MEDICINA               113           111           107        94.7%
+  KOKEE-NOTO                    64            60            58        90.6%
+  KOKEE-NYALE13S               137           131           127        92.7%
+  KOKEE-ONSALA60               113           110           106        93.8%
+  KOKEE-SEJONG                 241           178           177        73.4%
+  KOKEE-SVETLOE                121           118           115        95.0%
+  KOKEE-WETTZELL               123           121           114        92.7%
+  KOKEE-YEBES40M                80            79            75        93.8%
+  MATERA-MEDICINA              373           364           354        94.9%
+  MATERA-NOTO                  171           167           164        95.9%
+  MATERA-NYALE13S              209           174           174        83.3%
+  MATERA-ONSALA60              338           324           320        94.7%
+  MATERA-SEJONG                163            81            81        49.7%
+  MATERA-SVETLOE               244           232           223        91.4%
+  MATERA-WETTZELL              347           342           330        95.1%
+  MATERA-YEBES40M              299           291           281        94.0%
+  MEDICINA-NOTO                178           175           170        95.5%
+  MEDICINA-NYALE13S            210           207           206        98.1%
+  MEDICINA-ONSALA60            345           342           336        97.4%
+  MEDICINA-SEJONG              174           113           113        64.9%
+  MEDICINA-SVETLOE             264           258           248        93.9%
+  MEDICINA-WETTZELL            395           392           386        97.7%
+  MEDICINA-YEBES40M            330           326           313        94.8%
+  NOTO-NYALE13S                142           133           130        91.5%
+  NOTO-ONSALA60                165           164           161        97.6%
+  NOTO-SEJONG                  149            93            93        62.4%
+  NOTO-SVETLOE                 182           178           168        92.3%
+  NOTO-WETTZELL                176           175           167        94.9%
+  NOTO-YEBES40M                146           144           141        96.6%
+  NYALE13S-ONSALA60            226           211           207        91.6%
+  NYALE13S-SEJONG              201            66            66        32.8%
+  NYALE13S-SVETLOE             179           171           164        91.6%
+  NYALE13S-WETTZELL            210           205           204        97.1%
+  NYALE13S-YEBES40M            153           145           141        92.2%
+  ONSALA60-SEJONG              190            94            92        48.4%
+  ONSALA60-SVETLOE             246           240           230        93.5%
+  ONSALA60-WETTZELL            333           330           325        97.6%
+  ONSALA60-YEBES40M            260           258           253        97.3%
+  SEJONG-SVETLOE               174           107           106        60.9%
+  SEJONG-WETTZELL              179           122           121        67.6%
+  SEJONG-YEBES40M              123            92            92        74.8%
+  SVETLOE-WETTZELL             262           255           245        93.5%
+  SVETLOE-YEBES40M             207           200           196        94.7%
+  WETTZELL-YEBES40M            329           326           320        97.3%
+  -----------------      ---------   -----------    ----------       ------
+  Baseline Total             12710         10285         10052        79.1%
+
+  * Recoverable: can be included in the solution. 
+
+  MISSED:     Baseline was scheduled, but at least one of the sites
+              did not observe.
+  NOT CORR:   Baseline was scheduled but not correlated.
+  NO DATA:    The baseline's stations were both correlated,
+              but they did not observe together.
+  DESELECTED: Usable data was generated for the baseline,
+              but the analyst rejected it.

@@ -1,0 +1,157 @@
+       IVS Analysis Report for R1971 ($20NOV03XA) 
+       This report is the official IVS analysis report that corresponds to 
+       the database maintained by the IVS Data Centers for this session.  
+   (Analyzed by Sergei Bolotin, NVI, Inc. / NASA Goddard Space Flight Center.
+    Spoolfile source: interactive solve/nuSolve analysis.) 
+
+Problems:
+ - NYALES20 did not participate.
+ - numerous problems at NYALE13S.
+
+Parameterization comments: a clock break was added to YARRA12M. 
+
+Other comments: None. 
+
+-----------------------------------------
+
+Session Statistics 
+
+  Observations:     3467 scheduled 
+                    2254 correlated (in database)
+                    1925 recoverable (usable)
+                    1890 used
+  Session fit:        38.373 ps
+
+-----------------------------------------
+
+Station Performance 
+
+                           Number of Observations
+
+                    Scheduled   Recoverable*        Used   % of scheduled
+                                                              obs used
+
+  FORTLEZA                941           612          596        63.3%
+  HART15M                 827           591          581        70.3%
+  MATERA                 1158           735          720        62.2%
+  NYALE13S                823           487          479        58.2%
+  NYALES20               1083        MISSED       MISSED         0.0%
+  SEJONG                  517           287          282        54.5%
+  WETTZ13N               1221           874          864        70.8%
+  YARRA12M                364           264          258        70.9%
+  ---------------   ---------   -----------    ---------       ------
+  Station Total**        3467          1925         1890        54.5%
+
+  * Recoverable: can be included in the solution. 
+  ** Total includes distinct observations only.
+
+  MISSED:    Station was scheduled, but it did not observe.
+  NOT CORR:  Station was scheduled but not correlated.
+  NOT USED:  Usable data was generated for this station,
+             but the analyst rejected it all.
+
+-----------------------------------------
+
+Source Performance 
+
+                    Number of Observations
+
+                Scheduled  Correlated*    Used      % of scheduled
+                                                       obs used
+
+  1936+046             12           4        1            8.3%
+  0440+345             12           6        5           41.7%
+  0422-380              4           4        3           75.0%
+  1116-462             13          13       11           84.6%
+  4C39.25              48          34       33           68.8%
+  1738+476             46          27       21           45.7%
+  1423+146              1           0        0            0.0%
+  0802-010              2           2        0            0.0%
+  2336+598              9           3        2           22.2%
+  0119+115              6           3        2           33.3%
+  0133+476            194         108       88           45.4%
+  0229+131            102          57       37           36.3%
+  0458-020            186         146      135           72.6%
+  0530-727              9           9        4           44.4%
+  0537-441             11          11       10           90.9%
+  OJ287               239         144      132           55.2%
+  1057-797             15          15        9           60.0%
+  3C274                61          35       31           50.8%
+  1255-316             24          24       22           91.7%
+  1424-418             23          23       22           95.7%
+  3C371               266         156      115           43.2%
+  3C418               351         219      188           53.6%
+  2113+293            119          55       52           43.7%
+  0613+570            177         106       94           53.1%
+  1149-084             99          99       91           91.9%
+  1846+322             44          22       20           45.5%
+  2215+150            206         117      109           52.9%
+  2227-088            106          90       85           80.2%
+  0019+058            234         144      120           51.3%
+  0536+145             38          23        6           15.8%
+  0641+392             51          27        7           13.7%
+  0716+714            107          61       49           45.8%
+  1040+244            123          78       72           58.5%
+  1705+018            133          84       59           44.4%
+  0322+222             85          51       42           49.4%
+  0632-235             38          38       38          100.0%
+  1759-396              7           7        5           71.4%
+  0308-611             45          45       33           73.3%
+  1243-160             60          60       56           93.3%
+  0017+200             65          32       26           40.0%
+  0131-522             35          35       26           74.3%
+  1039+811             61          37       29           47.5%
+  ------------  ---------  ----------   ------          ------
+  Source Total       3467        2254     1890           54.5%
+
+ * Correlated: included in database 
+
+-----------------------------------------
+
+Baseline Performance 
+
+                                 Number of Observations
+
+                         Scheduled   Recoverable*         Used   % of scheduled
+                                                                    obs used
+
+  FORTLEZA-HART15M             198           170           166        83.8%
+  FORTLEZA-MATERA              200           158           152        76.0%
+  FORTLEZA-NYALE13S            113            66            65        57.5%
+  FORTLEZA-NYALES20            174        MISSED        MISSED         0.0%
+  FORTLEZA-SEJONG               19             0    DESELECTED         0.0%
+  FORTLEZA-WETTZ13N            208           195           191        91.8%
+  FORTLEZA-YARRA12M             29            23            22        75.9%
+  HART15M-MATERA               153           117           116        75.8%
+  HART15M-NYALE13S              70            53            52        74.3%
+  HART15M-NYALES20             106        MISSED        MISSED         0.0%
+  HART15M-SEJONG                23            14            14        60.9%
+  HART15M-WETTZ13N             167           150           148        88.6%
+  HART15M-YARRA12M             110            87            85        77.3%
+  MATERA-NYALE13S              178           142           138        77.5%
+  MATERA-NYALES20              234        MISSED        MISSED         0.0%
+  MATERA-SEJONG                 77            49            49        63.6%
+  MATERA-WETTZ13N              293           253           249        85.0%
+  MATERA-YARRA12M               23            16            16        69.6%
+  NYALE13S-NYALES20            169        MISSED        MISSED         0.0%
+  NYALE13S-SEJONG               88            46            44        50.0%
+  NYALE13S-WETTZ13N            178           168           168        94.4%
+  NYALE13S-YARRA12M             27            12            12        44.4%
+  NYALES20-SEJONG              108        MISSED        MISSED         0.0%
+  NYALES20-WETTZ13N            260        MISSED        MISSED         0.0%
+  NYALES20-YARRA12M             32        MISSED        MISSED         0.0%
+  SEJONG-WETTZ13N               87            80            80        92.0%
+  SEJONG-YARRA12M              115            98            95        82.6%
+  WETTZ13N-YARRA12M             28            28            28       100.0%
+  -----------------      ---------   -----------    ----------       ------
+  Baseline Total              3467          1925          1890        54.5%
+
+  * Recoverable: can be included in the solution. 
+
+  MISSED:     Baseline was scheduled, but at least one of the sites
+              did not observe.
+  NOT CORR:   Baseline was scheduled but not correlated.
+  NO DATA:    The baseline's stations were both correlated,
+              but they did not observe together.
+  DESELECTED: Usable data was generated for the baseline,
+              but the analyst rejected it.

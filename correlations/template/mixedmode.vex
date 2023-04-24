@@ -1,0 +1,672 @@
+VEX_rev = 1.5;
+*=========================================================================================================
+$GLOBAL;
+*=========================================================================================================
+    ref $EXPER = mf0005;
+*=========================================================================================================
+$EXPER;
+*=========================================================================================================
+    def mf0005;
+        exper_name = mf0005;
+        exper_description = Monday_fringe_check_0005;
+        exper_nominal_start = 2020y132d00h00m00s;
+        exper_nominal_stop = 2020y132d00h00m36s;
+        scheduler_name = unknown;
+        scheduler_email = unknown;
+        target_correlator = unknown;
+*       software = VieSched++;
+*       software_version = 7102042b8d4e479af1c5959d6504ddf843e222ad;
+*       software_gui_version = cc7242fee8798a91a8bedcda58d2c9d26f578b38;
+    enddef;
+*=========================================================================================================
+$STATION;
+*=========================================================================================================
+    def Hb;
+        ref $SITE = HOBART12;
+        ref $ANTENNA = HOBART12;
+        ref $DAS = MARK5B_recorder;
+        ref $DAS = DBBC_DDC_rack;
+        ref $DAS = Hb_Hb;
+    enddef;
+    def Ke;
+        ref $SITE = KATH12M;
+        ref $ANTENNA = KATH12M;
+        ref $DAS = MARK5B_recorder;
+        ref $DAS = DBBC_DDC_rack;
+        ref $DAS = Ke_Ke;
+    enddef;
+    def Yg;
+        ref $SITE = YARRA12M;
+        ref $ANTENNA = YARRA12M;
+        ref $DAS = MARK5B_recorder;
+        ref $DAS = DBBC_DDC_rack;
+        ref $DAS = Yg_Yg;
+    enddef;
+*=========================================================================================================
+$MODE;
+*=========================================================================================================
+    def 1024-16(AUMOD);
+        ref $FREQ =             GEOSXMOD      : Yg : Ww : Ht ;
+        ref $FREQ =             HB            : Hb ;
+*        ref $FREQ =             AOVSX16T      : Kv : S6 : Sh : Ww : Yg ;
+*        ref $FREQ =             HBAOVSX16T    : Hb : Ke ;
+        ref $FREQ =             KE            : Ke ; 
+        ref $BBC =              DBBC_AU       : Yg : Ww ;
+        ref $BBC =              DBBC_HH       : Ht ;
+        ref $BBC =              HB            : Hb ;
+        ref $BBC =              KE            : Ke ;
+        ref $BBC =              CDP_T6        : S6 ;
+        ref $BBC =              SESH_LO       : Sh ;
+        ref $BBC =              TSU_WIDE      : Kv ;
+        ref $IF =               DBBC_AU       : Yg : Ww ;
+        ref $IF =               DBBC_HH       : Ht ;
+        ref $IF =               HB            : Hb ;
+        ref $IF =               KE            : Ke ;
+        ref $IF =               CDP_T6        : S6 ;
+        ref $IF =               SESH_LO       : Sh ;
+        ref $IF =               TSU_WIDE      : Kv ;
+        ref $TRACKS =           HB            : Hb : Ke : Ww : Ht ;
+        ref $TRACKS =           14U2L-1-2-B   : Yg : S6 ;
+        ref $TRACKS =           Mark5B_format : Yg : Kv : Sh ;
+        ref $TRACKS =           14U2L-1-2-J   : Kv ;
+        ref $TRACKS =           14U2L-1-2     : Sh ;
+        ref $TRACKS =           Mark4_format  : S6 ;
+        ref $PASS_ORDER =       passOrder     : Hb : Ke : Ht : S6 : Sh : Ww : Yg ;
+        ref $ROLL =             NO_ROLL       : Hb : Ke : Ht : S6 : Sh : Ww : Yg ;
+        ref $PHASE_CAL_DETECT = Standard      : Hb : Ke : Ht : S6 : Sh : Ww : Yg ;
+    enddef;
+*=========================================================================================================
+$SCHED;
+*=========================================================================================================
+    scan 132-0000;
+        start = 2020y132d00h00m00s;
+        mode = 1024-16(AUMOD);
+        source = 1921-293;
+        station = Hb :    0 sec :   15 sec : 0 ft : 1A : &ccw : 1;
+        station = Ke :    0 sec :   15 sec : 0 ft : 1A : &ccw : 1;
+        station = Yg :    0 sec :   15 sec : 0 ft : 1A : &ccw : 1;
+    endscan;
+*=========================================================================================================
+$SITE;
+*=========================================================================================================
+    def HOBART12;
+        site_type = fixed;
+        site_name = HOBART12;
+        site_ID = Hb;
+        site_position = -3949990.583 m :  2522421.174 m : -4311708.242 m;
+        site_position_ref = sked_position.cat;
+        occupation_code = 73741201;
+    enddef;
+    def KATH12M;
+        site_type = fixed;
+        site_name = KATH12M;
+        site_ID = Ke;
+        site_position = -4147354.588 m :  4581542.408 m : -1573303.300 m;
+        site_position_ref = sked_position.cat;
+        occupation_code = 73751301;
+    enddef;
+    def YARRA12M;
+        site_type = fixed;
+        site_name = YARRA12M;
+        site_ID = Yg;
+        site_position = -2388896.057 m :  5043349.968 m : -3078590.918 m;
+        site_position_ref = sked_position.cat;
+        occupation_code = 73761401;
+    enddef;
+*=========================================================================================================
+$ANTENNA;
+*=========================================================================================================
+    def HOBART12;
+*       antenna_name = HOBART12;
+        antenna_diam = 12 m;
+        axis_type = az : el;
+        axis_offset = 0 m;
+        antenna_motion =  az: 300 deg/min:   9 sec;
+        antenna_motion =  el:  75 deg/min:   9 sec;
+        pointing_sector = &ccw   :  az :   90 deg :  270 deg :  el :    5 deg :   88 deg ;
+        pointing_sector = &n     :  az :  270 deg :  450 deg :  el :    5 deg :   88 deg ;
+        pointing_sector = &cw    :  az :  450 deg :  630 deg :  el :    5 deg :   88 deg ;
+    enddef;
+    def KATH12M;
+*       antenna_name = KATH12M;
+        antenna_diam = 12 m;
+        axis_type = az : el;
+        axis_offset = 0 m;
+        antenna_motion =  az: 300 deg/min:   9 sec;
+        antenna_motion =  el:  75 deg/min:   8 sec;
+        pointing_sector = &ccw   :  az :   90 deg :  270 deg :  el :    5 deg :   88 deg ;
+        pointing_sector = &n     :  az :  270 deg :  450 deg :  el :    5 deg :   88 deg ;
+        pointing_sector = &cw    :  az :  450 deg :  630 deg :  el :    5 deg :   88 deg ;
+    enddef;
+    def YARRA12M;
+*       antenna_name = YARRA12M;
+        antenna_diam = 12 m;
+        axis_type = az : el;
+        axis_offset = 0 m;
+        antenna_motion =  az: 300 deg/min:   9 sec;
+        antenna_motion =  el:  75 deg/min:   9 sec;
+        pointing_sector = &ccw   :  az :   90 deg :  270 deg :  el :    5 deg :   88 deg ;
+        pointing_sector = &n     :  az :  270 deg :  450 deg :  el :    5 deg :   88 deg ;
+        pointing_sector = &cw    :  az :  450 deg :  630 deg :  el :    5 deg :   88 deg ;
+    enddef;
+*=========================================================================================================
+$DAS;
+*=========================================================================================================
+    def DBBC_DDC_rack;
+        electronics_rack_type = DBBC_DDC;
+    enddef;
+    def MARK5B_recorder;
+        record_transport_type = MARK5B;
+    enddef;
+    def Hb_Hb;
+        recording_system_ID = Hb;
+    enddef;
+    def Ke_Ke;
+        recording_system_ID = Ke;
+    enddef;
+    def Yg_Yg;
+        recording_system_ID = Yg;
+    enddef;
+*=========================================================================================================
+$SOURCE;
+*=========================================================================================================
+    def 1921-293;
+        source_type = star;
+        source_name = 1921-293;
+        IAU_name = 1921-293;
+        ra = 19h24m51.05596s;
+        dec = -29d14'30.12105";
+        ref_coord_frame = J2000;
+        ra_rate = 0 asec/yr;
+        dec_rate = 0 asec/yr;
+    enddef;
+*=========================================================================================================
+$BBC;
+*=========================================================================================================
+    def DBBC_AU;    * 1024-16(AUMOD) : Hb : Ke : Yg; 
+*                     BBC    Physical   IF
+*                      ID      BBC#     ID
+        BBC_assign = &BBC01 :    01 : &IF_A1;
+        BBC_assign = &BBC02 :    02 : &IF_A1;
+        BBC_assign = &BBC03 :    03 : &IF_A1;
+        BBC_assign = &BBC04 :    04 : &IF_A1;
+        BBC_assign = &BBC05 :    05 : &IF_B4;
+        BBC_assign = &BBC06 :    06 : &IF_B4;
+        BBC_assign = &BBC07 :    07 : &IF_B4;
+        BBC_assign = &BBC08 :    08 : &IF_B4;
+        BBC_assign = &BBC09 :    09 : &IF_C2;
+        BBC_assign = &BBC10 :    10 : &IF_C2;
+        BBC_assign = &BBC11 :    11 : &IF_C2;
+        BBC_assign = &BBC12 :    12 : &IF_C2;
+        BBC_assign = &BBC13 :    13 : &IF_D2;
+        BBC_assign = &BBC14 :    14 : &IF_D2;
+    enddef;
+    def HB;
+        BBC_assign = &BBC01 : 01 : &IF_C1;
+        BBC_assign = &BBC02 : 02 : &IF_C1;
+        BBC_assign = &BBC03 : 03 : &IF_C1;
+        BBC_assign = &BBC04 : 04 : &IF_C1;
+        BBC_assign = &BBC05 : 05 : &IF_C1;
+        BBC_assign = &BBC06 : 06 : &IF_C1;
+        BBC_assign = &BBC07 : 07 : &IF_C1;
+        BBC_assign = &BBC08 : 08 : &IF_C1;
+        BBC_assign = &BBC09 : 09 : &IF_B1;
+        BBC_assign = &BBC10 : 10 : &IF_B1;
+        BBC_assign = &BBC11 : 11 : &IF_B1;
+        BBC_assign = &BBC12 : 12 : &IF_B1;
+        BBC_assign = &BBC13 : 13 : &IF_B1;
+        BBC_assign = &BBC14 : 14 : &IF_B1;
+        BBC_assign = &BBC15 : 15 : &IF_B1;
+        BBC_assign = &BBC16 : 16 : &IF_B1;
+        BBC_assign = &BBC17 : 17 : &IF_C1;
+        BBC_assign = &BBC18 : 18 : &IF_C1;
+        BBC_assign = &BBC19 : 19 : &IF_C1;
+        BBC_assign = &BBC20 : 20 : &IF_A1;
+        BBC_assign = &BBC21 : 21 : &IF_D1;
+        BBC_assign = &BBC22 : 22 : &IF_D1;
+        BBC_assign = &BBC23 : 23 : &IF_D1;
+        BBC_assign = &BBC24 : 24 : &IF_D1;
+    enddef;
+    def CDP_T6;    * AOV16T : S6; 
+*                     BBC    Physical   IF
+*                      ID      BBC#     ID
+        BBC_assign = &BBC01 :    01 :  &IF_A;
+        BBC_assign = &BBC02 :    02 :  &IF_A;
+        BBC_assign = &BBC03 :    03 :  &IF_A;
+        BBC_assign = &BBC04 :    04 :  &IF_A;
+        BBC_assign = &BBC05 :    05 :  &IF_B;
+        BBC_assign = &BBC06 :    06 :  &IF_B;
+        BBC_assign = &BBC07 :    07 :  &IF_B;
+        BBC_assign = &BBC08 :    08 :  &IF_B;
+        BBC_assign = &BBC09 :    09 :  &IF_C;
+        BBC_assign = &BBC10 :    10 :  &IF_C;
+        BBC_assign = &BBC11 :    11 :  &IF_C;
+        BBC_assign = &BBC12 :    12 :  &IF_C;
+        BBC_assign = &BBC13 :    13 :  &IF_D;
+        BBC_assign = &BBC14 :    14 :  &IF_D;
+    enddef;
+    def SESH_LO;    * AOV16T : Sh; 
+*                     BBC    Physical   IF
+*                      ID      BBC#     ID
+        BBC_assign = &BBC01 :    01 : &IF_A1;
+        BBC_assign = &BBC02 :    02 : &IF_A1;
+        BBC_assign = &BBC03 :    03 : &IF_A1;
+        BBC_assign = &BBC04 :    04 : &IF_A1;
+        BBC_assign = &BBC05 :    05 : &IF_B1;
+        BBC_assign = &BBC06 :    06 : &IF_B1;
+        BBC_assign = &BBC07 :    07 : &IF_B1;
+        BBC_assign = &BBC08 :    08 : &IF_B1;
+        BBC_assign = &BBC09 :    09 : &IF_C3;
+        BBC_assign = &BBC10 :    10 : &IF_C3;
+        BBC_assign = &BBC11 :    11 : &IF_C3;
+        BBC_assign = &BBC12 :    12 : &IF_C3;
+        BBC_assign = &BBC13 :    13 : &IF_D3;
+        BBC_assign = &BBC14 :    14 : &IF_D3;
+    enddef;
+    def TSU_WIDE;    * AOV16T : Kv; 
+*                     BBC    Physical   IF
+*                      ID      BBC#     ID
+        BBC_assign = &BBC01 :    01 : &IF_1N;
+        BBC_assign = &BBC02 :    02 : &IF_1N;
+        BBC_assign = &BBC03 :    03 : &IF_1N;
+        BBC_assign = &BBC04 :    04 : &IF_1N;
+        BBC_assign = &BBC05 :    05 : &IF_3N;
+        BBC_assign = &BBC06 :    06 : &IF_3N;
+        BBC_assign = &BBC07 :    07 : &IF_3N;
+        BBC_assign = &BBC08 :    08 : &IF_3N;
+        BBC_assign = &BBC09 :    09 : &IF_2N;
+        BBC_assign = &BBC10 :    10 : &IF_2N;
+        BBC_assign = &BBC11 :    11 : &IF_2N;
+        BBC_assign = &BBC12 :    12 : &IF_2N;
+        BBC_assign = &BBC13 :    13 : &IF_2N;
+        BBC_assign = &BBC14 :    14 : &IF_2N;
+    enddef;
+    def DBBC_HH;    * 1024-16(AUMOD) : Ht;
+*                     BBC    Physical   IF
+*                      ID      BBC#     ID
+        BBC_assign = &BBC01 :    01 : &IF_A1;
+        BBC_assign = &BBC02 :    02 : &IF_A1;
+        BBC_assign = &BBC03 :    03 : &IF_A1;
+        BBC_assign = &BBC04 :    04 : &IF_A1;
+        BBC_assign = &BBC05 :    05 : &IF_B1;
+        BBC_assign = &BBC06 :    06 : &IF_B1;
+        BBC_assign = &BBC07 :    07 : &IF_B1;
+        BBC_assign = &BBC08 :    08 : &IF_B1;
+        BBC_assign = &BBC09 :    09 : &IF_C1;
+        BBC_assign = &BBC10 :    10 : &IF_C1;
+        BBC_assign = &BBC11 :    11 : &IF_C1;
+        BBC_assign = &BBC12 :    12 : &IF_C1;
+        BBC_assign = &BBC13 :    13 : &IF_D1;
+        BBC_assign = &BBC14 :    14 : &IF_D1;
+    enddef;
+    def KE;
+        BBC_assign = &BBC01 : 01 : &IF_A1;
+        BBC_assign = &BBC02 : 02 : &IF_B1;
+        BBC_assign = &BBC03 : 03 : &IF_C1;
+        BBC_assign = &BBC04 : 04 : &IF_D1;
+    enddef;
+*=========================================================================================================
+$IF;
+*=========================================================================================================
+    def DBBC_AU;    * 1024-16(AUMOD) : Hb : Ke : Yg; 
+*                  IF   Physical Pol    Total      Net     Phase-cal   P-cal base  
+*                  ID     Name            IO        SB   freq spacing     freq
+        if_def = &IF_A1 :   A1 :  R : 7600.00 MHz :  U :    1.00 MHz :    0.00 Hz;
+        if_def = &IF_B4 :   B4 :  R : 7600.00 MHz :  U :    1.00 MHz :    0.00 Hz;
+        if_def = &IF_C2 :   C2 :  R : 1900.00 MHz :  U :    1.00 MHz :    0.00 Hz;
+        if_def = &IF_D2 :   D2 :  R : 1900.00 MHz :  U :    1.00 MHz :    0.00 Hz;
+    enddef;
+    def HB;
+        if_def = &IF_A1 : A1 : R :  6000.0 MHz : U : 5 MHz : 0 Hz;
+        if_def = &IF_B1 : B1 : L :  6000.0 MHz : U : 5 MHz : 0 Hz;
+        if_def = &IF_C1 : C1 : R :  1900.0 MHz : U : 5 MHz : 0 Hz;
+        if_def = &IF_D1 : D1 : L :  1900.0 MHz : U : 5 MHz : 0 Hz;
+    enddef;
+    def KE;
+        if_def = &IF_A1 : A1 : R :  1900.0 MHz : U : 1 MHz : 0 Hz;
+        if_def = &IF_B1 : B1 : L :  1900.0 MHz : U : 1 MHz : 0 Hz;
+        if_def = &IF_C1 : C1 : R :  6000.0 MHz : U : 1 MHz : 0 Hz;
+        if_def = &IF_D1 : D1 : L :  6000.0 MHz : U : 1 MHz : 0 Hz;
+    enddef;
+    def DBBC_HH;
+*   1024-16(AUMOD) : Ht;
+*                  IF   Physical Pol    Total      Net     Phase-cal   P-cal base
+*                  ID     Name            IO        SB   freq spacing     freq
+        if_def = &IF_A1 :   A1 :  R : 7600.00 MHz :  U :    1.00 MHz :    0.00 Hz;
+        if_def = &IF_B1 :   B1 :  R : 7600.00 MHz :  U :    1.00 MHz :    0.00 Hz;
+        if_def = &IF_C1 :   C1 :  R : 1900.00 MHz :  U :    1.00 MHz :    0.00 Hz;
+        if_def = &IF_D1 :   D1 :  R : 1900.00 MHz :  U :    1.00 MHz :    0.00 Hz;
+    enddef;
+    def CDP_T6;    * AOV16T : S6; 
+        if_def =  &IF_A :    A :  R : 8100.00 MHz :  U :    1.00 MHz :    0.00 Hz;
+        if_def =  &IF_B :    B :  R : 8100.00 MHz :  U :    1.00 MHz :    0.00 Hz;
+        if_def =  &IF_C :    C :  R : 2000.00 MHz :  U :    1.00 MHz :    0.00 Hz;
+        if_def =  &IF_D :    D :  R : 2000.00 MHz :  U :    1.00 MHz :    0.00 Hz;
+    enddef;
+    def SESH_LO;    * AOV16T : Sh; 
+        if_def = &IF_A1 :   A1 :  R : 8100.00 MHz :  U :    1.00 MHz :    0.00 Hz;
+        if_def = &IF_B1 :   B1 :  R : 8100.00 MHz :  U :    1.00 MHz :    0.00 Hz;
+        if_def = &IF_C3 :   C3 :  R : 2000.00 MHz :  U :    1.00 MHz :    0.00 Hz;
+        if_def = &IF_D3 :   D3 :  R : 2000.00 MHz :  U :    1.00 MHz :    0.00 Hz;
+    enddef;
+    def TSU_WIDE;    * AOV16T : Kv; 
+        if_def = &IF_1N :   1N :  R : 7680.00 MHz :  U :    1.00 MHz :    0.00 Hz;
+        if_def = &IF_3N :   3N :  R : 8080.00 MHz :  U :    1.00 MHz :    0.00 Hz;
+        if_def = &IF_2N :   2N :  R : 1600.00 MHz :  U :    1.00 MHz :    0.00 Hz;
+    enddef;
+*
+*=========================================================================================================
+$TRACKS;
+*=========================================================================================================
+    def 14U2L-1-2-B;    * 1024-16(AUMOD) : Hb : Ke : Yg; 
+*                    sub-   trksId  sign/  hdstk  trk0 
+*                    pass            mag 
+        fanout_def =    A : &CH01 : sign :    1 :  02;
+        fanout_def =    A : &CH01 :  mag :    1 :  03;
+        fanout_def =    A : &CH02 : sign :    1 :  04;
+        fanout_def =    A : &CH02 :  mag :    1 :  05;
+        fanout_def =    A : &CH03 : sign :    1 :  06;
+        fanout_def =    A : &CH03 :  mag :    1 :  07;
+        fanout_def =    A : &CH04 : sign :    1 :  08;
+        fanout_def =    A : &CH04 :  mag :    1 :  09;
+        fanout_def =    A : &CH05 : sign :    1 :  10;
+        fanout_def =    A : &CH05 :  mag :    1 :  11;
+        fanout_def =    A : &CH06 : sign :    1 :  12;
+        fanout_def =    A : &CH06 :  mag :    1 :  13;
+        fanout_def =    A : &CH07 : sign :    1 :  14;
+        fanout_def =    A : &CH07 :  mag :    1 :  15;
+        fanout_def =    A : &CH08 : sign :    1 :  16;
+        fanout_def =    A : &CH08 :  mag :    1 :  17;
+        fanout_def =    A : &CH09 : sign :    1 :  18;
+        fanout_def =    A : &CH09 :  mag :    1 :  19;
+        fanout_def =    A : &CH10 : sign :    1 :  20;
+        fanout_def =    A : &CH10 :  mag :    1 :  21;
+        fanout_def =    A : &CH11 : sign :    1 :  22;
+        fanout_def =    A : &CH11 :  mag :    1 :  23;
+        fanout_def =    A : &CH12 : sign :    1 :  24;
+        fanout_def =    A : &CH12 :  mag :    1 :  25;
+        fanout_def =    A : &CH13 : sign :    1 :  26;
+        fanout_def =    A : &CH13 :  mag :    1 :  27;
+        fanout_def =    A : &CH14 : sign :    1 :  28;
+        fanout_def =    A : &CH14 :  mag :    1 :  29;
+        fanout_def =    A : &CH15 : sign :    1 :  30;
+        fanout_def =    A : &CH15 :  mag :    1 :  31;
+        fanout_def =    A : &CH16 : sign :    1 :  32;
+        fanout_def =    A : &CH16 :  mag :    1 :  33;
+    enddef;
+    def HB;
+        fanout_def = A : &CH01 : sign : 1 : 02;
+        fanout_def = A : &CH01 : mag  : 1 : 03;
+        fanout_def = A : &CH02 : sign : 1 : 04;
+        fanout_def = A : &CH02 : mag  : 1 : 05;
+        fanout_def = A : &CH03 : sign : 1 : 06;
+        fanout_def = A : &CH03 : mag  : 1 : 07;
+        fanout_def = A : &CH04 : sign : 1 : 08;
+        fanout_def = A : &CH04 : mag  : 1 : 09;
+        fanout_def = A : &CH05 : sign : 1 : 10;
+        fanout_def = A : &CH05 : mag  : 1 : 11;
+        fanout_def = A : &CH06 : sign : 1 : 12;
+        fanout_def = A : &CH06 : mag  : 1 : 13;
+        fanout_def = A : &CH07 : sign : 1 : 14;
+        fanout_def = A : &CH07 : mag  : 1 : 15;
+        fanout_def = A : &CH08 : sign : 1 : 16;
+        fanout_def = A : &CH08 : mag  : 1 : 17;
+        fanout_def = A : &CH09 : sign : 1 : 18;
+        fanout_def = A : &CH09 : mag  : 1 : 19;
+        fanout_def = A : &CH10 : sign : 1 : 20;
+        fanout_def = A : &CH10 : mag  : 1 : 21;
+        fanout_def = A : &CH11 : sign : 1 : 22;
+        fanout_def = A : &CH11 : mag  : 1 : 23;
+        fanout_def = A : &CH12 : sign : 1 : 24;
+        fanout_def = A : &CH12 : mag  : 1 : 25;
+        fanout_def = A : &CH13 : sign : 1 : 26;
+        fanout_def = A : &CH13 : mag  : 1 : 27;
+        fanout_def = A : &CH14 : sign : 1 : 28;
+        fanout_def = A : &CH14 : mag  : 1 : 29;
+        fanout_def = A : &CH15 : sign : 1 : 30;
+        fanout_def = A : &CH15 : mag  : 1 : 31;
+        fanout_def = A : &CH16 : sign : 1 : 32;
+        fanout_def = A : &CH16 : mag  : 1 : 33;
+        track_frame_format = VDIF/8032/2;
+    enddef;
+    def 14U2L-1-2-J;    * AOV16T : Kv; 
+        fanout_def =    A : &CH01 : sign :    1 :  02;
+        fanout_def =    A : &CH01 :  mag :    1 :  03;
+        fanout_def =    A : &CH02 : sign :    1 :  30;
+        fanout_def =    A : &CH02 :  mag :    1 :  31;
+        fanout_def =    A : &CH03 : sign :    1 :  04;
+        fanout_def =    A : &CH03 :  mag :    1 :  05;
+        fanout_def =    A : &CH04 : sign :    1 :  06;
+        fanout_def =    A : &CH04 :  mag :    1 :  07;
+        fanout_def =    A : &CH05 : sign :    1 :  08;
+        fanout_def =    A : &CH05 :  mag :    1 :  09;
+        fanout_def =    A : &CH06 : sign :    1 :  10;
+        fanout_def =    A : &CH06 :  mag :    1 :  11;
+        fanout_def =    A : &CH07 : sign :    1 :  12;
+        fanout_def =    A : &CH07 :  mag :    1 :  13;
+        fanout_def =    A : &CH08 : sign :    1 :  14;
+        fanout_def =    A : &CH08 :  mag :    1 :  15;
+        fanout_def =    A : &CH09 : sign :    1 :  16;
+        fanout_def =    A : &CH09 :  mag :    1 :  17;
+        fanout_def =    A : &CH10 : sign :    1 :  32;
+        fanout_def =    A : &CH10 :  mag :    1 :  33;
+        fanout_def =    A : &CH11 : sign :    1 :  18;
+        fanout_def =    A : &CH11 :  mag :    1 :  19;
+        fanout_def =    A : &CH12 : sign :    1 :  20;
+        fanout_def =    A : &CH12 :  mag :    1 :  21;
+        fanout_def =    A : &CH13 : sign :    1 :  22;
+        fanout_def =    A : &CH13 :  mag :    1 :  23;
+        fanout_def =    A : &CH14 : sign :    1 :  24;
+        fanout_def =    A : &CH14 :  mag :    1 :  25;
+        fanout_def =    A : &CH15 : sign :    1 :  26;
+        fanout_def =    A : &CH15 :  mag :    1 :  27;
+        fanout_def =    A : &CH16 : sign :    1 :  28;
+        fanout_def =    A : &CH16 :  mag :    1 :  29;
+    enddef;
+    def 14U2L-1-2;    * AOV16T : Sh; 
+*                    sub-   trksId  sign/  hdstk  trk0 
+*                    pass            mag 
+        fanout_def =    A : &CH01 : sign :    1 :  02;
+        fanout_def =    A : &CH01 :  mag :    1 :  04;
+        fanout_def =    A : &CH02 : sign :    1 :  06;
+        fanout_def =    A : &CH02 :  mag :    1 :  08;
+        fanout_def =    A : &CH03 : sign :    1 :  10;
+        fanout_def =    A : &CH03 :  mag :    1 :  12;
+        fanout_def =    A : &CH04 : sign :    1 :  14;
+        fanout_def =    A : &CH04 :  mag :    1 :  16;
+        fanout_def =    A : &CH05 : sign :    1 :  18;
+        fanout_def =    A : &CH05 :  mag :    1 :  20;
+        fanout_def =    A : &CH06 : sign :    1 :  22;
+        fanout_def =    A : &CH06 :  mag :    1 :  24;
+        fanout_def =    A : &CH07 : sign :    1 :  26;
+        fanout_def =    A : &CH07 :  mag :    1 :  28;
+        fanout_def =    A : &CH08 : sign :    1 :  30;
+        fanout_def =    A : &CH08 :  mag :    1 :  32;
+        fanout_def =    A : &CH09 : sign :    1 :  03;
+        fanout_def =    A : &CH09 :  mag :    1 :  05;
+        fanout_def =    A : &CH10 : sign :    1 :  07;
+        fanout_def =    A : &CH10 :  mag :    1 :  09;
+        fanout_def =    A : &CH11 : sign :    1 :  11;
+        fanout_def =    A : &CH11 :  mag :    1 :  13;
+        fanout_def =    A : &CH12 : sign :    1 :  15;
+        fanout_def =    A : &CH12 :  mag :    1 :  17;
+        fanout_def =    A : &CH13 : sign :    1 :  19;
+        fanout_def =    A : &CH13 :  mag :    1 :  21;
+        fanout_def =    A : &CH14 : sign :    1 :  23;
+        fanout_def =    A : &CH14 :  mag :    1 :  25;
+        fanout_def =    A : &CH15 : sign :    1 :  27;
+        fanout_def =    A : &CH15 :  mag :    1 :  29;
+        fanout_def =    A : &CH16 : sign :    1 :  31;
+        fanout_def =    A : &CH16 :  mag :    1 :  33;
+    enddef;
+    def Mark4_format;    * AOV16T : S6; 
+        track_frame_format = Mark4;
+    enddef;
+    def Mark5B_format;    * 1024-16(AUMOD) : Hb : Ke : Yg; 
+        track_frame_format = Mark5B;
+    enddef;
+*=========================================================================================================
+$FREQ;
+*=========================================================================================================
+    def GEOSXMOD;    * 1024-16(AUMOD) : Hb : Ke : Yg; 
+*                 Band    Sky freq    Net    Chan       Chan     BBC   Phase-cal
+*                  Id    at 0Hz BBC    SB     BW         ID       ID       ID
+        chan_def = &X :  8212.99 MHz : U : 16.000 MHz : &CH01 : &BBC01 : &U_cal;
+        chan_def = &X :  8252.99 MHz : U : 16.000 MHz : &CH02 : &BBC02 : &U_cal;
+        chan_def = &X :  8352.99 MHz : U : 16.000 MHz : &CH03 : &BBC03 : &U_cal;
+        chan_def = &X :  8512.99 MHz : U : 16.000 MHz : &CH04 : &BBC04 : &U_cal;
+        chan_def = &X :  8732.99 MHz : U : 16.000 MHz : &CH05 : &BBC05 : &U_cal;
+        chan_def = &X :  8852.99 MHz : U : 16.000 MHz : &CH06 : &BBC06 : &U_cal;
+        chan_def = &X :  8892.99 MHz : U : 16.000 MHz : &CH07 : &BBC07 : &U_cal;
+        chan_def = &X :  8932.99 MHz : U : 16.000 MHz : &CH08 : &BBC08 : &U_cal;
+        chan_def = &X :  8212.99 MHz : L : 16.000 MHz : &CH09 : &BBC01 : &U_cal;
+        chan_def = &X :  8932.99 MHz : L : 16.000 MHz : &CH10 : &BBC08 : &U_cal;
+        chan_def = &S :  2200.99 MHz : U : 16.000 MHz : &CH11 : &BBC09 : &U_cal;
+        chan_def = &S :  2216.99 MHz : U : 16.000 MHz : &CH12 : &BBC10 : &U_cal;
+        chan_def = &S :  2232.99 MHz : U : 16.000 MHz : &CH13 : &BBC11 : &U_cal;
+        chan_def = &S :  2248.99 MHz : U : 16.000 MHz : &CH14 : &BBC12 : &U_cal;
+        chan_def = &S :  2264.99 MHz : U : 16.000 MHz : &CH15 : &BBC13 : &U_cal;
+        chan_def = &S :  2280.99 MHz : U : 16.000 MHz : &CH16 : &BBC14 : &U_cal;
+        sample_rate = 32.00 Ms/sec;
+    enddef;
+    def HB;
+        ** First datastream, X-band, X-pol
+        chan_def = &X :  8204.99 MHz : U :  32.000 MHz : &CH01 : &BBC01 : &U_cal;
+        chan_def = &X :  8244.99 MHz : U :  32.000 MHz : &CH02 : &BBC02 : &U_cal;
+        chan_def = &X :  8344.99 MHz : U :  32.000 MHz : &CH03 : &BBC03 : &U_cal;
+        chan_def = &X :  8504.99 MHz : U :  32.000 MHz : &CH04 : &BBC04 : &U_cal;
+        chan_def = &X :  8724.99 MHz : U :  32.000 MHz : &CH05 : &BBC05 : &U_cal;
+        chan_def = &X :  8844.99 MHz : U :  32.000 MHz : &CH06 : &BBC06 : &U_cal;
+        chan_def = &X :  8884.99 MHz : U :  32.000 MHz : &CH07 : &BBC07 : &U_cal;
+        chan_def = &X :  8924.99 MHz : U :  32.000 MHz : &CH08 : &BBC08 : &U_cal;
+        ** Second datastream, X-band, Y-pol
+        chan_def = &X :  8204.99 MHz : U :  32.000 MHz : &CH09 : &BBC09 : &U_cal;
+        chan_def = &X :  8244.99 MHz : U :  32.000 MHz : &CH10 : &BBC10 : &U_cal;
+        chan_def = &X :  8344.99 MHz : U :  32.000 MHz : &CH11 : &BBC11 : &U_cal;
+        chan_def = &X :  8504.99 MHz : U :  32.000 MHz : &CH12 : &BBC12 : &U_cal;
+        chan_def = &X :  8724.99 MHz : U :  32.000 MHz : &CH13 : &BBC13 : &U_cal;
+        chan_def = &X :  8844.99 MHz : U :  32.000 MHz : &CH14 : &BBC14 : &U_cal;
+        chan_def = &X :  8884.99 MHz : U :  32.000 MHz : &CH15 : &BBC15 : &U_cal;
+        chan_def = &X :  8924.99 MHz : U :  32.000 MHz : &CH16 : &BBC16 : &U_cal;
+        ** Third datastream, S-band, X and Y pol
+        chan_def = &X :  2200.99 MHz : U :  32.000 MHz : &CH17 : &BBC17 : &U_cal;
+        chan_def = &X :  2232.99 MHz : U :  32.000 MHz : &CH18 : &BBC18 : &U_cal;
+        chan_def = &X :  2264.99 MHz : U :  32.000 MHz : &CH19 : &BBC19 : &U_cal;
+        chan_def = &X :  3248.99 MHz : U :  32.000 MHz : &CH20 : &BBC20 : &U_cal;
+        chan_def = &X :  2200.99 MHz : U :  32.000 MHz : &CH21 : &BBC21 : &U_cal;
+        chan_def = &X :  2232.99 MHz : U :  32.000 MHz : &CH22 : &BBC22 : &U_cal;
+        chan_def = &X :  2264.99 MHz : U :  32.000 MHz : &CH23 : &BBC23 : &U_cal;
+        chan_def = &X :  3248.99 MHz : U :  32.000 MHz : &CH24 : &BBC24 : &U_cal;
+        sample_rate =  64.0 Ms/sec;
+    enddef;
+    def KE;
+        ** First datastream, X-band, X-pol
+        chan_def = &X :  8212.99 MHz : U :  16.000 MHz : &CH01 : &BBC01 : &U_cal;
+        chan_def = &X :  8252.99 MHz : U :  16.000 MHz : &CH02 : &BBC01 : &U_cal;
+        chan_def = &X :  8352.99 MHz : U :  16.000 MHz : &CH03 : &BBC01 : &U_cal;
+        chan_def = &X :  8512.99 MHz : U :  16.000 MHz : &CH04 : &BBC01 : &U_cal;
+        chan_def = &X :  8732.99 MHz : U :  16.000 MHz : &CH05 : &BBC01 : &U_cal;
+        chan_def = &X :  8852.99 MHz : U :  16.000 MHz : &CH06 : &BBC01 : &U_cal;
+        chan_def = &X :  8892.99 MHz : U :  16.000 MHz : &CH07 : &BBC01 : &U_cal;
+        chan_def = &X :  8932.99 MHz : U :  16.000 MHz : &CH08 : &BBC01 : &U_cal;
+        ** Second datastream, X-band, Y-pol
+        chan_def = &X :  8212.99 MHz : U :  16.000 MHz : &CH09 : &BBC02 : &U_cal;
+        chan_def = &X :  8252.99 MHz : U :  16.000 MHz : &CH10 : &BBC02 : &U_cal;
+        chan_def = &X :  8352.99 MHz : U :  16.000 MHz : &CH11 : &BBC02 : &U_cal;
+        chan_def = &X :  8512.99 MHz : U :  16.000 MHz : &CH12 : &BBC02 : &U_cal;
+        chan_def = &X :  8732.99 MHz : U :  16.000 MHz : &CH13 : &BBC02 : &U_cal;
+        chan_def = &X :  8852.99 MHz : U :  16.000 MHz : &CH14 : &BBC02 : &U_cal;
+        chan_def = &X :  8892.99 MHz : U :  16.000 MHz : &CH15 : &BBC02 : &U_cal;
+        chan_def = &X :  8932.99 MHz : U :  16.000 MHz : &CH16 : &BBC02 : &U_cal;
+        ** Third datastream, S-band, X-pol
+        chan_def = &S :  2200.99 MHz : U :  16.000 MHz : &CH17 : &BBC01 : &U_cal;
+        chan_def = &S :  2216.99 MHz : U :  16.000 MHz : &CH18 : &BBC01 : &U_cal;
+        chan_def = &S :  2232.99 MHz : U :  16.000 MHz : &CH19 : &BBC01 : &U_cal;
+        chan_def = &S :  2248.99 MHz : U :  16.000 MHz : &CH20 : &BBC01 : &U_cal;
+        chan_def = &S :  2264.99 MHz : U :  16.000 MHz : &CH21 : &BBC01 : &U_cal;
+        chan_def = &S :  2280.99 MHz : U :  16.000 MHz : &CH22 : &BBC01 : &U_cal;
+        chan_def = &S :  2296.99 MHz : U :  16.000 MHz : &CH23 : &BBC01 : &U_cal;
+        chan_def = &S :  2405.99 MHz : U :  16.000 MHz : &CH24 : &BBC01 : &U_cal;
+        ** Forth datastream, S-band, Y-pol
+        chan_def = &S :  2200.99 MHz : U :  16.000 MHz : &CH25 : &BBC02 : &U_cal;
+        chan_def = &S :  2216.99 MHz : U :  16.000 MHz : &CH26 : &BBC02 : &U_cal;
+        chan_def = &S :  2232.99 MHz : U :  16.000 MHz : &CH27 : &BBC02 : &U_cal;
+        chan_def = &S :  2248.99 MHz : U :  16.000 MHz : &CH28 : &BBC02 : &U_cal;
+        chan_def = &S :  2264.99 MHz : U :  16.000 MHz : &CH29 : &BBC02 : &U_cal;
+        chan_def = &S :  2280.99 MHz : U :  16.000 MHz : &CH30 : &BBC02 : &U_cal;
+        chan_def = &S :  2396.99 MHz : U :  16.000 MHz : &CH31 : &BBC02 : &U_cal;
+        chan_def = &S :  2405.99 MHz : U :  16.000 MHz : &CH32 : &BBC02 : &U_cal;
+        sample_rate =  32.0 Ms/sec;
+    enddef;
+    def AOVSX16T;    * 1024-16(AUMOD) : Hb : Ke : Yg; 
+*                 Band    Sky freq    Net    Chan       Chan     BBC   Phase-cal
+*                  Id    at 0Hz BBC    SB     BW         ID       ID       ID
+        chan_def = &X :     8214 MHz : U : 16.000 MHz : &CH01 : &BBC01 : &U_cal;
+        chan_def = &X :     8230 MHz : U : 16.000 MHz : &CH02 : &BBC02 : &U_cal;
+        chan_def = &X :     8470 MHz : U : 16.000 MHz : &CH03 : &BBC03 : &U_cal;
+        chan_def = &X :     8486 MHz : U : 16.000 MHz : &CH04 : &BBC04 : &U_cal;
+        chan_def = &X :     8774 MHz : U : 16.000 MHz : &CH05 : &BBC05 : &U_cal;
+        chan_def = &X :     8838 MHz : U : 16.000 MHz : &CH06 : &BBC06 : &U_cal;
+        chan_def = &X :     8902 MHz : U : 16.000 MHz : &CH07 : &BBC07 : &U_cal;
+        chan_def = &X :     8934 MHz : U : 16.000 MHz : &CH08 : &BBC08 : &U_cal;
+        chan_def = &X :     8214 MHz : L : 16.000 MHz : &CH09 : &BBC01 : &U_cal;
+        chan_def = &X :     8934 MHz : L : 16.000 MHz : &CH10 : &BBC08 : &U_cal;
+        chan_def = &S :     2201 MHz : U : 16.000 MHz : &CH11 : &BBC09 : &U_cal;
+        chan_def = &S :     2217 MHz : U : 16.000 MHz : &CH12 : &BBC10 : &U_cal;
+        chan_def = &S :     2233 MHz : U : 16.000 MHz : &CH13 : &BBC11 : &U_cal;
+        chan_def = &S :     2257 MHz : U : 16.000 MHz : &CH14 : &BBC12 : &U_cal;
+        chan_def = &S :     2273 MHz : U : 16.000 MHz : &CH15 : &BBC13 : &U_cal;
+        chan_def = &S :     2289 MHz : U : 16.000 MHz : &CH16 : &BBC14 : &U_cal;
+        sample_rate = 32.00 Ms/sec;
+    enddef;
+    def HBAOVSX16T;
+        ** First datastream, X-band, X-pol
+        chan_def = &X :  8206 MHz : U :  32.000 MHz : &CH01 : &BBC01 : &U_cal;
+        chan_def = &X :  8222 MHz : U :  32.000 MHz : &CH02 : &BBC02 : &U_cal;
+        chan_def = &X :  8462 MHz : U :  32.000 MHz : &CH03 : &BBC03 : &U_cal;
+        chan_def = &X :  8480 MHz : U :  32.000 MHz : &CH04 : &BBC04 : &U_cal;
+        chan_def = &X :  8766 MHz : U :  32.000 MHz : &CH05 : &BBC05 : &U_cal;
+        chan_def = &X :  8830 MHz : U :  32.000 MHz : &CH06 : &BBC06 : &U_cal;
+        chan_def = &X :  8894 MHz : U :  32.000 MHz : &CH07 : &BBC07 : &U_cal;
+        chan_def = &X :  8926 MHz : U :  32.000 MHz : &CH08 : &BBC08 : &U_cal;
+        ** Second datastream, X-band, Y-pol
+        chan_def = &X :  8206 MHz : U :  32.000 MHz : &CH09 : &BBC09 : &U_cal;
+        chan_def = &X :  8222 MHz : U :  32.000 MHz : &CH10 : &BBC10 : &U_cal;
+        chan_def = &X :  8462 MHz : U :  32.000 MHz : &CH11 : &BBC11 : &U_cal;
+        chan_def = &X :  8480 MHz : U :  32.000 MHz : &CH12 : &BBC12 : &U_cal;
+        chan_def = &X :  8766 MHz : U :  32.000 MHz : &CH13 : &BBC13 : &U_cal;
+        chan_def = &X :  8830 MHz : U :  32.000 MHz : &CH14 : &BBC14 : &U_cal;
+        chan_def = &X :  8894 MHz : U :  32.000 MHz : &CH15 : &BBC15 : &U_cal;
+        chan_def = &X :  8926 MHz : U :  32.000 MHz : &CH16 : &BBC16 : &U_cal;
+        ** Third datastream, S-band, X and Y pol
+        chan_def = &X :  2201 MHz : U :  32.000 MHz : &CH17 : &BBC17 : &U_cal;
+        chan_def = &X :  2233 MHz : U :  32.000 MHz : &CH18 : &BBC18 : &U_cal;
+        chan_def = &X :  2265 MHz : U :  32.000 MHz : &CH19 : &BBC19 : &U_cal;
+        chan_def = &X :  3249 MHz : U :  32.000 MHz : &CH20 : &BBC20 : &U_cal;
+        chan_def = &X :  2201 MHz : U :  32.000 MHz : &CH21 : &BBC21 : &U_cal;
+        chan_def = &X :  2233 MHz : U :  32.000 MHz : &CH22 : &BBC22 : &U_cal;
+        chan_def = &X :  2265 MHz : U :  32.000 MHz : &CH23 : &BBC23 : &U_cal;
+        chan_def = &X :  3249 MHz : U :  32.000 MHz : &CH24 : &BBC24 : &U_cal;
+        sample_rate =  64.0 Ms/sec;
+    enddef;
+*=========================================================================================================
+$PASS_ORDER;
+*=========================================================================================================
+* WARNING: This block is hard coded!
+    def passOrder;
+        pass_order =   1A :   2A :   3A :   4A :   5A :   6A :   7A :   8A :   9A :  10A :  11A :  12A :  13A :  14A;
+    enddef;
+*=========================================================================================================
+$ROLL;
+*=========================================================================================================
+* WARNING: This block is hard coded!
+    def NO_ROLL;
+        roll = off;
+    enddef;
+*=========================================================================================================
+$PHASE_CAL_DETECT;
+*=========================================================================================================
+* WARNING: This block is hard coded!
+    def Standard;
+        phase_cal_detect = &U_cal : 1;
+    enddef;

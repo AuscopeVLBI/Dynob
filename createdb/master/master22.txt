@@ -1,0 +1,268 @@
+## Master file format version 1.0           2001.08.21 CCT&NRV
+
+                         2022 MULTI-AGENCY SCHEDULE
+
+                     Last Updated - January 11, 2023 - CCT
+
+  SESSION  SESSION DATE  DOY TIME  DUR       STATIONS                                               SKED CORR STATUS  PF   DBC  SUBM  DEL   MK4
+    NAME     CODE  mondd ddd hh:mm hr                                                                         yymondd      CODE       days  NUM 
+------------------------------------------------------------------------------------------------------------------------------------------------
+|IVS-R11032|R11032|JAN03|  3|17:00|24|HtIsKvMaNsNtNyOnSaWzYg -Ag                                   |NASA|BONN|22JAN18|1.0 | XA |NASA|  14 |5257|
+|IVS-R41032|R41032|JAN06|  6|18:30|24|HtIsKkNsNySaYgYs                                             |USNO|WASH|22JAN18|1.0 | XE |USNO|  11 |1032|
+|IVS-R11033|R11033|JAN10| 10|17:00|24|AgHtIsMaNsNtNyOnSaWzYg                                       |NASA|BONN|22JAN20|1.0 | XA |NASA|   9 |5258|
+|IVS-T2P151|T2P151|JAN11| 11|17:30|24|AgBdEbHhHtIsKgKkKvMaMcNsNtNyOhOnSaShSvVmWnWzYgYsZc -Mh       |DACH|BONN|Wt_med |    | XH |BKG | 364 |    |
+|AUS-MIX045|AUM045|JAN12| 12|18:00|24|HbKeYg                                                       |UTAS|UTAS|22FEB15|1.0 | XB |UTAS|  33 |<4s|
+|IVS-R&D-1 |RD2201|JAN12| 12|18:00|24|HhIsKkKmMaNsNyOnWz                                           |OSO |SHAO|22MAR25|1.0 | XA |NASA|  71 |2201|
+|VGOS-O2013|VO2013|JAN13| 13|18:00|24|GsK2MgOeOwWfWsYj                                             |HAYS|VIEN|22MAY30|1.0 | VG |NASA| 136 |    |
+|IVS-R41033|R41033|JAN13| 13|18:30|24|HtIsKkNsNySaWwWzYgYsZc                                       |USNO|WASH|22JAN31|1.0 | XE |USNO|  17 |1033|
+|AOV067    |AOV067|JAN15| 15|02:00|24|HbIsKgKmSyWwYg -Ke                                           |GSI |GSI |22MAY25|1.0 | XA |NASA| 129 |2072|
+|AUS-AST084|AUA084|JAN17| 17|14:00|24|HbHtKeWwYg -Ho                                               |DACH|UTAS|22FEB09|1.0 | XA |NASA|  22 |1084|
+|IVS-R11034|R11034|JAN18| 18|17:00|24|AgHtIsKkKvNsSaWwWzYg -MaNy                                   |NASA|BONN|22FEB02|1.0 | XA |NASA|  14 |5260|
+|VLBA151   |RV151 |JAN19| 19|18:00|24|HhNsNyOnShVaWzYg                                             |USNO|VLBA|22MAY31|1.0 | XA |USNO| 131 |    |
+|VGOS-R&D01|VR2201|JAN20| 20|18:00|24|GsHbK2MgOeOwWfWs -Yj                                         |DACH|HAYS|22APR20|1.0 | VG |NASA|  89 |3793|
+|IVS-R41034|R41034|JAN20| 20|18:30|24|HtIsKkNsNySaWwWzYgYsZc                                       |USNO|WASH|22FEB03|1.0 | XE |USNO|  13 |1034|
+|IVS-R11035|R11035|JAN24| 24|17:00|24|AgBdHtIsKvNsNyOnSaSvWnWzYgZc -Ma                             |NASA|BONN|22FEB07|1.0 | XA |NASA|  13 |5261|
+|IVS-CRD117|CRD117|JAN25| 25|17:30|24|AgHhOhWwYg -Ho                                               |DACH|WASH|22JUL01|1.0 | XN |USNO| 156 |    |
+|IVS-CRF128|CRF128|JAN26| 26|18:00|24|BdHhNtYgZc -KmMa                                             |DACH|SHAO|22APR30|1.0 | XN |USNO|  93 |2228|
+|VGOS-O2027|VO2027|JAN27| 27|18:00|24|GsK2MgOeWfWs -OwYj                                           |HAYS|WASH|22APR01|1.0 | VG |NASA|  63 |    |
+|IVS-R41035|R41035|JAN27| 27|18:30|24|HtIsKkMcNsNySaWzYgZc -Ur                                     |USNO|WASH|22FEB09|1.0 | XE |USNO|  12 |1035|
+|IVS-R11036|R11036|JAN31| 31|17:00|24|BdHtIsMaNsNtNyOnSaSvWnWzYgZc -Ag                             |NASA|BONN|22FEB15|1.0 | XA |NASA|  14 |5262|
+------------------------------------------------------------------------------------------------------------------------------------------------
+|IVS-CRF129|CRF129|FEB01| 32|17:30|24|BdHhMaNtYgZc -Km                                             |DACH|SHAO|22MAR29|1.0 | XN |USNO|  55 |2229|
+|IVS-R&D-2 |RD2202|FEB02| 33|18:00|24|HhIsKkMaNsNyOnWzYg -Km                                       |OSO |SHAO|22MAY11|1.0 | XA |NASA|  97 |2202|
+|VGOS-O2034|VO2034|FEB03| 34|18:00|24|GsK2OeWfWsYj -MgOw                                           |HAYS|BONN|22APR19|1.0 | VG |NASA|  74 |5263|
+|IVS-R41036|R41036|FEB03| 34|18:30|24|HtIsKkMcNsSvWnWzYs -NySaYg                                   |USNO|WASH|22FEB23|1.0 | XE |USNO|  19 |1036|
+|IVS-R11037|R11037|FEB07| 38|17:00|24|BdHtIsKvMaNsNtNyOnWnWzYgZc -Sa                               |NASA|BONN|22FEB21|1.0 | XA |NASA|  13 |5264|
+|IVS-OHG135|OHG135|FEB08| 39|17:30|24|HtKkOhSyWwYg -Ag                                             |DACH|BONN|Wt_med |    | XA |BKG | 336 |    |
+|VGOS-O2041|VO2041|FEB10| 41|18:00|24|GsK2MgOeWfWsYj -Ow                                           |HAYS|VIEN|22JUL06|1.0 | VG |NASA| 145 |    |
+|IVS-R41037|R41037|FEB10| 41|18:30|24|HtIsKkNsNySvWnWzYgYsZc -BdSa                                 |USNO|WASH|22FEB22|1.0 | XE |USNO|  11 |1037|
+|IVS-R11038|R11038|FEB14| 45|17:00|24|HtIsKkKvMaNsNyWnWzYg -AgSa                                   |NASA|BONN|22FEB25|1.0 | XA |NASA|  10 |5266|
+|AUS-MIX046|AUM046|FEB15| 46|17:30|24|HbKeYg                                                       |UTAS|UTAS|22MAR21|1.0 | XA |UTAS|  33 |8846|
+|VLBA152   |RV152 |FEB16| 47|18:00|24|HhNsNyOnShVaWzYg                                             |USNO|VLBA|22JUN03|1.0 | XA |USNO| 106 |    |
+|VGOS-O2048|VO2048|FEB17| 48|18:00|24|GsK2MgOeWfWsYj -Ow                                           |HAYS|HAYS|22JUN03|1.0 | VG |NASA| 105 |3795|
+|IVS-R41038|R41038|FEB17| 48|18:30|24|HtIsKkMcNsNySaWzYgZc -Ur                                     |USNO|WASH|22MAR03|1.0 | XE |USNO|  13 |1038|
+|IVS-R11039|R11039|FEB21| 52|17:00|24|AgHtIsKvNsNyOnSaShSvWnWzYgZc                                 |NASA|BONN|22MAR08|1.0 | XA |NASA|  14 |5267|
+|AUS-AST085|AUA085|FEB22| 53|17:30|24|HbHtKeWwYg -Ho                                               |DACH|UTAS|22APR11|1.0 | XA |NASA|  47 |1085|
+|AOV068    |AOV068|FEB23| 54|18:00|24|HbIsKeKgKmKvShUrWwYg                                         |SHAO|SHAO|22JUN09|1.0 | XA |NASA| 105 |2268|
+|VGOS-O2055|VO2055|FEB24| 55|18:00|24|GsK2MgOeWfWsYj -Ow                                           |HAYS|WASH|22APR28|1.0 | VG |NASA|  62 |    |
+|IVS-R41039|R41039|FEB24| 55|18:30|24|HtIsKkMaNsNySaWnWwWzYg                                       |USNO|WASH|22MAR10|1.0 | XE |USNO|  13 |1039|
+|IVS-R11040|R11040|FEB28| 59|17:00|24|IsKkMaNsNySaWnWwWzYg -Ho                                     |NASA|BONN|22MAR10|1.0 | XA |NASA|   9 |5268|
+------------------------------------------------------------------------------------------------------------------------------------------------
+|VGOS-O2062|VO2062|MAR03| 62|18:00|24|GsK2MgOeWfWsYj -Ow                                           |HAYS|BONN|22MAY18|1.0 | VG |NASA|  75 |5277|
+|IVS-R41040|R41040|MAR03| 62|18:30|24|IsKkMaNsNySaWnWwYg -Wz                                       |USNO|WASH|22APR12|1.0 | XE |USNO|  39 |1040|
+|IVS-R11041|R11041|MAR07| 66|17:00|24|HtIsKkKvMaNsNySaWwWzYg -AgHo                                 |NASA|BONN|22MAR21|1.0 | XA |NASA|  13 |5278|
+|IVS-OHG136|OHG136|MAR08| 67|17:30|24|AgHtKkOhSyWwYg -Ho                                           |DACH|BONN|Wt_med |    | XA |BKG | 308 |    |
+|AUS-MIX047|AUM047|MAR09| 68|18:00|24|HbHtYg                                                       |UTAS|UTAS|22APR28|1.0 | XA |UTAS|  49 |<4s|
+|VGOS-O2069|VO2069|MAR10| 69|18:00|24|GsK2MgOeWfYj -OwWs                                           |HAYS|VIEN|22JUL13|1.0 | VG |NASA| 124 |    |
+|IVS-R41041|R41041|MAR10| 69|18:30|24|HtIsKkMaNsNySaWnWwWzYg                                       |USNO|WASH|22MAR24|1.0 | XE |USNO|  13 |1041|
+|IVS-R11042|R11042|MAR14| 73|17:00|24|HtKkKvMaNsNySaWwWzYg -AgHo                                   |NASA|BONN|22MAR30|1.0 | XA |NASA|  15 |5280|
+|AUS-AST086|AUA086|MAR15| 74|17:30|24|HbHtWwYg -HoKe                                               |DACH|UTAS|22MAY01|1.0 | XA |NASA|  46 |1086|
+|AOV069    |AOV069|MAR16| 75|18:00|24|HbKgKmKvShWwYg -Ke                                           |UTAS|UTAS|22AUG15|1.0 | XA |NASA| 151 |8069|
+|VGOS-R&D02|VR2202|MAR17| 76|18:00|24|GsK2MgOeWfYj -HbOwWs                                         |DACH|HAYS|22JUL15|1.0 | VG |NASA| 119 |3802|
+|IVS-R41042|R41042|MAR17| 76|18:30|24|KkMaNsNySaWnWwWzYg                                           |USNO|WASH|22APR01|1.0 | XE |USNO|  14 |1042|
+|IVS-R11043|R11043|MAR22| 81|17:00|24|AgHtKkKvMaNsNySaWzYg -Ho                                     |NASA|BONN|22APR05|1.0 | XA |NASA|  13 |5281|
+|AUS-MIX048|AUM048|MAR23| 82|17:30|24|HbHtYg                                                       |UTAS|UTAS|22APR28|1.0 | XB |UTAS|  35 |8848|
+|IVS-R&D-3 |RD2203|MAR23| 82|18:00|24|HhKkMaNsNyOnWz -HoKm                                         |OSO |SHAO|22AUG03|1.0 | XA |NASA| 132 |2203|
+|VGOS-O2083|VO2083|MAR24| 83|18:00|24|GsIsK2MgOeWfWsYj -Ow                                         |HAYS|WASH|22JUL05|1.0 | VG |NASA| 102 |    |
+|IVS-R41043|R41043|MAR24| 83|18:30|24|BdHtKkNsNySvWnWzYg -Sa                                       |USNO|WASH|22APR01|1.0 | XE |USNO|   7 |1043|
+|IVS-R11044|R11044|MAR28| 87|17:00|24|HtKkKvNtNyOnSaShWzYg -AgNs                                   |NASA|BONN|22APR05|1.0 | XA |NASA|   7 |5282|
+|IVS-T2152 |T2152 |MAR29| 88|17:30|24|HtKgKvNyOhOnSaSmWnWzYg -263656AgNs                           |DACH|BONN|Wt_med |    | XH |BKG | 287 |    |
+|IVS-CRF130|CRF130|MAR30| 89|18:00|24|HhUrYg -HoKm                                                 |DACH|SHAO|22JUL11|1.0 | XN |USNO| 102 |2130|
+|VGOS-O2090|VO2090|MAR31| 90|18:00|24|GsIsK2MgOeWfWsYj -Ow                                         |HAYS|SHAO|22AUG03|1.0 | VG |NASA| 124 |2290|
+|IVS-R41044|R41044|MAR31| 90|18:30|24|BdHtKkNySvWnWzYg -NsSa                                       |USNO|WASH|22APR13|1.0 | XE |USNO|  12 |1044|
+------------------------------------------------------------------------------------------------------------------------------------------------
+|IVS-R11045|R11045|APR04| 94|17:00|24|AgHtKkKvMaNySaWzYg -HoNs                                     |NASA|BONN|22APR20|1.0 | XA |NASA|  15 |5291|
+|VGOS-O2097|VO2097|APR07| 97|18:00|24|GsIsK2MgOeWfWsYj -Ow                                         |HAYS|BONN|22JUN10|1.0 | VG |NASA|  63 |5292|
+|IVS-R41045|R41045|APR07| 97|18:30|24|HtKkNsNySaWnWzYg -BdSv                                       |USNO|WASH|22APR19|1.0 | XE |USNO|  11 |1045|
+|IVS-R11046|R11046|APR11|101|17:00|24|AgHtKkKvMaNySaWwWzYg -Ns                                     |NASA|BONN|22APR21|1.0 | XA |NASA|   9 |5293|
+|VGOS-S2201|S22401|APR11|101|17:00|24|MgWs                                                         |DACH|WETZ|22MAY17|1.0 | VJ |NASA|  35 |    |
+|IVS-OHG137|OHG137|APR12|102|17:30|24|AgHtKkOhSyWwYg                                               |DACH|BONN|Wt_med |    | XA |BKG | 273 |    |
+|VGOS-O2103|VO2103|APR13|103|18:00|24|GsIsK2MgWfWs -Yj                                             |HAYS|VIEN|22JUL27|1.0 | VG |NASA| 104 |    |
+|IVS-R41046|R41046|APR13|103|18:30|24|BdHtKkMcSvWzYgZc -Sa                                         |USNO|WASH|22APR28|1.0 | XE |USNO|  14 |1046|
+|IVS-R11047|R11047|APR19|109|17:00|24|BdHtKvMaNtNyWzYgZc -NsOnSa                                   |NASA|BONN|22APR29|1.0 | XA |NASA|   9 |5295|
+|AUS-AST087|AUA087|APR20|110|18:00|24|HbHtKeWwYg -Ho                                               |DACH|UTAS|22MAY31|1.0 | XA |NASA|  40 |2087|
+|IVS-R&D-4 |RD2204|APR20|110|18:00|24|HhKkMcNsNyOnWz -T6                                           |OSO |SHAO|22AUG03|1.0 | XB |NASA| 104 |2204|
+|VGOS-O2111|VO2111|APR21|111|18:00|24|GsIsK2MgOeWfWsYj -Ow                                         |HAYS|HAYS|22AUG15|1.0 | VG |NASA| 115 |3810|
+|IVS-R41047|R41047|APR21|111|18:30|24|HtKkMcNsNySaUrWzYg -Zc                                       |USNO|WASH|22MAY03|1.0 | XE |USNO|  11 |1047|
+|IVS-R11048|R11048|APR25|115|17:00|24|HtNsNyOnSaYgYs -BdSvWzZc                                     |NASA|BONN|22MAY04|1.0 | XA |NASA|   8 |5296|
+|AOV070    |AOV070|APR26|116|17:30|24|HbIsKeKgKvUrWwYg -KmT6                                       |SHAO|SHAO|22DEC07|1.0 | XA |NASA| 224 |2270|
+|VGOS-O2118|VO2118|APR28|118|18:00|24|GsIsK2MgOeWfWsYj -Ow                                         |HAYS|WASH|22AUG05|1.0 | VG |NASA|  98 |    |
+|IVS-R41048|R41048|APR28|118|18:30|24|BdKkMcNsNySvWzYgZc -SaYs                                     |USNO|WASH|22MAY13|1.0 | XE |USNO|  14 |1048|
+------------------------------------------------------------------------------------------------------------------------------------------------
+|IVS-R11049|R11049|MAY03|123|17:00|24|HtKkKvMaNsNtNyOnSaWzYg -Ag                                   |NASA|BONN|22MAY17|1.0 | XA |NASA|  13 |5302|
+|VLBA153   |RV153 |MAY04|124|18:00|24|HhNsNyOnShVaWzYg                                             |USNO|VLBA|Ready  |    | XA |USNO| 251 |    |
+|VGOS-O2125|VO2125|MAY05|125|18:00|24|GsIsK2OeWfWsYj -MgOw                                         |HAYS|BONN|22JUL12|1.0 | VG |NASA|  67 |5303|
+|IVS-R41049|R41049|MAY05|125|18:30|24|HtKkNsNySaWnWzYg -BdSv                                       |USNO|WASH|22MAY16|1.0 | XE |USNO|  10 |1049|
+|IVS-R11050|R11050|MAY09|129|17:00|24|HtKkKvMaNsNySaWzYg -AgHo                                     |NASA|BONN|22MAY24|1.0 | XA |NASA|  14 |5304|
+|IVS-R&D-5 |RD2205|MAY11|131|18:00|24|HhKkMcNsNyOnWz                                               |OSO |WASH|22AUG02|1.0 | XA |NASA|  82 |    |
+|VGOS-O2132|VO2132|MAY12|132|18:00|24|GsIsK2OeOwWfWsYj -Mg                                         |HAYS|VIEN|22AUG25|1.0 | VG |NASA| 104 |    |
+|IVS-R41050|R41050|MAY12|132|18:30|24|BdHtKkNsNySvWnYgZc -SaYs                                     |USNO|WASH|22MAY23|1.0 | XE |USNO|  10 |1050|
+|IVS-R11051|R11051|MAY16|136|17:00|24|BdHtSvWzYgZc -AgOnSaShWn                                     |NASA|BONN|22MAY25|1.0 | XA |NASA|   8 |5305|
+|IVS-T2153 |T2153 |MAY17|137|17:30|24|26HtKgKvOhOnSaSmWzYg -3656MhShWn                             |DACH|BONN|Wt_med |    | XH |BKG | 238 |    |
+|IVS-CRD118|CRD118|MAY18|138|18:00|24|HhMkScYg -AgHoKmOhWw                                         |DACH|WASH|22SEP19|1.0 | XN |USNO| 123 |    |
+|VGOS-R&D03|VR2203|MAY19|139|18:00|24|GsIsK2MgOwWfYj -OeWs                                         |DACH|HAYS|22SEP29|1.0 | VG |NASA| 132 |3811|
+|IVS-R41051|R41051|MAY19|139|18:30|24|HtKkNsNySaYgYs -BdSvWn                                       |USNO|WASH|22JUN02|1.0 | XE |USNO|  13 |1051|
+|IVS-R11052|R11052|MAY23|143|17:00|24|HtKkKvNsNtNyOnSaWzYg -AgSh                                   |NASA|BONN|22JUN06|1.0 | XA |NASA|  13 |5307|
+|VGOS-S2202|S22402|MAY23|143|17:00|24|MgWs                                                         |DACH|WETZ|Wt_med |    | VJ |NASA| 232 |    |
+|AUS-AST088|AUA088|MAY24|144|17:30|24|HbHtKeWwYg -Ho                                               |DACH|UTAS|22JUL12|1.0 | XA |NASA|  48 |2088|
+|VGOS-O2146|VO2146|MAY26|146|18:00|24|GsIsK2MgWfYj -Ws                                             |NASA|WASH|22SEP06|1.0 | VG |NASA| 102 |    |
+|IVS-R41052|R41052|MAY26|146|18:30|24|HtKkMaSaWnWwWzYg                                             |USNO|WASH|22JUN13|1.0 | XE |USNO|  17 |1052|
+|AOV071    |AOV071|MAY30|150|14:00|24|HbIsKeKgKvVmWwYg -KmSy                                       |GSI |GSI |22AUG03|1.0 | XA |NASA|  64 |2149|
+|IVS-R11053|R11053|MAY31|151|17:00|24|AgHtKkMaNsNySaWnWzYg                                         |NASA|BONN|22JUN15|1.0 | XA |NASA|  14 |5308|
+------------------------------------------------------------------------------------------------------------------------------------------------
+|VGOS-O2153|VO2153|JUN02|153|18:00|24|GsIsK2MgOwWfYj -OeWs                                         |NASA|BONN|22SEP19|1.0 | VG |NASA| 108 |5316|
+|IVS-R41053|R41053|JUN02|153|18:30|24|HtKkNsNySaWnWwWzYg                                           |USNO|WASH|22JUN17|1.0 | XE |USNO|  14 |1053|
+|AUS-AST089|AUA089|JUN06|157|14:00|24|HbHtKeYg -HoWw                                               |DACH|UTAS|22JUL26|1.0 | XA |NASA|  49 |2089|
+|IVS-R11054|R11054|JUN07|158|17:00|24|AgHtKkKvMaNsNySaWzYg -Ho                                     |NASA|BONN|22JUN22|1.0 | XA |NASA|  14 |5317|
+|AOV072    |AOV072|JUN08|159|17:30|24|HbIsKeKgShYg -KmWw                                           |UTAS|UTAS|22OCT28|1.0 | XA |NASA| 141 |8072|
+|VGOS-O2160|VO2160|JUN09|160|18:00|24|IsK2MgOwWfWsYj -GsOe                                         |NASA|VIEN|22SEP01|1.0 | VG |NASA|  83 |    |
+|IVS-R41054|R41054|JUN09|160|18:30|24|HtKkMaNsNySaWnWzYg -Ww                                       |USNO|WASH|22AUG16|1.0 | XE |USNO|  67 |1054|
+|IVS-R11055|R11055|JUN13|164|17:00|24|AgHtKkKvMaNsSaWnWzYg -Ny                                     |NASA|BONN|22JUN24|1.0 | XA |NASA|  10 |5318|
+|IVS-OHG138|OHG138|JUN14|165|17:30|24|AgHtKkOhSyWwYg                                               |DACH|BONN|Wt_med |    | XA |BKG | 210 |    |
+|VGOS-O2167|VO2167|JUN16|167|18:00|24|GsHbIsK2MgOeOwWfWsYj                                         |NASA|HAYS|22NOV03|1.0 | VG |NASA| 139 |3813|
+|IVS-R41055|R41055|JUN16|167|18:30|24|KkMaNsNySaWnWzYg                                             |USNO|WASH|22JUN30|1.0 | XE |USNO|  13 |1055|
+|IVS-R11056|R11056|JUN21|172|17:00|24|AgHtKkKvMaNsNySaWnWzYg                                       |NASA|BONN|22JUL05|1.0 | XA |NASA|  13 |5320|
+|IVS-CRF131|CRF131|JUN22|173|18:00|24|HhUrYg -HoKm                                                 |DACH|SHAO|22AUG22|1.0 | XN |USNO|  60 |2231|
+|VGOS-O2174|VO2174|JUN23|174|18:00|24|GsIsK2MgWfYj -Ws                                             |NASA|WASH|22OCT05|1.0 | VG |NASA| 103 |    |
+|IVS-R41056|R41056|JUN23|174|18:30|24|BdHtKkMcNsWzYgZc -NySa                                       |USNO|WASH|22JUN30|1.0 | XE |USNO|   6 |1056|
+|IVS-R11057|R11057|JUN27|178|17:00|24|AgHtKkKvNsNtOnSaShWzYgYs -Ny                                 |NASA|BONN|22JUL12|1.0 | XA |NASA|  14 |5321|
+|IVS-R&D-6 |RD2206|JUN29|180|18:00|24|HhMcNsOnWz -KkNy                                             |OSO |WASH|22OCT27|1.0 | XA |NASA| 119 |    |
+|VGOS-O2181|VO2181|JUN30|181|18:00|24|GsK2MgOwWfYj -IsOe                                           |NASA|SHAO|22NOV07|1.0 | VG |NASA| 129 |2281|
+|IVS-R41057|R41057|JUN30|181|18:30|24|HtKkMcNsSaWzYgYs -BdNyZc                                     |USNO|WASH|22JUL20|1.0 | XE |USNO|  19 |1057|
+------------------------------------------------------------------------------------------------------------------------------------------------
+|IVS-R11058|R11058|JUL04|185|17:00|24|AgHtKvMaNsNyOnSaShWnWzYgYs                                   |NASA|BONN|22JUL27|1.0 | XA |NASA|  22 |5328|
+|VLBA154   |RV154 |JUL05|186|17:30|24|HhNsNyOnShVaWz -Ho                                           |USNO|VLBA|Wt_med |    | XA |USNO| 189 |    |
+|VGOS-O2187|VO2187|JUL06|187|18:00|24|GsIsK2MgOeOwWfYj                                             |NASA|BONN|22SEP23|1.0 | VG |NASA|  78 |5329|
+|IVS-R41058|R41058|JUL06|187|18:30|24|BdHtKkNsNySvWnWzYg                                           |USNO|WASH|22JUL14|1.0 | XE |USNO|   7 |1058|
+|APSG-50   |APSG50|JUL07|188|19:00|24|KgKkKmKvShUrYg -Ho                                           |SHAO|SHAO|Wt_med |    | XA |NASA| 187 |    |
+|IVS-R11059|R11059|JUL11|192|17:00|24|AgBdHtKkKvMaNsNyShSvWzYg                                     |NASA|BONN|22JUL29|1.0 | XA |NASA|  17 |5330|
+|IVS-T2154 |T2154 |JUL12|193|17:30|24|26HtKgKvNsNyOhSaSmWnWzYg -3656                               |DACH|BONN|Wt_med |    | XH |BKG | 182 |    |
+|AUS-AST090|AUA090|JUL13|194|18:00|24|HbHtIsKeYg -HoWw                                             |DACH|UTAS|22SEP01|1.0 | XA |NASA|  49 |2090|
+|VGOS-O2195|VO2195|JUL14|195|18:00|24|GsK2MgWfYj -Is                                               |NASA|VIEN|22SEP19|1.0 | VG |NASA|  66 |    |
+|IVS-R41059|R41059|JUL14|195|18:30|24|BdHtKkNsNySvWnYgZc -Ys                                       |USNO|WASH|22JUL29|1.0 | XE |USNO|  14 |1059|
+|IVS-R11060|R11060|JUL18|199|17:00|24|AgBdHtKkKvMaNsNySvWzYg                                       |NASA|BONN|22AUG02|1.0 | XA |NASA|  14 |5332|
+|IVS-CRD119|CRD119|JUL19|200|17:30|24|AgHhOhYg -HoWw                                               |DACH|WASH|22OCT24|1.0 | XN |USNO|  96 |    |
+|IVS-OHG139|OHG139|JUL20|201|18:00|24|HtKkOhSyYg -HoWw                                             |DACH|BONN|Wt_med |    | XA |BKG | 174 |    |
+|VGOS-R&D04|VR2204|JUL21|202|18:00|24|GsHbIsK2MgOeOwWfWsYj                                         |DACH|HAYS|In_prog|    | VG |NASA| 173 |    |
+|IVS-R41060|R41060|JUL21|202|18:30|24|HtKkMaNsNySaWnYgYs -BdSv                                     |USNO|WASH|22AUG04|1.0 | XE |USNO|  13 |1060|
+|IVS-R11061|R11061|JUL25|206|17:00|24|BdHtKvMaNsNySvWzYg -AgKk                                     |NASA|BONN|22AUG09|1.0 | XA |NASA|  14 |5334|
+|VGOS-S2203|S22403|JUL25|206|17:00|24|MgWs                                                         |DACH|WETZ|Wt_med |    | VJ |NASA| 169 |    |
+|AOV073    |AOV073|JUL26|207|17:30|24|HbIsKeShYg -KgKmWw                                           |GSI |GSI |22OCT18|1.0 | XA |NASA|  83 |2210|
+|VGOS-O2209|VO2209|JUL28|209|18:00|24|GsMgWfWsYj -IsK2                                             |NASA|WASH|22NOV10|1.0 | VG |NASA| 104 |    |
+|IVS-R41061|R41061|JUL28|209|18:30|24|HtMcNsNyWzYgZc -KkUr                                         |USNO|WASH|22AUG08|1.0 | XE |USNO|  10 |1061|
+------------------------------------------------------------------------------------------------------------------------------------------------
+|IVS-R11062|R11062|AUG01|213|17:00|24|AgHtKvMaNsNySaWwWzYgYs -Kk                                   |NASA|BONN|22AUG25|1.0 | XA |NASA|  23 |5374|
+|AUS-AST091|AUA091|AUG02|214|17:30|24|HbHtKeWwYg -Ho                                               |DACH|UTAS|22SEP08|1.0 | XA |NASA|  36 |2091|
+|VGOS-O2215|VO2215|AUG03|215|18:00|24|GsMgWfWsYj -IsK2                                             |NASA|BONN|22NOV07|1.0 | VG |NASA|  95 |5375|
+|IVS-R41062|R41062|AUG03|215|18:30|24|BdHtMcNsNyWnWwWzYgZc -Kk                                     |USNO|WASH|22AUG18|1.0 | XE |USNO|  14 |1062|
+|AOV074    |AOV074|AUG04|216|19:00|24|HbIsKeKgKvT6WwYg -KmUr                                       |SHAO|SHAO|22DEC28|1.0 | XA |NASA| 145 |2274|
+|IVS-R11063|R11063|AUG08|220|17:00|24|AgKkKvNsNtNyOnSaShWnWzYgYs                                   |NASA|BONN|22AUG24|1.0 | XA |NASA|  15 |5376|
+|IVS-R&D-7 |RD2207|AUG10|222|18:00|24|HhKkMaNsOnT6Wz -Ny                                           |OSO |SHAO|22NOV05|1.0 | XA |NASA|  86 |    |
+|VGOS-O2223|VO2223|AUG11|223|18:00|24|K2OeOwWfYj -GsIsMgWs                                         |NASA|VIEN|22DEC13|1.0 | VG |NASA| 123 |5403|
+|IVS-R41063|R41063|AUG11|223|18:30|24|HtKkNsNySaWnWwWzYgYs -Ma                                     |USNO|WASH|22AUG19|1.0 | XE |USNO|   7 |1063|
+|IVS-R11064|R11064|AUG16|228|17:00|24|AgBdMaNsNyShSvWnWzYgZc -On                                   |NASA|BONN|22AUG29|1.0 | XA |NASA|  12 |5377|
+|IVS-CRD120|CRD120|AUG17|229|17:30|24|AgHhOhWwYg -Ho                                               |DACH|WASH|Wt_med |    | XN |USNO| 146 |    |
+|VGOS-O2230|VO2230|AUG18|230|18:00|24|HbIsK2MgNnOeOwWfWsYj -Gs                                     |NASA|HAYS|In_prog|    | VG |NASA| 145 |    |
+|IVS-R41064|R41064|AUG18|230|18:30|24|BdKkNsNySvYgZc -MaWnWwYs                                     |USNO|WASH|22SEP08|1.0 | XE |USNO|  20 |1064|
+|AUS-MIX049|AUM049|AUG19|231|19:00|24|HbKeYg                                                       |UTAS|UTAS|22SEP12|1.0 | XA |UTAS|  23 |2049|
+|AUS-MIX050|AUM050|AUG20|232|19:30|24|HbKeYg                                                       |UTAS|UTAS|Wt_med |    | XA |UTAS| 143 |    |
+|IVS-R11065|R11065|AUG22|234|17:00|24|AgHtKkNsNtNyOnSaShWnWzYg                                     |NASA|BONN|22SEP06|1.0 | XA |NASA|  14 |5378|
+|VGOS-S2204|S22404|AUG22|234|17:00|24|Ws -Mg                                                       |DACH|WETZ|Wt_med |    | VJ |NASA| 141 |    |
+|VGOS-O2237|VO2237|AUG25|237|18:00|24|IsK2MgOeOwYj -GsWfWs                                         |NASA|WASH|22DEC05|1.0 | VG |NASA| 101 |    |
+|IVS-R41065|R41065|AUG25|237|18:30|24|HtKkMcNsNyWwWzYgZc -Ur                                       |USNO|WASH|22SEP07|1.0 | XE |USNO|  12 |1065|
+|IVS-R11066|R11066|AUG29|241|17:00|24|HtKkMaNsNtNyOnSaWnYg                                         |NASA|BONN|22SEP14|1.0 | XA |NASA|  15 |5379|
+------------------------------------------------------------------------------------------------------------------------------------------------
+|VGOS-O2244|VO2244|SEP01|244|18:00|24|K2MgOeOwWfWsYj -GsIs                                         |NASA|BONN|22NOV08|1.0 | VG |NASA|  67 |5390|
+|IVS-R41066|R41066|SEP01|244|18:30|24|BdHtKkMcNsNyWwWzYgZc                                         |USNO|WASH|22SEP12|1.0 | XE |USNO|  10 |1066|
+|AUS-MIX051|AUM051|SEP02|245|19:00|24|HbKeYg                                                       |UTAS|UTAS|Wt_med |    | XA |UTAS| 130 |    |
+|AUS-MIX052|AUM052|SEP03|246|19:30|24|HbKeYg                                                       |UTAS|UTAS|Wt_med |    | XA |UTAS| 129 |    |
+|IVS-R11067|R11067|SEP05|248|17:00|24|BdHtKvMaNsNtNyWnYgZc -OnSv                                   |NASA|BONN|22SEP20|1.0 | XA |NASA|  14 |5391|
+|VLBA155   |RV155 |SEP06|249|17:30|24|HhNsNyOnVaWzYg -Sh                                           |USNO|VLBA|Wt_med |    | XA |USNO| 126 |    |
+|IVS-CRF132|CRF132|SEP07|250|18:00|24|BdHhMaNtYgZc -Km                                             |DACH|SHAO|23JAN05|1.0 | XN |USNO| 119 |2232|
+|EUVG-R&D01|ER2201|SEP08|251|11:30| 6|MgOeOwWfWsYj -Gs                                             |DACH|VIEN|Wt_med |    | VE |NASA| 124 |    |
+|VGOS-O2251|VO2251|SEP08|251|18:00|24|K2MgOeOwWfYj -GsIsWs                                         |NASA|VIEN|22DEC15|1.0 | VG |NASA|  97 |5403|
+|IVS-R41067|R41067|SEP08|251|18:30|24|HtKkMcNsNyWwWzYgZc -Ur                                       |USNO|WASH|22SEP22|1.0 | XE |USNO|  13 |1067|
+|IVS-R11068|R11068|SEP12|255|17:00|24|AgHtKkMaNsNyOnSaWnWzYg -NtSh                                 |NASA|BONN|22SEP26|1.0 | XA |NASA|  13 |5392|
+|VGOS-S2205|S22405|SEP12|255|17:00|24|MgWs                                                         |DACH|WETZ|Wt_med |    | VJ |NASA| 120 |    |
+|IVS-T2155 |T2155 |SEP13|256|17:30|24|26HtKgKvMaNsNyOhSaSmSyWnWzYg -3656                           |DACH|BONN|Wt_med |    | XH |BKG | 119 |    |
+|IVS-R&D-8 |RD2208|SEP14|257|18:00|24|HhKkMcNsNyOnWz                                               |OSO |WASH|22NOV22|1.0 | XA |NASA|  68 |    |
+|VGOS-R&D05|VR2205|SEP15|258|18:00|24|HbIsK2MgOeOwWfWsYj -Gs                                       |DACH|HAYS|Wt_med |    | VG |NASA| 117 |    |
+|IVS-R41068|R41068|SEP15|258|18:30|24|HtKkMaNsNySaWwWzYgYs -Zc                                     |USNO|WASH|22SEP30|1.0 | XE |USNO|  14 |1068|
+|AUS-MIX053|AUM053|SEP16|259|19:00|24|HbKeYg                                                       |UTAS|UTAS|Wt_med |    | XA |UTAS| 116 |    |
+|AUS-MIX054|AUM054|SEP17|260|19:30|24|HbKeYg                                                       |UTAS|UTAS|Wt_med |    | XA |UTAS| 115 |    |
+|IVS-R11069|R11069|SEP19|262|17:00|24|HbHtKeKkKvMaNsNySaWwWzYg -AgIs                               |NASA|WASH|22NOV21|1.0 | XA |NASA|  62 |    |
+|AUS-AST092|AUA092|SEP20|263|17:30|24|HbHtKeWwYg -Ho                                               |DACH|UTAS|22NOV16|1.0 | XA |NASA|  56 |2092|
+|IVS-CRD121|CRD121|SEP21|264|18:00|24|AgHhHoOhWwYg                                                 |DACH|WASH|Wt_med |    | XN |USNO| 111 |    |
+|VGOS-O2265|VO2265|SEP22|265|18:00|24|IsK2MgOeOwWfWsYj -Gs                                         |NASA|WASH|22NOV28|1.0 | VG |NASA|  66 |    |
+|IVS-R41069|R41069|SEP22|265|18:30|24|HtKkMcNsWzYgZc -HbKeNyUr                                     |USNO|BONN|22OCT10|1.0 | XE |USNO|  17 |5397|
+|IVS-R11070|R11070|SEP26|269|17:00|24|HtKkKvMaNsNtNyOnSaWzYg -Ag                                   |NASA|BONN|22OCT17|1.0 | XA |NASA|  20 |5395|
+|IVS-OHG140|OHG140|SEP27|270|17:30|24|AgHoHtKkOhSyWwYg                                             |DACH|BONN|Wt_med |    | XA |BKG | 105 |    |
+|AOV075    |AOV075|SEP28|271|18:00|24|HbIsKeKgKmKvVmWwYg -Sh                                       |GSI |GSI |Wt_med |    | XA |NASA| 104 |    |
+|VGOS-O2272|VO2272|SEP29|272|18:00|24|IsK2MgOeOwWfWs -GsYj                                         |NASA|SHAO|Ready  |    | VG |NASA| 103 |    |
+|IVS-R41070|R41070|SEP29|272|18:30|24|BdHtKkMaNsNySvWzYg -MaWn                                     |USNO|WASH|22OCT12|1.0 | XE |USNO|  12 |1070|
+|AUS-MIX055|AUM055|SEP30|273|19:00|24|HbKeYg                                                       |UTAS|UTAS|Wt_med |    | XA |UTAS| 102 |    |
+------------------------------------------------------------------------------------------------------------------------------------------------
+|AUS-MIX056|AUM056|OCT01|274|19:30|24|HbKeYg                                                       |UTAS|UTAS|Wt_med |    | XA |UTAS| 101 |    |
+|IVS-R11071|R11071|OCT04|277|17:00|24|HtKvMaNsNtNyOnWwWzYg                                         |NASA|BONN|22OCT17|1.0 | XA |NASA|  12 |5402|
+|VGOS-O2279|VO2279|OCT06|279|18:00|24|K2MgOeOwWfWsYj -Gs                                           |NASA|BONN|22NOV18|1.0 | VG |NASA|  42 |5403|
+|IVS-R41071|R41071|OCT06|279|18:30|24|BdHtKkMcNsNyWwWzYgZc -Wn                                     |USNO|WASH|22OCT17|1.0 | XE |USNO|  10 |1071|
+|AUS-AST093|AUA093|OCT10|283|14:00|24|HbHtKeWwYg -Ho                                               |DACH|UTAS|22NOV20|1.0 | XA |NASA|  40 |2093|
+|IVS-R11072|R11072|OCT11|284|17:00|24|AgHtKkKvMaNsNyWwWzYg -HoWn                                   |NASA|BONN|22OCT25|1.0 | XA |NASA|  13 |5404|
+|VGOS-O2286|VO2286|OCT13|286|18:00|24|K2MgOeOwWfWsYj -Gs                                           |NASA|VIEN|In_prog|    | VG |NASA|  89 |    |
+|IVS-R41072|R41072|OCT13|286|18:30|24|HtIsKkMaNsNyWwWzYg -Wn                                       |USNO|WASH|22OCT25|1.0 | XE |USNO|  11 |1072|
+|AUS-MIX057|AUM057|OCT14|287|19:00|24|HbKeYg                                                       |UTAS|UTAS|22NOV14|1.0 | XA |UTAS|  30 |8057|
+|AUS-MIX058|AUM058|OCT15|288|19:30|24|HbKeYg                                                       |UTAS|UTAS|22NOV14|1.0 | XA |UTAS|  29 |8058|
+|IVS-R11073|R11073|OCT17|290|17:00|24|BdHtIsNsNtNySvWwYgZc -MaOnWn                                 |NASA|BONN|22NOV02|1.0 | XA |NASA|  15 |5405|
+|VGOS-S2206|S22406|OCT17|290|17:00|24|MgWs                                                         |DACH|WETZ|Wt_med |    | VJ |NASA|  85 |    |
+|IVS-T2156 |T2156 |OCT18|291|17:30|24|HtKgKvNsNyOnSmSyWzYg -263656Wn                               |DACH|BONN|Wt_med |    | XH |BKG |  84 |    |
+|VGOS-O2293|VO2293|OCT20|293|18:00|24|HbK2MgOwWfWsYj -GsOe                                         |NASA|HAYS|Wt_med |    | VG |NASA|  82 |    |
+|IVS-R41073|R41073|OCT20|293|18:30|24|HtIsKkNsNyWwWzYg -MaWn                                       |USNO|WASH|22NOV02|1.0 | XE |USNO|  12 |1073|
+|IVS-R11074|R11074|OCT24|297|17:00|24|AgHtIsKkKvNsNyWwWzYg -HoMa                                   |NASA|BONN|22NOV04|1.0 | XA |NASA|  10 |5407|
+|AOV076    |AOV076|OCT25|298|17:30|24|HbIsKeKgWwYg -KmSh                                           |UTAS|UTAS|22DEC16|1.0 | XA |NASA|  51 |8076|
+|VGOS-O2299|VO2299|OCT26|299|18:00|24|K2OeOwWfYj -GsMgWs                                           |NASA|WASH|22DEC16|1.0 | VG |NASA|  50 |    |
+|IVS-R41074|R41074|OCT26|299|18:30|24|HtIsKkNsNyWwWzYg -MaWn                                       |USNO|WASH|22NOV04|1.0 | XE |USNO|   8 |1074|
+|IVS-R11075|R11075|OCT31|304|17:00|24|AgHtIsKkNsNyWwYg -HoKvYs                                     |NASA|BONN|22NOV15|1.0 | XA |NASA|  14 |5408|
+------------------------------------------------------------------------------------------------------------------------------------------------
+|VGOS-O2307|VO2307|NOV03|307|18:00|24|K2MgOeOwWfWsYj -Gs                                           |NASA|BONN|In_prog|    | VG |NASA|  68 |    |
+|IVS-R41075|R41075|NOV03|307|18:30|24|HtIsKkNsNyWwWzYg -MaWn                                       |USNO|WASH|22NOV15|1.0 | XE |USNO|  11 |1075|
+|AUS-MIX059|AUM059|NOV04|308|19:00|24|HbKeWwYg                                                     |UTAS|UTAS|Wt_med |    | XA |UTAS|  67 |    |
+|AUS-MIX060|AUM060|NOV05|309|19:30|24|HbKeWwYg                                                     |UTAS|UTAS|Wt_med |    | XA |UTAS|  66 |    |
+|IVS-R11076|R11076|NOV07|311|17:00|24|AgHtIsKkKvMaNsNyWwWzYg -Ho                                   |NASA|BONN|22NOV22|1.0 | XA |NASA|  14 |5423|
+|VGOS-R&D06|VR2206|NOV09|313|18:00|24|HbK2MgNnOeWfWs -GsOwYj                                       |DACH|HAYS|Wt_med |    | VG |NASA|  62 |    |
+|IVS-R41076|R41076|NOV09|313|18:30|24|HtIsKkMaNsNyWw -WnWzYg                                       |USNO|WASH|22NOV30|1.0 | XE |USNO|  20 |1076|
+|IVS-R11077|R11077|NOV14|318|17:00|24|AgHtKkKvMaNsNyWwWzYg -HoWn                                   |NASA|BONN|22NOV28|1.0 | XA |NASA|  13 |5424|
+|AUS-AST094|AUA094|NOV15|319|17:30|24|HbHtKeWwYg -Ho                                               |DACH|UTAS|22DEC09|1.0 | XA |NASA|  23 |2094|
+|IVS-CRD122|CRD122|NOV16|320|18:00|24|AgHhHoWwYg                                                   |DACH|WASH|Wt_med |    | XN |USNO|  55 |    |
+|VGOS-O2321|VO2321|NOV17|321|18:00|24|GsK2MgOeOwWfWsYj                                             |NASA|WASH|In_prog|    | VG |NASA|  54 |    |
+|IVS-R41077|R41077|NOV17|321|18:30|24|BdHtKkMcNsSvWwWzYgZc -NyWn                                   |USNO|WASH|22DEC01|1.0 | XE |USNO|  13 |1077|
+|IVS-R11078|R11078|NOV21|325|17:00|24|AgHtIsKvNsNtOnWwWzYgYs -NyShWn                               |NASA|BONN|22DEC07|1.0 | XA |NASA|  15 |5425|
+|AOV077    |AOV077|NOV22|326|17:30|24|HbIsKeKgVmWwYg -KmSh                                         |GSI |GSI |Wt_med |    | XA |NASA|  49 |    |
+|IVS-CRF133|CRF133|NOV23|327|18:00|24|HhHoIsUrYg -Km                                               |DACH|SHAO|Wt_med |    | XN |USNO|  48 |    |
+|IVS-R41078|R41078|NOV24|328|18:30|24|HtIsNsNyWwWzYgYs -Wn                                         |USNO|WASH|22DEC08|1.0 | XE |USNO|  13 |1078|
+|AUS-MIX061|AUM061|NOV25|329|19:00|24|HbKeWwYg                                                     |UTAS|UTAS|Wt_med |    | XA |UTAS|  46 |    |
+|AUS-MIX062|AUM062|NOV26|330|19:30|24|HbKeWwYg                                                     |UTAS|UTAS|Wt_med |    | XA |UTAS|  45 |    |
+|VLBA156   |RV156 |NOV28|332|13:30|24|HhHoNsNyOnVaWzYg -Sh                                         |USNO|VLBA|Wt_med |    | XA |USNO|  43 |    |
+|IVS-R11079|R11079|NOV29|333|17:00|24|AgBdHtIsKvNsSvWwWzYg -NyOnShWnZc                             |NASA|BONN|22DEC13|1.0 | XA |NASA|  13 |5426|
+|IVS-R&D-9 |RD2209|NOV30|334|17:30|24|HhIsKkNsOnT6Wz -Ny                                           |OSO |SHAO|Wt_med |    | XA |NASA|  41 |    |
+------------------------------------------------------------------------------------------------------------------------------------------------
+|VGOS-O2335|VO2335|DEC01|335|18:00|24|GsK2MgOeOwWfYj -Ws                                           |NASA|WETZ|Wt_med |    | VG |NASA|  40 |    |
+|IVS-R41079|R41079|DEC01|335|18:30|24|HtIsKkNsWwWzYgYs -NyWn                                       |USNO|WASH|22DEC13|1.0 | XE |USNO|  11 |1079|
+|IVS-R11080|R11080|DEC05|339|17:00|24|HbHoHtIsKeKkKvMaNsWwWzYg -AgNyWn                             |NASA|BONN|22DEC20|1.0 | XA |NASA|  14 |5434|
+|AUS-AST095|AUA095|DEC07|341|18:00|24|HbHoHtKeWwYg                                                 |DACH|UTAS|Wt_med |    | XB |NASA|  34 |    |
+|IVS-R&D-10|RD2210|DEC07|341|18:00|24|HhIsKkMcNsOnWz -KmNy                                         |OSO |SHAO|23JAN05|1.0 | XA |NASA|  28 |2210|
+|IVS-R41080|R41080|DEC08|342|18:30|24|HbHtIsKkNsWwWzYgYs -KeNyWn                                   |USNO|WASH|22DEC23|1.0 | XE |USNO|  14 |1080|
+|IVS-R11081|R11081|DEC12|346|17:00|24|AgHtIsNsOnWwWzYgYs -NyShWn                                   |NASA|BONN|22DEC21|1.0 | XA |NASA|   8 |5435|
+|IVS-T2P157|T2P157|DEC13|347|17:30|24|AgBdEbHhHtIsKgKkKvMaMcNsNtSvVmWzYgZc -MhNyOnShWnYs           |DACH|BONN|Wt_med |    | XH |BKG |  28 |    |
+|VGOS-O2348|VO2348|DEC14|348|18:00|24|GsHbK2NnOeOwWfYj -MgWs                                       |NASA|HAYS|Wt_med |    | VG |NASA|  27 |    |
+|IVS-R41081|R41081|DEC14|348|18:30|24|HtKkNsWwWzYgYs -IsNyWn                                       |USNO|WASH|22DEC30|1.0 | XE |USNO|  15 |1081|
+|AOV078    |AOV078|DEC15|349|19:00|24|HbIsKeKgKvUrYg -KmSh                                         |SHAO|SHAO|Wt_med |    | XA |NASA|  26 |    |
+|AUS-MIX063|AUM063|DEC16|350|19:30|24|HbKeWwYg                                                     |UTAS|UTAS|Wt_med |    | XA |UTAS|  25 |    |
+|AUS-MIX064|AUM064|DEC17|351|20:00|24|HbKeWwYg                                                     |UTAS|UTAS|Wt_med |    | XA |UTAS|  24 |    |
+|IVS-R11082|R11082|DEC19|353|17:00|24|BdHtIsMaNsNtNySvWzYgZc -OnWn                                 |NASA|BONN|Cleanup|    | XA |NASA|  22 |    |
+|APSG-51   |APSG51|DEC20|354|17:30|24|HoKgKkKvUrYg -KmSh                                           |SHAO|SHAO|Wt_med |    | XA |NASA|  21 |    |
+|IVS-R41082|R41082|DEC21|355|18:30|24|BdHtIsKkMcWzYgZc -NsNyWn                                     |USNO|WASH|23JAN03|1.0 | XE |USNO|  12 |1082|
+|IVS-R11083|R11083|DEC27|361|17:00|24|AgHtIsKvMaNsNyWzZc -Wn                                       |NASA|BONN|In_prog|    | XA |NASA|  14 |    |
+|VGOS-O2363|VO2363|DEC29|363|18:00|24|GsK2MgOeOwWf -WsYj                                           |NASA|SHAO|Wt_med |    | VG |NASA|  12 |    |
+|IVS-R41083|R41083|DEC29|363|18:30|24|HtIsKkNsNyWzYs -BdWn                                         |USNO|WASH|Wt_med |    | XE |USNO|  12 |    |
+------------------------------------------------------------------------------------------------------------------------------------------------
+## Master file format version 1.0           2001.08.21 CCT&NRV

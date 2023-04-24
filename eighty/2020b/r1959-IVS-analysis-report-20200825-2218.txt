@@ -1,0 +1,153 @@
+       IVS Analysis Report for R1959 ($20AUG11XA) 
+       This report is the official IVS analysis report that corresponds to 
+       the database maintained by the IVS Data Centers for this session.  
+   (Analyzed by David Gordon, NASA Goddard Space Flight Center.
+    Spoolfile source: interactive solve/nuSolve analysis.) 
+
+Problems: ONSALA60 antenna was stuck last 4 hours, no fringes. ONSALA60 cable
+          cal unit was rebooted at 07:14, clock break used and the cable cal 
+          was applied. 
+
+Parameterization comments: None. 
+
+Other comments: None. 
+
+-----------------------------------------
+
+Session Statistics 
+
+  Observations:     2678 scheduled 
+                    2633 correlated (in database)
+                    2208 recoverable (usable)
+                    2087 used
+  Session fit:        34.819 ps
+
+-----------------------------------------
+
+Station Performance 
+
+                           Number of Observations
+
+                    Scheduled   Recoverable*        Used   % of scheduled
+                                                              obs used
+
+  AGGO                    311           233          229        73.6%
+  HART15M                 651           524          506        77.7%
+  MATERA                 1065           911          870        81.7%
+  ONSALA60               1074           832          805        75.0%
+  SEJONG                  681           551          495        72.7%
+  WETTZELL               1136          1034          978        86.1%
+  YARRA12M                438           331          291        66.4%
+  ---------------   ---------   -----------    ---------       ------
+  Station Total**        2678          2208         2087        77.9%
+
+  * Recoverable: can be included in the solution. 
+  ** Total includes distinct observations only.
+
+  MISSED:    Station was scheduled, but it did not observe.
+  NOT CORR:  Station was scheduled but not correlated.
+  NOT USED:  Usable data was generated for this station,
+             but the analyst rejected it all.
+
+-----------------------------------------
+
+Source Performance 
+
+                    Number of Observations
+
+                Scheduled  Correlated*    Used      % of scheduled
+                                                       obs used
+
+  0812+367             37          35       32           86.5%
+  2351-154              6           6        6          100.0%
+  0630-261              2           2        1           50.0%
+  1313-333             16          16       14           87.5%
+  0159+723              9           9        9          100.0%
+  1614+051             26          24       15           57.7%
+  3C120                35          35       26           74.3%
+  1227+255             11          11        9           81.8%
+  1738+476             41          39       31           75.6%
+  1949-052             15          12        7           46.7%
+  0119+115             42          42       42          100.0%
+  0133+476             97          97       82           84.5%
+  0530-727             10           9        8           80.0%
+  0537-441             27          27       17           63.0%
+  0727-115            195         195      155           79.5%
+  0823+033             77          77       65           84.4%
+  OJ287               171         168      133           77.8%
+  1057-797             24          24       16           66.7%
+  1144-379             21          21       14           66.7%
+  1351-018             25          23       13           52.0%
+  1424-418             19          19       14           73.7%
+  1749+096            155         150      116           74.8%
+  1803+784            177         174      156           88.1%
+  1908-201             27          24       23           85.2%
+  1954-388             20          19       15           75.0%
+  3C418               216         212      137           63.4%
+  3C446               201         201      164           81.6%
+  2318+049             47          47       44           93.6%
+  1149-084            123         119       75           61.0%
+  1639+230             14          12        9           64.3%
+  2229+695            105         105       95           90.5%
+  0529+483             54          54       45           83.3%
+  0641+392              7           7        7          100.0%
+  1040+244             45          45       37           82.2%
+  1929+226             35          35       27           77.1%
+  0322+222             52          52       51           98.1%
+  1759-396             14          14        8           57.1%
+  0308-611             32          32       19           59.4%
+  1657-261             54          52       40           74.1%
+  0017+200             21          21       21          100.0%
+  0131-522             26          26       18           69.2%
+  0202+319            152         152      129           84.9%
+  0834-201             13          13        5           38.5%
+  1030+415             66          64       53           80.3%
+  1751+288             78          74       58           74.4%
+  2126-158             38          38       26           68.4%
+  ------------  ---------  ----------   ------          ------
+  Source Total       2678        2633     2087           77.9%
+
+ * Correlated: included in database 
+
+-----------------------------------------
+
+Baseline Performance 
+
+                                 Number of Observations
+
+                         Scheduled   Recoverable*         Used   % of scheduled
+                                                                    obs used
+
+  AGGO-HART15M                 173           124           124        71.7%
+  AGGO-MATERA                   50            39            37        74.0%
+  AGGO-ONSALA60                 37            24            24        64.9%
+  AGGO-SEJONG                    0      NOT CORR      NOT CORR         0.0%
+  AGGO-WETTZELL                 51            46            44        86.3%
+  AGGO-YARRA12M                  0      NOT CORR      NOT CORR         0.0%
+  HART15M-MATERA               118           105           101        85.6%
+  HART15M-ONSALA60             108            79            78        72.2%
+  HART15M-SEJONG                42            26            25        59.5%
+  HART15M-WETTZELL             127           127           122        96.1%
+  HART15M-YARRA12M              83            63            56        67.5%
+  MATERA-ONSALA60              351           280           275        78.3%
+  MATERA-SEJONG                131           105            98        74.8%
+  MATERA-WETTZELL              362           346           324        89.5%
+  MATERA-YARRA12M               53            36            35        66.0%
+  ONSALA60-SEJONG              154           112           102        66.2%
+  ONSALA60-WETTZELL            370           302           294        79.5%
+  ONSALA60-YARRA12M             54            35            32        59.3%
+  SEJONG-WETTZELL              166           162           148        89.2%
+  SEJONG-YARRA12M              188           146           122        64.9%
+  WETTZELL-YARRA12M             60            51            46        76.7%
+  -----------------      ---------   -----------    ----------       ------
+  Baseline Total              2678          2208          2087        77.9%
+
+  * Recoverable: can be included in the solution. 
+
+  MISSED:     Baseline was scheduled, but at least one of the sites
+              did not observe.
+  NOT CORR:   Baseline was scheduled but not correlated.
+  NO DATA:    The baseline's stations were both correlated,
+              but they did not observe together.
+  DESELECTED: Usable data was generated for the baseline,
+              but the analyst rejected it.

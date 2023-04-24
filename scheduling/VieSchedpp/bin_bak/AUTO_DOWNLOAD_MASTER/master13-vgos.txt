@@ -1,0 +1,14 @@
+## Master file format version 1.0           2001.08.21 CCT&NRV
+
+                    2013 MULTI-AGENCY VGOS SCHEDULE
+
+                     Last Updated - October 22, 2015 - CCT
+
+
+  SESSION      SESSION DATE  DOY TIME DUR        STATIONS      
+   SKED CORR STATUS  PF  DBC SUBM DEL  MK4
+    NAME        CODE   mondd ddd hh:mm hr                                                      yymondd     CODE     days NUM
+------------------------------------------------------------------------------------------------------------------------------
+|RD1301BB      |BB1301|JAN29| 29|17:30|24 |GsWf                                     |NASA|HAYS|       |    |VB|NASA|   0|    |
+------------------------------------------------------------------------------------------------------------------------------
+## Master file format version 1.0           2001.08.21 CCT&NRV

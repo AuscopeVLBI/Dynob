@@ -1,0 +1,151 @@
+       IVS Analysis Report for R1976 ($20DEC07XA) 
+       This report is the official IVS analysis report that corresponds to 
+       the database maintained by the IVS Data Centers for this session.  
+   (Analyzed by Sergei Bolotin, NVI, Inc. / NASA Goddard Space Flight Center.
+    Spoolfile source: interactive solve/nuSolve analysis.) 
+
+This is a second release of the session, the correlator has applied manual phase
+cals for SEJONG.
+
+Problems:
+ - Only one station, HART15M, used the correct chanel set up, one channel of
+   X-band was removed. Numerous non-detections in both bands, more in X-band.
+ - Due to data storage error SEJONG did not observe ~2.5hrs.
+ - YARRA12M did not observe last ~1.25hrs due to insufficient space on disk.
+
+Parameterization comments: one clock break has been added to YARRA12M.
+
+Other comments: None. 
+
+-----------------------------------------
+
+Session Statistics 
+
+  Observations:     2440 scheduled 
+                    2323 correlated (in database)
+                    1931 recoverable (usable)
+                    1882 used
+  Session fit:        35.679 ps
+
+-----------------------------------------
+
+Station Performance 
+
+                           Number of Observations
+
+                    Scheduled   Recoverable*        Used   % of scheduled
+                                                              obs used
+
+  HART15M                 760           518          507        66.7%
+  NYALE13S                759           595          583        76.8%
+  ONSALA60               1026           864          853        83.1%
+  SEJONG                  774           556          543        70.2%
+  WETTZELL               1034           959          931        90.0%
+  YARRA12M                527           370          347        65.8%
+  ---------------   ---------   -----------    ---------       ------
+  Station Total**        2440          1931         1882        77.1%
+
+  * Recoverable: can be included in the solution. 
+  ** Total includes distinct observations only.
+
+  MISSED:    Station was scheduled, but it did not observe.
+  NOT CORR:  Station was scheduled but not correlated.
+  NOT USED:  Usable data was generated for this station,
+             but the analyst rejected it all.
+
+-----------------------------------------
+
+Source Performance 
+
+                    Number of Observations
+
+                Scheduled  Correlated*    Used      % of scheduled
+                                                       obs used
+
+  2351-154             31          25       15           48.4%
+  1435-218             18          18       15           83.3%
+  2204-540             17          14       12           70.6%
+  1420-679              9           8        5           55.6%
+  0549-575              7           5        2           28.6%
+  0506+101              7           7        5           71.4%
+  1150+497             41          41       22           53.7%
+  1949-052             12          12        8           66.7%
+  0926-039             10          10        0            0.0%
+  0059+581            162         150      147           90.7%
+  0808+019              5           5        3           60.0%
+  1057-797             14          13        6           42.9%
+  1144-379             18          18       18          100.0%
+  1156+295             31          31       27           87.1%
+  3C274                47          47       39           83.0%
+  1255-316              7           7        7          100.0%
+  1418+546            115         115       97           84.3%
+  1424-418              5           5        4           80.0%
+  NRAO512              86          80       65           75.6%
+  1749+096            157         152      142           90.4%
+  1908-201              6           6        6          100.0%
+  1954-388             14          11       11           78.6%
+  3C418               271         259      188           69.4%
+  2113+293              5           5        5          100.0%
+  3C446               116         114       83           71.6%
+  1639+230             29          29       15           51.7%
+  2229+695            115         100       94           81.7%
+  0019+058            115         108       90           78.3%
+  0716+714             71          71       47           66.2%
+  1040+244             50          50       46           92.0%
+  1053+704             36          33       24           66.7%
+  0534-340              5           5        5          100.0%
+  0920-397              9           9        6           66.7%
+  0308-611             26          23       15           57.7%
+  0332-403             34          31       30           88.2%
+  0544+273             25          25       16           64.0%
+  0700-197             26          26       26          100.0%
+  1243-160             46          41       35           76.1%
+  1555+001              9           9        9          100.0%
+  1806+456             62          62       32           51.6%
+  0131-522             12          10        7           58.3%
+  0642+449            241         228      203           84.2%
+  0834-201             46          46       16           34.8%
+  1504+377             12          12        6           50.0%
+  1751+288            206         193      187           90.8%
+  1849+670             54          54       41           75.9%
+  ------------  ---------  ----------   ------          ------
+  Source Total       2440        2323     1882           77.1%
+
+ * Correlated: included in database 
+
+-----------------------------------------
+
+Baseline Performance 
+
+                                 Number of Observations
+
+                         Scheduled   Recoverable*         Used   % of scheduled
+                                                                    obs used
+
+  HART15M-NYALE13S              83            29            28        33.7%
+  HART15M-ONSALA60             184           121           120        65.2%
+  HART15M-SEJONG                75            43            43        57.3%
+  HART15M-WETTZELL             207           178           174        84.1%
+  HART15M-YARRA12M             211           147           142        67.3%
+  NYALE13S-ONSALA60            234           219           218        93.2%
+  NYALE13S-SEJONG              180           104           102        56.7%
+  NYALE13S-WETTZELL            222           221           213        95.9%
+  NYALE13S-YARRA12M             40            22            22        55.0%
+  ONSALA60-SEJONG              193           138           137        71.0%
+  ONSALA60-WETTZELL            352           348           342        97.2%
+  ONSALA60-YARRA12M             63            38            36        57.1%
+  SEJONG-WETTZELL              183           160           158        86.3%
+  SEJONG-YARRA12M              143           111           103        72.0%
+  WETTZELL-YARRA12M             70            52            44        62.9%
+  -----------------      ---------   -----------    ----------       ------
+  Baseline Total              2440          1931          1882        77.1%
+
+  * Recoverable: can be included in the solution. 
+
+  MISSED:     Baseline was scheduled, but at least one of the sites
+              did not observe.
+  NOT CORR:   Baseline was scheduled but not correlated.
+  NO DATA:    The baseline's stations were both correlated,
+              but they did not observe together.
+  DESELECTED: Usable data was generated for the baseline,
+              but the analyst rejected it.

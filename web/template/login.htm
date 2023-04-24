@@ -1,0 +1,20 @@
+<div class="loginBox">
+	<?php if ($_SESSION["login_message"]): ?>
+	<div class="loginTopMessage">
+		<b><?php echo $_SESSION["login_message"]; ?></b>
+		<?php session_unset(); ?>
+	</div>
+	<?php endif; ?>
+	<form action="./function/login.php?ref=<?php echo base64_encode($_SERVER['SCRIPT_NAME']) ?>" method="post">
+		
+		<div class="formGroup">
+			<label for="username"><b><?php echo $lang["username"]; ?>:</b></label>
+			<input type="text" class="<?php echo inputClass; ?>" id="username" name="username">
+		</div>
+		<div class="formGroup">
+			<label for="pwd"><b><?php echo $lang["password"]; ?>:</b></label>
+			<input type="password" class="<?php echo inputClass; ?>" id="pwd" name="password">
+		</div>
+		<button name="submit" type="submit" class="<?php echo btnClass; ?>"><?php echo $lang["submit"]; ?></button>
+	</form>
+</div>

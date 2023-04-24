@@ -1,0 +1,37 @@
+minLength = 0.01
+invalidMask = 0
+singleScan=True
+threadsFile = threads
+tweakIntTime=True
+#mode=profile
+minSubarray=1
+sortAntennas=True
+minReadSize=64000000
+exhaustiveAutocorrs=True
+machines=vc0,vc0,vc0,vc0,vc0,vc0,vc0,vc0,vc0,vc0,vc0,vc0,vc0,vc0,vc0,
+vc1,vc1,vc1,vc1,vc1,vc1,vc1,vc1,vc1,vc1,vc1,vc1,vc1,vc1,vc1,vc1,vc1,vc1,vc1,
+vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,vc2,
+vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,vc3,
+vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,vc4,
+vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,vc5,
+vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,vc6,
+vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,vc7,
+vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8,vc8
+
+SETUP default
+{
+	#specRes = 0.015625
+	specRes = 0.25
+	tInt = 1.0
+	guardNS = 26000
+	#freqId = 12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27
+}
+
+RULE default
+{
+	setup = default
+}
+
+vex = {expname}.vex
+
+antennas = {antennas}

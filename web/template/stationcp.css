@@ -1,0 +1,111 @@
+/*CSS for admincp*/
+
+/*
+.main{
+	width: 100%;
+	min-height: calc(100vh - 150px); /*minus header height*/
+/*}
+
+.loginBox{
+	margin: auto;
+	width: 300px;
+	padding-top: 70px;
+}
+.registerBox{
+	margin: auto;
+	width: 80%;
+	padding-top: 30px;
+	padding-bottom: 25px;
+}
+.formGroup{
+	margin-bottom: 25px;
+	font-size: 16px;
+}
+#regTab{
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 500px;
+}
+#regTab td, #regTab th {
+  padding: 15px 5px;
+}
+#regTab input{
+	font-size: 14px;
+}
+.loginInput{
+	width: 100%;
+	height: 40px;
+	padding-left: 10px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 7px;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	background-color: #f8f8f8;
+	font-size: 18px;
+	resize: none;
+}
+.registerInput{
+	width: 230px;
+	height: 40px;
+	padding-left: 10px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 7px;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	background-color: #f8f8f8;
+	font-size: 18px;
+	resize: none;
+	left: 50px;
+}
+.btnc{
+	font-size: 16px;
+	padding: 5px 13px;
+	text-align: center;
+	text-decoration: none;
+	-webkit-transition-duration: 0.2s; /* Safari */
+/*	transition-duration: 0.2s;
+	cursor: pointer;
+	border: none;
+	border-radius: 5px;
+	
+}
+.loginTopMessage{
+	position: absolute;
+	margin-top: -40px;
+	padding-top: 5px;
+	text-align: center;
+	width: 300px;
+	height: 35px;
+	background-color: #c8c8c8;
+	border-radius: 5px;
+	color: red;
+	-moz-box-shadow:    inset 0 0 4px #000000;
+	-webkit-box-shadow: inset 0 0 4px #000000;
+	box-shadow:         inset 0 0 4px #000000;
+	font-size: 16px;
+}
+.submain{
+	width: calc(100% - 80px);
+	min-height: calc(100vh - 150px);
+	position: relative;
+	margin: 0 auto;
+	background-color: rgba(255, 255, 255, 0.8);
+}
+#topNav {
+	font-size: 16px;
+	float: right;
+	margin-top: -47px;
+}
+#topNav div{
+	border-radius: 15px 15px 0px 0px;
+	background: rgba(255, 255, 255, 0.8);
+	padding: 10px; 
+	display: inline-block;
+	margin-left: 1px;
+}

@@ -1,0 +1,172 @@
+       IVS Analysis Report for R11002 ($21JUN07XA)
+       This report is the official IVS analysis report that corresponds to
+       the database maintained by the IVS Data Centers for this session.
+   (Analyzed by Sergei Bolotin, NVI, Inc. / NASA Goddard Space Flight Center.
+    Spoolfile source: interactive solve/nuSolve analysis.)
+
+Problems: AGGO   Bbc02 mostly unlocked, bbc13 unlocked, no spares available
+          NYALE13S Station tagged along
+          RAEGSMAR Scans 158-1700a to 159-1156 started 5-6 seconds later due to some waits in
+                   caltsys (preob)
+          YARRA12M Late start 18:03. Problems connecting to mk5
+
+Parameterization comments: A clock break was added to SEJONG.
+
+Other comments: This is a final solution of the session. The correlator has refringed observations of 
+                RAEGSMAR in S-band and removed the subambiguities.
+
+-----------------------------------------
+
+Session statistics
+
+  Observations:     3595 scheduled
+                    3569 correlated (in database)
+                    3092 recoverable (usable)
+                    3034 used
+  Session fit:        34.870 ps
+
+-----------------------------------------
+
+Station Performance
+
+                           Number of Observations
+
+                    Scheduled   Recoverable*        Used   % of scheduled
+                                                              obs used
+
+  AGGO                    426           250          246        57.7%
+  HART15M                 989           672          658        66.5%
+  NYALE13S                965           837          821        85.1%
+  NYALES20               1225          1178         1154        94.2%
+  RAEGSMAR                682           642          628        92.1%
+  SEJONG                  880           752          746        84.8%
+  WETTZ13N               1501          1404         1374        91.5%
+  YARRA12M                522           449          441        84.5%
+  ---------------   ---------   -----------    ---------       ------
+  Station Total**        3595          3092         3034        84.4%
+
+  * Recoverable: can be included in the solution.
+  ** Total includes distinct observations only.
+
+  MISSED:    Station was scheduled, but it did not observe.
+  NOT CORR:  Station was scheduled but not correlated.
+  NOT USED:  Usable data was generated for this station,
+             but the analyst rejected it all.
+
+-----------------------------------------
+
+Source Performance
+
+                    Number of Observations
+
+                Scheduled  Correlated*    Used      % of scheduled
+                                                       obs used
+
+  0630-261              2           2        2          100.0%
+  0516-621              7           7        6           85.7%
+  2204-540              7           7        2           28.6%
+  1240+381              9           9        2           22.2%
+  1614+051             26          26       16           61.5%
+  2037+216              1           1        0            0.0%
+  0235+164            402         402      390           97.0%
+  1647-296             62          59       35           56.5%
+  0059+581            309         309      309          100.0%
+  0104-408             16          16        4           25.0%
+  0119+115             37          37       26           70.3%
+  CTA26                 7           7        5           71.4%
+  0454-234            125         125      113           90.4%
+  0458-020            136         136      127           93.4%
+  0537-441             22          22        4           18.2%
+  0727-115            118         118      106           89.8%
+  0823+033             26          26       25           96.2%
+  0955+476             79          79       73           92.4%
+  1057-797             10           9        7           70.0%
+  1124-186              6           6        6          100.0%
+  1144-379             28          28       24           85.7%
+  1255-316             11          11        5           45.5%
+  1418+546             41          41       30           73.2%
+  1451-375              9           8        0            0.0%
+  1519-273              8           7        7           87.5%
+  1726+455             67          67       58           86.6%
+  1741-038            150         145      139           92.7%
+  1749+096            117         116       92           78.6%
+  3C371               318         318      257           80.8%
+  1908-201             22          22       16           72.7%
+  1954-388             19          19       14           73.7%
+  2052-474             24          24       13           54.2%
+  2255-282             14          14       10           71.4%
+  2318+049             76          76       69           90.8%
+  1324+224             28          28       24           85.7%
+  1846+322             25          25       22           88.0%
+  2000+472            247         247      206           83.4%
+  2215+150             40          40       26           65.0%
+  2227-088             78          76       62           79.5%
+  2229+695             42          42       40           95.2%
+  0215+015             26          26       24           92.3%
+  0529+483            107         107       92           86.0%
+  0748+126            107         107       96           89.7%
+  1040+244             21          21       15           71.4%
+  0322+222             37          37       22           59.5%
+  2008-159             21          21       17           81.0%
+  0308-611             34          34        0            0.0%
+  0332-403             28          28       21           75.0%
+  0202+319            142         142      114           80.3%
+  0827+243             53          53       37           69.8%
+  1243-072             20          16       13           65.0%
+  1504+377             12          12       12          100.0%
+  1751+288            216         208      199           92.1%
+  ------------  ---------  ----------   ------          ------
+  Source Total       3595        3569     3034           84.4%
+
+ * Correlated: included in database
+
+-----------------------------------------
+
+Baseline Performance
+
+                                 Number of Observations
+
+                         Scheduled   Recoverable*         Used   % of scheduled
+                                                                    obs used
+
+  AGGO-HART15M                 226            70            69        30.5%
+  AGGO-NYALE13S                 12             9             9        75.0%
+  AGGO-NYALES20                 16            16            16       100.0%
+  AGGO-RAEGSMAR                 67            67            67       100.0%
+  AGGO-SEJONG                    0       NO DATA       NO DATA         0.0%
+  AGGO-WETTZ13N                103            88            85        82.5%
+  AGGO-YARRA12M                  2             0    DESELECTED         0.0%
+  HART15M-NYALE13S              72            33            32        44.4%
+  HART15M-NYALES20             116            90            90        77.6%
+  HART15M-RAEGSMAR             117           104            99        84.6%
+  HART15M-SEJONG                61            45            45        73.8%
+  HART15M-WETTZ13N             261           221           217        83.1%
+  HART15M-YARRA12M             136           109           106        77.9%
+  NYALE13S-NYALES20            300           292           284        94.7%
+  NYALE13S-RAEGSMAR            113           105           104        92.0%
+  NYALE13S-SEJONG              170           125           124        72.9%
+  NYALE13S-WETTZ13N            269           251           246        91.4%
+  NYALE13S-YARRA12M             29            22            22        75.9%
+  NYALES20-RAEGSMAR            132           131           127        96.2%
+  NYALES20-SEJONG              190           182           180        94.7%
+  NYALES20-WETTZ13N            429           427           417        97.2%
+  NYALES20-YARRA12M             42            40            40        95.2%
+  RAEGSMAR-SEJONG               65            48            48        73.8%
+  RAEGSMAR-WETTZ13N            175           174           171        97.7%
+  RAEGSMAR-YARRA12M             13            13            12        92.3%
+  SEJONG-WETTZ13N              179           165           163        91.1%
+  SEJONG-YARRA12M              215           187           186        86.5%
+  WETTZ13N-YARRA12M             85            78            75        88.2%
+  -----------------      ---------   -----------    ----------       ------
+  Baseline Total              3595          3092          3034        84.4%
+
+  * Recoverable: can be included in the solution.
+
+  MISSED:     Baseline was scheduled, but at least one of the sites
+              did not observe.
+  NOT CORR:   Baseline was scheduled but not correlated.
+  NO DATA:    The baseline's stations were both correlated,
+              but they did not observe together.
+  DESELECTED: Usable data was generated for the baseline,
+              but the analyst rejected it.
+
