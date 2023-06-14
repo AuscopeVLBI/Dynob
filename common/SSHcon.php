@@ -32,9 +32,9 @@ class ConnectSSH {
 //Usage:
 //$conssh = new ConnectSSH;
 //new connect
-//$con = $conssh->connect("pcfshb", "oper", "LunchB0x");
+//$con = $conssh->connect("server", "user", "password");
 //exec
-//$conssh->exec($con,'cd /usr2/sched;ls | grep dyn');
+//$conssh->exec($con,'ls | grep dyn');
 //send
 //ssh2_scp_send($connection, '/local/filename', '/remote/filename', 0644);
 //receive
