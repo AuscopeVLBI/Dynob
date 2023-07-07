@@ -3,10 +3,11 @@ class ConnectSSH {
 
 	function connect($server, $user, $password){
 		if(count(explode(".",$server))>=4){
+			//$connection = ssh2_connect(trim($server), 22, [ 'hostkey' => 'ecdsa-sha2-nistp256,ssh-rsa']);
 			$connection = ssh2_connect(trim($server), 22);
 		}
 		else{
-			$connection = ssh2_connect($server, 22);
+			$connection = ssh2_connect($server.'.phys.utas.edu.au', 22);
 		}
 		if (!ssh2_auth_password($connection, $user, $password)) {
 			print_r($connection);
@@ -32,9 +33,10 @@ class ConnectSSH {
 //Usage:
 //$conssh = new ConnectSSH;
 //new connect
-//$con = $conssh->connect("server", "user", "password");
+//$con = $conssh->connect("131.217.62.225", "observer", "LunchB0x");
 //exec
-//$conssh->exec($con,'ls | grep dyn');
+//echo $conssh->exec($con,'ls -la');
+//$conssh->exec($con,'cd /usr2/sched;ls | grep dyn');
 //send
 //ssh2_scp_send($connection, '/local/filename', '/remote/filename', 0644);
 //receive

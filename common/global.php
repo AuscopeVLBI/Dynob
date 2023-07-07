@@ -1,14 +1,14 @@
 <?php
-$corrdir = "/home/observer/correlations"; //correlation directory on primary correlation machine
+$corrdir = ""; //correlation directory on primary correlation machine
 $pcfsuser = "";
 $skdlocation = "";
 $loglocation = "";
 
 //Mysql
-$sqlserver = "localhost";
+$sqlserver = "";
 $sqluser = "";
 $sqlpass = "";
-$sqlpre = "Dynob_";
+$sqlpre = "";
 
 //Correlator infos
 $cserver = "";
@@ -21,12 +21,19 @@ $dbmacuser = "";
 $dbmacpass = "";
 $dbmacpath = "";
 
+//make apriori machine
+$mkapmac = "";
+$mkapuser = "";
+$mkappass = "";
+
 //analysis processing machine
 $anamachine = "";
 $anamacuser = "";
 $anamacpass = "";
+//$anamaclogpath = "/data/vlbi/sessions/";
 $anamaclogpath = "";
-//$anamaclogpath = "/500/sessions/";
+$fringepath = "";
+$vgosdbloc = "";
 
 //local stations
 $localstations = ["ho","hb","ke","yg"];
@@ -40,11 +47,13 @@ $exper = "mftest"; //"mf0004,mf0005,mf0006..";
 $cmode = "mixed"; //mixed or vgos
 
 //datastreams
-$vgosstations = ["hb","ke"];
+$vgosstations = ["hb","ke","yg"]; //strictly lower-case only
 $dtsvgos = array("hb"=>["a","b","c","d","e","f","g","h"],
-		  "ke"=>["a","b","c","d","e","f","g","h"]);
+		  "ke"=>["a","b","c","d","e","f","g","h"],
+		  "yg"=>["a","b","c","d","e","f","g","h"]);
 $dtsmixeds = array("hb"=>["xx","xy","sx","sy"],
-		   "ke"=>["xx","xy","sx","sy"]);
+		   "ke"=>["xx","xy","sx","sy"],
+		   "yg"=>["xx","xy","sx","sy"]);
 
 //peculiar offsets for dUT1
 //$poffs = array("hb"=>-1.725,
@@ -81,4 +90,10 @@ $goodsources = ["0454-234","0727-115","1334-127","OJ287","2255-282"];
 
 //real time fringe check sources
 $rtfcsources = ["0454-234","0727-115","1334-127","OJ287","2255-282","1921-293","1057-797"];
+
+//IVS access command for downloads
+$ivsftps = array("ftp://gdc.cddis.eosdis.nasa.gov" => "curl -u anonymous:hbobserver@gmail.com -O --ftp-ssl",
+			"ftp://ivs.bkg.bund.de" => "curl --ssl-reqd -u anonymous:anonymous -O",
+		    "ftp://ivsopar.obspm.fr" => "curl -u anonymous:anonymous -O --ftp-ssl");
+			
 ?>
