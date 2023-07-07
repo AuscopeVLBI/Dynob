@@ -20,7 +20,11 @@ class Modilist{
 
 		//read log to see what recorder
 		$recorder = [];
+		$vdifmode = [];
 		foreach($cstations as $cs){
+			if (!file_exists($_SERVER['DOCUMENT_ROOT']."tmp/".$exper."/".$cs."buffer.log")){
+				continue;
+			}
 			$logfile = fopen($_SERVER['DOCUMENT_ROOT']."tmp/".$exper."/".$cs."buffer.log", "r");
 			while (!feof($logfile)){
 				$line = fgets($logfile);
@@ -34,6 +38,12 @@ class Modilist{
 					$pos = stripos($line,"Recorder=");
 					$recorder[$cs] = strtolower(trim(substr($line,$pos+9)));
 				}
+			}
+
+			if(in_array($cs,$GLOBALS["vgosstations"]) && in_array($cs,$GLOBALS["localstations"]) ){
+				//read log to check vdifmode
+				$vdifmode[$cs] = strtoupper(trim(shell_exec('grep -i "vdif_8000" '.$_SERVER['DOCUMENT_ROOT']."tmp/".$exper."/".$cs.'buffer.log | tail -1 | cut -d " " -f 4')));
+				$globvdifmode = strtoupper(trim(shell_exec('grep -i "vdif_8000" '.$_SERVER['DOCUMENT_ROOT']."tmp/".$exper."/".$cs.'buffer.log | tail -1 | cut -d " " -f 4')));
 			}
 		}
 
@@ -117,8 +127,15 @@ class Modilist{
 						for ($i=0;$i<count($dts[$st]);$i++){
 							$matches  = preg_grep ('/(.*)'.$therl.'_(.*)/i', $thelistwithpath[$i]);
 							$matches = array_values($matches);
+							
 							if(count($matches)>0){
-								$tmpstr = $conssh->exec($con,"cd ".$corrdir."; ~/vsum.gappy.dyn.py ".$matches[0]." VDIF_8000-1024-8-2");
+								if(in_array($st,$GLOBALS["localstations"])){
+									$tmpstr = $conssh->exec($con,"cd ".$corrdir."; ~/vsum.gappy.dyn.py ".$matches[0]." ".$vdifmode[$st]);
+								}
+								else{
+									$tmpstr = $conssh->exec($con,"cd ".$corrdir."; ~/vsum.gappy.dyn.py ".$matches[0]." ".$globvdifmode);
+								}
+								//$tmpstr = trim($conssh->exec($con,"cd ".$corrdir."; cat tf.list"));
 								if (strpos($tmpstr,"badscan")!==false){
 									break;
 								}

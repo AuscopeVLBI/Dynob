@@ -43,6 +43,11 @@ Class Lv1db{
 	public $a7username;
 	public $a7password;
 	public $a7logpath;
+	public $a7fringepath;
+	public $vgosdbloc;
+	public $mkapmac;
+	public $mkapuser;
+	public $mkappass;
 	public $cserver;
 	public $cusername;
 	public $cpassword;
@@ -60,6 +65,11 @@ Class Lv1db{
 		$this->a7username = $GLOBALS["anamacuser"];
 		$this->a7password = $GLOBALS["anamacpass"];
 		$this->a7logpath = $GLOBALS["anamaclogpath"];
+		$this->a7fringepath = $GLOBALS["fringepath"];
+		$this->vgosdbloc = $GLOBALS["vgosdbloc"];
+		$this->mkapmac = $GLOBALS["mkapmac"];
+		$this->mkapuser = $GLOBALS["mkapuser"];
+		$this->mkappass = $GLOBALS["mkappass"];
 		$this->cserver = $GLOBALS["cserver"];
 		$this->cusername = $GLOBALS["cusername"];
 		$this->cpassword = $GLOBALS["cpassword"];
@@ -70,58 +80,55 @@ Class Lv1db{
 	function checkdir(){
 		//check if correlation directory exists
 		$conssh = new ConnectSSH;
-		if(!($con = $conssh->connect($this->aserver,$this->ausername,$this->apassword))){
-			$message = "Exit: Unable to reach ".$this->aserver.PHP_EOL;
+		if(!($con = $conssh->connect($this->a7server,$this->a7username,$this->a7password))){
+			$message = "Exit: Unable to reach ".$this->a7server.PHP_EOL;
 			$_SESSION["ana_message"] = $_SESSION["ana_message"].$message;
 			die();
 		}
 
 		$sftp = ssh2_sftp($con);
-		$_str = file_exists('ssh2.sftp://'.$sftp.$this->amacpath.$this->exper);
+		$_str = file_exists('ssh2.sftp://'.$sftp.$this->$a7fringepath.$this->exper);
 		if(!$_str){
 			//make exper dir
-			ssh2_sftp_mkdir($sftp, $this->amacpath.$this->exper);
-			ssh2_sftp_chmod($sftp, $this->amacpath.$this->exper, 0775);
+			ssh2_sftp_mkdir($sftp, $this->a7fringepath.$this->exper);
+			ssh2_sftp_chmod($sftp, $this->a7fringepath.$this->exper, 0775);
 		}
-		$_str = file_exists('ssh2.sftp://'.$sftp.$this->amacpath.$this->exper."/SNR");
+		$_str = file_exists('ssh2.sftp://'.$sftp.$this->a7fringepath.$this->exper."/inp_calc");
 		if(!$_str){
-			//make SNR dir
+			//make inp_calc dir
 			$expcode = $this->getexpcode();
-			ssh2_sftp_mkdir($sftp, $this->amacpath.$this->exper."/SNR");
-			ssh2_sftp_chmod($sftp, $this->amacpath.$this->exper."/SNR", 0775);
+			ssh2_sftp_mkdir($sftp, $this->a7fringepath.$this->exper."/inp_calc");
+			ssh2_sftp_chmod($sftp, $this->a7fringepath.$this->exper."/inp_calc", 0775);
 		}
-		$_str = file_exists('ssh2.sftp://'.$sftp.$this->amacpath.$this->exper."/control");
+		$_str = file_exists('ssh2.sftp://'.$sftp.$this->a7fringepath.$this->exper."/control");
 		if(!$_str){
 			//make control dir
-			ssh2_sftp_mkdir($sftp, $this->amacpath.$this->exper."/control");
-			ssh2_sftp_chmod($sftp, $this->amacpath.$this->exper."/control", 0775);
-			
+			ssh2_sftp_mkdir($sftp, $this->a7fringepath.$this->exper."/control");
+			ssh2_sftp_chmod($sftp, $this->a7fringepath.$this->exper."/control", 0775);	
 		}
-		$anadir = $this->anadir.$this->exper."/";
-		$_SESSION["anadir"] = $anadir;
 		ssh2_disconnect($con);
 	}
 
 	function cp2mac(){
 		$conssh = new ConnectSSH;
-		if(!($con = $conssh->connect($this->aserver,$this->ausername,$this->apassword))){
-			$message = "Exit: Unable to reach ".$this->aserver.PHP_EOL;
+		if(!($con = $conssh->connect($this->a7server,$this->a7username,$this->a7password))){
+			$message = "Exit: Unable to reach ".$this->a7server.PHP_EOL;
 			$_SESSION["ana_message"] = $_SESSION["ana_message"].$message;
 			die();
 		}
 		
-		//copy skd file to $this->amacpath
+		//copy skd file to $this->a7fringepath
 		$sftp = ssh2_sftp($con);
-		$_str = file_exists('ssh2.sftp://'.$sftp.$this->amacpath.$this->exper.".skd");
+		$_str = file_exists('ssh2.sftp://'.$sftp.$this->a7fringepath.$this->exper."/".$this->exper.".skd");
 		if(!$_str){
 			$skd = $_SERVER['DOCUMENT_ROOT']."scheduling/skd/".$this->exper.".skd";
-			ssh2_scp_send($con,$skd, $this->amacpath.$this->exper.".skd", 0755);
+			ssh2_scp_send($con,$skd, $this->a7fringepath.$this->exper."/".$this->exper.".skd", 0755);
 		}
 		//copy log files
 		$logs = glob($_SERVER['DOCUMENT_ROOT']."/tmp/".$this->exper."/*.log");
 		foreach($logs as $lg){
 			$st = substr(basename($lg),0,2);
-			ssh2_scp_send($con,$lg, $this->amacpath.$this->exper."/".$this->exper.$st.".log", 0755);
+			ssh2_scp_send($con,$lg, $this->a7fringepath.$this->exper."/".$this->exper.$st.".log", 0755);
 		}
 
 		//copy v2d
@@ -142,14 +149,14 @@ Class Lv1db{
 			}
 			$v2dfilenew ->fwrite($line);
 		}
-		ssh2_scp_send($con,$_SERVER['DOCUMENT_ROOT']."/tmp/".$this->exper."/".$this->exper.".v2d", $this->amacpath.$this->exper."/".$this->exper.".v2d", 0755);
+		ssh2_scp_send($con,$_SERVER['DOCUMENT_ROOT']."/tmp/".$this->exper."/".$this->exper.".v2d", $this->a7fringepath.$this->exper."/".$this->exper.".v2d", 0755);
 
 		//copy vex
-		ssh2_scp_send($con,$_SERVER['DOCUMENT_ROOT']."/tmp/".$this->exper."/buffer.vex", $this->amacpath.$this->exper."/".$this->exper.".vex", 0755);
+		ssh2_scp_send($con,$_SERVER['DOCUMENT_ROOT']."/tmp/".$this->exper."/buffer.vex", $this->a7fringepath.$this->exper."/".$this->exper.".vex", 0755);
 
 		//copy control file
 		$expcode = $this->getexpcode();
-		ssh2_scp_send($con,$_SERVER['DOCUMENT_ROOT']."/tmp/".$this->exper."/cf_".$this->exper, $this->amacpath.$this->exper."/control/cf_".$expcode, 0755);
+		ssh2_scp_send($con,$_SERVER['DOCUMENT_ROOT']."/tmp/".$this->exper."/cf_".$this->exper, $this->a7fringepath.$this->exper."/control/cf_".$expcode, 0755);
 	}
 
 	//copy data from correlator to analysis machine
@@ -160,13 +167,13 @@ Class Lv1db{
 			$_SESSION["ana_message"] = $_SESSION["ana_message"].$message;
 			die();
 		}
+
 		//copy all $expcode files
 		//read scan list for data
 		//echo $_SERVER['DOCUMENT_ROOT']."postcorr/scans/scans_".$this->exper.".txt";
 		$thescans = file($_SERVER['DOCUMENT_ROOT']."postcorr/scans/scans_".$this->exper.".txt");
 		$thescans = array_filter($thescans);
 		$thescans = array_values($thescans);
-
 
 		switch(substr($this->exper,0,2)){
 			case "mf":
@@ -196,14 +203,40 @@ Class Lv1db{
 
 		//send
 		$expcode = $this->getexpcode();
-		$conssh->exec($concorr,"cd ".$this->corrdir.$this->exper.";scp -r ".$expcode." ".$this->ausername."@".$this->aserver.".phys.utas.edu.au:".$this->amacpath.$this->exper."/".$expcode." &>/dev/null;");
+		if(count(explode(".",$this->a7server))>=4){
+			echo $conssh->exec($concorr,"cd ".$this->corrdir.$this->exper.";scp -r ".$expcode." ".$this->a7username."@".$this->a7server.":".$this->a7fringepath.$this->exper."/".$expcode." &>/dev/null;");
+		}
+		else{
+			echo $conssh->exec($concorr,"cd ".$this->corrdir.$this->exper.";scp -r ".$expcode." ".$this->a7username."@".$this->a7server.".phys.utas.edu.au:".$this->a7fringepath.$this->exper."/".$expcode." &>/dev/null;");
+		}
+
+		//copy inputs and calcs
+		if(count(explode(".",$this->a7server))>=4){
+			$conssh->exec($concorr,"cd ".$this->corrdir.$this->exper.";scp *.input ".$this->a7username."@".$this->a7server.":".$this->a7fringepath.$this->exper."/inp_calc/ &>/dev/null;");
+			$conssh->exec($concorr,"cd ".$this->corrdir.$this->exper.";scp *.calc ".$this->a7username."@".$this->a7server.":".$this->a7fringepath.$this->exper."/inp_calc/ &>/dev/null;");
+		}
+		else{
+			$conssh->exec($concorr,"cd ".$this->corrdir.$this->exper.";scp *input ".$this->a7username."@".$this->a7server.".phys.utas.edu.au:".$this->a7fringepath.$this->exper."/inp_calc/ &>/dev/null;");
+			$conssh->exec($concorr,"cd ".$this->corrdir.$this->exper.";scp *calc ".$this->a7username."@".$this->a7server.".phys.utas.edu.au:".$this->a7fringepath.$this->exper."/inp_calc/ &>/dev/null;");
+		}
+		
 	}
 
 	//before creating lv1 vgosdb
 	function predb(){
 		$conssh = new ConnectSSH;
-		$con = $conssh->connect($this->a7server,$this->a7username,$this->a7password);		
 		if(!($con = $conssh->connect($this->a7server,$this->a7username,$this->a7password))){
+			$message = "Exit: Unable to reach ".$this->a7server.PHP_EOL;
+			$_SESSION["ana_message"] = $_SESSION["ana_message"].$message;
+			die();
+		}
+		$expcode = $this->getexpcode();
+		echo $conssh->exec($con,"cd ".$this->a7fringepath.$this->exper."/".$expcode.";/home/observer/correlator/USNO-software/pylib/vlbi/report.py . .. ../inp_calc/ --no-drop-channels -o ../control/".$this->exper.".corr;");
+		
+		//$con = $conssh->connect($this->mkapmac,$this->mkapuser,$this->mkappass);	
+
+		/* old
+		if(!($con = $conssh->connect($this->mkapmac,$this->mkapuser,$this->mkappass))){
 			$message = "Exit: Unable to reach ".$this->a7server.PHP_EOL;
 			$_SESSION["ana_message"] = $_SESSION["ana_message"].$message;
 			die();
@@ -328,7 +361,7 @@ Class Lv1db{
 		else{
 			echo $conssh->exec($conana,"cd ".$this->amacpath.$this->exper."/".$expcode."; echo -e '\n\n' | ~/bin/report_prep.dyn.sh");
 		}
-
+		*/
 	}
 
 	//create lv1 vgosdb
@@ -347,12 +380,22 @@ Class Lv1db{
 		//download master
 		//intensives
 		//if(!file_exists($_SERVER['DOCUMENT_ROOT']."createdb/master/master".$sessyear."-int.txt")){
-			$usnobkg = "https://ivs.bkg.bund.de/data_dir/vlbi/ivscontrol/master".$sessyear."-int.txt";
+			$ivsftps = $GLOBALS["ivsftps"];
+			$fileloc = "/pub/vlbi/ivscontrol/master".$sessyear."-int.txt";
 			$file_name = $_SERVER['DOCUMENT_ROOT']."createdb/master/master".$sessyear."-int.txt";
-			if(!file_put_contents($file_name,file_get_contents($usnobkg))){
-				$message = "failed to download master".$sessyear."-int.txt from the bkg server".PHP_EOL;
+			$filesuccess = 0;
+			foreach($ivsftps as $_serv => $_comm){
+				exec($_comm ." ".$_serv.$fileloc);
+				if(rename("master".$sessyear."-int.txt",$file_name)){
+					$filesuccess = 1;
+					break;
+				}
+			}
+			if($filesuccess == 0){
+				$message = "failed to download master".$sessyear."-int.txt from the IVS servers".PHP_EOL;
 				$_SESSION["precor_message"] = $_SESSION["precor_message"].$message;
 			}
+			
 		//}
 		$_masterint = new SplFileObject($_SERVER['DOCUMENT_ROOT']."createdb/master/master".$sessyear."-int.txt","r");
 
@@ -369,13 +412,22 @@ Class Lv1db{
 
 		if($skipnorm == 0){
 			//if(!file_exists($_SERVER['DOCUMENT_ROOT']."createdb/master/master".$sessyear.".txt")){
-				$usnobkg = "https://ivs.bkg.bund.de/data_dir/vlbi/ivscontrol/master".$sessyear.".txt";
-				//normal
+				$ivsftps = $GLOBALS["ivsftps"];
+				$fileloc = "/pub/vlbi/ivscontrol/master".$sessyear.".txt";
 				$file_name = $_SERVER['DOCUMENT_ROOT']."createdb/master/master".$sessyear.".txt";
-				if(!file_put_contents($file_name,file_get_contents($usnobkg))){
-					$message = "failed to download master".$sessyear.".txt from the bkg server".PHP_EOL;
+				$filesuccess = 0;
+				foreach($ivsftps as $_serv => $_comm){
+					exec($_comm ." ".$_serv.$fileloc);
+					if(rename("master".$sessyear.".txt",$file_name)){
+						$filesuccess = 1;
+						break;
+					}
+				}
+				if($filesuccess == 0){
+					$message = "failed to download master".$sessyear.".txt from the IVS servers".PHP_EOL;
 					$_SESSION["precor_message"] = $_SESSION["precor_message"].$message;
 				}
+
 			//}
 			$_master = new SplFileObject($_SERVER['DOCUMENT_ROOT']."createdb/master/master".$sessyear.".txt","r");
 
@@ -390,8 +442,8 @@ Class Lv1db{
 			}
 		}
 
-		echo $conssh->exec($con,"vgosDbMake -d ".$vdbname." /mnt/".$this->aserver."/AUSTRAL/".$this->exper."/".$expcode."/");
-		echo $conssh->exec($con,"cd /data/vlbi/vgosDb/".$sessyear."; tar -zcvf ".$vdbname.".tgz ".$vdbname);
+		echo $conssh->exec($con,"vgosDbMake -d ".$vdbname." ".$this->a7fringepath.$this->exper."/".$expcode."/");
+		echo $conssh->exec($con,"cd ".$this->vgosdbloc.$sessyear."; tar -zcvf ".$vdbname.".tgz ".$vdbname);
 	}
 
 	function createdbold(){ //before 2023

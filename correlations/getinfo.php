@@ -72,6 +72,7 @@ class Getinfo{
 		}
 
 		$uniraid = array_unique($raidmac);
+
 		foreach($uniraid as $mac){
 			$uraidpath[$mac] = [];
 			$conssh = new ConnectSSH;

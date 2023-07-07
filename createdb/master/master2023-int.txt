@@ -2,7 +2,7 @@
 
                          2023 MULTI-AGENCY INTENSIVES SCHEDULE
 
-                     Last Updated - April 10, 2023 - CCT
+                     Last Updated - July 03, 2023 - CCT
 
    SESSION      DATE     SESSION    DOY TIME   DUR       STATIONS                             SKED CORR  STATUS  DBC  SUBM DEL 
      TYPE     yyyymmdd     CODE     ddd hh:mm  h:mm                                                     yyyymmdd CODE      days 
@@ -226,10 +226,10 @@
 --------------------------------------------------------------------------------------------------------------------------------
 |IVS-INT-2   |20230401|q23091      | 91|07:30| 1:00|MkWz                                     |DACH|GSI |        | XK |GSI |   0|
 |VGOS-INT-B  |20230401|b23091      | 91|07:30| 1:00|IsOe -Ow                                 |DACH|GSI |        | VB |NASA|   0|
-|VGOS-INT-C  |20230401|c23091      | 91|08:45| 1:00|IsOe -Ow                                 |DACH|GSI |        | VC |NASA|   0|
+|VGOS-INT-C  |20230401|c23091      | 91|08:45| 1:00|IsOe -Ow                                 |DACH|OSO |        | VC |NASA|   0|
 |IVS-INT-2   |20230402|q23092      | 92|07:30| 1:00|MkWz                                     |DACH|GSI |        | XK |GSI |   0|
 |VGOS-INT-B  |20230402|b23092      | 92|07:30| 1:00|IsOe -Ow                                 |DACH|GSI |        | VB |NASA|   0|
-|VGOS-INT-C  |20230402|c23092      | 92|08:45| 1:00|IsOe -Ow                                 |DACH|GSI |        | VC |NASA|   0|
+|VGOS-INT-C  |20230402|c23092      | 92|08:45| 1:00|IsOe -Ow                                 |DACH|OSO |        | VC |NASA|   0|
 |IVS-INT-S   |20230403|z23093      | 93|06:30| 1:00|HbHt                                     |DACH|UTAS|        | MH |VIEN|   0|
 |IVS-INT-1   |20230403|i23093      | 93|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230403|v23093      | 93|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
@@ -244,10 +244,9 @@
 |VGOS-INT-A  |20230406|v23096      | 96|18:45| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |IVS-INT-2   |20230408|q23098      | 98|07:30| 1:00|Wz -Mk                                   |DACH|GSI |        | XK |GSI |   0|
 |VGOS-INT-B  |20230408|b23098      | 98|07:30| 1:00|IsOe -Ow                                 |DACH|GSI |        | VB |NASA|   0|
-|VGOS-INT-C  |20230408|c23098      | 98|08:45| 1:00|IsOe -Ow                                 |DACH|GSI |        | VC |NASA|   0|
+|VGOS-INT-C  |20230408|c23098      | 98|08:45| 1:00|IsOe -Ow                                 |DACH|OSO |        | VC |NASA|   0|
 |VGOS-INT-B  |20230409|b23099      | 99|07:30| 1:00|IsOe -Ow                                 |DACH|GSI |        | VB |NASA|   0|
-|VGOS-INT-C  |20230409|c23099      | 99|08:45| 1:00|IsOe -Ow                                 |DACH|GSI |        | VC |NASA|   0|
-|VGOS-INT-Y  |20230411|y23101      |101|14:00| 1:00|GsSaYj                                   |DACH|YEBS|        | VT |NASA|   0|
+|VGOS-INT-C  |20230409|c23099      | 99|08:45| 1:00|IsOe -Ow                                 |DACH|OSO |        | VC |NASA|   0|
 |IVS-INT-1   |20230411|i23101      |101|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230411|v23101      |101|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |VGOS-INT-S  |20230411|s23101      |101|19:45| 1:00|MgWs                                     |DACH|WETZ|        | VJ |NASA|   0|
@@ -262,10 +261,10 @@
 |VGOS-INT-A  |20230414|v23104      |104|18:45| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |IVS-INT-2   |20230415|q23105      |105|07:30| 1:00|KkWz -Mk                                 |DACH|GSI |        | XK |GSI |   0|
 |VGOS-INT-B  |20230415|b23105      |105|07:30| 1:00|IsOe -Ow                                 |DACH|GSI |        | VB |NASA|   0|
-|VGOS-INT-C  |20230415|c23105      |105|08:45| 1:00|IsOe -Ow                                 |DACH|GSI |        | VC |NASA|   0|
+|VGOS-INT-C  |20230415|c23105      |105|08:45| 1:00|IsOe -Ow                                 |DACH|OSO |        | VC |NASA|   0|
 |IVS-INT-2   |20230416|q23106      |106|07:30| 1:00|KkWz -Mk                                 |DACH|GSI |        | XK |GSI |   0|
 |VGOS-INT-B  |20230416|b23106      |106|07:30| 1:00|IsOe -Ow                                 |DACH|GSI |        | VB |NASA|   0|
-|VGOS-INT-C  |20230416|c23106      |106|08:45| 1:00|IsOe -Ow                                 |DACH|GSI |        | VC |NASA|   0|
+|VGOS-INT-C  |20230416|c23106      |106|08:45| 1:00|IsOe -Ow                                 |DACH|OSO |        | VC |NASA|   0|
 |IVS-INT-S   |20230417|z23107      |107|06:30| 1:00|HbHt                                     |DACH|UTAS|        | MH |VIEN|   0|
 |IVS-INT-3   |20230417|q23107      |107|07:00| 1:00|NsNyShWz                                 |DACH|BONN|        | XK |NASA|   0|
 |IVS-INT-1   |20230417|i23107      |107|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
@@ -276,22 +275,23 @@
 |VGOS-INT-A  |20230418|v23108      |108|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |VGOS-INT-S  |20230418|s23108      |108|19:45| 1:00|MgWs                                     |DACH|WETZ|        | VJ |NASA|   0|
 |VGOS-INT-TST|20230418|s3108a      |108|21:05| 0:12|MgWs                                     |NASA|WETZ|        | VT |NASA|   0|
-|IVS-INT-1   |20230420|i23110      |110|18:30| 1:00|KkSvWz                                   |USNO|WASH|        | XU |NASA|   0|
+|IVS-INT-1   |20230420|i23110      |110|18:30| 1:00|KkWz -Sv                                 |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230420|v23110      |110|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |IVS-INT-00  |20230420|ii3110      |110|23:30| 1:00|KkWz                                     |NASA|WASH|        | XZ |NASA|   0|
 |IVS-INT-1   |20230421|i23111      |111|18:45| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230421|v23111      |111|18:45| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |IVS-INT-2   |20230422|q23112      |112|07:30| 1:00|MkWz                                     |DACH|GSI |        | XK |GSI |   0|
-|VGOS-INT-B  |20230422|b23112      |112|07:30| 1:00|IsOe -Ow                                 |DACH|GSI |        | VB |NASA|   0|
-|VGOS-INT-C  |20230422|c23112      |112|08:45| 1:00|IsOe -Ow                                 |DACH|GSI |        | VC |NASA|   0|
+|VGOS-INT-B  |20230422|b23112      |112|07:30| 1:00|IsOeOw                                   |DACH|GSI |        | VB |NASA|   0|
+|VGOS-INT-C  |20230422|c23112      |112|08:45| 1:00|IsOeOw                                   |DACH|OSO |        | VC |NASA|   0|
 |IVS-INT-2   |20230423|q23113      |113|07:30| 1:00|MkWz                                     |DACH|GSI |        | XK |GSI |   0|
-|VGOS-INT-B  |20230423|b23113      |113|07:30| 1:00|IsOe -Ow                                 |DACH|GSI |        | VB |NASA|   0|
-|VGOS-INT-C  |20230423|c23113      |113|08:45| 1:00|IsOe -Ow                                 |DACH|GSI |        | VC |NASA|   0|
+|VGOS-INT-B  |20230423|b23113      |113|07:30| 1:00|IsOeOw                                   |DACH|GSI |        | VB |NASA|   0|
+|VGOS-INT-C  |20230423|c23113      |113|08:45| 1:00|IsOeOw                                   |DACH|OSO |        | VC |NASA|   0|
 |IVS-INT-S   |20230424|z23114      |114|06:30| 1:00|HbHt                                     |DACH|UTAS|        | MH |VIEN|   0|
 |IVS-INT-3   |20230424|q23114      |114|07:00| 1:00|NsNyShWz                                 |DACH|BONN|        | XK |NASA|   0|
 |IVS-INT-1   |20230424|i23114      |114|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230424|v23114      |114|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
-|VGOS-INT-TST|20230425|y3115a      |115|15:15| 0:06|GsSaYj                                   |NASA|YEBS|        | VT |NASA|   0|
+|VGOS-INT-Y  |20230425|y23115      |115|14:00| 1:00|SaYj -Gs                                 |DACH|YEBS|        | VH |NASA|   0|
+|VGOS-INT-TST|20230425|y3115a      |115|15:15| 0:06|SaYj -Gs                                 |NASA|YEBS|        | VT |NASA|   0|
 |IVS-INT-1   |20230425|i23115      |115|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230425|v23115      |115|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |VGOS-INT-S  |20230425|s23115      |115|19:45| 1:00|MgWs                                     |DACH|WETZ|        | VJ |NASA|   0|
@@ -304,14 +304,14 @@
 |IVS-INT-1   |20230428|i23118      |118|18:45| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230428|v23118      |118|18:45| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |IVS-INT-2   |20230429|q23119      |119|07:30| 1:00|MkWz                                     |DACH|GSI |        | XK |GSI |   0|
-|VGOS-INT-B  |20230429|b23119      |119|07:30| 1:00|IsOe -Ow                                 |DACH|GSI |        | VB |NASA|   0|
-|VGOS-INT-C  |20230429|c23119      |119|08:45| 1:00|IsOe -Ow                                 |DACH|GSI |        | VC |NASA|   0|
+|VGOS-INT-B  |20230429|b23119      |119|07:30| 1:00|IsOeOw                                   |DACH|GSI |        | VB |NASA|   0|
+|VGOS-INT-C  |20230429|c23119      |119|08:45| 1:00|IsOeOw                                   |DACH|OSO |        | VC |NASA|   0|
 |IVS-INT-2   |20230430|q23120      |120|07:30| 1:00|MkWz                                     |DACH|GSI |        | XK |GSI |   0|
-|VGOS-INT-B  |20230430|b23120      |120|07:30| 1:00|IsOe -Ow                                 |DACH|GSI |        | VB |NASA|   0|
-|VGOS-INT-C  |20230430|c23120      |120|08:45| 1:00|IsOe -Ow                                 |DACH|GSI |        | VC |NASA|   0|
+|VGOS-INT-B  |20230430|b23120      |120|07:30| 1:00|IsOeOw                                   |DACH|GSI |        | VB |NASA|   0|
+|VGOS-INT-C  |20230430|c23120      |120|08:45| 1:00|IsOeOw                                   |DACH|OSO |        | VC |NASA|   0|
 --------------------------------------------------------------------------------------------------------------------------------
-|VGOS-INT-Y  |20230502|y23122      |122|14:00| 1:00|GsSaYj                                   |DACH|YEBS|        | VH |NASA|   0|
-|VGOS-INT-TST|20230502|y3122a      |122|15:15| 0:06|GsSaYj                                   |NASA|YEBS|        | VT |NASA|   0|
+|VGOS-INT-Y  |20230502|y23122      |122|14:00| 1:00|SaYj -Gs                                 |DACH|YEBS|        | VH |NASA|   0|
+|VGOS-INT-TST|20230502|y3122a      |122|15:15| 0:06|SaYj -Gs                                 |NASA|YEBS|        | VT |NASA|   0|
 |IVS-INT-1   |20230502|i23122      |122|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230502|v23122      |122|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |IVS-INT-1   |20230503|i23123      |123|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
@@ -323,14 +323,15 @@
 |VGOS-INT-A  |20230505|v23125      |125|18:45| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |IVS-INT-2   |20230506|q23126      |126|07:30| 1:00|MkWz                                     |DACH|GSI |        | XK |GSI |   0|
 |VGOS-INT-B  |20230506|b23126      |126|07:30| 1:00|IsOeOw                                   |DACH|GSI |        | VB |NASA|   0|
-|VGOS-INT-C  |20230506|c23126      |126|08:45| 1:00|IsOeOw                                   |DACH|GSI |        | VC |NASA|   0|
+|VGOS-INT-C  |20230506|c23126      |126|08:45| 1:00|IsOeOw                                   |DACH|OSO |        | VC |NASA|   0|
 |IVS-INT-2   |20230507|q23127      |127|07:30| 1:00|MkWz                                     |DACH|GSI |        | XK |GSI |   0|
 |VGOS-INT-B  |20230507|b23127      |127|07:30| 1:00|IsOeOw                                   |DACH|GSI |        | VB |NASA|   0|
-|VGOS-INT-C  |20230507|c23127      |127|08:45| 1:00|IsOeOw                                   |DACH|GSI |        | VC |NASA|   0|
+|VGOS-INT-C  |20230507|c23127      |127|08:45| 1:00|IsOeOw                                   |DACH|OSO |        | VC |NASA|   0|
 |IVS-INT-S   |20230508|z23128      |128|06:30| 1:00|HbHt                                     |DACH|UTAS|        | MH |VIEN|   0|
-|IVS-INT-3   |20230508|q23128      |128|07:00| 1:00|NsNyShWz                                 |DACH|BONN|        | XK |NASA|   0|
+|IVS-INT-3   |20230508|q23128      |128|07:00| 1:00|NsShWz -Ny                               |DACH|BONN|        | XK |NASA|   0|
 |IVS-INT-1   |20230508|i23128      |128|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230508|v23128      |128|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
+|VGOS-INT-Y  |20230509|y23129      |129|14:00| 1:00|GsSaYj                                   |DACH|YEBS|        | VH |NASA|   0|
 |VGOS-INT-TST|20230509|y3129a      |129|15:15| 0:06|GsSaYj                                   |NASA|YEBS|        | VT |NASA|   0|
 |IVS-INT-1   |20230509|i23129      |129|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230509|v23129      |129|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
@@ -344,10 +345,10 @@
 |IVS-INT-00  |20230511|ii3131      |131|23:30| 1:00|KkWz                                     |NASA|WASH|        | XZ |NASA|   0|
 |IVS-INT-1   |20230512|i23132      |132|18:45| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230512|v23132      |132|18:45| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
-|IVS-INT-2   |20230513|q23133      |133|07:30| 1:00|MkWz                                     |DACH|GSI |        | XK |GSI |   0|
+|IVS-INT-2   |20230513|q23133      |133|07:30| 1:00|KkWz                                     |DACH|GSI |        | XK |GSI |   0|
 |VGOS-INT-B  |20230513|b23133      |133|07:30| 1:00|IsOeOw                                   |DACH|GSI |        | VB |NASA|   0|
 |VGOS-INT-C  |20230513|c23133      |133|08:45| 1:00|IsOeOw                                   |DACH|GSI |        | VC |NASA|   0|
-|IVS-INT-2   |20230514|q23134      |134|07:30| 1:00|MkWz                                     |DACH|GSI |        | XK |GSI |   0|
+|IVS-INT-2   |20230514|q23134      |134|07:30| 1:00|KkWz                                     |DACH|GSI |        | XK |GSI |   0|
 |VGOS-INT-B  |20230514|b23134      |134|07:30| 1:00|IsOeOw                                   |DACH|GSI |        | VB |NASA|   0|
 |VGOS-INT-C  |20230514|c23134      |134|08:45| 1:00|IsOeOw                                   |DACH|GSI |        | VC |NASA|   0|
 |IVS-INT-S   |20230515|z23135      |135|06:30| 1:00|HbHt                                     |DACH|UTAS|        | MH |VIEN|   0|
@@ -355,25 +356,25 @@
 |IVS-INT-1   |20230515|i23135      |135|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230515|v23135      |135|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |IVS-INT-00  |20230515|ii3135      |135|23:30| 1:00|KkWz                                     |NASA|WASH|        | XZ |NASA|   0|
-|VGOS-INT-Y  |20230516|y23136      |136|14:00| 1:00|GsSaYj                                   |DACH|YEBS|        | VH |NASA|   0|
-|VGOS-INT-TST|20230516|y3136a      |136|15:15| 0:06|GsSaYj                                   |NASA|YEBS|        | VT |NASA|   0|
+|VGOS-INT-Y  |20230516|y23136      |136|14:00| 1:00|SaYj -Gs                                 |DACH|YEBS|        | VH |NASA|   0|
+|VGOS-INT-TST|20230516|y3136a      |136|15:15| 0:06|SaYj -Gs                                 |NASA|YEBS|        | VT |NASA|   0|
 |IVS-INT-1   |20230516|i23136      |136|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230516|v23136      |136|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |VGOS-INT-S  |20230516|s23136      |136|19:45| 1:00|MgWs                                     |DACH|WETZ|        | VJ |NASA|   0|
 |VGOS-INT-TST|20230516|s3136a      |136|21:05| 0:12|MgWs                                     |NASA|WETZ|        | VT |NASA|   0|
 |IVS-INT-1   |20230519|i23139      |139|18:45| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230519|v23139      |139|18:45| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
-|IVS-INT-2   |20230520|q23140      |140|07:30| 1:00|MkWz                                     |DACH|GSI |        | XK |GSI |   0|
+|IVS-INT-2   |20230520|q23140      |140|07:30| 1:00|KkWz                                     |DACH|GSI |        | XK |GSI |   0|
 |VGOS-INT-B  |20230520|b23140      |140|07:30| 1:00|IsOeOw                                   |DACH|GSI |        | VB |NASA|   0|
 |VGOS-INT-C  |20230520|c23140      |140|08:45| 1:00|IsOeOw                                   |DACH|GSI |        | VC |NASA|   0|
-|IVS-INT-2   |20230521|q23141      |141|07:30| 1:00|MkWz                                     |DACH|GSI |        | XK |GSI |   0|
+|IVS-INT-2   |20230521|q23141      |141|07:30| 1:00|KkWz                                     |DACH|GSI |        | XK |GSI |   0|
 |VGOS-INT-B  |20230521|b23141      |141|07:30| 1:00|IsOeOw                                   |DACH|GSI |        | VB |NASA|   0|
 |VGOS-INT-C  |20230521|c23141      |141|08:45| 1:00|IsOeOw                                   |DACH|GSI |        | VC |NASA|   0|
 |IVS-INT-S   |20230522|z23142      |142|06:30| 1:00|HbHt                                     |DACH|UTAS|        | MH |VIEN|   0|
-|IVS-INT-3   |20230522|q23142      |142|07:00| 1:00|NsNyShWz                                 |DACH|BONN|        | XK |NASA|   0|
+|IVS-INT-3   |20230522|q23142      |142|07:00| 1:00|NsNyWz -Sh                               |DACH|BONN|        | XK |NASA|   0|
 |IVS-INT-1   |20230522|i23142      |142|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230522|v23142      |142|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
-|VGOS-INT-TST|20230523|y3143a      |143|15:15| 0:06|GsSaYj                                   |NASA|YEBS|        | VT |NASA|   0|
+|VGOS-INT-Y  |20230523|y23143      |143|14:00| 1:00|SaYj -Gs                                 |DACH|YEBS|        | VH |NASA|   0|
 |IVS-INT-1   |20230523|i23143      |143|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230523|v23143      |143|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |VGOS-INT-S  |20230523|s23143      |143|19:45| 1:00|MgWs                                     |DACH|WETZ|        | VJ |NASA|   0|
@@ -387,17 +388,15 @@
 |IVS-INT-1   |20230526|i23146      |146|18:45| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230526|v23146      |146|18:45| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |IVS-INT-2   |20230527|q23147      |147|07:30| 1:00|MkWz                                     |DACH|GSI |        | XK |GSI |   0|
-|VGOS-INT-B  |20230527|b23147      |147|07:30| 1:00|IsOeOw                                   |DACH|GSI |        | VB |NASA|   0|
-|VGOS-INT-C  |20230527|c23147      |147|08:45| 1:00|IsOeOw                                   |DACH|GSI |        | VC |NASA|   0|
-|VGOS-INT-B  |20230528|b23148      |148|07:30| 1:00|IsOeOw                                   |DACH|GSI |        | VB |NASA|   0|
-|VGOS-INT-C  |20230528|c23148      |148|08:45| 1:00|IsOeOw                                   |DACH|GSI |        | VC |NASA|   0|
+|VGOS-INT-B  |20230527|b23147      |147|07:30| 1:00|OeOw -Is                                 |DACH|GSI |        | VB |NASA|   0|
+|VGOS-INT-C  |20230527|c23147      |147|08:45| 1:00|OeOw -Is                                 |DACH|GSI |        | VC |NASA|   0|
+|VGOS-INT-B  |20230528|b23148      |148|07:30| 1:00|OeOw -Is                                 |DACH|GSI |        | VB |NASA|   0|
+|VGOS-INT-C  |20230528|c23148      |148|08:45| 1:00|OeOw -Is                                 |DACH|GSI |        | VC |NASA|   0|
 |IVS-INT-S   |20230529|z23149      |149|06:30| 1:00|HbHt                                     |DACH|UTAS|        | MH |VIEN|   0|
-|VGOS-INT-Y  |20230530|y23150      |150|14:00| 1:00|GsSaYj                                   |DACH|YEBS|        | VH |NASA|   0|
-|VGOS-INT-TST|20230530|y3150a      |150|15:15| 0:06|GsSaYj                                   |NASA|YEBS|        | VT |NASA|   0|
+|VGOS-INT-Y  |20230530|y23150      |150|14:00| 1:00|SaYj -Gs                                 |DACH|YEBS|        | VH |NASA|   0|
 |IVS-INT-1   |20230530|i23150      |150|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230530|v23150      |150|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
-|VGOS-INT-S  |20230530|s23150      |150|19:45| 1:00|MgWs                                     |DACH|WETZ|        | VJ |NASA|   0|
-|VGOS-INT-TST|20230530|s3150a      |150|21:05| 0:12|MgWs                                     |NASA|WETZ|        | VT |NASA|   0|
+|VGOS-INT-S  |20230530|s23150      |150|19:45| 1:00|Ws -Mg                                   |DACH|WETZ|        | VJ |NASA|   0|
 |IVS-INT-00  |20230530|ii3150      |150|23:30| 1:00|KkWz                                     |NASA|WASH|        | XZ |NASA|   0|
 |IVS-INT-1   |20230531|i23151      |151|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230531|v23151      |151|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
@@ -419,35 +418,43 @@
 |IVS-INT-00  |20230605|ii3156      |156|23:30| 1:00|KkWz                                     |NASA|WASH|        | XZ |NASA|   0|
 |IVS-INT-1   |20230606|i23157      |157|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230606|v23157      |157|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
-|VGOS-INT-S  |20230606|s23157      |157|19:45| 1:00|MgWs                                     |DACH|WETZ|        | VJ |NASA|   0|
-|VGOS-INT-TST|20230606|s3157a      |157|21:05| 0:12|MgWs                                     |NASA|WETZ|        | VT |NASA|   0|
+|VGOS-INT-S  |20230606|s23157      |157|19:45| 1:00|Ws -Mg                                   |DACH|WETZ|        | VJ |NASA|   0|
+|VGOS-INT-TST|20230606|s3157a      |157|21:05| 0:12|Ws -Mg                                   |NASA|WETZ|        | VT |NASA|   0|
+|VGOS-INT-Y  |20230607|y23158      |158|14:00| 1:00|SaYj -Mg                                 |DACH|YEBS|        | VH |NASA|   0|
+|VGOS-INT-TST|20230607|y3158a      |158|15:15| 0:06|SaYj -Mg                                 |NASA|YEBS|        | VT |NASA|   0|
 |IVS-INT-1   |20230607|i23158      |158|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230607|v23158      |158|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
-|IVS-INT-1   |20230608|i23159      |159|18:30| 1:00|KkNy                                     |USNO|WASH|        | XU |NASA|   0|
+|IVS-INT-1   |20230608|i23159      |159|18:30| 1:00|KkNs -Ny                                 |USNO|WASH|        | XU |NASA|   0|
 |IVS-INT-00  |20230608|ii3159      |159|23:30| 1:00|KkWz                                     |NASA|WASH|        | XZ |NASA|   0|
 |IVS-INT-1   |20230609|i23160      |160|18:45| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230609|v23160      |160|18:45| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |IVS-INT-2   |20230610|q23161      |161|07:30| 1:00|MkWz                                     |DACH|GSI |        | XK |GSI |   0|
-|VGOS-INT-B  |20230610|b23161      |161|07:30| 1:00|IsOeOw                                   |DACH|GSI |        | VB |NASA|   0|
-|VGOS-INT-C  |20230610|c23161      |161|08:45| 1:00|IsOeOw                                   |DACH|GSI |        | VC |NASA|   0|
+|VGOS-INT-B  |20230610|b23161      |161|07:30| 1:00|IsOw -Oe                                 |DACH|GSI |        | VB |NASA|   0|
+|VGOS-INT-C  |20230610|c23161      |161|08:45| 1:00|IsOw -Oe                                 |DACH|GSI |        | VC |NASA|   0|
 |IVS-INT-2   |20230611|q23162      |162|07:30| 1:00|MkWz                                     |DACH|GSI |        | XK |GSI |   0|
-|VGOS-INT-B  |20230611|b23162      |162|07:30| 1:00|IsOeOw                                   |DACH|GSI |        | VB |NASA|   0|
-|VGOS-INT-C  |20230611|c23162      |162|08:45| 1:00|IsOeOw                                   |DACH|GSI |        | VC |NASA|   0|
+|VGOS-INT-B  |20230611|b23162      |162|07:30| 1:00|IsOw -Oe                                 |DACH|GSI |        | VB |NASA|   0|
+|VGOS-INT-C  |20230611|c23162      |162|08:45| 1:00|IsOw -Oe                                 |DACH|GSI |        | VC |NASA|   0|
 |IVS-INT-S   |20230612|z23163      |163|06:30| 1:00|HbHt                                     |DACH|UTAS|        | MH |VIEN|   0|
 |IVS-INT-1   |20230612|i23163      |163|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230612|v23163      |163|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |IVS-INT-00  |20230612|ii3163      |163|23:30| 1:00|KkWz                                     |NASA|WASH|        | XZ |NASA|   0|
 |IVS-INT-1   |20230613|i23164      |164|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
+|VGOS-INT-A  |20230613|v23164      |164|18:30| 1:00|IsWs                                     |NASA|WASH|        | VI |NASA|   0|
+|VGOS-INT-S  |20230613|s23164      |164|19:45| 1:00|MgWs                                     |DACH|WETZ|        | VJ |NASA|   0|
+|VGOS-INT-TST|20230613|s3164a      |164|21:05| 0:12|MgWs                                     |NASA|WETZ|        | VT |NASA|   0|
+|VGOS-INT-Y  |20230614|y23165      |165|14:00| 1:00|SaYj -Mg                                 |DACH|YEBS|        | VH |NASA|   0|
+|VGOS-INT-TST|20230614|y3165a      |165|15:15| 0:06|MgSaYj                                   |NASA|YEBS|        | VT |NASA|   0|
 |IVS-INT-1   |20230614|i23165      |165|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
+|VGOS-INT-A  |20230614|v23165      |165|18:30| 1:00|IsWs                                     |NASA|WASH|        | VI |NASA|   0|
 |IVS-INT-00  |20230614|ii3165      |165|23:30| 1:00|KkWz                                     |NASA|WASH|        | XZ |NASA|   0|
 |IVS-INT-1   |20230615|i23166      |166|18:45| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
-|VGOS-INT-A  |20230615|v23166      |166|18:45| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
+|VGOS-INT-A  |20230615|v23166      |166|18:45| 1:00|IsWs -K2                                 |NASA|WASH|        | VI |NASA|   0|
 |IVS-INT-1   |20230616|i23167      |167|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
-|VGOS-INT-A  |20230616|v23167      |167|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
-|IVS-INT-2   |20230617|q23168      |168|07:30| 1:00|MkWz                                     |DACH|GSI |        | XK |GSI |   0|
+|VGOS-INT-A  |20230616|v23167      |167|18:30| 1:00|IsWs -K2                                 |NASA|WASH|        | VI |NASA|   0|
+|IVS-INT-2   |20230617|q23168      |168|07:30| 1:00|Wz -Mk                                   |DACH|GSI |        | XK |GSI |   0|
 |VGOS-INT-B  |20230617|b23168      |168|07:30| 1:00|IsOeOw                                   |DACH|GSI |        | VB |NASA|   0|
-|VGOS-INT-C  |20230617|c23168      |168|08:45| 1:00|IsOeOw                                   |DACH|GSI |        | VC |NASA|   0|
-|IVS-INT-2   |20230618|q23169      |169|07:30| 1:00|MkWz                                     |DACH|GSI |        | XK |GSI |   0|
+|VGOS-INT-C  |20230617|c23168      |168|08:45| 1:00|IsOeOw                                   |DACH|OSO |        | VC |NASA|   0|
+|IVS-INT-2   |20230618|q23169      |169|07:30| 1:00|Wz -Mk                                   |DACH|GSI |        | XK |GSI |   0|
 |VGOS-INT-B  |20230618|b23169      |169|07:30| 1:00|IsOeOw                                   |DACH|GSI |        | VB |NASA|   0|
 |VGOS-INT-C  |20230618|c23169      |169|08:45| 1:00|IsOeOw                                   |DACH|GSI |        | VC |NASA|   0|
 |IVS-INT-S   |20230619|z23170      |170|06:30| 1:00|HbHt                                     |DACH|UTAS|        | MH |VIEN|   0|
@@ -455,28 +462,31 @@
 |IVS-INT-1   |20230619|i23170      |170|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230619|v23170      |170|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |IVS-INT-00  |20230619|ii3170      |170|23:30| 1:00|KkWz                                     |NASA|WASH|        | XZ |NASA|   0|
-|IVS-INT-1   |20230620|i23171      |171|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
+|IVS-INT-1   |20230620|i23171      |171|18:30| 1:00|Kk -Wz                                   |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230620|v23171      |171|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |VGOS-INT-S  |20230620|s23171      |171|19:45| 1:00|MgWs                                     |DACH|WETZ|        | VJ |NASA|   0|
 |VGOS-INT-TST|20230620|s3171a      |171|21:05| 0:12|MgWs                                     |NASA|WETZ|        | VT |NASA|   0|
-|IVS-INT-1   |20230621|i23172      |172|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
+|VGOS-INT-Y  |20230621|y23172      |172|14:00| 1:00|MgSa -Yj                                 |DACH|YEBS|        | VH |NASA|   0|
+|VGOS-INT-TST|20230621|y3172a      |172|15:15| 0:06|MgSaYj                                   |NASA|YEBS|        | VT |NASA|   0|
+|IVS-INT-1   |20230621|i23172      |172|18:30| 1:00|Kk -Wz                                   |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230621|v23172      |172|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |IVS-INT-00  |20230621|ii3172      |172|23:30| 1:00|KkWz                                     |NASA|WASH|        | XZ |NASA|   0|
 |IVS-INT-1   |20230622|i23173      |173|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230622|v23173      |173|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |IVS-INT-00  |20230622|ii3173      |173|23:30| 1:00|KkWz                                     |NASA|WASH|        | XZ |NASA|   0|
-|IVS-INT-1   |20230623|i23174      |174|18:45| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
+|IVS-INT-1   |20230623|i23174      |174|18:45| 1:00|Kk -Wz                                   |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230623|v23174      |174|18:45| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
-|IVS-INT-2   |20230624|q23175      |175|07:30| 1:00|MkWz                                     |DACH|GSI |        | XK |GSI |   0|
-|VGOS-INT-B  |20230624|b23175      |175|07:30| 1:00|IsOeOw                                   |DACH|GSI |        | VB |NASA|   0|
-|VGOS-INT-C  |20230624|c23175      |175|08:45| 1:00|IsOeOw                                   |DACH|GSI |        | VC |NASA|   0|
-|IVS-INT-2   |20230625|q23176      |176|07:30| 1:00|MkWz                                     |DACH|GSI |        | XK |GSI |   0|
-|VGOS-INT-B  |20230625|b23176      |176|07:30| 1:00|IsOeOw                                   |DACH|GSI |        | VB |NASA|   0|
-|VGOS-INT-C  |20230625|c23176      |176|08:45| 1:00|IsOeOw                                   |DACH|GSI |        | VC |NASA|   0|
+|IVS-INT-2   |20230624|q23175      |175|07:30| 1:00|Mk -Wz                                   |DACH|GSI |        | XK |GSI |   0|
+|VGOS-INT-B  |20230624|b23175      |175|07:30| 1:00|IsOe -Ow                                 |DACH|GSI |        | VB |NASA|   0|
+|VGOS-INT-C  |20230624|c23175      |175|08:45| 1:00|IsOe -Ow                                 |DACH|GSI |        | VC |NASA|   0|
+|IVS-INT-2   |20230625|q23176      |176|07:30| 1:00|Mk -Wz                                   |DACH|GSI |        | XK |GSI |   0|
+|VGOS-INT-B  |20230625|b23176      |176|07:30| 1:00|IsOe -Ow                                 |DACH|GSI |        | VB |NASA|   0|
+|VGOS-INT-C  |20230625|c23176      |176|08:45| 1:00|IsOe -Ow                                 |DACH|GSI |        | VC |NASA|   0|
 |IVS-INT-S   |20230626|z23177      |177|06:30| 1:00|HbHt                                     |DACH|UTAS|        | MH |VIEN|   0|
-|IVS-INT-3   |20230626|q23177      |177|07:00| 1:00|NsNyShWz                                 |DACH|BONN|        | XK |NASA|   0|
+|IVS-INT-3   |20230626|q23177      |177|07:00| 1:00|NsNySh -Wz                               |DACH|BONN|        | XK |NASA|   0|
 |IVS-INT-1   |20230626|i23177      |177|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230626|v23177      |177|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
+|VGOS-INT-Y  |20230627|y23178      |178|14:00| 1:00|GsSaYj                                   |DACH|YEBS|        | VH |NASA|   0|
 |IVS-INT-1   |20230627|i23178      |178|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230627|v23178      |178|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |VGOS-INT-S  |20230627|s23178      |178|19:45| 1:00|MgWs                                     |DACH|WETZ|        | VJ |NASA|   0|
@@ -489,15 +499,18 @@
 --------------------------------------------------------------------------------------------------------------------------------
 |IVS-INT-2   |20230701|q23182      |182|07:30| 1:00|MkWz                                     |DACH|GSI |        | XK |GSI |   0|
 |VGOS-INT-B  |20230701|b23182      |182|07:30| 1:00|IsOeOw                                   |DACH|GSI |        | VB |NASA|   0|
-|VGOS-INT-C  |20230701|c23182      |182|08:45| 1:00|IsOeOw                                   |DACH|GSI |        | VC |NASA|   0|
+|VGOS-INT-C  |20230701|c23182      |182|08:45| 1:00|IsOeOw                                   |DACH|OSO |        | VC |NASA|   0|
 |IVS-INT-2   |20230702|q23183      |183|07:30| 1:00|MkWz                                     |DACH|GSI |        | XK |GSI |   0|
 |VGOS-INT-B  |20230702|b23183      |183|07:30| 1:00|IsOeOw                                   |DACH|GSI |        | VB |NASA|   0|
-|VGOS-INT-C  |20230702|c23183      |183|08:45| 1:00|IsOeOw                                   |DACH|GSI |        | VC |NASA|   0|
+|VGOS-INT-C  |20230702|c23183      |183|08:45| 1:00|IsOeOw                                   |DACH|OSO |        | VC |NASA|   0|
 |IVS-INT-S   |20230703|z23184      |184|06:30| 1:00|HbHt                                     |DACH|UTAS|        | MH |VIEN|   0|
-|IVS-INT-3   |20230703|q23184      |184|07:00| 1:00|NsShWz                                   |DACH|BONN|        | XK |NASA|   0|
+|IVS-INT-3   |20230703|q23184      |184|07:00| 1:00|NsNyShWz                                 |DACH|BONN|        | XK |NASA|   0|
 |IVS-INT-1   |20230703|i23184      |184|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230703|v23184      |184|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |IVS-INT-1   |20230704|i23185      |185|18:30| 1:00|MkWz                                     |USNO|WASH|        | XU |NASA|   0|
+|VGOS-INT-Y  |20230705|y23186      |186|14:00| 1:00|MgSaYj                                   |DACH|YEBS|        | VH |NASA|   0|
+|VGOS-INT-TST|20230705|y3186a      |186|15:15| 0:06|MgSaYj                                   |NASA|YEBS|        | VT |NASA|   0|
+|VGOS-INT-TST|20230705|s3186a      |186|15:45| 0:15|MgWs                                     |NASA|WETZ|        | VT |NASA|   0|
 |IVS-INT-1   |20230705|i23186      |186|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230705|v23186      |186|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |IVS-INT-00  |20230705|ii3186      |186|23:30| 1:00|KkWz                                     |NASA|WASH|        | XZ |NASA|   0|
@@ -509,11 +522,13 @@
 |IVS-INT-2   |20230708|q23189      |189|07:30| 1:00|MkWz                                     |DACH|GSI |        | XK |GSI |   0|
 |IVS-INT-2   |20230709|q23190      |190|07:30| 1:00|MkWz                                     |DACH|GSI |        | XK |GSI |   0|
 |IVS-INT-S   |20230710|z23191      |191|06:30| 1:00|HbHt                                     |DACH|UTAS|        | MH |VIEN|   0|
-|IVS-INT-3   |20230710|q23191      |191|07:00| 1:00|NsShWz                                   |DACH|BONN|        | XK |NASA|   0|
+|IVS-INT-3   |20230710|q23191      |191|07:00| 1:00|NsNyShWz                                 |DACH|BONN|        | XK |NASA|   0|
 |IVS-INT-1   |20230710|i23191      |191|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230710|v23191      |191|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |IVS-INT-1   |20230711|i23192      |192|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230711|v23192      |192|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
+|VGOS-INT-Y  |20230712|y23193      |193|14:00| 1:00|MgSaYj                                   |DACH|YEBS|        | VH |NASA|   0|
+|VGOS-INT-TST|20230712|y3193a      |193|15:15| 0:06|MgSaYj                                   |NASA|YEBS|        | VT |NASA|   0|
 |IVS-INT-1   |20230713|i23194      |194|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230713|v23194      |194|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |IVS-INT-00  |20230713|ii3194      |194|23:30| 1:00|KkWz                                     |NASA|WASH|        | XZ |NASA|   0|
@@ -522,7 +537,7 @@
 |IVS-INT-2   |20230715|q23196      |196|07:30| 1:00|MkWz                                     |DACH|GSI |        | XK |GSI |   0|
 |IVS-INT-2   |20230716|q23197      |197|07:30| 1:00|MkWz                                     |DACH|GSI |        | XK |GSI |   0|
 |IVS-INT-S   |20230717|z23198      |198|06:30| 1:00|HbHt                                     |DACH|UTAS|        | MH |VIEN|   0|
-|IVS-INT-3   |20230717|q23198      |198|07:00| 1:00|NsShWz                                   |DACH|BONN|        | XK |NASA|   0|
+|IVS-INT-3   |20230717|q23198      |198|07:00| 1:00|NsNyShWz                                 |DACH|BONN|        | XK |NASA|   0|
 |IVS-INT-1   |20230717|i23198      |198|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230717|v23198      |198|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |IVS-INT-00  |20230717|ii3198      |198|23:30| 1:00|KkWz                                     |NASA|WASH|        | XZ |NASA|   0|
@@ -530,6 +545,8 @@
 |VGOS-INT-A  |20230718|v23199      |199|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |VGOS-INT-S  |20230718|s23199      |199|19:45| 1:00|MgWs                                     |DACH|WETZ|        | VJ |NASA|   0|
 |VGOS-INT-TST|20230718|s3199a      |199|21:05| 0:12|MgWs                                     |NASA|WETZ|        | VT |NASA|   0|
+|VGOS-INT-Y  |20230719|y23200      |200|14:00| 1:00|MgSaYj                                   |DACH|YEBS|        | VH |NASA|   0|
+|VGOS-INT-TST|20230719|y3200a      |200|15:15| 0:06|MgSaYj                                   |NASA|YEBS|        | VT |NASA|   0|
 |IVS-INT-1   |20230719|i23200      |200|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230719|v23200      |200|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |IVS-INT-1   |20230720|i23201      |201|18:30| 1:00|KkSvWz                                   |USNO|WASH|        | XU |NASA|   0|
@@ -540,7 +557,7 @@
 |IVS-INT-2   |20230722|q23203      |203|07:30| 1:00|MkWz                                     |DACH|GSI |        | XK |GSI |   0|
 |IVS-INT-2   |20230723|q23204      |204|07:30| 1:00|MkWz                                     |DACH|GSI |        | XK |GSI |   0|
 |IVS-INT-S   |20230724|z23205      |205|06:30| 1:00|HbHt                                     |DACH|UTAS|        | MH |VIEN|   0|
-|IVS-INT-3   |20230724|q23205      |205|07:00| 1:00|NsShWz                                   |DACH|BONN|        | XK |NASA|   0|
+|IVS-INT-3   |20230724|q23205      |205|07:00| 1:00|NsNyShWz                                 |DACH|BONN|        | XK |NASA|   0|
 |IVS-INT-1   |20230724|i23205      |205|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230724|v23205      |205|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |IVS-INT-00  |20230724|ii3205      |205|23:30| 1:00|KkWz                                     |NASA|WASH|        | XZ |NASA|   0|
@@ -548,6 +565,8 @@
 |VGOS-INT-A  |20230725|v23206      |206|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |VGOS-INT-S  |20230725|s23206      |206|19:45| 1:00|MgWs                                     |DACH|WETZ|        | VJ |NASA|   0|
 |VGOS-INT-TST|20230725|s3206a      |206|21:05| 0:12|MgWs                                     |NASA|WETZ|        | VT |NASA|   0|
+|VGOS-INT-Y  |20230726|y23207      |207|14:00| 1:00|MgSaYj                                   |DACH|YEBS|        | VH |NASA|   0|
+|VGOS-INT-TST|20230726|y3207a      |207|15:15| 0:06|MgSaYj                                   |NASA|YEBS|        | VT |NASA|   0|
 |IVS-INT-1   |20230726|i23207      |207|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230726|v23207      |207|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |IVS-INT-00  |20230726|ii3207      |207|23:30| 1:00|KkWz                                     |NASA|WASH|        | XZ |NASA|   0|
@@ -559,11 +578,13 @@
 |IVS-INT-2   |20230729|q23210      |210|07:30| 1:00|MkWz                                     |DACH|GSI |        | XK |GSI |   0|
 |IVS-INT-2   |20230730|q23211      |211|07:30| 1:00|MkWz                                     |DACH|GSI |        | XK |GSI |   0|
 |IVS-INT-S   |20230731|z23212      |212|06:30| 1:00|HbHt                                     |DACH|UTAS|        | MH |VIEN|   0|
-|IVS-INT-3   |20230731|q23212      |212|07:00| 1:00|NsShWz                                   |DACH|BONN|        | XK |NASA|   0|
+|IVS-INT-3   |20230731|q23212      |212|07:00| 1:00|NsNyShWz                                 |DACH|BONN|        | XK |NASA|   0|
 |IVS-INT-1   |20230731|i23212      |212|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230731|v23212      |212|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |IVS-INT-00  |20230731|ii3212      |212|23:30| 1:00|KkWz                                     |NASA|WASH|        | XZ |NASA|   0|
 --------------------------------------------------------------------------------------------------------------------------------
+|VGOS-INT-Y  |20230801|y23213      |213|14:00| 1:00|GsSaYj                                   |DACH|YEBS|        | VH |NASA|   0|
+|VGOS-INT-TST|20230801|y3213a      |213|15:15| 0:06|GsSaYj                                   |NASA|YEBS|        | VT |NASA|   0|
 |IVS-INT-1   |20230801|i23213      |213|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230801|v23213      |213|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |VGOS-INT-S  |20230801|s23213      |213|19:45| 1:00|MgWs                                     |DACH|WETZ|        | VJ |NASA|   0|
@@ -578,10 +599,12 @@
 |IVS-INT-2   |20230805|q23217      |217|07:30| 1:00|MkWz                                     |DACH|GSI |        | XK |GSI |   0|
 |IVS-INT-2   |20230806|q23218      |218|07:30| 1:00|MkWz                                     |DACH|GSI |        | XK |GSI |   0|
 |IVS-INT-S   |20230807|z23219      |219|06:30| 1:00|HbHt                                     |DACH|UTAS|        | MH |VIEN|   0|
-|IVS-INT-3   |20230807|q23219      |219|07:00| 1:00|NsShWz                                   |DACH|BONN|        | XK |NASA|   0|
+|IVS-INT-3   |20230807|q23219      |219|07:00| 1:00|NsNyShWz                                 |DACH|BONN|        | XK |NASA|   0|
 |IVS-INT-1   |20230807|i23219      |219|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230807|v23219      |219|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |IVS-INT-00  |20230807|ii3219      |219|23:30| 1:00|KkWz                                     |NASA|WASH|        | XZ |NASA|   0|
+|VGOS-INT-Y  |20230808|y23220      |220|14:00| 1:00|GsSaYj                                   |DACH|YEBS|        | VH |NASA|   0|
+|VGOS-INT-TST|20230808|y3220a      |220|15:15| 0:06|GsSaYj                                   |NASA|YEBS|        | VT |NASA|   0|
 |IVS-INT-1   |20230808|i23220      |220|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230808|v23220      |220|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |VGOS-INT-S  |20230808|s23220      |220|19:45| 1:00|MgWs                                     |DACH|WETZ|        | VJ |NASA|   0|
@@ -598,10 +621,12 @@
 |VGOS-INT-B  |20230813|b23225      |225|07:30| 1:00|IsOeOw                                   |DACH|GSI |        | VB |NASA|   0|
 |VGOS-INT-C  |20230813|c23225      |225|08:45| 1:00|IsOeOw                                   |DACH|GSI |        | VC |NASA|   0|
 |IVS-INT-S   |20230814|z23226      |226|06:30| 1:00|HbHt                                     |DACH|UTAS|        | MH |VIEN|   0|
-|IVS-INT-3   |20230814|q23226      |226|07:00| 1:00|NsShWz                                   |DACH|BONN|        | XK |NASA|   0|
+|IVS-INT-3   |20230814|q23226      |226|07:00| 1:00|ShWz -Ns                                 |DACH|BONN|        | XK |NASA|   0|
 |IVS-INT-1   |20230814|i23226      |226|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230814|v23226      |226|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |IVS-INT-00  |20230814|ii3226      |226|23:30| 1:00|KkWz                                     |NASA|WASH|        | XZ |NASA|   0|
+|VGOS-INT-Y  |20230815|y23227      |227|14:00| 1:00|GsSaYj                                   |DACH|YEBS|        | VH |NASA|   0|
+|VGOS-INT-TST|20230815|y3227a      |227|15:15| 0:06|GsSaYj                                   |NASA|YEBS|        | VT |NASA|   0|
 |IVS-INT-1   |20230816|i23228      |228|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230816|v23228      |228|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |IVS-INT-00  |20230816|ii3228      |228|23:30| 1:00|KkWz                                     |NASA|WASH|        | XZ |NASA|   0|
@@ -617,9 +642,11 @@
 |VGOS-INT-B  |20230820|b23232      |232|07:30| 1:00|IsOeOw                                   |DACH|GSI |        | VB |NASA|   0|
 |VGOS-INT-C  |20230820|c23232      |232|08:45| 1:00|IsOeOw                                   |DACH|GSI |        | VC |NASA|   0|
 |IVS-INT-S   |20230821|z23233      |233|06:30| 1:00|HbHt                                     |DACH|UTAS|        | MH |VIEN|   0|
-|IVS-INT-3   |20230821|q23233      |233|07:00| 1:00|NsShWz                                   |DACH|BONN|        | XK |NASA|   0|
+|IVS-INT-3   |20230821|q23233      |233|07:00| 1:00|ShWz -Ns                                 |DACH|BONN|        | XK |NASA|   0|
 |IVS-INT-1   |20230821|i23233      |233|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230821|v23233      |233|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
+|VGOS-INT-Y  |20230822|y23234      |234|14:00| 1:00|GsSaYj                                   |DACH|YEBS|        | VH |NASA|   0|
+|VGOS-INT-TST|20230822|y3234a      |234|15:15| 0:06|GsSaYj                                   |NASA|YEBS|        | VT |NASA|   0|
 |IVS-INT-1   |20230822|i23234      |234|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |IVS-INT-00  |20230822|ii3234      |234|23:30| 1:00|KkWz                                     |NASA|WASH|        | XZ |NASA|   0|
 |IVS-INT-1   |20230823|i23235      |235|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
@@ -639,6 +666,8 @@
 |IVS-INT-1   |20230828|i23240      |240|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230828|v23240      |240|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |IVS-INT-00  |20230828|ii3240      |240|23:30| 1:00|KkWz                                     |NASA|WASH|        | XZ |NASA|   0|
+|VGOS-INT-Y  |20230829|y23241      |241|14:00| 1:00|GsSaYj                                   |DACH|YEBS|        | VH |NASA|   0|
+|VGOS-INT-TST|20230829|y3241a      |241|15:15| 0:06|GsSaYj                                   |NASA|YEBS|        | VT |NASA|   0|
 |IVS-INT-1   |20230829|i23241      |241|18:30| 1:00|KkWz                                     |USNO|WASH|        | XU |NASA|   0|
 |VGOS-INT-A  |20230829|v23241      |241|18:30| 1:00|K2Ws                                     |NASA|WASH|        | VI |NASA|   0|
 |VGOS-INT-S  |20230829|s23241      |241|19:45| 1:00|MgWs                                     |DACH|WETZ|        | VJ |NASA|   0|

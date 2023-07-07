@@ -208,9 +208,26 @@ class Precorrelate {
 		}
 		$_SESSION["expcode"] = $expcode;
 
-		//download usno from bkg
+		//download usno from available ftpservers
+		$ivsftps = $GLOBALS["ivsftps"];
+		$fileloc = "/pub/vlbi/gsfc/ancillary/solve_apriori/usno_finals.erp";
+		$file_name = $_SERVER['DOCUMENT_ROOT']."tmp/usno_finals.erp";
+		$filesuccess = 0;
+			
+		foreach($ivsftps as $_serv => $_comm){
+			exec($_comm ." ".$_serv.$fileloc);
+			unlink($file_name);
+			if(rename("usno_finals.erp",$file_name)){
+				$filesuccess = 1;
+				break;
+			}
+		}
+		if($filesuccess == 0){
+			$message = "failed to download usno_finals.erp from the bkg server".PHP_EOL;
+			$_SESSION["precor_message"] = $_SESSION["precor_message"].$message;
+		}
+
 		//https://ivs.bkg.bund.de/data_dir/vlbi/gsfc/ancillary/solve_apriori/usno_finals.erp
-		
 		//exec("curl --ssl-reqd -u anonymous:anonymous -O ftp://ivs.bkg.bund.de/pub/vlbi/gsfc/ancillary/solve_apriori/usno_finals.erp");
 		//$file_name = $_SERVER['DOCUMENT_ROOT']."tmp/usno_finals.erp";
 		//if(!rename("usno_finals.erp",$file_name)){
@@ -218,13 +235,13 @@ class Precorrelate {
 		//	$_SESSION["precor_message"] = $_SESSION["precor_message"].$message;
 		//}
 		
-		$usnobkg = "https://ivs.bkg.bund.de/data_dir/vlbi/gsfc/ancillary/solve_apriori/usno_finals.erp";
+		//$usnobkg = "https://ivs.bkg.bund.de/data_dir/vlbi/gsfc/ancillary/solve_apriori/usno_finals.erp";
 		//$usnobkg = "ftp://ivs.bkg.bund.de/pub/vlbi/gsfc/ancillary/solve_apriori/usno_finals.erp";
-		$file_name = $_SERVER['DOCUMENT_ROOT']."tmp/usno_finals.erp";
-		if(!file_put_contents($file_name,file_get_contents($usnobkg))){
-			$message = "failed to download usno_finals.erp from the bkg server".PHP_EOL;
-			$_SESSION["precor_message"] = $_SESSION["precor_message"].$message;
-		}
+		//$file_name = $_SERVER['DOCUMENT_ROOT']."tmp/usno_finals.erp";
+		//if(!file_put_contents($file_name,file_get_contents($usnobkg))){
+		//	$message = "failed to download usno_finals.erp from the bkg server".PHP_EOL;
+		//	$_SESSION["precor_message"] = $_SESSION["precor_message"].$message;
+		//}
 	}
 
 	function checkdir(){
@@ -371,26 +388,46 @@ class Precorrelate {
 					$guessdt = 2020;
 					//$_SESSION["progress"] = "downloading vex from IVS";
 					while ($guessdt<2040){
-						$urlfrombkg = "https://ivs.bkg.bund.de/data_dir/vlbi/ivsdata/aux/".$guessdt."/".$_dynexper."/".$_dynexper.".skd";
+						//$urlfrombkg = "https://ivs.bkg.bund.de/data_dir/vlbi/ivsdata/aux/".$guessdt."/".$_dynexper."/".$_dynexper.".skd";
 						//$urlfrombkg = "ftp://ivs.bkg.bund.de/pub/vlbi/ivsdata/aux/".$guessdt."/".$_dynexper."/".$_dynexper.".skd";
+						$ivsftps = $GLOBALS["ivsftps"];
+						$fileloc = "/pub/vlbi/ivsdata/aux/".$guessdt."/".$_dynexper."/".$_dynexper.".skd";
 						$file_name = $_SERVER['DOCUMENT_ROOT']."scheduling/skd/".$_dynexper.'.skd';
+						$filesuccess = 0;
 						if (!file_exists($file_name)){
-							$handle = @fopen($urlfrombkg, 'r');
-							if(!$handle){
+							//$handle = @fopen($urlfrombkg, 'r');
+							//if(!$handle){
+							//	$guessdt = $guessdt + 1;
+							//}
+							
+							foreach($ivsftps as $_serv => $_comm){
+								exec($_comm ." ".$_serv.$fileloc);
+								if(rename($_dynexper.".skd",$file_name)){
+									$filesuccess = 1;
+									break;
+								}
+							}
+							if($filesuccess == 0){
 								$guessdt = $guessdt + 1;
 							}
 							else{
-								if(file_put_contents($file_name,file_get_contents($urlfrombkg))){
-									break;
-								}
-								else{
-									$message = "Exit: ".$urlfrombkg.PHP_EOL."
-												No access to pcfs or no skd file found".PHP_EOL;
-									$_SESSION["precor_message"] = $_SESSION["precor_message"].$message;
-									die();
-								}
+								break;
 							}
+							//if(file_put_contents($file_name,file_get_contents($urlfrombkg))){
+							//	break;
+							//}
+							//else{
+							//	$message = "Exit: ".$urlfrombkg.PHP_EOL."
+							//				No access to pcfs or no skd file found".PHP_EOL;
+							//	$_SESSION["precor_message"] = $_SESSION["precor_message"].$message;
+							//	die();
+							//}
 						}
+					}
+					if($filesuccess == 0){
+						$message = "Exit: ".PHP_EOL."No access to pcfs or no skd file found".PHP_EOL;
+						$_SESSION["precor_message"] = $_SESSION["precor_message"].$message;
+						die();
 					}
 				}
 			}
@@ -414,41 +451,59 @@ class Precorrelate {
 				$guessdt = 2022;
 				//$_SESSION["progress"] = "downloading vex from IVS";
 				while ($guessdt<2040){
-					$urlfrombkg = "https://ivs.bkg.bund.de/data_dir/vlbi/ivsdata/aux/".$guessdt."/".$_dynexper."/".$_dynexper.".vex";
+					//$urlfrombkg = "https://ivs.bkg.bund.de/data_dir/vlbi/ivsdata/aux/".$guessdt."/".$_dynexper."/".$_dynexper.".vex";
 					//$urlfrombkg = "ftp://ivs.bkg.bund.de/pub/vlbi/ivsdata/aux/".$guessdt."/".$_dynexper."/".$_dynexper.".vex";
+					$ivsftps = $GLOBALS["ivsftps"];
+					$fileloc = "/pub/vlbi/ivsdata/aux/".$guessdt."/".$_dynexper."/".$_dynexper.".vex";
 					$file_name = $_SERVER['DOCUMENT_ROOT']."tmp/".$this->exper."/".$_dynexper.'.vex';
+					$filesuccess = 0;
+					
 					if (!file_exists($file_name)){
-						$handle = @fopen($urlfrombkg, 'r');
-						if(!$handle){
-							$guessdt = $guessdt + 1;
-						}
-						else{
-							if(file_put_contents($file_name,file_get_contents($urlfrombkg))){
+						foreach($ivsftps as $_serv => $_comm){
+							exec($_comm ." ".$_serv.$fileloc);
+							if(rename($_dynexper.".vex",$file_name)){
+								$filesuccess = 1;
 								ssh2_scp_send($con, $_SERVER['DOCUMENT_ROOT']."tmp/".$this->exper."/".$_dynexper.'.vex', $this->corrdir.$_dynexper.'.vex', 0755);
 								array_push($vexfile,$_SERVER['DOCUMENT_ROOT']."tmp/".$this->exper."/".$_dynexper.'.vex');
 								break;
 							}
-							else{
-								$message = "Exit: ".$urlfrombkg.PHP_EOL."
-											No access to pcfs or no vex file found".PHP_EOL;
-								$_SESSION["precor_message"] = $_SESSION["precor_message"].$message;
-								die();
-							}
 						}
+						if($filesuccess == 0){
+							$guessdt = $guessdt + 1;
+						}
+						else{
+							break;
+						}
+						//if(file_put_contents($file_name,file_get_contents($urlfrombkg))){
+						//	ssh2_scp_send($con, $_SERVER['DOCUMENT_ROOT']."tmp/".$this->exper."/".$_dynexper.'.vex', $this->corrdir.$_dynexper.'.vex', 0755);
+						//	array_push($vexfile,$_SERVER['DOCUMENT_ROOT']."tmp/".$this->exper."/".$_dynexper.'.vex');
+						//	break;
+						//}
+						//else{
+						//	$message = "Exit: ".$urlfrombkg.PHP_EOL."
+						//				No access to pcfs or no vex file found".PHP_EOL;
+						//	$_SESSION["precor_message"] = $_SESSION["precor_message"].$message;
+						//	die();
+						//}
 					}
 					else{
 						ssh2_scp_send($con, $_SERVER['DOCUMENT_ROOT']."tmp/".$this->exper."/".$_dynexper.'.vex', $this->corrdir.$_dynexper.'.vex', 0755);
 						array_push($vexfile,$_SERVER['DOCUMENT_ROOT']."tmp/".$this->exper."/".$_dynexper.'.vex');
 					}
 				}
+				if($filesuccess == 0){
+					$message = "Exit: ".PHP_EOL."No access to pcfs or no vex file found".PHP_EOL;
+					$_SESSION["precor_message"] = $_SESSION["precor_message"].$message;
+					die();
+				}
 			}
 		}
 		
 		if(count($vexfile)>0){
 			//modify vex
-            Modivex::vex($this->exper,$vexfile,$this->cmode,$ctag);
-            //send vex
-            //ssh2_scp_send($con, $_SERVER['DOCUMENT_ROOT']."tmp/".$this->exper."/".'buffer.vex', $this->corrdir.$this->exper.'.vex', 0755);
+			Modivex::vex($this->exper,$vexfile,$this->cmode,$ctag);
+			//send vex
+			//ssh2_scp_send($con, $_SERVER['DOCUMENT_ROOT']."tmp/".$this->exper."/".'buffer.vex', $this->corrdir.$this->exper.'.vex', 0755);
 		}
 
 		ssh2_disconnect($conpcfs);
@@ -457,6 +512,7 @@ class Precorrelate {
 	}
 
 	function getlog(){
+	
 		$conssh = new ConnectSSH;
 		if(!($con = $conssh->connect($this->cserver,$this->cusername,$this->cpassword))){
 			$message = "Exit: Unable to reach ".$this->cserver.PHP_EOL;
@@ -505,8 +561,28 @@ class Precorrelate {
 							}
 						}
 						*/
-						//old
 						
+						
+						$ivsftps = $GLOBALS["ivsftps"];
+						$fileloc = "/pub/vlbi/ivsdata/aux/".$eptmp['year']."/".$_dynexper."/".$_dynexper.$cs.".log";
+						$file_name = $_SERVER['DOCUMENT_ROOT']."tmp/".$this->exper."/".$_dynexper.".".$cs.'.log';
+						$filesuccess = 0;
+						
+						foreach($ivsftps as $_serv => $_comm){
+							exec($_comm ." ".$_serv.$fileloc);
+							if(rename($_dynexper.$cs.".log",$file_name)){
+								$filesuccess = 1;
+								array_push($logfile,$file_name);
+								break;
+							}
+						}
+						if($filesuccess == 0){
+							$message = "fail to download $_dynexper.$cs.log".PHP_EOL;
+							$_SESSION["precor_message"] = $_SESSION["precor_message"].$message;
+						}
+
+						//old
+						/*
 						$urlfrombkg = "https://ivs.bkg.bund.de/data_dir/vlbi/ivsdata/aux/".$eptmp['year']."/".$_dynexper."/".$_dynexper.$cs.".log";
 						//$urlfrombkg = "ftp://ivs.bkg.bund.de/pub/vlbi/ivsdata/aux/".$eptmp['year']."/".$_dynexper."/".$_dynexper.$cs.".log";
 						$file_name = $_SERVER['DOCUMENT_ROOT']."tmp/".$this->exper."/".$_dynexper.".".$cs.'.log';
@@ -520,7 +596,7 @@ class Precorrelate {
 								echo $message;
 							}
 						}
-						
+						*/
 					}
 				}
 
@@ -549,6 +625,23 @@ class Precorrelate {
 							}
 						}
 						*/
+						$ivsftps = $GLOBALS["ivsftps"];
+						$fileloc = "/pub/vlbi/ivsdata/aux/".$eptmp['year']."/".$_dynexper."/".$_dynexper.$cs.".log";
+						$file_name = $_SERVER['DOCUMENT_ROOT']."tmp/".$this->exper."/".$_dynexper.".".$cs.'.log';
+						$filesuccess = 0;
+						foreach($ivsftps as $_serv => $_comm){
+							exec($_comm ." ".$_serv.$fileloc);
+							if(rename($_dynexper.$cs.".log",$file_name)){
+								$filesuccess = 1;
+								array_push($logfile,$file_name);
+								break;
+							}
+						}
+						if($filesuccess == 0){
+							$message = "fail to download $_dynexper.$cs.log".PHP_EOL;
+							$_SESSION["precor_message"] = $_SESSION["precor_message"].$message;
+						}
+						/*
 						$urlfrombkg = "https://ivs.bkg.bund.de/data_dir/vlbi/ivsdata/aux/".$eptmp['year']."/".$_dynexper."/".$_dynexper.$cs.".log";
 						//$urlfrombkg = "ftp://ivs.bkg.bund.de/pub/vlbi/ivsdata/aux/".$eptmp['year']."/".$_dynexper."/".$_dynexper.$cs.".log";
 						$file_name = $_SERVER['DOCUMENT_ROOT']."tmp/".$this->exper."/".$_dynexper.".".$cs.'.log';
@@ -562,7 +655,7 @@ class Precorrelate {
 								echo $message;
 							}
 						}
-						
+						*/
 					}
 				}
 				else{
@@ -594,7 +687,7 @@ class Precorrelate {
 		}
 
 		//modivex freq part
-		Modivex::vexfreq($_SERVER['DOCUMENT_ROOT']."tmp/".$this->exper."/",$this->cmode);
+		Modivex::vexfreq($_SERVER['DOCUMENT_ROOT']."tmp/".$this->exper."/",$this->cmode,$this->cstations,$GLOBALS["vgosstations"]);
         //send vex
         ssh2_scp_send($con, $_SERVER['DOCUMENT_ROOT']."tmp/".$this->exper."/".'updatedfreqs.vex', $this->corrdir.$this->exper.'.vex', 0755);
 		unlink($_SERVER['DOCUMENT_ROOT']."tmp/".$this->exper."/".'buffer.vex');
@@ -628,6 +721,8 @@ class Precorrelate {
 
 	function genfilelist(){
 		//create filelist
+		//print_r($this->ginfoout["uraid"]);print_r($this->ginfoout["ufull"]);
+		//die();
 		Modilist::createfilelist($this->exper,$this->explabel,$this->cmode,$this->corrdir,$this->cstations,$this->ginfoout["uraid"],$this->ginfoout["ufull"]);
 	}
 

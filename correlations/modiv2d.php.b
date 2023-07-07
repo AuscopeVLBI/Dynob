@@ -5,7 +5,7 @@ require_once "../common/SSHcon.php";
 require_once "../pmonitor/stats.php";
 require_once "getinfo.php";
 
-//Modiv2d::create('mf0129','mixed',['hb','ke'],["Hb hb vc0","Ke ke vc0"]);
+//Modiv2d::create('aum061','mixed',['ke','yg','ww']);
 
 class Modiv2d{
 	public static function create($exper,$cmode,$cstations,$ufull){
@@ -18,175 +18,34 @@ class Modiv2d{
 			$machine[$tmpuexp[1]] = $tmpuexp[2];
 		}
 
-		if($cmode=="mixed"){
-			$tempfile = fopen('template/mixedmode.v2d',"r");
-		}
-		elseif($cmode=="vgos"){
+		if($cmode=="vgos"){
 			$tempfile = fopen('template/vgosmode.v2d',"r");
-		}
-
-		//select S/X station as ref station
-		$sxstation = "";
-		foreach($cstations as $cs){
-			if(!in_array($cs,$GLOBALS["vgosstations"])){
-				$sxstation = $cs;
-				break;
-			}
-		}
-		if($sxstation !== ""){
-			$reflog = $_SERVER['DOCUMENT_ROOT']."tmp/".$exper."/".$sxstation."buffer.log";
-			//$reflog = fopen($_SERVER['DOCUMENT_ROOT']."tmp/".$exper."/".$sxstation."buffer.log","r");
-		}
-		if (!isset($reflog)){
-			foreach($cstations as $cs){
-				if (!file_exists($_SERVER['DOCUMENT_ROOT']."tmp/".$exper."/".$cs."buffer.log")){
-					continue;
-				}
-				else{
-					$reflog = $_SERVER['DOCUMENT_ROOT']."tmp/".$exper."/".$cs."buffer.log";
-					//$reflog = fopen($_SERVER['DOCUMENT_ROOT']."tmp/".$exper."/".$cs."buffer.log","r");
-					break;
-				}
-			}
-		}
-
-		//copy all and modify SETUP
-		$vdifmode = strtoupper(trim(shell_exec('grep -i "vdif_8000" '.$reflog.' | tail -1 | cut -d " " -f 4')));
-		$expvdif = explode("-",$vdifmode);
-		if(substr($expvdif[3],0,1) == "2"){ //2bit
-			$dynsetup = "specRes = 0.125\n\ttInt = 1.0\n\tguardNS = 26000\n\t#freqId = 12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27";
-		}
-		else{ //1 bit
-			$dynsetup = "FFTSpecRes = 0.03125\n\tspecRes = 0.125\n\ttInt = 2.0\n\t#freqId = 12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27";
-		}
-		
-		while (!feof($tempfile)){
-			$line = fgets($tempfile);
-			$line = preg_replace('/{dynsetup}/',$dynsetup,$line);
-			$line = preg_replace('/{expname}/',$exper,$line);
-			$line = preg_replace('/{antennas}/',implode(", ",array_filter($cstations)),$line);
-			fwrite($file,$line);
-		}
-		fclose($tempfile);
-
-		
-		if($cmode == "mixed"){
-
-			//-------if mixed mode, add zoom band----------
-			$line = "ZOOM zoom1 {".PHP_EOL;
-			fwrite($file,$line);
-
-			//freqs
-			$bbcsx = shell_exec('grep "bbcsx" '.$reflog.' | cut -d "=" -f 2 | tail -64');
-			$bbcsx = explode(PHP_EOL,$bbcsx);
-			$freqs = [];
-			$bitswidth = [];
-			$los = [];
-			foreach ($bbcsx as $_bbcsx){
-				if(strpos($_bbcsx,",")!==false){
-					$_expbbcsx = explode(",",$_bbcsx);
-					array_push($freqs,$_expbbcsx[0]);
-					array_push($los,$_expbbcsx[1]);
-					array_push($bitswidth,$_expbbcsx[2]);
-				}
-			}
-			$freqs = array_unique($freqs);
-			$los = array_intersect_key($los, $freqs);
-			$bitswidth = $bitswidth[0];
-
-			$lofreq = shell_exec('grep "lo=lo" '.$reflog.' | cut -d "=" -f 2 | tail -8');
-			$lofreq = array_filter(explode(PHP_EOL,$lofreq));
-			$loarr = [];
-			foreach($lofreq as $_lofreq){
-				$_explo = explode(",",$_lofreq);
-				if(!array_key_exists($_explo[0],$loarr)){
-					$loarr[$_explo[0]] = $_explo[1];
-				}
-			}
-
-			$freqs = array_values($freqs);
-			$los = array_values($los);
-			
-			if($bitswidth >= 16 ){
-				$zoomwidth = 16;
-				$margin = ($bitswidth-16)/2;
-			}
-			else{
-				$zoomwidth = $bitswidth;
-				$margin = 0;
-			}
-
-			$zoomfreq = [];
-			for($u=0; $u<count($freqs); $u++){
-				$_lofreq = $loarr["lo".$los[$u]];
-				if( ($freqs[$u]+$_lofreq) > 8000){ //x-band
-					array_push($zoomfreq,$freqs[$u]+$_lofreq+$margin);
-				}
-				else{
-					if($bitswidth >= 16){
-						$_i = $bitswidth/16;
-						for($i=0;$i<$_i;$i++){
-							array_push($zoomfreq,$freqs[$u]+$_lofreq+($i*16));
-						}
-					}
-					else{
-						array_push($zoomfreq,$freqs[$u]+$_lofreq);
-					}
-				}
-			}
-
-			$zoomfreq = array_unique($zoomfreq);
-			$zoomfreq = array_slice($zoomfreq, 0, 14);
-
-			foreach($zoomfreq as $_zf){
-				fwrite($file,"\taddZoomFreq = freq@".$_zf."/bw@".number_format($bitswidth, 2, '.', '').PHP_EOL);
-			}
-			fwrite($file,"}");
-			//-----------------------------
-
-			//---other setups----------
-			$datastream = $GLOBALS["dtsmixeds"];
-			$format = "VDIF/8032/".substr($expvdif[3],0,1);
-			$zoom = "zoom1";
-			$vgosstations = $GLOBALS["vgosstations"];
-			$toneguard = "\ttoneGuard = 3".PHP_EOL;
-			$toneSelection = "\ttoneSelection = most".PHP_EOL;
-			$nbandx = [];
-			$nbands = [];
-			$csbitswidth = [];
-			foreach($cstations as $cs){
-				$nbandx[$cs] = "8";
-				$_reflog = $_SERVER['DOCUMENT_ROOT']."tmp/".$exper."/".$cs."buffer.log";
-				$bbcsx = shell_exec('grep "bbcsx" '.$_reflog.' | cut -d "=" -f 2 | tail -5');
-				$bbcsx = explode(PHP_EOL,$bbcsx);
-				foreach ($bbcsx as $_bbcsx){
-					if(strpos($_bbcsx,",")!==false){
-						$_expbbcsx = explode(",",$_bbcsx);
-						$csbitswidth[$cs] = $_expbbcsx[2];
-						break;
-					}
-				}
-				if($csbitswidth[$cs] >= 16){
-					$_i = $csbitswidth[$cs]/16;
-					$nbands[$cs] = 8/$_i;
-				}
-				else{
-					$nbands[$cs] = 8;
-				}
-			}
-		}
-		elseif($cmode=="vgos"){
-			//no zoom bands
 			$datastream = $GLOBALS["dtsvgos"];
-			$format = "VDIF/8032/".substr($expvdif[3],0,1);
-			$nbandx = [];
-			foreach($cstations as $cs){
-				$nbandx[$cs] = "8";
-			}
+			$format = "VDIF/8032/2";
+			$nband = "8";
 			$vgosstations = $GLOBALS["vgosstations"];
 			$toneguard = "";
 			$toneSelection = "\ttoneSelection = all".PHP_EOL;
 		}
+		elseif($cmode=="mixed"){
+			$tempfile = fopen('template/mixedmode.v2d',"r");
+			$datastream = $GLOBALS["dtsmixeds"];
+			$format = "VDIF/8032/2";
+			$nband = "8";
+			$zoom = "zoom1";
+			$vgosstations = $GLOBALS["vgosstations"];
+			$toneguard = "\ttoneGuard = 3".PHP_EOL;
+			$toneSelection = "\ttoneSelection = most".PHP_EOL;
+		}
+		
+		while (!feof($tempfile)){
+			$line = fgets($tempfile);
+			$line = preg_replace('/{expname}/',$exper,$line);
+			$line = preg_replace('/{zoomname}/',$zoom,$line);
+			$line = preg_replace('/{antennas}/',implode(", ",array_filter($cstations)),$line);
+			fwrite($file,$line);
+		}
+		fclose($tempfile);
 
 		//Antenna
 		$time = Getinfo::vexstart();
@@ -262,8 +121,7 @@ class Modiv2d{
 			if (in_array($cs,$vgosstations)){
 				$csdts = preg_filter('/^/', $cs, $datastream[$cs]);
 				fwrite($file,"\tdatastreams = ".implode(",",$csdts)."\n");
-				//if ($cmode=="mixed" && $cs=="hb"){
-				if ($cmode=="mixed"){
+				if ($cmode=="mixed" && $cs=="hb"){
 					fwrite($file,"\tzoom = ".$zoom."\n");
 				}
 				unset($csdts);
@@ -292,17 +150,8 @@ class Modiv2d{
 					fwrite($file,"\nDATASTREAM ".$cs.$dts."\n{\n");
 					//-----for the four datastreams stations----
 					if ($cmode=="mixed"){
-						if($dts[0] == "s"){
-							fwrite($file,"\tformat =  ".$format."\n\tnBand = ".$nbands[$cs]."\n\tfilelist = ".$cs.$dts.".filelist\n\tmachine = ".$machine[$cs]."\n}\n");
-						}
-						else{
-							fwrite($file,"\tformat =  ".$format."\n\tnBand = ".$nbandx[$cs]."\n\tfilelist = ".$cs.$dts.".filelist\n\tmachine = ".$machine[$cs]."\n}\n");
-						}
-
-						/*
 						if (count($datastream[$cs])>3){
 							if($dts[0] == "s"){
-
 								if($cs == "hb"){
 									fwrite($file,"\tformat =  ".$format."\n\tnBand = 4\n\tfilelist = ".$cs.$dts.".filelist\n\tmachine = ".$machine[$cs]."\n}\n");
 								}
@@ -316,10 +165,10 @@ class Modiv2d{
 						}
 						else{
 							fwrite($file,"\tformat =  ".$format."\n\tnBand = ".$nband."\n\tfilelist = ".$cs.$dts.".filelist\n\tmachine = ".$machine[$cs]."\n}\n");
-						}*/
+						}
 					}
 					elseif ($cmode=="vgos"){
-						fwrite($file,"\tformat =  ".$format."\n\tnBand = ".$nbandx[$cs]."\n\tfilelist = ".$cs.$dts.".filelist\n\tmachine = ".$machine[$cs]."\n}\n");
+						fwrite($file,"\tformat =  ".$format."\n\tnBand = ".$nband."\n\tfilelist = ".$cs.$dts.".filelist\n\tmachine = ".$machine[$cs]."\n}\n");
 					}
 				}
 			}

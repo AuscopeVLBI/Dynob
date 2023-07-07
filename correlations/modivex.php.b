@@ -1,7 +1,7 @@
 <?php
 
 //Modivex::vex('z22332',[$_SERVER['DOCUMENT_ROOT']."tmp/z22332/z22332.vex"],'mixed',"si");
-//Modivex::vexfreq($_SERVER['DOCUMENT_ROOT']."tmp/mf0129/","mixed",["hb","ke"],["hb","ke"]);
+//Modivex::vexfreq($_SERVER['DOCUMENT_ROOT']."tmp/z22332/","mixed");
 
 class Modivex{
 	public static function vex($exper,$vexfile,$cmode,$ctag){
@@ -289,83 +289,14 @@ class Modivex{
 		$vexsec = ['$GLOBAL;','$EXPER;','$STATION;','$MODE;','$SCHED;','$SITE;','$ANTENNA;','$DAS;',
 			'$SOURCE;','$BBC;','$IF;','$TRACKS;','$FREQ;','$PASS_ORDER;','$ROLL;','$PHASE_CAL_DETECT;'];
 
-		
 		//check the $mode for the $freq for each station
 		$fmode = [];
 		$vexfile = new SplFileObject($bufferdir."buffer.vex","r");
 		$vexfile2 = new SplFileObject($bufferdir."updatedfreqs.vex","w");
-
-		//check the bit
-		$thebit = "";
-		foreach($cstations as $cs){
-			if(in_array($cs,$vgosstations)){
-				$_reflog = $bufferdir.$cs."buffer.log";
-				$vdifmode = strtoupper(trim(shell_exec('grep -i "vdif_8000" '.$_reflog.' | tail -1 | cut -d " " -f 4')));
-				$expvdif = explode("-",$vdifmode);
-				$thebit = substr($expvdif[3],0,1);
-				break;
-			}
-		}
-		if($thebit == ""){
-			$thebit = "2"; //assume 2 bits
-		}
-
-		//check Hb bbc for bitwidth
-		$hbbitswidth = "";
-		if(in_array("hb",$cstations)){
-			$_reflog = $bufferdir."hbbuffer.log";
-			$bbcsx = shell_exec('grep "bbcsx" '.$_reflog.' | cut -d "=" -f 2 | tail -5');
-			$bbcsx = explode(PHP_EOL,$bbcsx);
-			foreach ($bbcsx as $_bbcsx){
-				if(strpos($_bbcsx,",")!==false){
-					$_expbbcsx = explode(",",$_bbcsx);
-					$hbbitswidth = $_expbbcsx[2];
-					break;
-				}
-			}
-		}
-		if($hbbitswidth <= 16){
-			$hbiske = true;
-		}
-		else{
-			$hbiske = false;
-		}
-
 		$mark = 0;
 		$fmodemark = 0;
 		while (!$vexfile->eof()) {
 			$line = $vexfile->fgets();
-
-			if($hbiske == true){
-				//comment out HB definitions under $MODE
-				if (stripos($line,'ref $FREQ')!==false && strpos($line,'*')===false && strpos($line,'HB')!==false){
-					$line = '*'.$line;
-				}
-				if (stripos($line,'ref $BBC')!==false && strpos($line,'*')===false && strpos($line,'HB')!==false){
-					$line = '*'.$line;
-				}
-				if (stripos($line,'ref $IF')!==false && strpos($line,'*')===false && strpos($line,'HB')!==false){
-					$line = '*'.$line;
-				}
-				//add Hb to the KE definitions
-				if (stripos($line,'ref $FREQ')!==false && strpos($line,'*')===false && strpos($line,'KE')!==false){
-					$line = preg_replace('/Ke/', 'Hb : Ke',$line);
-				}
-				if (stripos($line,'ref $BBC')!==false && strpos($line,'*')===false && strpos($line,'KE')!==false){
-					$line = preg_replace('/Ke/', 'Hb : Ke',$line);
-				}
-				if (stripos($line,'ref $IF')!==false && strpos($line,'*')===false && strpos($line,'KE')!==false){
-					$line = preg_replace('/Ke/', 'Hb : Ke',$line);
-				}
-			}
-			if($thebit == "1"){
-				if (stripos($line,'ref $TRACKS')!==false && strpos($line,'*')===false && strpos($line,'HB')!==false){
-					$line = preg_replace('/HB/', 'KE',$line);
-				}
-				if (stripos($line,'fanout_def')!==false && strpos($line,'*')===false && strpos($line,'mag')!==false){
-					$line = '*'.$line;
-				}
-			}
 
 			//turn mark off if new section
 			foreach ($vexsec as $vsec){
@@ -484,10 +415,6 @@ class Modivex{
 							$_n = $_n + 1;
 						}
 						
-						$line = $_nline;
-					}
-					if(stripos($line,'sample_rate')!==false){
-						$_nline = preg_replace('/= \s*([0-9]*).0 Ms/', '= '.round($ubw[0]*2).'.0 Ms', $line);
 						$line = $_nline;
 					}
 				}

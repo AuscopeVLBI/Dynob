@@ -39,13 +39,13 @@ $STATION;
 $MODE;
 *=========================================================================================================
     def 1024-16(AUMOD);
-        ref $FREQ =             GEOSX         : Hb : Ke ;
-        ref $BBC =              HB            : Hb : Ke ;
-        ref $IF =               DBBC_AU       : Hb : Ke ;
-        ref $TRACKS =           HB            : Hb : Ke ;
-        ref $PASS_ORDER =       passOrder     : Hb : Ke ;
-        ref $ROLL =             NO_ROLL       : Hb : Ke ;
-        ref $PHASE_CAL_DETECT = Standard      : Hb : Ke ;
+        ref $FREQ =             GEOSX         : Hb : Ke : Yg ;
+        ref $BBC =              HB            : Hb : Ke : Yg ;
+        ref $IF =               DBBC_AU       : Hb : Ke : Yg ;
+        ref $TRACKS =           HB            : Hb : Ke : Yg ; 
+        ref $PASS_ORDER =       passOrder     : Hb : Ke : Yg ;
+        ref $ROLL =             NO_ROLL       : Hb : Ke : Yg ;
+        ref $PHASE_CAL_DETECT = Standard      : Hb : Ke : Yg ;
     enddef;
 *=========================================================================================================
 $SITE;
