@@ -1,0 +1,11 @@
+<div>
+	<h3>Pre-requisite</h3>
+		The Dynob feedback is done by translating the zero-km baseline source flux density (or median source flux density from observations for B-model sources) and the re-estimated antenna SEFD on the database into SKED-format flux and equip catalogues, respectively. Please make sure the Dynob performance monitoring step is completed first.
+	<br>
+	<h3>Creating the catalogue files:</h3>
+	<ol>
+		<li>Open a web browser on ops8 and run http://dynob.tasphys.ga/scheduling/feedback.php?exp=<i>aum048</i>. Replace <i>aum048</i> with the session's code. The "?exp=sessioncode" is optional. If absent, the latest source flux densities and antenna SEFDs ordered by session date (median from two latest sessions for the flux, and five for the SEFD) will be used.</li>
+		<li>Dynob downloads the latest SKED flux and equip catalogues from github everytime.</li>
+		<li>The new catalogue files will be created as dynflux.cat and dynequip.cat, stored under the scheduling/dynflux/ directory of Dynob. The download links will also be shown upon successful creation.</li>
+	</ol>
+</div>

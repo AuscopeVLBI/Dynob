@@ -1,0 +1,13 @@
+<div>
+	<h3>Pre-automation</h3>
+	<p>	
+		<ol>
+			<li>The current SI sessions are observed by two telescopes: Hobart12 and Hart15m. The default directory for the Hart15m SI data is flexbuf:/disk2/ht/.</li>
+			<li>The Hobart12 data can be correlated directory off the flexbuff. To do so, run <i>vbs_fs -I session* /mnt/vbsSI/</i> on flexbuffhb or flexbuf-2hb. The data can also be copied to another machine for correlation to avoid potential recording issues when another experiment is running.</li>
+			<li>Other mounting or data directories may be used, but need to be added to the MySQL database. See <i>General > Accessing the database</i>.</li>
+			<li>On a web browser, open <a href="http://dynob.tasphys.ga/web/si.html"></a>http://dynob.tasphys.ga/web/si.html.</li>
+			<li>Give the session name and press the start button. DO NOT close the browser when the process is running. It will end when the level1 vgosDB is created or when other errors occur.</li>
+			<li>The correlation directory is at <i>correlator:~/correlations/si/sessionname</i></li>
+		</ol> 
+	</p>
+</div>

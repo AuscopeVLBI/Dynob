@@ -1,0 +1,13 @@
+<div>
+	<h3>Overview</h3>
+	<p>The Dynob one click fringe-check automatically creates one-scan schedule based on the user input and show the quality of the scan at the end of the process. The fringe-check application is to test if the system is properly setup and detect any potential issues before carrying out an experiment. Observer needs to first setup the system as usual.</p>
+	<h3>Steps</h3>
+	<p>
+		<ol>
+			<li>On a web browser, open <a href="http://dynob.tasphys.ga/web/fringe.php">http://dynob.tasphys.ga/web/fringe.php</a>.</li>
+			<li>Complete the form accordingly, and click on the start button.</li>
+			<li>After the scan is recorded, Dynob will prepare the scans into transferrable files. And prompt the observer to conitnue once the data transfer is done.</li>
+			<li>On the ssh terminal for the flexbuff or Mark5 computers in used, run the data transfer script <i>~/fringetranx.sh /mnt/mf/ vc0.phys.utas.edu.au:~/correlations/mf/</i>. The script will detect and transfer fringe check data to the correct folder on vc0 automatically. When there is no more scans, press the continue button on the fringe-check web page.</li>
+		</ol>
+	</p>
+</div>

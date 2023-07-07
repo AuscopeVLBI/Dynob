@@ -10,7 +10,7 @@ abstract class Config {
 	protected static $hostAddr = "";
 
 	//web
-	protected static $db_pre = "Dynob_";
+	protected static $db_pre = "";
 	
 
 }

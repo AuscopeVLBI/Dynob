@@ -1,0 +1,140 @@
+<!Doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Dynob documentation</title>
+	<meta name="description" content="Dynob documentation">
+	<meta name="author" content="Lim Chin Chuan">
+	<link rel="stylesheet" href="../template/main.css">
+	<link rel="stylesheet" href="css/doc.css">
+	
+	<script src="./jquery-3.6.1.min.js"></script>
+
+	<script>
+		$( document ).ready(function() {
+
+			$( "#content" ).load( "whatis.html");
+
+			$( ".docact" ).click(function() {
+				var cat = $( this ).parent().parent().find("h3").text();
+				var act = $( this ).text();
+				$("#content-title").text(cat + " > " + act);
+				$("#content-title").html(cat + " > " + act);
+				var dir = $( this ).parent().parent().attr('id').toLowerCase();
+				var page = $( this ).text();
+				page = page.replace(/\s+/g, '-').toLowerCase();
+				$( "#content" ).load( dir+"/"+page+".html", function( response, status, xhr ) {
+					if ( status == "error" ) {
+						var msg = "Sorry but there was an error: ";
+						$( "#content" ).html( msg + xhr.status + " " + xhr.statusText );
+					}
+				});
+			});
+
+			var hname = $(location).attr('hostname');
+			var protocol = $(location).attr('protocol');
+			//alert(protocol+'//'+hname);
+			$( '#nav_home' ).attr('href', protocol+'//'+hname+'/web');
+			$( '#nav_doc' ).attr('href', protocol+'//'+hname+'/web/dynobdoc/index.html');
+			$( '#nav_acp' ).attr('href', protocol+'//'+hname+'/web/admincp');
+			$('#acpli').hide();
+			$('#main_nav_logged').hide();
+			$('#main_nav_default').hide();
+
+			if(checkCookie("dynob_user")==false){
+				$('#main_nav_default').show();
+				$( '#nav_login' ).attr('href', protocol+'//'+hname+'/web/login.php');
+			}
+			else{
+				$('#main_nav_logged').show();
+			}
+			
+		});
+
+		function checkCookie(cookiename) {
+			if(escape(cookiename) == "dynob_user"){
+				let user = getCookie(cookiename);
+				if (user == "" || user == null) {
+					return false;
+				}
+				else{
+					$('#nav_uname').text(user);
+					//Logout enabled
+					$('#btn_logout').click(function(){
+						uref = $(location).attr('href');
+						//alert(window.location.protocol +"//"+window.location.host+"/web/function/logout.php?ref=" + btoa(uref));
+						window.location.replace(window.location.protocol +"//"+window.location.host+"/web/function/logout.php?ref=" + btoa(uref));
+					});
+				}
+				if (user == "admin"){
+					$('#acpli').show();
+				}
+			}
+		}
+		function getCookie(cname) {
+			let name = cname + "=";
+			let ca = document.cookie.split(';');
+			for(let i = 0; i < ca.length; i++) {
+				let c = ca[i];
+				while (c.charAt(0) == ' ') {
+				c = c.substring(1);
+				}
+				if (c.indexOf(name) == 0) {
+				return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	</script>
+</head>
+<body>
+	<header>
+		<ul class="main_topnav">
+			<li class="main_nav_left"><a id="nav_home" href="">Home</a></li>
+			<li class="main_nav_left"><a id="nav_doc" href="">Documentation</a></li>
+			<div id="main_nav_logged" style="display:none" >
+				<li class="main_nav_right" id="btn_logout"><a style="cursor: pointer" >Logout</a></li>
+				<li class="main_nav_right" id="acpli" ><a id="nav_acp" href="" target="_blank">Admin CP</a></li>
+				<li class="main_nav_right"><span id="nav_uname">username</span></li>
+			</div>
+			<div id="main_nav_default" style="display:none" >
+				<li class="main_nav_right"><a id="nav_login" href="">Login</a></li>
+			</div>
+		</ul>
+	</header>
+	
+	<section>
+		<nav>
+			<ul>
+				<div id="general">
+					<h3>General</h3>
+					<li><a class="docact" href="#">Setup</a></li>
+					<li><a class="docact" href="#">Accessing the database</a></li>
+					<li><a class="docact" href="#">Correlation</a></li>
+					<li><a class="docact" href="#">Fringe fitting</a></li>
+					<li><a class="docact" href="#">Performance monitoring</a></li>
+					<li><a class="docact" href="#">Feedback</a></li>
+					<li><a class="docact" href="#">Creating vgosDB</a></li>
+				</div>
+				<div id="si">
+					<h3>Southern intensive</h3>
+					<li><a class="docact" href="#">Automation note</a></li>
+				</div>
+				<div id="fringe">
+					<h3>Fringe check</h3>
+					<li><a class="docact" href="#">Fringe check</a></li>
+				</div>
+				<div id="rfringe">
+					<h3>Realtime fringe test</h3>
+					<li><a class="docact" href="#"></a>Realtime fringe test</li>
+				</div>
+			</ul>
+		</nav>
+	  
+		<article>
+			<h2 id="content-title">Welcome</h2>
+			<div id="content">This is the documentation for Dynob.</div>
+		</article>
+	</section>
+</body>
+</html> 

@@ -1,0 +1,13 @@
+<div>
+	<h3>Steps</h3>
+	<p>	
+		<ol>
+			<li>Check the data's path is on the database except when correlating fringe check sessions. For example, if the aum048ww is at flexbuf:/mnt/rdsi/AUSTRAL/aum048ww, the path <i>/mnt/rdsi/AUSTRAL/</i> for machine <i>flexbuf</i> must be listed or added to RaidList </li>
+			<li>Make sure both the session's SKD and VEX file are either on a pcfs machine or the IVS server.</li>
+			<li>Run http://dynob.tasphys.ga/correlations/ajax.html#<i>sessionname</i>. Example of <i>sessionname</i> is aum048. </li>
+			<li>The correlation folder is at <i>correlator:~/correlations/au/sessionname</i> for the AUSTRAL sessions, <i>correlator:~/correlations/si/sessionname</i> for the southern intensives, and <i>correlator:~/correlations/mf/sessionname</i> for the fringe check sessions. </li>
+			<li>The web page will be updated with messages showing the correlation progress. DO NOT close the browser at least until the correlation has started, showing "correlating scan n of p". It is recommended to run this on the ops8's vnc.</li>
+			<li>If the browser was closed during correlation, you would have to monitor the correlation progress manually. You would also need to run difx2mark4 afterwards.</li>
+		</ol>
+	</p>
+</div>

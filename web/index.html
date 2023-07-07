@@ -1,0 +1,95 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>UTAS Dynob -- Welcome</title>
+	<meta name="description" content="UTAS Dynob">
+	<meta name="author" content="Lim Chin Chuan">
+	<link rel="stylesheet" href="./template/main.css">
+	<script src="./js/jquery-3.6.0.min.js"></script>
+
+	<script>
+		$( document ).ready(function() {
+			var hname = $(location).attr('hostname');
+			var protocol = $(location).attr('protocol');
+			//alert(protocol+'//'+hname);
+			$( '#nav_home' ).attr('href', protocol+'//'+hname+'/web');
+			$( '#nav_doc' ).attr('href', protocol+'//'+hname+'/web/dynobdoc/index.html');
+			$( '#nav_acp' ).attr('href', protocol+'//'+hname+'/web/admincp');
+			$('#acpli').hide();
+			$('#main_nav_logged').hide();
+			$('#main_nav_default').hide();
+
+			if(checkCookie("dynob_user")==false){
+				$('#main_nav_default').show();
+				$( '#nav_login' ).attr('href', protocol+'//'+hname+'/web/login.php');
+			}
+			else{
+				$('#main_nav_logged').show();
+			}
+		});
+
+		function checkCookie(cookiename) {
+			if(escape(cookiename) == "dynob_user"){
+				let user = getCookie(cookiename);
+				if (user == "" || user == null) {
+					return false;
+				}
+				else{
+					$('#nav_uname').text(user);
+					//Logout enabled
+					$('#btn_logout').click(function(){
+						uref = $(location).attr('href');
+						window.location.replace(window.location.protocol +"//"+window.location.host+"/web/function/logout.php?ref=" + btoa(uref));
+					});
+				}
+				if (user == "admin"){
+					$('#acpli').show();
+				}
+			}
+		}
+
+		function getCookie(cname) {
+			let name = cname + "=";
+			let ca = document.cookie.split(';');
+			for(let i = 0; i < ca.length; i++) {
+				let c = ca[i];
+				while (c.charAt(0) == ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) == 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	</script>
+
+</head>
+
+<body>
+	
+	<header>
+		<ul class="main_topnav">
+			<li class="main_nav_left"><a id="nav_home" href="">Home</a></li>
+			<li class="main_nav_left"><a id="nav_doc" href="">Documentation</a></li>
+			<div id="main_nav_logged" style="display:none" >
+				<li class="main_nav_right" id="btn_logout"><a style="cursor: pointer" >Logout</a></li>
+				<li class="main_nav_right" id="acpli" ><a id="nav_acp" href="" target="_blank">Admin CP</a></li>
+				<li class="main_nav_right"><span id="nav_uname">username</span></li>
+			</div>
+			<div id="main_nav_default" style="display:none" >
+				<li class="main_nav_right"><a id="nav_login" href="">Login</a></li>
+			</div>
+		</ul>
+	</header>
+	<section class="mainsection">
+		<p><h1>Welcome! </h1></p>
+		<p>Choose an action:</p>
+		<ol>
+			<li class="action_list"><a href="fringe.php" target="_blank">Fringe Check</a></li>
+			<li class="action_list"><a href="si.html" target="_blank">Southern Intensive</a></li>
+		</ol>
+	</section>
+</body>
+</html>

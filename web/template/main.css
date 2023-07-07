@@ -5,7 +5,7 @@ a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
-dl, dt, dd, ol, ul, li,
+dl, dt, dd, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
@@ -15,12 +15,52 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
-	font: inherit;
 	vertical-align: baseline;
 }
 
 /*main CSS*/
+
+.main_topnav {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333333;
+	line-height: 1;
+	font-family: "Times New Roman", Times, serif;
+}
+
+.main_nav_left {
+ 	float: left;
+}
+.main_nav_right {
+	float: right;
+}
+
+.main_nav_left a, .main_nav_right a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 16px;
+	text-decoration: none;
+}
+
+.main_nav_left a:hover, .main_nav_right a:hover {
+	background-color: #111111;
+}
+
+#nav_uname{
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 16px;
+}
+
+.mainsection{
+	margin: 20px;
+	line-height: 2;
+}
+
 /*
 .wrapper{
 	width: 100%;

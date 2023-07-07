@@ -7,7 +7,14 @@
 
 <?php
 if(isset($_COOKIE["dynob_user"])) {
-	echo 'You are logged in!';
+	//echo 'You have logged in!';
+	if (isset($_SERVER['HTTPS']) && ($_SERVER['HTTPS'] == 'on' || $_SERVER['HTTPS'] == 1) || isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') {
+		$protocol = 'https://';
+	}
+	else {
+		$protocol = 'http://';
+	}
+	header('Refresh: 0.1; URL = '.$protocol.$_SERVER['SERVER_NAME'].'/web/index.html');
 	die();
 }
 else{

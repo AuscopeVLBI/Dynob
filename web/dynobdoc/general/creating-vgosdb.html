@@ -1,0 +1,41 @@
+<div>
+    <h3>Overview</h3>
+    <p>
+        There are five extra actions available after the fringe-fitting process, independent of te Dynob's performance monitoring and feedback system. This function allows the creating of level1 vgosDB semi-automatically by runnig executing five URIs separately. Oaf and ops7 are the default for preparing the analysis and creating the vgosDB. Please change the <i>common/global.php</i>settings if using other machines. <span style="color:red">IMPORTANT: this script will only work if the entire session was processed by Dynob from correlation to fringe-fitting, except for action 1.</span> 
+    </p>
+    <h3>Actions</h3>
+    All automation for this part is handled by the <i>dynob.tasphys.ga/createdb/lv1db.php?exper=sessionname&do=action</i>. Replace the <i>sessionname</i> with the session to process, and the <i>action</i> with the following. Please run the steps in correct order unless some of the steps have been done manually.
+
+    <table>
+        <tr>
+            <th>Order</th>
+            <th>action</th>
+            <th>description</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>checkdir</td>
+            <td>This action checks and creates the required directories on the oaf machine. This step can be skipped if the directories exists.</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>cp2mac</td>
+            <td>This action copies the required files for analysis to the oaf machine. This step can be skipped if all required files were previously prepared.</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>data2mac</td>
+            <td>This action copies the correlated data (fringe files) from the correlator to the oaf machine. This process can take longer for larger sessions with more scans. This step can be skipped if the fringe files have been transferred previously. This action can be run before the cp2mac.</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>predb</td>
+            <td>This action generates the files required to generate vgosDB. The process can take a while. This step can be skipped if the ovex files and etc had been prepared, or if creating these files manually is preferred. </td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>createdb</td>
+            <td>This action generates the vgosDB.</td>
+        </tr>
+    </table>
+</div>

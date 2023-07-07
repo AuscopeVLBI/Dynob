@@ -1,0 +1,13 @@
+<div>
+	<h3>Steps</h3>
+	<p>	
+		<ol>
+			<li>If the correlation was done using Dynob, run http://dynob.tasphys.ga/postcorr/initfringefit.php?exp=<i>sessionname</i> until a message pops up. Otherwise, do the following steps first.</li>
+			<li>Create a folder (permission at least 775, user www-data) under Dynob root dir/tmp/sessionname</li>
+			<li>Download the session's VEX file and store it at here.</li>
+			<li>Check if the session index exists on the <i>dynob > Correlation</i> database. Create a new record if not.</li>
+			<li>Then, you may run http://dynob.tasphys.ga/postcorr/initfringefit.php?exp=<i>sessionname</i>.</li>
+			<li>After running initfringefit, run http://dynob.tasphys.ga/postcorr/fringefit.php?exp=<i>sessionname</i> until a message pops up.</li>
+		</ol>
+	</p>
+</div>

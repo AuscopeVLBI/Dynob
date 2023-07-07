@@ -1,0 +1,16 @@
+<div>
+    <h3>Steps</h3>
+    <p>
+        <ol>
+			<li>If the correlation and fringe-fitting process was not performed by Dynob, do the following steps first.</li>
+			<li>Check if the folder (permission at least 775, user www-data) <i>Dynob_root_dir/tmp/sessionname</i> exists. Create it if not.</li>
+            <li>Move the correlation data (fringe files) to <i>vc0:~/correlations/au/sessionname/sessioncode/</i>, remove any existing alist and control files from the folder. Make sure only the 'scan folders' remain.</li>
+            <li>Copy the session's VEX file to <i>Dynob_root_dir/tmp/sessionname/sessionname.vex</i>.</li>
+			<li>Check if the <i>sessionname.skd</i> exists under <i>Dynob_root_dir/scheduling/skd/sessionname.skd</i></li>
+            <li>Check if the session index exists on the <i>dynob > Correlation</i> database. Create a new record if not.</li>
+			<li>Then, run http://dynob.tasphys.ga/pmonitor/monitor.php?exp=<i>sessionname</i>. Start with this step if the fringe-fitting process was done by Dynob. This step will re-estimate the antenna SEFDs and store them onto the database</li>
+			<li>Finally, run http://dynob.tasphys.ga/pmonitor/reflux.php?exp=<i>sessionname</i> to monitor the flux density for sources observed in the session. </li>
+		</ol>
+    </p>
+
+</div>

@@ -100,6 +100,19 @@ $cffile = fopen($cftemplate,"r");
 $arrline = [];
 $freqs = [];
 
+//get frequencies from v2d's zoom
+if($cmode == "mixed"){
+	$corfreqs = [];
+	$v2dfile = fopen($_SERVER['DOCUMENT_ROOT']."tmp/".$expname."/buffer.v2d","r");
+	while (!feof($v2dfile)){
+		$line = fgets($v2dfile);
+		if(strpos($line,"addZoomFreq")!==false && strpos($line,'#')===false){
+			array_push($corfreqs,(float)(substr($line,strpos($line,'@')+1,strpos($line,'/')-strpos($line,'@')-1)));
+		}
+	}
+	sort($corfreqs);
+}
+
 while (!feof($cffile)){
 	$line = fgets($cffile);
 	$line = preg_replace('/{refscan}/',$refscan,$line);
@@ -107,12 +120,15 @@ while (!feof($cffile)){
 	$line = preg_replace('/{reffreqs}/',$rFreqS,$line);
 	$line = preg_replace('/{refstation}/',$refStation,$line);
 
-	array_push($arrline,$line);
-
+	//array_push($arrline,$line);
 	if($cmode == "mixed"){
 		if(stripos($line,"if f_group ")!==false){
 			preg_match('/if f_group (.)/', $line, $group);
 		}
+		if(stripos($line,"chan_ids")!==false){
+			$line = "chan_ids abcdefghijklmn ".implode(" ",$corfreqs).PHP_EOL;
+		}
+
 	}
 	else{
 		$group = ["vgos","X"];
@@ -120,6 +136,7 @@ while (!feof($cffile)){
 	if(stripos($line,"freqs ")!==false){
 		$freqs[$group[1]]  = trim(substr($line,stripos($line, "freqs")+6));
 	}
+	array_push($arrline,$line);
 }
 fclose($cffile);
 
@@ -176,7 +193,7 @@ foreach ($stations as $rst){
 			$usedfreqs = [];
 
 			for($fi=0;$fi<count(array_filter($freqtmp));$fi++){
-				
+
 				$indioff = trim($conssh->exec($con,"cd ~/correlations/".$exptype."/".$expname."; fourfit -m1 -t -b".$fbl." $expcode/".$refscan." set pc_mode manual freqs ".$freqtmp[$fi]." 2>&1 | tee tmp.ff | grep 'at sbd' | tr -s ' ' | cut -d ' ' -f 8  | tr '\\n' ' ' "));
 				$SNR = trim($conssh->exec($con,"cd ~/correlations/".$exptype."/".$expname."; cat tmp.ff | grep 'SNR' |  tr -s ' ' | cut -d ' ' -f 3 | tr '\\n' ' '"));
 				$inexpl = explode(" ",$indioff);
@@ -223,7 +240,6 @@ foreach ($stations as $rst){
 }
 
 //echo $conssh->exec($con,"cd correlations/".$exptype."/".$expname."; rm tmp.ff"));
-
 $cfexp = fopen('cf_'.$expname,"w");
 fwrite($cfexp,implode("",$arrline));
 fclose($cfexp);

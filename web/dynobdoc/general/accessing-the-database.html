@@ -1,0 +1,42 @@
+<div>
+	<h3>Databases</h3>
+	<p>	
+		There are two databases used by Dynob: <i>dynob</i> and <i>mfringe</i>. The <i>dynob</i> database stores information of the 24-hour AUSTRAL sessions, whereas the <i>mfringe</i> database stores results of the fringe check sessions.
+	</p>
+
+	<h3><i>dynob</i>'s structure</h3>
+	<p>
+		This database contains 5 tables: 
+		<table>
+			<tr>
+				<th>Correlation</th>
+				<td>Index of sessions, contains the session names, prefixes and the corresponding 4 digit codes.</td>
+				
+			</tr>
+			<tr>
+				<th>Fluxmons</th>
+				<td>Re-calculated S-band soure flux densities for observed sources. The number of columns increases automatically when new sources are monitored.</td>
+			</tr>
+			<tr>
+				<th>Fluxmonx</th>
+				<td>Re-calculated X-band soure flux densities for observed sources. The number of columns increases automatically when new sources are monitored.</td>
+			</tr>
+			<tr>
+				<th>RaidList</th>
+				<td>The list of computers that potentially store the sessions' data.</td>
+			</tr>
+			<tr>
+				<th>SEFDmon</th>
+				<td>Re-estimated SEFDs for the AUSTRAL telescopes. Currently supports Hb, Ke, Yg, Ww and Ht. If more stations are involved, please add the new station's  Mk4 code on the global configuration file at the <i>$stcodes</i> array. Columns are automatically added when new stations are monitored.</td>
+			</tr>
+		</table>
+	</p>
+	
+
+	<h3><i>mfringe</i>'s structure</h3>
+	<p>
+		This database contains only 1 table, i.e., <i>SEFDmon</i>, as it assumes all data are located on the main correlator machine. This table is similar to the <i>SEFDmon</i> table for <i>dynob</i>.
+	</p>
+	
+
+</div>

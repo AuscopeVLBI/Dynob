@@ -26,6 +26,7 @@ while (!$dbfile->eof()) {
 		$realtimedb[trim($lineexp[0])]=trim($lineexp[1]);
 	}
 }
+
 ?>
 <!Doctype html>
 <head>
@@ -80,7 +81,7 @@ $(document).ready(function(){
 
 	if($('.pgcontent').attr('id')=="lockactive"){
 		$( "#notice" ).html("Someone else is fringe checking!");
-		$( "#obstext" ).append("\nClick the button to reset and start the fringe test if you are VERY sure no one else is fringe checking.");
+		$( "#obstext" ).append("\nClick the button to reset and start the fringe test if you are VERY sure no one else is running fringe check.");
 		$( "#btnstartover" ).show();
 		$( "#btnstartover" ).click(toStartover);
 		//logintval();

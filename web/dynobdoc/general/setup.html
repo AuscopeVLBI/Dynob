@@ -1,0 +1,23 @@
+<div>
+	<h3>Accessing Dynob root</h3>
+	<p>	
+		The dynob program is a web tool that runs on PHP server. The program must be hosted on a top-level domain or subdomain. It is currently running on the UTAS Frenkie machine, using the temporary domain: dynob.tasphys.ga.
+	</p>
+
+	<p>
+		<b>SSH access:</b>
+		<br>The Dynob program may be modified via ssh to suit different circumstances. SSH into frenkie.phys.utas.edu.au and go to the /var/www/dynob directory. For safety reasons, please do not modify or move any file under the default Dynob's root directory. You may duplicate the entire dynob folder into dynob_[name] and make changes there. You should point a new domain to that directory to use the duplicated program.
+	</p>
+
+	<h3>Common configuration</h3>
+	The configuration file is the <i>common/global.php</i>. 
+	<br>
+	The list of computers where Dynob looks for experiment data is stored in the MySQL database (login method shown below). You may add more entries at dynob>RaidList.
+
+	<h3>Database</h3>
+	Dynob uses the MySQL database to store the re-estimated antenna SEFD and source flux density for the observed sources. The database can be accessed from the terminal or the Adminer page:  
+	<br>The database link: <a href="http://dynob.tasphys.ga/adminer.php">here</a>
+	<br>username: obsdb
+	<br>password: <i>obsdbpass</i>
+	<br><b><span style="color:red;">The above account allows you to view the data from the database only, if you need to create new table entries or modify the data, please use the usual login information with caution. </span></b>
+</div>

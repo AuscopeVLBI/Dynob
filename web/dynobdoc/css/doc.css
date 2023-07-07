@@ -1,0 +1,77 @@
+* {
+	box-sizing: border-box;
+}
+  
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 2;
+}
+  
+/* Style the header */
+/*
+header {
+	background-color: #666;
+	padding: 20px;
+	text-align: center;
+	font-size: 35px;
+	color: white;
+}
+*/
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+	float: left;
+	width: 20%;
+	background: #ccc;
+	padding: 20px;
+	min-width: 300px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+article {
+	float: left;
+	padding: 20px;
+	width: 70%;
+	/*background-color: #f1f1f1;*/
+	background-color: #fff;
+}
+
+/* Clear floats after the columns */
+section::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Style the footer */
+footer {
+	background-color: #777;
+	padding: 10px;
+	text-align: center;
+	color: white;
+}
+
+#dynstruc{
+	width: 720px;
+	height: 480px;
+	object-fit: none;
+}
+
+th, td {
+	border:1px solid rgb(254, 58, 58);
+	padding:5px;
+	border-collapse: collapse;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+	nav, article {
+		width: 100%;
+		height: auto;
+	}
+}
